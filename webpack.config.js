@@ -1,8 +1,21 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
+const path = require('path');
 
 module.exports = {
   mode: 'development',
+  entry: {
+    index: './src/index.js',
+  },
+  output: {
+    filename: '[name].bai.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    }
+  },
   module: {
     rules: [
       {
