@@ -1,8 +1,10 @@
 import ReactDOM from 'react-dom/client';
+import WebHead from './components/WebHead';
 
 function App() {
   return (
     <div>
+      <WebHead />
       <h1>Hallo</h1>
     </div>
   );
