@@ -7,8 +7,11 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import './css/style.css'
 // Components
 import { TickerTape } from "react-ts-tradingview-widgets";
-import WebHead from './components/WebHead';
-import Navbar from './components/Navbar';
+import {
+  WebHead,
+  Navbar,
+  Footer
+} from './components';
 
 function App() {
   return (
@@ -21,9 +24,7 @@ function App() {
           <TickerTape colorTheme="dark"></TickerTape>
         </div>
       </div>
-      <div class="footer">
-        <p className="text-center">This is footer!</p>
-      </div>
+      <Footer />
     </div>
   );
 }
