@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --mode=production",
     "start-live": "npx webpack serve",
-    "firebase-emulator": "firebase emulators:start"
+    "firebase-emulator": "firebase emulators:start",
+    "update-package": "npm outdated & npm update --save"
   },
   "keywords": [],
   "author": "Gerald Zandisko",
@@ -20,12 +21,13 @@
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.0",
     "style-loader": "^4.0.0",
-    "webpack": "^5.92.0",
+    "webpack": "^5.92.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
