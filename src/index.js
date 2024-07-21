@@ -10,7 +10,8 @@ import { TickerTape } from "react-ts-tradingview-widgets";
 import {
   WebHead,
   Navbar,
-  Footer
+  Footer,
+  BAIJumbotron
 } from './components';
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
         <div className="col-md-12">
           <WebHead />
           <Navbar />
-          <h1>Hallo</h1>
+          <BAIJumbotron />
           <TickerTape colorTheme="dark"></TickerTape>
         </div>
       </div>

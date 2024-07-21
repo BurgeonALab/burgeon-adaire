@@ -13,3 +13,8 @@ body {
 .footer {
   margin-top: auto;
 }
+
+.bai-jumbotron {
+  min-height: 100vh;
+  width: 100%;
+}

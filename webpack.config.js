@@ -29,12 +29,21 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: "./public/assets/favicons", to: "assets/favicons" }
+        { from: "./public/assets/favicons", to: "assets/favicons" },
+        { from: "./public/assets", to: "assets" },
       ],
     }),
     new HtmlWebpackPlugin({
