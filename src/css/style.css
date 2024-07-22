@@ -22,3 +22,9 @@ body {
 .jumbotron-logo {
   opacity: 50%;
 }
+
+.navbar-position {
+  position: absolute;
+  left: 0;
+  right: 0;
+}

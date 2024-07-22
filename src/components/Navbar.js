@@ -15,8 +15,8 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="position-absolute w-100 mt-4">
-        <div className="container p-3 shadow rounded-pill">
+      <nav className="navbar-position w-100 mt-4">
+        <div className="container p-3 border rounded-pill">
           <div className="d-flex flex-row">
             <div className="mx-3 d-flex w-50">
               <a className="navbar-brand" href="#">
