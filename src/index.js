@@ -11,7 +11,9 @@ import {
   WebHead,
   Navbar,
   Footer,
-  BAIJumbotron
+  BAIJumbotron,
+  AboutSection,
+  GeraldContact,
 } from './components';
 
 function App() {
@@ -20,8 +22,10 @@ function App() {
       <div className="row">
         <div className="col-md-12">
           <WebHead />
+          <GeraldContact />
           <Navbar />
           <BAIJumbotron />
+          <AboutSection />
           <TickerTape colorTheme="dark"></TickerTape>
         </div>
       </div>

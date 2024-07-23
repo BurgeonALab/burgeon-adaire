@@ -28,3 +28,32 @@ body {
   left: 0;
   right: 0;
 }
+
+.about-container {
+  height: 100vh;
+}
+
+.about-items {
+  height: 100%;
+}
+
+.about-contents {
+  background-color: #000000;
+  height: 100%;
+}
+
+.contact-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+.contact-box {
+  background-color: #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: auto;
+}
