@@ -29,25 +29,13 @@ body {
   right: 0;
 }
 
-.about-container {
-  height: 100vh;
-}
-
-.about-items {
-  height: 100%;
-}
-
-.about-contents {
-  background-color: #000000;
-  height: 100%;
-}
-
 .contact-container {
   width: 100%;
   height: 100vh;
   position: fixed;
   left: 0;
   right: 0;
+  pointer-events: none;
 }
 
 .contact-box {
@@ -56,4 +44,16 @@ body {
   bottom: 0;
   right: 0;
   width: auto;
+  border-top-left-radius: var(--bs-border-radius)!important;
+  border-top-right-radius: var(--bs-border-radius)!important;
+  pointer-events: auto;
+}
+
+.about-box {
+  height: 100vh;
+}
+
+.about-item {
+  height: 100%;
+  background-color: #000000;
 }
