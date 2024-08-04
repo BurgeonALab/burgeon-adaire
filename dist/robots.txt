@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Unnecesarrybot
+Disallow: /
+
+Sitemap: https://www.burgeonadaire.com/sitemap.xml

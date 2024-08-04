@@ -44,6 +44,8 @@ module.exports = {
       patterns: [
         { from: "./public/assets/favicons", to: "assets/favicons" },
         { from: "./public/assets", to: "assets" },
+        { from: "./public/robots.txt", to: "robots.txt" },
+        { from: "./public/sitemap.xml", to: "sitemap.xml" },
       ],
     }),
     new HtmlWebpackPlugin({

@@ -8,7 +8,7 @@ import './css/style.css'
 // Components
 import { TickerTape } from "react-ts-tradingview-widgets";
 import {
-  WebHead,
+  HomeHead,
   Navbar,
   Footer,
   BAIJumbotron,
@@ -21,7 +21,7 @@ function App() {
     <div className="bottom-footer-container container-fluid">
       <div className="row">
         <div className="col-md-12">
-          <WebHead />
+          <HomeHead />
           <GeraldContact />
           <Navbar />
           <BAIJumbotron />
