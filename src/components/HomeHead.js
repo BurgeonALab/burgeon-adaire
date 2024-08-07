@@ -10,7 +10,7 @@ function HomeHead() {
       <meta name="googlebot" content="follow" />
       <link rel="canoncial" href="https://www.burgeonadaire.com" />
       <meta name="description"
-        content="PT. Burgeon Adaire International is a dedicated sole proprietorship specializing in the dynamic and face-paced world of forex trading. We offer valuable insights and learning opportunities for those interested in trading, while also fostering strong partnerships." />
+        content="PT. Burgeon Adaire International is a dedicated sole proprietorship that focuses on the ever-changing and fast-paced world of forex trading. We strive to provide expert services and innovative solutions to help navigate the complexities of the market." />
       <meta name="keywords" content="Forex, Commodity, Services, Technology" />
       <meta name="author" content="PT. Burgeon Adaire International" />
       <meta property="og:locale" content="en_US" />
@@ -18,7 +18,7 @@ function HomeHead() {
 
       <meta property="og:title" content="Home • PT. Burgeon Adaire International" />
       <meta property="og:description"
-        content="PT. Burgeon Adaire International is a dedicated sole proprietorship specializing in the dynamic and face-paced world of forex trading. We offer valuable insights and learning opportunities for those interested in trading, while also fostering strong partnerships." />
+        content="PT. Burgeon Adaire International is a dedicated sole proprietorship that focuses on the ever-changing and fast-paced world of forex trading. We strive to provide expert services and innovative solutions to help navigate the complexities of the market." />
       <meta property="og:type" content="website" />
       <meta property="og:image"
         content="https://firebasestorage.googleapis.com/v0/b/burgeon-adaire.appspot.com/o/BAI_MetaCover.webp?alt=media&token=68f49fa4-3fc0-48b5-8ee1-f95031d0bd34" />
@@ -28,7 +28,7 @@ function HomeHead() {
 
       <meta name="twitter:title" content="Home • PT. Burgeon Adaire International" />
       <meta name="twitter:description"
-        content="PT. Burgeon Adaire International is a dedicated sole proprietorship specializing in the dynamic and face-paced world of forex trading. We offer valuable insights and learning opportunities for those interested in trading, while also fostering strong partnerships." />
+        content="PT. Burgeon Adaire International is a dedicated sole proprietorship that focuses on the ever-changing and fast-paced world of forex trading. We strive to provide expert services and innovative solutions to help navigate the complexities of the market." />
       <meta property="twitter:image"
         content="https://firebasestorage.googleapis.com/v0/b/burgeon-adaire.appspot.com/o/BAI_MetaCover.webp?alt=media&token=68f49fa4-3fc0-48b5-8ee1-f95031d0bd34" />
       <meta property="twitter:image:alt" content="PT. Burgeon Adaire International Logo Cover" />
