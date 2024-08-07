@@ -11,9 +11,10 @@ function HomeHead() {
       <link rel="canoncial" href="https://www.burgeonadaire.com" />
       <meta name="description"
         content="PT. Burgeon Adaire International is a dedicated sole proprietorship specializing in the dynamic and face-paced world of forex trading. We offer valuable insights and learning opportunities for those interested in trading, while also fostering strong partnerships." />
-      <meta name="keywords" content="Forex" />
+      <meta name="keywords" content="Forex, Commodity, Services, Technology" />
       <meta name="author" content="PT. Burgeon Adaire International" />
       <meta property="og:locale" content="en_US" />
+      <meta property="og:locale:alternate" content="id_ID" />
 
       <meta property="og:title" content="Home • PT. Burgeon Adaire International" />
       <meta property="og:description"

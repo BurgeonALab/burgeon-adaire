@@ -22,14 +22,14 @@ function App() {
       <div className="row">
         <div className="col-md-12">
           <HomeHead />
-          <GeraldContact />
-          <Navbar />
+          {/* <GeraldContact /> */}
+          {/* <Navbar /> */}
           <BAIJumbotron />
-          <AboutSection />
-          <TickerTape colorTheme="dark"></TickerTape>
+          {/* <AboutSection /> */}
+          {/* <TickerTape colorTheme="dark"></TickerTape> */}
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
