@@ -21,15 +21,15 @@ function App() {
     <div className="bottom-footer-container container-fluid">
       <div className="row">
         <div className="col-md-12">
+          <TickerTape colorTheme="dark"></TickerTape>
           <HomeHead />
-          {/* <GeraldContact /> */}
-          {/* <Navbar /> */}
+          <GeraldContact />
+          <Navbar />
           <BAIJumbotron />
-          {/* <AboutSection /> */}
-          {/* <TickerTape colorTheme="dark"></TickerTape> */}
+          <AboutSection />
         </div>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }

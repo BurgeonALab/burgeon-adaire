@@ -16,7 +16,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav className="navbar-position w-100 mt-4">
-        <div className="container p-3 border border-5 rounded-pill">
+        <div className="bai-navbar container p-3 rounded-pill">
           <div className="d-flex flex-row">
             <div className="mx-3 d-flex w-50">
               <a className="navbar-brand" href="#">
@@ -27,13 +27,13 @@ export default class Navbar extends Component {
             <div className='w-50 d-flex flex-row-reverse'>
               <ul className="nav d-flex flex-row-reverse me-3">
                 <li className="nav-item ms-3 d-flex align-items-center">
-                  <a>Section #1</a>
+                  <a>About</a>
                 </li>
                 <li className="nav-item ms-3 d-flex align-items-center">
-                  <a>Section #2</a>
+                  <a>What We Do</a>
                 </li>
                 <li className="nav-item ms-3 d-flex align-items-center">
-                  <a>Section #3</a>
+                  <a>Contact</a>
                 </li>
               </ul>
             </div>
