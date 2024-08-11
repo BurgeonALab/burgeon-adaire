@@ -5,14 +5,22 @@ function HomeHead() {
   return (
     <Helmet>
       <title>Home • PT. Burgeon Adaire International</title>
+      <link rel="canoncial" href="https://www.burgeonadaire.com" />
 
+      {/* Google */}
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="follow" />
-      <link rel="canoncial" href="https://www.burgeonadaire.com" />
+
+      {/* Metas */}
       <meta name="description"
         content="PT. Burgeon Adaire International is a dedicated sole proprietorship that focuses on the ever-changing and fast-paced world of forex trading. We strive to provide expert services and innovative solutions to help navigate the complexities of the market." />
       <meta name="keywords" content="Forex, Commodity, Services, Technology" />
       <meta name="author" content="PT. Burgeon Adaire International" />
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+      {/* Open Graph */}
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="id_ID" />
 
@@ -26,6 +34,7 @@ function HomeHead() {
       <meta property="og:url" content="https://www.burgeonadaire.com" />
       <meta property="og:site_name" content="PT. Burgeon Adaire International" />
 
+      {/* Twitter */}
       <meta name="twitter:title" content="Home • PT. Burgeon Adaire International" />
       <meta name="twitter:description"
         content="PT. Burgeon Adaire International is a dedicated sole proprietorship that focuses on the ever-changing and fast-paced world of forex trading. We strive to provide expert services and innovative solutions to help navigate the complexities of the market." />
@@ -34,9 +43,6 @@ function HomeHead() {
       <meta property="twitter:image:alt" content="PT. Burgeon Adaire International Logo Cover" />
       <meta name="twitter:card" content="summary_large_image" />
 
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
       {/* Favicon */}
       <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png" />

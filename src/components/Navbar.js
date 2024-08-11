@@ -25,15 +25,18 @@ export default class Navbar extends Component {
               <span className='ms-3 d-flex align-items-center'><strong>Burgeon Adaire International</strong></span>
             </div>
             <div className='w-50 d-flex flex-row-reverse'>
-              <ul className="nav d-flex flex-row-reverse me-3">
+              <ul className="nav d-flex me-3">
                 <li className="nav-item ms-3 d-flex align-items-center">
-                  <a>About</a>
+                  <a>Identity</a>
                 </li>
                 <li className="nav-item ms-3 d-flex align-items-center">
-                  <a>What We Do</a>
+                  <a>Operations</a>
                 </li>
                 <li className="nav-item ms-3 d-flex align-items-center">
-                  <a>Contact</a>
+                  <a>Gratitude</a>
+                </li>
+                <li className="nav-item ms-3 d-flex align-items-center">
+                  <a>Legal</a>
                 </li>
               </ul>
             </div>

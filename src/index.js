@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-// CSS
+// Styles
 import './css/style.css'
+import 'react-material-symbols/rounded';
 // Components
-import { TickerTape } from "react-ts-tradingview-widgets";
 import {
   HomeHead,
   Navbar,
@@ -14,6 +14,8 @@ import {
   BAIJumbotron,
   AboutSection,
   GeraldContact,
+  CompanyAbstract,
+  BurgeonOperations,
 } from './components';
 
 function App() {
@@ -21,12 +23,13 @@ function App() {
     <div className="bottom-footer-container container-fluid">
       <div className="row">
         <div className="col-md-12">
-          <TickerTape colorTheme="dark"></TickerTape>
           <HomeHead />
           <GeraldContact />
           <Navbar />
           <BAIJumbotron />
           <AboutSection />
+          <CompanyAbstract />
+          <BurgeonOperations />
         </div>
       </div>
       <Footer />

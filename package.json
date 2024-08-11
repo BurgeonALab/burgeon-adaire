@@ -10,7 +10,7 @@
     "deploy": "firebase deploy"
   },
   "keywords": [],
-  "author": "Gerald Zandisko",
+  "author": "PT. Burgeon Adaire International",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -32,6 +32,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
+    "react-material-symbols": "^4.4.0",
     "react-ts-tradingview-widgets": "^1.2.5"
   }
 }
