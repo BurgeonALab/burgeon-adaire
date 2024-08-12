@@ -6,34 +6,25 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 // Styles
 import './css/style.css'
 import 'react-material-symbols/rounded';
-// Components
+// Router
 import {
-  HomeHead,
-  Navbar,
-  Footer,
-  BAIJumbotron,
-  AboutSection,
-  GeraldContact,
-  CompanyAbstract,
-  BurgeonOperations,
-} from './components';
+  Link,
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom'
+// Pages
+import {
+  HomePage
+} from './pages'
 
 function App() {
   return (
-    <div className="bottom-footer-container container-fluid">
-      <div className="row">
-        <div className="col-md-12">
-          <HomeHead />
-          <GeraldContact />
-          <Navbar />
-          <BAIJumbotron />
-          <AboutSection />
-          <CompanyAbstract />
-          <BurgeonOperations />
-        </div>
-      </div>
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
