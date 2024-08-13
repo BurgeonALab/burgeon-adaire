@@ -5,7 +5,7 @@ function HomeHead() {
   return (
     <Helmet>
       <title>Home • PT. Burgeon Adaire International</title>
-      <link rel="canoncial" href="https://www.burgeonadaire.com" />
+      <link rel="canoncial" href="https://burgeonadaire.com" />
 
       {/* Google */}
       <meta name="robots" content="index, follow" />
@@ -13,7 +13,7 @@ function HomeHead() {
 
       {/* Metas */}
       <meta name="description"
-        content="PT. Burgeon Adaire International is a dedicated sole proprietorship that focuses on the ever-changing and fast-paced world of forex trading. We strive to provide expert services and innovative solutions to help navigate the complexities of the market." />
+        content="PT. Burgeon Adaire International navigates the dynamic world of forex, offering expertise and innovation to meet the market's evolving challenges." />
       <meta name="keywords" content="Forex, Commodity, Services, Technology" />
       <meta name="author" content="PT. Burgeon Adaire International" />
       <meta charset="UTF-8" />
@@ -26,12 +26,12 @@ function HomeHead() {
 
       <meta property="og:title" content="Home • PT. Burgeon Adaire International" />
       <meta property="og:description"
-        content="PT. Burgeon Adaire International is a dedicated sole proprietorship that focuses on the ever-changing and fast-paced world of forex trading. We strive to provide expert services and innovative solutions to help navigate the complexities of the market." />
+        content="PT. Burgeon Adaire International navigates the dynamic world of forex, offering expertise and innovation to meet the market's evolving challenges." />
       <meta property="og:type" content="website" />
       <meta property="og:image"
         content="https://firebasestorage.googleapis.com/v0/b/burgeon-adaire.appspot.com/o/BAI_MetaCover.webp?alt=media&token=68f49fa4-3fc0-48b5-8ee1-f95031d0bd34" />
       <meta property="og:image:alt" content="PT. Burgeon Adaire International Logo Cover" />
-      <meta property="og:url" content="https://www.burgeonadaire.com" />
+      <meta property="og:url" content="https://burgeonadaire.com" />
       <meta property="og:site_name" content="PT. Burgeon Adaire International" />
 
       {/* Twitter */}

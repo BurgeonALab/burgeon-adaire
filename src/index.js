@@ -8,7 +8,6 @@ import './css/style.css'
 import 'react-material-symbols/rounded';
 // Router
 import {
-  Link,
   BrowserRouter,
   Routes,
   Route,
