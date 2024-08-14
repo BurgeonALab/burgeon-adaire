@@ -15,16 +15,13 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar-position navbar-expand-lg w-100 mt-4">
+      <nav className="navbar-position w-100 mt-4">
         <div className="bai-navbar container p-3 rounded-pill">
           <div className="d-flex flex-row">
             <div className="mx-3 d-flex w-50">
               <a className="navbar-brand" href="#">
                 <img alt="PT. Burgeon Adaire International Logo" src={BAILogo} height="40"></img>
               </a>
-              <button className='navbar-toggler' type='button' data-bs-toggle='collapse'>
-                <span className='navbar-toggler-icon'></span>
-              </button> 
               <span className='ms-3 d-flex align-items-center'><strong>Burgeon Adaire International</strong></span>
             </div>
             <div className='w-50 d-flex flex-row-reverse'>
