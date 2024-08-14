@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  BAILogo
+  BAILogo,
 } from './images';
 // import $ from 'jquery';
 
@@ -15,13 +15,16 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar-position w-100 mt-4">
+      <nav className="navbar-position navbar-expand-lg w-100 mt-4">
         <div className="bai-navbar container p-3 rounded-pill">
           <div className="d-flex flex-row">
             <div className="mx-3 d-flex w-50">
               <a className="navbar-brand" href="#">
                 <img alt="PT. Burgeon Adaire International Logo" src={BAILogo} height="40"></img>
               </a>
+              <button className='navbar-toggler' type='button' data-bs-toggle='collapse'>
+                <span className='navbar-toggler-icon'></span>
+              </button> 
               <span className='ms-3 d-flex align-items-center'><strong>Burgeon Adaire International</strong></span>
             </div>
             <div className='w-50 d-flex flex-row-reverse'>
@@ -36,7 +39,14 @@ export default class Navbar extends Component {
                   <a>Gratitude</a>
                 </li>
                 <li className="nav-item ms-3 d-flex align-items-center">
-                  <a>Legal</a>
+                  <a className='nav-link dropdown-toggle p-0 link-dark' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                    Legal
+                  </a>
+                  <ul className='dropdown-menu dropdown-menu-end'>
+                    <li><a className='dropdown-item' href='#'>Privacy Policy</a></li>
+                    <li><a className='dropdown-item' href='#'>Cookie Policy</a></li>
+                    <li><a className='dropdown-item' href='#'>Terms & Conditions</a></li>
+                  </ul>
                 </li>
               </ul>
             </div>

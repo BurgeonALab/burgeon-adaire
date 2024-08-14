@@ -6,6 +6,7 @@ import AboutSection from './AboutSection';
 import GeraldContact from './GeraldContact';
 import CompanyAbstract from './CompanyAbstract';
 import BurgeonOperations from './BurgeonOperations';
+import BurgeonOutro from './BurgeonOutro';
 
 export {
   HomeHead,
@@ -16,4 +17,5 @@ export {
   GeraldContact,
   CompanyAbstract,
   BurgeonOperations,
+  BurgeonOutro,
 }

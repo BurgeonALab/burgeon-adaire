@@ -8,6 +8,7 @@ import {
   GeraldContact,
   CompanyAbstract,
   BurgeonOperations,
+  BurgeonOutro,
 } from '../components';
 
 export default class HomePage extends Component {
@@ -23,6 +24,7 @@ export default class HomePage extends Component {
             <AboutSection />
             <CompanyAbstract />
             <BurgeonOperations />
+            <BurgeonOutro />
           </div>
         </div>
         <Footer />

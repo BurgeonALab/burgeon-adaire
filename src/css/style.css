@@ -69,3 +69,17 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+.outro-container {
+  min-height: 100vh;
+}
+
+.outro-text-container {
+  height: 100%;
+  width: 100%;
+}
+
+.outro-text {
+  height: 100%;
+  width: 100%;
+}
