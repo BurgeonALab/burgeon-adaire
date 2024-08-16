@@ -4,7 +4,7 @@ import { MaterialSymbol } from 'react-material-symbols';
 export default class GeraldContact extends Component {
   render() {
     return (
-      <div className='contact-container'>
+      <div className='contact-mobile contact-container'>
         <div className='contact-box me-5 shadow'>
           <div className='p-3'>
             <div className='d-flex flex-row'>

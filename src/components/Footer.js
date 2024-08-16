@@ -10,11 +10,11 @@ export default class Footer extends Component {
         <div>
           <div className="container-fluid py-5">
             <div className="row">
-              <div className="col-md-6 d-flex justify-content-start align-items-center">
-                <img alt="Pepperstone Official Partner" src={BurgeonAdairePepperstone} height="96"></img>
+              <div className="burgeon-partner-major col-md-6 d-flex justify-content-start align-items-center">
+                <img className='partner-pepperstone' alt="Pepperstone Official Partner" src={BurgeonAdairePepperstone} height={80}></img>
               </div>
-              <div className="col-md-6 d-flex justify-content-end align-items-center">
-                <img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={64} alt="Powered by AWS Cloud Computing"></img>
+              <div className="burgeon-partner-major col-md-6 d-flex justify-content-end align-items-center">
+                <img className='partner-aws' src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={56} alt="Powered by AWS Cloud Computing"></img>
               </div>
             </div>
           </div>

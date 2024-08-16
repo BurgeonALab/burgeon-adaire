@@ -22,9 +22,9 @@ export default class Navbar extends Component {
               <a className="navbar-brand" href="#">
                 <img alt="PT. Burgeon Adaire International Logo" src={BAILogo} height="40"></img>
               </a>
-              <span className='ms-3 d-flex align-items-center'><strong>Burgeon Adaire International</strong></span>
+              <span className='burgeon-nav-title ms-3 d-flex align-items-center'><strong>Burgeon Adaire International</strong></span>
             </div>
-            <div className='w-50 d-flex flex-row-reverse'>
+            <div className='burgeon-nav-menu w-50 d-flex flex-row-reverse'>
               <ul className="nav d-flex me-3">
                 <li className="nav-item ms-3 d-flex align-items-center">
                   <a>Identity</a>

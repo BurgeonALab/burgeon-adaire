@@ -1,0 +1,32 @@
+@media (max-width: 992px) {
+  .burgeon-nav-menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .burgeon-nav-title {
+    display: none !important;
+  }
+  .tiger-ox {
+    height: 308px;
+  }
+  .burgeon-partner-major {
+    justify-content: center !important;
+  }
+  .burgeon-partner-major img {
+    margin-top: 36px;
+  }
+  .partner-pepperstone {
+    height: 64px;
+  }
+  .partner-aws {
+    height: 48px;
+  }
+}

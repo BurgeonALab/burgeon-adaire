@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom/client';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 // Styles
-import './css/style.css'
+import './css/style.css';
+import './css/responsive.css';
 import 'react-material-symbols/rounded';
 // Router
 import {
