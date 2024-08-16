@@ -2,20 +2,12 @@
   .burgeon-nav-menu {
     display: none !important;
   }
-}
-
-@media (max-width: 768px) {
-  .contact-mobile {
-    display: none;
-  }
-}
-
-@media (max-width: 576px) {
-  .burgeon-nav-title {
-    display: none !important;
+  .outro-text-title {
+    text-align: right;
+    margin-right: 0px !important;
   }
   .tiger-ox {
-    height: 308px;
+    height: 384px;
   }
   .burgeon-partner-major {
     justify-content: center !important;
@@ -23,10 +15,34 @@
   .burgeon-partner-major img {
     margin-top: 36px;
   }
+}
+
+@media (max-width: 768px) {
+  .burgeon-nav-title {
+    display: none !important;
+  }
+  .contact-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .tiger-ox {
+    height: 308px !important;
+  }
+  .outro-text-title {
+    text-align: center;
+  }
+  .outro-text-title-first {
+    margin-right: 0px !important;
+  }
   .partner-pepperstone {
     height: 64px;
   }
   .partner-aws {
     height: 48px;
+  }
+  .bai-navbar {
+    max-width: 330px;
   }
 }
