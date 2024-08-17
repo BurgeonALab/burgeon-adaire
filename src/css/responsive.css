@@ -24,6 +24,9 @@
   .burgeon-partner-major img {
     margin-top: 36px;
   }
+  .burgeon-nav-mobile-button {
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
@@ -32,6 +35,9 @@
   }
   .contact-mobile {
     display: none;
+  }
+  .c-abstract-box {
+    text-align: center;
   }
 }
 
@@ -53,5 +59,11 @@
   }
   .bai-navbar {
     max-width: 330px;
+  }
+}
+
+@media (max-width: 400px) {
+  .c-abstract-box {
+    height: 65vh;
   }
 }

@@ -34,6 +34,18 @@ body {
   background-color: #FFFFFF;
 }
 
+.burgeon-nav-mobile-button {
+  display: none;
+}
+
+.burgeon-nav-menu {
+  display: flex;
+}
+
+.offcanvas {
+  z-index: 9999;
+}
+
 .contact-container {
   width: 100%;
   height: 100vh;
@@ -41,7 +53,7 @@ body {
   left: 0;
   right: 0;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .contact-box {
