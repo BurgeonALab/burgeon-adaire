@@ -37,6 +37,15 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.svg/,
+        use: {
+          loader: "svg-url-loader",
+          options: {
+            iesafe: true,
+          }
+        }
+      },
     ],
   },
   plugins: [
