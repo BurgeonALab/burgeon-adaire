@@ -12,11 +12,11 @@ import {
   BrowserRouter,
   Routes,
   Route,
-} from 'react-router-dom'
+} from 'react-router-dom';
 // Pages
 import {
   HomePage
-} from './pages'
+} from './pages';
 
 function App() {
   return (

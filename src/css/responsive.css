@@ -1,3 +1,9 @@
+@media (max-width: 1400px) {
+  .sky-video-box {
+    height: 40vh;
+  }
+}
+
 @media (max-width: 1200px) {
   .about-box {
     height: 50vh;
@@ -59,6 +65,9 @@
   }
   .bai-navbar {
     max-width: 330px;
+  }
+  .sky-video-box {
+    height: 25vh;
   }
 }
 

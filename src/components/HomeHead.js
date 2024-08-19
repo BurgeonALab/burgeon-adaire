@@ -16,7 +16,7 @@ function HomeHead() {
         content="PT. Burgeon Adaire International navigates the dynamic world of forex, offering expertise and innovation to meet the market's evolving challenges." />
       <meta name="keywords" content="Forex, Commodity, Services, Technology" />
       <meta name="author" content="PT. Burgeon Adaire International" />
-      <meta charset="UTF-8" />
+      <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
@@ -42,6 +42,10 @@ function HomeHead() {
         content="https://firebasestorage.googleapis.com/v0/b/burgeon-adaire.appspot.com/o/BAI_MetaCover.webp?alt=media&token=68f49fa4-3fc0-48b5-8ee1-f95031d0bd34" />
       <meta property="twitter:image:alt" content="PT. Burgeon Adaire International Logo Cover" />
       <meta name="twitter:card" content="summary_large_image" />
+
+      {/* React Slick */}
+      <link rel='stylesheet' type='text/css' charSet='UTF-8' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css' />
+      <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css' />
 
       {/* Favicon */}
       <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png" />
