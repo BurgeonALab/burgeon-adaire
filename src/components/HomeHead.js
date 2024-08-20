@@ -13,7 +13,7 @@ function HomeHead() {
 
       {/* Metas */}
       <meta name="description"
-        content="PT. Burgeon Adaire International navigates the dynamic world of forex, offering expertise and innovation to meet the market's evolving challenges." />
+        content="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value." />
       <meta name="keywords" content="Forex, Commodity, Services, Technology" />
       <meta name="author" content="PT. Burgeon Adaire International" />
       <meta charSet="UTF-8" />
@@ -26,7 +26,7 @@ function HomeHead() {
 
       <meta property="og:title" content="Home • PT. Burgeon Adaire International" />
       <meta property="og:description"
-        content="PT. Burgeon Adaire International navigates the dynamic world of forex, offering expertise and innovation to meet the market's evolving challenges." />
+        content="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value." />
       <meta property="og:type" content="website" />
       <meta property="og:image"
         content="https://firebasestorage.googleapis.com/v0/b/burgeon-adaire.appspot.com/o/BAI_MetaCover.webp?alt=media&token=68f49fa4-3fc0-48b5-8ee1-f95031d0bd34" />
@@ -37,7 +37,7 @@ function HomeHead() {
       {/* Twitter */}
       <meta name="twitter:title" content="Home • PT. Burgeon Adaire International" />
       <meta name="twitter:description"
-        content="PT. Burgeon Adaire International is a dedicated sole proprietorship that focuses on the ever-changing and fast-paced world of forex trading. We strive to provide expert services and innovative solutions to help navigate the complexities of the market." />
+        content="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value." />
       <meta property="twitter:image"
         content="https://firebasestorage.googleapis.com/v0/b/burgeon-adaire.appspot.com/o/BAI_MetaCover.webp?alt=media&token=68f49fa4-3fc0-48b5-8ee1-f95031d0bd34" />
       <meta property="twitter:image:alt" content="PT. Burgeon Adaire International Logo Cover" />
