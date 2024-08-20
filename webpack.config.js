@@ -1,20 +1,24 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     index: './src/index.js',
   },
   output: {
-    filename: '[name].bai.js',
+    filename: '[name].burgeonadaire.js',
     path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
     splitChunks: {
       chunks: 'all',
-    }
+    },
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [
@@ -24,10 +28,6 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
-      },
-      {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
       },
       {
         test: /\.(png|webp|jpe?g|gif)$/i,
@@ -46,6 +46,10 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
     ],
   },
   plugins: [
@@ -63,8 +67,10 @@ module.exports = {
       filename: './index.html',
     }),
     new HtmlWebpackPlugin({
+      inject: false,
       template: './public/404.html',
       filename: './404.html',
     }),
+    new MiniCssExtractPlugin(),
   ]
 };
