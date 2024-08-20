@@ -3,7 +3,11 @@ import {
   BurgeonAdairePepperstone
 } from './images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+  faInstagram,
+  faLinkedin,
+  faXTwitter,
+} from '@fortawesome/free-brands-svg-icons';
 import {
   TheOrg,
   GeraldZandisko,
@@ -41,6 +45,11 @@ export default class Footer extends Component {
           <div className='mx-2 d-flex justify-content-center align-items-center'>
             <a className='d-block' href='https://www.linkedin.com/company/burgeonadaire/' target='_blank' rel='noopener'>
               <FontAwesomeIcon icon={faLinkedin} className='link-light' size='lg' />
+            </a>
+          </div>
+          <div className='mx-2 d-flex justify-content-center align-items-center'>
+            <a className='d-block' href='https://x.com/burgeonadaire' target='_blank' rel='noopener'>
+              <FontAwesomeIcon icon={faXTwitter} className='link-light' size='lg' />
             </a>
           </div>
           {/* <div className='mx-2 d-flex justify-content-center align-items-center'>

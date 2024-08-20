@@ -1,7 +1,7 @@
 {
   "name": "burgeon-adaire",
-  "version": "1.1.0",
-  "description": "PT. Burgeon Adaire International navigates the dynamic world of forex, offering expertise and innovation to meet the market's evolving challenges.",
+  "version": "1.2.0",
+  "description": "PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value.",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production",
