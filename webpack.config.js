@@ -55,6 +55,7 @@ module.exports = {
         { from: "./public/assets", to: "assets" },
         { from: "./public/robots.txt", to: "robots.txt" },
         { from: "./public/sitemap.xml", to: "sitemap.xml" },
+        { from: "./public/Ads.txt", to: "Ads.txt" },
       ],
     }),
     new HtmlWebpackPlugin({
