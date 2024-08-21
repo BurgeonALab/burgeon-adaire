@@ -1,3 +1,5 @@
+// Firebase
+import './services/Services'
 // React
 import ReactDOM from 'react-dom/client';
 // Bootstrap
