@@ -1,5 +1,3 @@
-// Material Icons
-import 'react-material-symbols/rounded';
 // Firebase
 import './services/Services'
 // React

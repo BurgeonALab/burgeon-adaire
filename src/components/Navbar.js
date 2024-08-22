@@ -1,4 +1,8 @@
-import { MaterialSymbol } from 'react-material-symbols';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faXmark,
+  faBars,
+} from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 import {
   BAILogo,
@@ -28,13 +32,13 @@ export default class Navbar extends Component {
             <div className='w-50 d-flex flex-row-reverse'>
               <div className='burgeon-nav-mobile-button'>
                 <button type='button' data-bs-toggle='offcanvas' data-bs-target='#burgeonNavbarMobile' aria-controls='burgeonNavbarMobile' className='btn btn-link d-flex align-items-center justify-content-center text-decoration-none'>
-                  <MaterialSymbol icon="menu" size={24} fill grade={-25} color='#000000' />
+                  <FontAwesomeIcon icon={faBars} className='link-dark' size='lg' />
                 </button>
                 <div className='offcanvas offcanvas-end' data-bs-scroll='true' tabIndex={-1} id='burgeonNavbarMobile' aria-labelledby='burgeonNavbarMobileLabel'>
                   <div className='offcanvas-header d-flex justify-content-between flex-row'>
                     <h5 className='offcanvas-title' id='burgeonNavbarMobileLabel'>PT. Burgeon Adaire International</h5>
                     <button type='button' className='btn btn-link d-flex align-items-center justify-content-center text-decoration-none' data-bs-dismiss='offcanvas' aria-label='Close'>
-                      <MaterialSymbol icon="close" size={24} fill grade={-25} color='#000000' />
+                      <FontAwesomeIcon icon={faXmark} className='link-dark' size='lg' />
                     </button>
                   </div>
                   <div className='offcanvas-body'>

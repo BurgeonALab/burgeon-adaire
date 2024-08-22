@@ -3,15 +3,20 @@ const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 module.exports = {
   mode: 'production',
+  performance: {
+    maxAssetSize: 1000000,
+    maxEntrypointSize: 1000000,
+  },
   entry: {
     index: './src/index.js',
   },
   output: {
-    filename: '[name].burgeonadaire.js',
-    path: path.resolve(__dirname, 'dist'),
+    filename: 'scripts/[name].burgeonadaire.js',
+    path: path.resolve(__dirname, 'dist/'),
     clean: true,
   },
   optimization: {
@@ -19,7 +24,17 @@ module.exports = {
       chunks: 'all',
     },
     minimize: true,
-    minimizer: [new TerserPlugin()],
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          format: {
+            comments: false,
+          },
+        },
+        extractComments: false,
+      }),
+      new CssMinimizerPlugin(),
+    ],
   },
   module: {
     rules: [
@@ -58,14 +73,15 @@ module.exports = {
     ],
   },
   plugins: [
-    new CopyPlugin({
-      patterns: [
+    new CopyPlugin(
+      [
         { from: "./public/assets/favicons", to: "assets/favicons" },
         { from: "./public/robots.txt", to: "robots.txt" },
+        { from: "./public/favicon.ico", to: "favicon.ico" },
         { from: "./public/sitemap.xml", to: "sitemap.xml" },
         { from: "./public/ads.txt", to: "ads.txt" },
       ],
-    }),
+    ),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
@@ -75,6 +91,8 @@ module.exports = {
       template: './public/404.html',
       filename: './404.html',
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: "style/[name].css",
+    }),
   ]
 };
