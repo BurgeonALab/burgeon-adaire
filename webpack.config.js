@@ -12,6 +12,7 @@ module.exports = {
   output: {
     filename: '[name].burgeonadaire.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   optimization: {
     splitChunks: {
@@ -56,7 +57,6 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: "./public/assets/favicons", to: "assets/favicons" },
-        { from: "./public/assets", to: "assets" },
         { from: "./public/robots.txt", to: "robots.txt" },
         { from: "./public/sitemap.xml", to: "sitemap.xml" },
         { from: "./public/ads.txt", to: "ads.txt" },

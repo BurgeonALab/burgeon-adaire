@@ -20,7 +20,7 @@ export default class Navbar extends Component {
         <div className="bai-navbar container p-3 rounded-pill">
           <div className="d-flex flex-row">
             <div className="mx-3 d-flex w-50">
-              <a className="navbar-brand" href="#">
+              <a className="navbar-brand" href="https://burgeonadaire.com">
                 <img alt="PT. Burgeon Adaire International Logo" src={BAILogo} height="40"></img>
               </a>
               <span className='burgeon-nav-title ms-3 d-flex align-items-center'><strong>Burgeon Adaire International</strong></span>
