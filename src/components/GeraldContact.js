@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
 import { MaterialSymbol } from 'react-material-symbols';
+import React, { Component } from 'react';
 
 export default class GeraldContact extends Component {
   render() {

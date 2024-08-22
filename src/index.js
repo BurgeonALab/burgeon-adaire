@@ -1,3 +1,5 @@
+// Material Icons
+import 'react-material-symbols/rounded';
 // Firebase
 import './services/Services'
 // React
@@ -8,7 +10,6 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 // Styles
 import './css/style.css';
 import './css/responsive.css';
-import 'react-material-symbols/rounded';
 // Router
 import {
   BrowserRouter,

@@ -1,8 +1,8 @@
+import { MaterialSymbol } from 'react-material-symbols';
 import React, { Component } from 'react';
 import {
   BAILogo,
 } from './images';
-import { MaterialSymbol } from 'react-material-symbols';
 // import $ from 'jquery';
 
 export default class Navbar extends Component {
