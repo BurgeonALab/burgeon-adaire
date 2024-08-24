@@ -9,6 +9,7 @@ import {
   CompanyAbstract,
   BurgeonOperations,
   BurgeonOutro,
+  BurgeonPartners,
 } from '../components';
 
 export default class HomePage extends Component {
@@ -25,6 +26,7 @@ export default class HomePage extends Component {
             <CompanyAbstract />
             <BurgeonOperations />
             <BurgeonOutro />
+            <BurgeonPartners />
           </div>
         </div>
         <Footer />

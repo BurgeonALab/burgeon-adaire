@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class CompanyAbstract extends Component {
 	render() {
 		return (
-			<div className='container-fluid py-5'>
+			<div className='container-fluid py-3'>
 				<div className='row'>
 					<div className='col-xxl-8 c-abstract-box'>
 						<h1 className='text-white'>
