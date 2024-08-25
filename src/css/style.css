@@ -87,16 +87,6 @@ body {
   min-height: 100vh;
 }
 
-.outro-text-container {
-  height: 100%;
-  width: 100%;
-}
-
-.outro-text {
-  height: 100%;
-  width: 100%;
-}
-
 .sky-video-box {
   height: 100vh;
   width: 100%;
@@ -110,4 +100,22 @@ body {
 
 .partners-opacity {
   opacity: 50%;
+}
+
+.partners-opacity:hover {
+  animation: fullOpacity 0.2s forwards;
+}
+
+.partners-opacity:not(:hover) {
+  animation: halfOpacity 0.2s;
+}
+
+@keyframes fullOpacity {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes halfOpacity {
+  0% { opacity: 1; }
+  100% { opacity: 0.5; }
 }

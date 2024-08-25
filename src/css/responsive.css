@@ -17,10 +17,6 @@
   .burgeon-nav-menu {
     display: none !important;
   }
-  .outro-text-title {
-    text-align: right;
-    margin-right: 0px !important;
-  }
   .tiger-ox {
     height: 384px;
   }
@@ -50,12 +46,6 @@
 @media (max-width: 576px) {
   .tiger-ox {
     height: 308px !important;
-  }
-  .outro-text-title {
-    text-align: center;
-  }
-  .outro-text-title-first {
-    margin-right: 0px !important;
   }
   .partner-pepperstone {
     height: 64px;

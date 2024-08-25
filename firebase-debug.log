@@ -1,0 +1,166 @@
+[debug] [2024-08-25T00:14:31.397Z] ----------------------------------------------------------------------
+[debug] [2024-08-25T00:14:31.401Z] Command:       /usr/bin/node-20 /usr/local/bin/firebase emulators:start
+[debug] [2024-08-25T00:14:31.402Z] CLI Version:   13.15.4
+[debug] [2024-08-25T00:14:31.403Z] Platform:      linux
+[debug] [2024-08-25T00:14:31.403Z] Node Version:  v20.12.2
+[debug] [2024-08-25T00:14:31.403Z] Time:          Sun Aug 25 2024 07:14:31 GMT+0700 (Western Indonesia Time)
+[debug] [2024-08-25T00:14:31.404Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-25T00:14:31.543Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-25T00:14:31.544Z] > authorizing via signed-in user (imgerraour@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2024-08-25T00:14:31.558Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-25T00:14:31.558Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-25T00:14:31.559Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-08-25T00:14:31.570Z] [hub] writing locator at /tmp/hub-burgeon-adaire.json
+[debug] [2024-08-25T00:14:31.599Z] > refreshing access token with scopes: []
+[debug] [2024-08-25T00:14:31.602Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-25T00:14:31.602Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-25T00:15:41.373Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  hosting: Stopping Hosting Emulator {"metadata":{"emulator":{"name":"hosting"},"message":"Stopping Hosting Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2024-08-25T00:15:50.045Z] Received signal SIGINT (Ctrl-C) 2
+[info]  
+[debug] [2024-08-25T00:15:50.046Z] Skipping clean onExit() and cleanShutdown()
+[warn] ⚠  emulators: Received SIGINT (Ctrl-C) 2 times. You have forced the Emulator Suite to exit without waiting for 0 subprocess to finish. These processes may still be running on your machine:  
+[info] 
+┌──────────┬───────────┬─────┐
+│ Emulator │ Host:Port │ PID │
+└──────────┴───────────┴─────┘
+
+To force them to exit run:
+
+[info] kill 
+
+[debug] [2024-08-25T00:15:50.784Z] Received signal SIGINT (Ctrl-C) 3
+[info]  
+[debug] [2024-08-25T00:15:50.784Z] Skipping clean onExit() and cleanShutdown()
+[warn] ⚠  emulators: Received SIGINT (Ctrl-C) 3 times. You have forced the Emulator Suite to exit without waiting for 0 subprocess to finish. These processes may still be running on your machine:  
+[info] 
+┌──────────┬───────────┬─────┐
+│ Emulator │ Host:Port │ PID │
+└──────────┴───────────┴─────┘
+
+To force them to exit run:
+
+[info] kill 
+
+[debug] [2024-08-25T00:15:51.390Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:268:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-08-25T00:16:01.617Z] ----------------------------------------------------------------------
+[debug] [2024-08-25T00:16:01.621Z] Command:       /usr/bin/node-20 /usr/local/bin/firebase emulators:start
+[debug] [2024-08-25T00:16:01.622Z] CLI Version:   13.15.4
+[debug] [2024-08-25T00:16:01.622Z] Platform:      linux
+[debug] [2024-08-25T00:16:01.622Z] Node Version:  v20.12.2
+[debug] [2024-08-25T00:16:01.623Z] Time:          Sun Aug 25 2024 07:16:01 GMT+0700 (Western Indonesia Time)
+[debug] [2024-08-25T00:16:01.623Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-08-25T00:16:01.746Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-08-25T00:16:01.746Z] > authorizing via signed-in user (imgerraour@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2024-08-25T00:16:01.757Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-25T00:16:01.758Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-08-25T00:16:01.758Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-08-25T00:16:01.767Z] [hub] writing locator at /tmp/hub-burgeon-adaire.json
+[debug] [2024-08-25T00:16:01.794Z] > refreshing access token with scopes: []
+[debug] [2024-08-25T00:16:01.798Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-25T00:16:01.798Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-25T00:17:02.326Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":212,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------658553690880634064953920","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: getaddrinfo EAI_AGAIN www.googleapis.com
+[debug] [2024-08-25T00:17:02.327Z] Failed to list hosting sites
+[debug] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2024-08-25T00:17:02.328Z] > refreshing access token with scopes: []
+[debug] [2024-08-25T00:17:02.328Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-08-25T00:17:02.329Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-08-25T00:17:38.074Z] Received signal SIGINT (Ctrl-C) 1
+[info]  
+[info] i  emulators: Received SIGINT (Ctrl-C) for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGINT (Ctrl-C) signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[info] i  hosting: Stopping Hosting Emulator {"metadata":{"emulator":{"name":"hosting"},"message":"Stopping Hosting Emulator"}}
+[info] i  hub: Stopping emulator hub {"metadata":{"emulator":{"name":"hub"},"message":"Stopping emulator hub"}}
+[debug] [2024-08-25T00:17:38.784Z] Received signal SIGINT (Ctrl-C) 2
+[info]  
+[debug] [2024-08-25T00:17:38.784Z] Skipping clean onExit() and cleanShutdown()
+[warn] ⚠  emulators: Received SIGINT (Ctrl-C) 2 times. You have forced the Emulator Suite to exit without waiting for 0 subprocess to finish. These processes may still be running on your machine:  
+[info] 
+┌──────────┬───────────┬─────┐
+│ Emulator │ Host:Port │ PID │
+└──────────┴───────────┴─────┘
+
+To force them to exit run:
+
+[info] kill 
+
+[debug] [2024-08-25T00:17:39.376Z] Received signal SIGINT (Ctrl-C) 3
+[info]  
+[debug] [2024-08-25T00:17:39.377Z] Skipping clean onExit() and cleanShutdown()
+[warn] ⚠  emulators: Received SIGINT (Ctrl-C) 3 times. You have forced the Emulator Suite to exit without waiting for 0 subprocess to finish. These processes may still be running on your machine:  
+[info] 
+┌──────────┬───────────┬─────┐
+│ Emulator │ Host:Port │ PID │
+└──────────┴───────────┴─────┘
+
+To force them to exit run:
+
+[info] kill 
+
+[debug] [2024-08-25T00:17:39.690Z] Received signal SIGINT (Ctrl-C) 4
+[info]  
+[debug] [2024-08-25T00:17:39.690Z] Skipping clean onExit() and cleanShutdown()
+[warn] ⚠  emulators: Received SIGINT (Ctrl-C) 4 times. You have forced the Emulator Suite to exit without waiting for 0 subprocess to finish. These processes may still be running on your machine:  
+[info] 
+┌──────────┬───────────┬─────┐
+│ Emulator │ Host:Port │ PID │
+└──────────┴───────────┴─────┘
+
+To force them to exit run:
+
+[info] kill 
+
+[debug] [2024-08-25T00:17:39.868Z] Received signal SIGINT (Ctrl-C) 5
+[info]  
+[debug] [2024-08-25T00:17:39.869Z] Skipping clean onExit() and cleanShutdown()
+[warn] ⚠  emulators: Received SIGINT (Ctrl-C) 5 times. You have forced the Emulator Suite to exit without waiting for 0 subprocess to finish. These processes may still be running on your machine:  
+[info] 
+┌──────────┬───────────┬─────┐
+│ Emulator │ Host:Port │ PID │
+└──────────┴───────────┴─────┘
+
+To force them to exit run:
+
+[info] kill 
+
+[debug] [2024-08-25T00:17:40.989Z] Received signal SIGINT (Ctrl-C) 6
+[info]  
+[debug] [2024-08-25T00:17:40.989Z] Skipping clean onExit() and cleanShutdown()
+[warn] ⚠  emulators: Received SIGINT (Ctrl-C) 6 times. You have forced the Emulator Suite to exit without waiting for 0 subprocess to finish. These processes may still be running on your machine:  
+[info] 
+┌──────────┬───────────┬─────┐
+│ Emulator │ Host:Port │ PID │
+└──────────┴───────────┴─────┘
+
+To force them to exit run:
+
+[info] kill 
+
+[debug] [2024-08-25T00:17:48.789Z] Received signal SIGHUP 1
+[info]  
+[info] i  emulators: Received SIGHUP for the first time. Starting a clean shutdown. 
+[info] i  emulators: Please wait for a clean shutdown or send the SIGHUP signal again to stop right now. 
+[info] i  emulators: Shutting down emulators. {"metadata":{"emulator":{"name":"hub"},"message":"Shutting down emulators."}}
+[debug] [2024-08-25T00:17:53.791Z] Error: Timed out.
+    at Timeout._onTimeout (/usr/local/lib/node_modules/firebase-tools/lib/utils.js:268:49)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
+[error] 
+[error] Error: An unexpected error has occurred.
