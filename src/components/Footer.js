@@ -10,6 +10,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   TheOrg,
+  PitchBook,
 } from './vectors';
 import { ReactSVG } from 'react-svg';
 
@@ -52,6 +53,11 @@ export default class Footer extends Component {
                 <div className='mx-2 d-flex justify-content-center align-items-center'>
                   <a className='d-block' href='https://twitter.com/burgeonadaire' target='_blank' rel='noopener'>
                     <FontAwesomeIcon icon={faXTwitter} className='link-light' size='lg' />
+                  </a>
+                </div>
+                <div className='mx-2 d-flex justify-content-center align-items-center'>
+                  <a className='d-block' href='https://pitchbook.com' target='_blank' rel='noopener'>
+                  <ReactSVG title='PitchBook' desc='PitchBook Profile' src={PitchBook} />
                   </a>
                 </div>
               </div>
