@@ -4,6 +4,7 @@ const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
   mode: 'production',
@@ -93,6 +94,11 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "style/[name].css",
+    }),
+    new CompressionPlugin({
+      test: /\.(js|css)$/,
+      algorithm: "gzip",
+      compressionOptions: { level: 9 },
     }),
   ]
 };
