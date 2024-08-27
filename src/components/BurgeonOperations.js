@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TickerTape } from "react-ts-tradingview-widgets";
+import { Ticker } from "react-ts-tradingview-widgets";
 
 export default class BurgeonOperations extends Component {
 	render() {
@@ -11,7 +11,44 @@ export default class BurgeonOperations extends Component {
 							<h2 className='text-white'>Operation</h2>
 							<p className='lead text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 						</div>
-						<TickerTape colorTheme="dark"></TickerTape>
+						<Ticker symbols={[
+							{
+								"proName": "PEPPERSTONE:XAUUSD",
+								"title": "GOLD"
+							},
+							{
+								"proName": "PEPPERSTONE:USDJPY",
+								"title": "USD/JPY"
+							},
+							{
+								"proName": "PEPPERSTONE:GBPUSD",
+								"title": "GBP/USD"
+							},
+							{
+								"proName": "PEPPERSTONE:EURUSD",
+								"title": "EUR/USD"
+							},
+							{
+								"proName": "PEPPERSTONE:NAS100",
+								"title": "NASDAQ-100"
+							},
+							{
+								"proName": "PEPPERSTONE:US500",
+								"title": "S&P 500"
+							},
+							{
+								"proName": "PEPPERSTONE:SPOTCRUDE",
+								"title": "CRUDE OIL"
+							},
+							{
+								"proName": "PEPPERSTONE:BTCUSD",
+								"title": "BITCOIN"
+							},
+							{
+								"proName": "PEPPERSTONE:SOLUSD",
+								"title": "SOLANA"
+							},
+						]} colorTheme="dark"></Ticker>
 					</div>
 				</div>
 			</div>
