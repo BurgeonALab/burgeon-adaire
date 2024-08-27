@@ -41,6 +41,12 @@
   .c-abstract-box {
     text-align: center;
   }
+  .operation-text-center {
+    text-align: center;
+  }
+  .gratitude-text-center {
+    text-align: center;
+  }
 }
 
 @media (max-width: 576px) {
@@ -64,5 +70,20 @@
 @media (max-width: 400px) {
   .c-abstract-box {
     height: 65vh;
+  }
+}
+
+@media (max-width: 370px) {
+  .bai-navbar {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 280px) {
+  .about-box {
+    height: 30vh;
+  }
+  .c-abstract-box {
+    height: 70vh;
   }
 }
