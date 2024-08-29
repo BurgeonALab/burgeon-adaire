@@ -55,6 +55,38 @@ function HomeHead() {
       <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff" />
+
+      {/* JSON-LD */}
+      <script type='application/ld+json'>
+        {
+          `
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Burgeon Adaire International",
+              "legalName": "PT. Burgeon Adaire International",
+              "url": "https://burgeonadaire.com",
+              "foundingDate": "2018",
+              "founders": [
+                {
+                  "@type": "Person",
+                  "name": "Gerald Zandisko"
+                },
+                {
+                  "@type": "Person",
+                  "name": "Nadine Huang"
+                }
+              ],
+              "sponsor":
+                {
+                  "@type": "Organization",
+                  "name": "Pepperstone"
+                  "url": "https://pepperstone.com"
+                },
+            }
+          `
+        }
+      </script>
     </Helmet>
   );
 }
