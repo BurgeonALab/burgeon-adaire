@@ -110,6 +110,38 @@ body {
   animation: halfOpacity 0.2s;
 }
 
+.operations-container {
+  height: 100vh;
+}
+
+.operation-hide-box {
+  padding-right: 12px;
+  padding-left: 0px;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+}
+
+.padding-24 {
+  padding: 24px;
+}
+
+.operation-hide-overlay {
+  background-color: #1C1C24;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-top-right-radius: var(--bs-border-radius)!important;
+  border-bottom-right-radius: var(--bs-border-radius)!important;
+  pointer-events: auto;
+}
+
+.button-operation-right {
+  display: none;
+}
+
+/* Animation */
+
 @keyframes fullOpacity {
   0% { opacity: 0.5; }
   100% { opacity: 1; }

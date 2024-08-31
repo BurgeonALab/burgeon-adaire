@@ -22,7 +22,9 @@ export default class Footer extends Component {
           <div className="container-fluid py-3">
             <div className="row">
               <div className="burgeon-partner-major col-lg-6 d-flex justify-content-start align-items-center">
-                <img className='partner-pepperstone' alt="Pepperstone Official Partner" src={BurgeonAdairePepperstone} height={80}></img>
+                <a href='https://trk.pepperstonepartners.com/aff_c?offer_id=367&aff_id=34824' target='_blank' rel='noopener'>
+                  <img className='partner-pepperstone' alt="Pepperstone Official Partner" src={BurgeonAdairePepperstone} height={80}></img>
+                </a>
               </div>
               <div className="burgeon-partner-major col-lg-6 d-flex justify-content-end align-items-center">
                 <img className='partner-aws' src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={56} alt="Powered by AWS Cloud Computing"></img>
@@ -41,7 +43,7 @@ export default class Footer extends Component {
                   </a>
                 </div>
                 <div className='mx-2 d-flex justify-content-center align-items-center'>
-                  <a className='d-block' href='https://bit.ly/3SWvfNS' target='_blank' rel='noopener'>
+                  <a className='d-block' href='https://theorg.com/org/pt-burgeon-adaire-international' target='_blank' rel='noopener'>
                     <ReactSVG title='The Org' desc='PT. Burgeon Adaire International Organizational' src={TheOrg} />
                   </a>
                 </div>
@@ -57,7 +59,7 @@ export default class Footer extends Component {
                 </div>
                 <div className='mx-2 d-flex justify-content-center align-items-center'>
                   <a className='d-block' href='https://pitchbook.com' target='_blank' rel='noopener'>
-                  <ReactSVG title='PitchBook' desc='PitchBook Profile' src={PitchBook} />
+                    <ReactSVG title='PitchBook' desc='PitchBook Profile' src={PitchBook} />
                   </a>
                 </div>
               </div>

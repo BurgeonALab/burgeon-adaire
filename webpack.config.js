@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 const path = require('path');
+const webpack = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -8,19 +9,22 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 module.exports = {
   mode: 'production',
   performance: {
-		hints: false,
-	},
+    hints: false,
+    maxAssetSize: 500 * 1024,
+  },
   entry: {
     index: './src/index.js',
   },
   output: {
     filename: 'scripts/[name].burgeonadaire.js',
+    chunkFilename: 'scripts/[name].burgeonadairechunk.js',
     path: path.resolve(__dirname, 'dist/'),
     clean: true,
   },
   optimization: {
     splitChunks: {
       chunks: 'all',
+      minSize: 0,
     },
     minimize: true,
     minimizer: [
@@ -72,6 +76,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
+    }),
     new CopyPlugin(
       [
         { from: "./public/assets/favicons", to: "assets/favicons" },

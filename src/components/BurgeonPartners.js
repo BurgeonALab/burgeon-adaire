@@ -4,6 +4,7 @@ import {
   ValburyAsiaFutures,
   GeraldZandisko,
   AdaireSolutions,
+  LionsClub,
 } from './images';
 
 export default class BurgeonOutro extends Component {
@@ -21,13 +22,16 @@ export default class BurgeonOutro extends Component {
             <h3 className='text-white fw-light text-center mb-0'>Associates</h3>
             <Marquee>
               <a href="https://valbury.co.id/sales/trading-valbury?fc=VMD1059F" target='_blank' rel='noopener'>
-                <img src={ValburyAsiaFutures} height={56} alt="Valbury Asia Futures Wealth Management" className="partners-opacity valbury m-5"></img>
+                <img src={ValburyAsiaFutures} height={56} alt="Valbury Asia Futures Wealth Management" className="partners-opacity valbury my-5 mx-5"></img>
               </a>
               <a href="https://geraldzandisko.burgeonadaire.com" target='_blank' rel='noopener'>
-                <img src={GeraldZandisko} height={56} alt="Gerald Zandisko's Homepage" className="partners-opacity m-5"></img>
+                <img src={GeraldZandisko} height={56} alt="Gerald Zandisko's Homepage" className="partners-opacity my-5 mx-5"></img>
               </a>
               <a href="#" target='_blank' rel='noopener'>
-                <img src={AdaireSolutions} height={56} alt="Adaire Solutions" className="partners-opacity m-5"></img>
+                <img src={AdaireSolutions} height={56} alt="Adaire Solutions" className="partners-opacity my-5 mx-5"></img>
+              </a>
+              <a href="https://lionsclubs.org" target='_blank' rel='noopener'>
+                <img src={LionsClub} height={56} alt="Gerald Zandisko's Homepage" className="partners-opacity my-5 mx-5"></img>
               </a>
             </Marquee>
           </div>

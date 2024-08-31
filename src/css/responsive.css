@@ -47,6 +47,22 @@
   .gratitude-text-center {
     text-align: center;
   }
+  .overlay-content-mobile {
+    height: 100%;
+    justify-content: space-evenly;
+    flex-direction: column !important;
+  }
+  .operation-hide-box {
+    padding-right: 0px;
+  }
+  .operation-hide-overlay {
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: var(--bs-border-radius)!important;
+    border-bottom-right-radius: var(--bs-border-radius)!important;
+  }
+  .operation-hide-box {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
