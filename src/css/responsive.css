@@ -62,9 +62,6 @@
   .partner-aws {
     height: 48px;
   }
-  .bai-navbar {
-    max-width: 330px;
-  }
   .sky-video-box {
     height: 25vh;
   }
@@ -73,12 +70,6 @@
 @media (max-width: 400px) {
   .c-abstract-box {
     height: 65vh;
-  }
-}
-
-@media (max-width: 370px) {
-  .bai-navbar {
-    max-width: 250px;
   }
 }
 

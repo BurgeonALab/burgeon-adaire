@@ -16,7 +16,7 @@ export default class BurgeonOperations extends Component {
 	}
 	render() {
 		return (
-			<div className='container-fluid py-3' >
+			<div className='container-fluid py-3'>
 				{/* <div className='col-md-12 operation-container py-3'>
 				</div> */}
 				<div className='row operations-container'>

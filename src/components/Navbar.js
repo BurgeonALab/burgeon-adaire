@@ -21,7 +21,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <nav className="navbar-position w-100 mt-4">
-        <div className="bai-navbar container p-3 rounded-pill">
+        <div className="bai-navbar p-3 rounded-pill">
           <div className="d-flex flex-row">
             <div className="mx-3 d-flex w-50">
               <a className="navbar-brand" href="https://burgeonadaire.com">
