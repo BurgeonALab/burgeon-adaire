@@ -5,6 +5,13 @@ body {
   background-color: #121217;
 }
 
+.preload {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .bottom-footer-container {
   min-height: 100vh;
   display: flex;

@@ -6,7 +6,7 @@ import {
 export default class BurgeonOutro extends Component {
   render() {
     return (
-      <div>
+      <div className='preload'>
         <img src={BAILogoGenWhite} height={192} alt="PT. Burgeon Adaire International Logo"></img>
       </div>
     );
