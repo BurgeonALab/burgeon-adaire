@@ -20,10 +20,10 @@ export default class BurgeonOperations extends Component {
 				{/* <div className='col-md-12 operation-container py-3'>
 				</div> */}
 				<div className='row operations-container'>
-					<div className='col-xxl-3 py-3'>
+					<div className='adaire-solutions-container-mobile col-xxl-3 py-3'>
 						<div className='adairesolutions-box rounded'></div>
 					</div>
-					<div className='col-xxl-9 d-flex flex-column py-3'>
+					<div className='other-operations-container-mobile col-xxl-9 d-flex flex-column py-3'>
 						<div>
 							<TickerTape
 								symbols={[
@@ -70,10 +70,13 @@ export default class BurgeonOperations extends Component {
 						</div>
 						<div className='flex-grow-1 operation-child-container'>
 							<div className='row h-100 portfolio-box-mobile'>
-								<div className='col-md-6'>
+								<div className='col-md-4'>
 									<div className='portfolio-box rounded'></div>
 								</div>
-								<div className='col-md-6'>
+								<div className='col-md-4'>
+									<div className='portfolio-box rounded'></div>
+								</div>
+								<div className='col-md-4'>
 									<div className='portfolio-box rounded'></div>
 								</div>
 							</div>

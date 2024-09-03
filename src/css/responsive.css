@@ -47,8 +47,14 @@
   .gratitude-text-center {
     text-align: center;
   }
-  .portfolio-box-mobile .col-md-6:last-child {
+  .portfolio-box-mobile .col-md-4:nth-child(2), .portfolio-box-mobile .col-md-4:last-child {
     margin-top: 24px;
+  }
+  .adaire-solutions-container-mobile {
+    height: 25%;
+  }
+  .other-operations-container-mobile {
+    height: 75%;
   }
 }
 
@@ -64,6 +70,12 @@
   }
   .sky-video-box {
     height: 25vh;
+  }
+  .adaire-solutions-container-mobile {
+    height: 20%;
+  }
+  .other-operations-container-mobile {
+    height: 80%;
   }
 }
 

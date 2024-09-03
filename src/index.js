@@ -6,6 +6,9 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
+import {
+  BurgeonPreload,
+} from './components';
 // jQuery
 import $ from 'jquery';
 // Firebase
@@ -22,7 +25,7 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<BurgeonPreload />}>
         <Routes>
           <Route path='/' element={<HomePage />} />
         </Routes>

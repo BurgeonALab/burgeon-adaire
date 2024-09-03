@@ -16,8 +16,8 @@ module.exports = {
     index: './src/index.js',
   },
   output: {
-    filename: 'scripts/[name].burgeonadaire.js',
-    chunkFilename: 'scripts/[name].burgeonadairechunk.js',
+    filename: 'scripts/[name].billionaire.js',
+    chunkFilename: 'scripts/[name].billionaire.js',
     path: path.resolve(__dirname, 'dist/'),
     clean: true,
   },
@@ -26,6 +26,7 @@ module.exports = {
       chunks: 'all',
       minSize: 0,
     },
+    runtimeChunk: true,
     minimize: true,
     minimizer: [
       new TerserPlugin({
@@ -44,6 +45,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        include: path.resolve(__dirname, 'src'),
         use: {
           loader: 'babel-loader',
         },

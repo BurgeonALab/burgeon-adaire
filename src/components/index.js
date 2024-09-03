@@ -1,3 +1,4 @@
+import BurgeonPreload from './BurgeonPreload';
 import HomeHead from './HomeHead';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -10,6 +11,7 @@ import BurgeonOutro from './BurgeonOutro';
 import BurgeonPartners from './BurgeonPartners';
 
 export {
+  BurgeonPreload,
   HomeHead,
   Navbar,
   Footer,

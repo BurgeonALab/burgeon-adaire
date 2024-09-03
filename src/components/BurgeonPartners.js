@@ -8,6 +8,42 @@ import {
 } from './images';
 
 export default class BurgeonOutro extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      associates: [
+        {
+          id: 0,
+          name: "Valbury Asia Group",
+          desc: "Valbury Asia Group Wealth Management",
+          logo: ValburyAsiaFutures,
+          link: "https://valbury.co.id/sales/trading-valbury?fc=VMD1059F",
+        },
+        {
+          id: 1,
+          name: "Gerald Zandisko",
+          desc: "Gerald Zandisko's Homepage",
+          logo: GeraldZandisko,
+          link: "https://geraldzandisko.burgeonadaire.com",
+        },
+        {
+          id: 2,
+          name: "PT. The Adaire Solutions",
+          desc: "PT. The Adaire Solutions's Homepage",
+          logo: AdaireSolutions,
+          link: "https://adairesolutions.com",
+        },
+        {
+          id: 3,
+          name: "Lions Club International",
+          desc: "Lions Club International's Hompage",
+          logo: LionsClub,
+          link: "https://lionsclubs.org",
+        },
+      ]
+    }
+  }
+
   render() {
     return (
       <div className='container-fluid'>
@@ -21,18 +57,11 @@ export default class BurgeonOutro extends Component {
           <div className='col-md-6 py-3'>
             <h3 className='text-white fw-light text-center mb-0'>Associates</h3>
             <Marquee>
-              <a href="https://valbury.co.id/sales/trading-valbury?fc=VMD1059F" target='_blank' rel='noopener'>
-                <img src={ValburyAsiaFutures} height={56} alt="Valbury Asia Futures Wealth Management" className="partners-opacity valbury my-5 mx-5"></img>
-              </a>
-              <a href="https://geraldzandisko.burgeonadaire.com" target='_blank' rel='noopener'>
-                <img src={GeraldZandisko} height={56} alt="Gerald Zandisko's Homepage" className="partners-opacity my-5 mx-5"></img>
-              </a>
-              <a href="#" target='_blank' rel='noopener'>
-                <img src={AdaireSolutions} height={56} alt="Adaire Solutions" className="partners-opacity my-5 mx-5"></img>
-              </a>
-              <a href="https://lionsclubs.org" target='_blank' rel='noopener'>
-                <img src={LionsClub} height={56} alt="Gerald Zandisko's Homepage" className="partners-opacity my-5 mx-5"></img>
-              </a>
+              {this.state.associates.map((element, i) => (
+                <a key={i} href={element.link} target='_blank' rel='noopener'>
+                  <img src={element.logo} height={56} alt={element.desc} className="partners-opacity valbury my-5 mx-5"></img>
+                </a>
+              ))}
             </Marquee>
           </div>
           <div className='col-md-6 py-3'>

@@ -7,16 +7,24 @@ import React, { Component } from 'react';
 import {
   BAILogo,
 } from './images';
-// import $ from 'jquery';
+import $ from 'jquery';
 
 export default class Navbar extends Component {
-  // jQuery = () => {
-  // Insert jQuery Code Here
-  // }
+  jQuery = () => {
+    $(function () {
+      $(window).on("scroll", function () {
+        if ($(document).scrollTop() > 24) {
+          console.log('24 Reached');
+        } else {
+          console.log('Reseted');
+        }
+      });
+    });
+  }
 
-  // componentDidMount() {
-  //   this.jQuery()
-  // }
+  componentDidMount() {
+    this.jQuery()
+  }
 
   render() {
     return (
