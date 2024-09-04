@@ -14,7 +14,7 @@ import {
 } from './vectors';
 import { ReactSVG } from 'react-svg';
 
-export default class Footer extends Component {
+export default class BurgeonFooter extends Component {
   render() {
     return (
       <div className="footer text-white">

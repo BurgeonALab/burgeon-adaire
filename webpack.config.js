@@ -51,12 +51,13 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|webp|jpe?g|gif)$/i,
+        test: /\.(png|webp|jpe?g|gif|ico)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'images',
+              outputPath: 'assets/images',
+              name: '[name].[ext]',
             },
           },
         ],
@@ -84,21 +85,24 @@ module.exports = {
     }),
     new CopyPlugin(
       [
-        { from: "./public/assets/favicons", to: "assets/favicons" },
-        { from: "./public/robots.txt", to: "robots.txt" },
-        { from: "./public/favicon.ico", to: "favicon.ico" },
-        { from: "./public/sitemap.xml", to: "sitemap.xml" },
-        { from: "./public/ads.txt", to: "ads.txt" },
+        { from: "./public/assets/favicons/safari-pinned-tab.svg", to: "assets/images" },
+        { from: "./public/robots.txt", to: "./" },
+        { from: "./public/sitemap.xml", to: "./" },
+        { from: "./public/browserconfig.xml", to: "./" },
+        { from: "./public/site.webmanifest", to: "./" },
+        { from: "./public/ads.txt", to: "./" },
       ],
     ),
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
+      favicon: "./public/assets/favicons/favicon.ico",
     }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './public/404.html',
       filename: './404.html',
+      favicon: "./public/assets/favicons/favicon.ico",
     }),
     new MiniCssExtractPlugin({
       filename: "style/[name].css",

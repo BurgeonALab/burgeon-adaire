@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class CompanyAbstract extends Component {
+export default class BurgeonAbstract extends Component {
 	render() {
 		return (
 			<div className='container-fluid py-3'>

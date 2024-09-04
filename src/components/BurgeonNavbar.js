@@ -9,7 +9,7 @@ import {
 } from './images';
 import $ from 'jquery';
 
-export default class Navbar extends Component {
+export default class BurgeonNavbar extends Component {
   jQuery = () => {
     $(function () {
       $(window).on("scroll", function () {

@@ -4,7 +4,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 
-export default class GeraldContact extends Component {
+export default class BurgeonContact extends Component {
   render() {
     return (
       <div className='contact-mobile contact-container'>

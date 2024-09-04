@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import {
-  HomeHead,
-  Navbar,
-  Footer,
-  BAIJumbotron,
-  AboutSection,
-  GeraldContact,
-  CompanyAbstract,
+  BurgeonHead,
+  BurgeonNavbar,
+  BurgeonFooter,
+  BurgeonJumbotron,
+  BurgeonAbout,
+  BurgeonContact,
+  BurgeonAbstract,
   BurgeonOperations,
   BurgeonOutro,
   BurgeonPartners,
@@ -18,18 +18,18 @@ export default class HomePage extends Component {
       <div className="bottom-footer-container container-fluid">
         <div className="row">
           <div className="col-md-12">
-            <HomeHead />
-            <GeraldContact />
-            <Navbar />
-            <BAIJumbotron />
-            <AboutSection />
-            <CompanyAbstract />
+            <BurgeonHead />
+            <BurgeonContact />
+            <BurgeonNavbar />
+            <BurgeonJumbotron />
+            <BurgeonAbout />
+            <BurgeonAbstract />
             <BurgeonOperations />
             <BurgeonOutro />
             <BurgeonPartners />
           </div>
         </div>
-        <Footer />
+        <BurgeonFooter />
       </div>
     );
   }

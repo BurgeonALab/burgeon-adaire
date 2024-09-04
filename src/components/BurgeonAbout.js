@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class BAIJumbotron extends Component {
+export default class BurgeonAbout extends Component {
   render() {
     return (
       <div className="container-fluid">
