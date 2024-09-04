@@ -90,9 +90,9 @@ export default class BurgeonHead extends Component {
               "sponsor":
                 {
                   "@type": "Organization",
-                  "name": "Pepperstone"
+                  "name": "Pepperstone",
                   "url": "https://pepperstone.com"
-                },
+                }
             }
           `
           }
