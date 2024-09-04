@@ -14,9 +14,17 @@ export default class BurgeonNavbar extends Component {
     $(function () {
       $(window).on("scroll", function () {
         if ($(document).scrollTop() > 24) {
-          console.log('24 Reached');
+          $('#burgeon-navbar').css('margin-top', '0px');
+          $('#burgeon-navbar').css('position', 'fixed');
+          $('#burgeon-navbar .bai-navbar').css('margin-left', '0px');
+          $('#burgeon-navbar .bai-navbar').css('margin-right', '0px');
+          $('#burgeon-navbar .bai-navbar').css('border-radius', '0px');
         } else {
-          console.log('Reseted');
+          $('#burgeon-navbar').css('margin-top', '1.5rem ');
+          $('#burgeon-navbar .bai-navbar').css('margin-left', '24px');
+          $('#burgeon-navbar .bai-navbar').css('margin-right', '24px');
+          $('#burgeon-navbar').css('position', 'absolute');
+          $('#burgeon-navbar .bai-navbar').css('border-radius', 'var(--bs-border-radius-pill)');
         }
       });
     });
@@ -28,8 +36,8 @@ export default class BurgeonNavbar extends Component {
 
   render() {
     return (
-      <nav className="navbar-position w-100 mt-4">
-        <div className="bai-navbar p-3 rounded-pill">
+      <nav id="burgeon-navbar" className="navbar-position w-100">
+        <div className="bai-navbar p-3">
           <div className="d-flex flex-row">
             <div className="mx-3 d-flex w-50">
               <a className="navbar-brand" href="https://burgeonadaire.com">

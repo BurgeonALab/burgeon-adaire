@@ -8,6 +8,7 @@
   .about-box {
     height: 50vh;
   }
+
   .c-abstract-box {
     height: 50vh;
   }
@@ -17,15 +18,19 @@
   .burgeon-nav-menu {
     display: none !important;
   }
+
   .tiger-ox {
     height: 384px;
   }
+
   .burgeon-partner-major {
     justify-content: center !important;
   }
+
   .burgeon-partner-major img {
     margin-top: 36px;
   }
+
   .burgeon-nav-mobile-button {
     display: block;
   }
@@ -35,26 +40,52 @@
   .burgeon-nav-title {
     display: none !important;
   }
+
   .contact-mobile {
     display: none;
   }
+
   .c-abstract-box {
     text-align: center;
   }
+
   .operation-text-center {
     text-align: center;
   }
+
   .gratitude-text-center {
     text-align: center;
   }
-  .portfolio-box-mobile .col-md-4:nth-child(2), .portfolio-box-mobile .col-md-4:last-child {
+
+  .portfolio-box-mobile .col-md-4:nth-child(2), .portfolio-box-mobile .col-md-4:nth-child(3) {
     margin-top: 24px;
   }
-  .adaire-solutions-container-mobile {
-    height: 25%;
+
+  .valbury-container-mobile {
+    height: 25% !important;
+    flex-direction: row !important;
   }
+
   .other-operations-container-mobile {
-    height: 75%;
+    height: 75% !important;
+  }
+
+  .valbury-box:nth-child(1) {
+    margin-bottom: 0px;
+    margin-right: 12px;
+  }
+
+  .valbury-box:nth-child(2) {
+    margin-top: 0px;
+    margin-left: 12px;
+  }
+
+  .burgeon-mobile-first-operations {
+    display: block !important;
+  }
+
+  .mobile-child-operations {
+    display: none;
   }
 }
 
@@ -62,18 +93,23 @@
   .tiger-ox {
     height: 308px !important;
   }
+
   .partner-pepperstone {
     height: 64px;
   }
+
   .partner-aws {
     height: 48px;
   }
+
   .sky-video-box {
     height: 25vh;
   }
-  .adaire-solutions-container-mobile {
+
+  .valbury-container-mobile {
     height: 20%;
   }
+
   .other-operations-container-mobile {
     height: 80%;
   }
@@ -89,6 +125,7 @@
   .about-box {
     height: 30vh;
   }
+
   .c-abstract-box {
     height: 70vh;
   }

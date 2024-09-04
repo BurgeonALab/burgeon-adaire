@@ -5,6 +5,9 @@
 // } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 import { TickerTape } from "react-ts-tradingview-widgets";
+import {
+	BurgeonMobileFirstOperations
+} from '../components'
 // import $ from 'jquery';
 
 export default class BurgeonOperations extends Component {
@@ -20,8 +23,9 @@ export default class BurgeonOperations extends Component {
 				{/* <div className='col-md-12 operation-container py-3'>
 				</div> */}
 				<div className='row operations-container'>
-					<div className='adaire-solutions-container-mobile col-xxl-3 py-3'>
-						<div className='adairesolutions-box rounded'></div>
+					<div className='valbury-container-mobile col-xxl-3 py-3 d-flex flex-column'>
+						<div className='valbury-box flex-grow-1 rounded'></div>
+						<div className='valbury-box flex-grow-1 rounded'></div>
 					</div>
 					<div className='other-operations-container-mobile col-xxl-9 d-flex flex-column py-3'>
 						<div>
@@ -70,15 +74,16 @@ export default class BurgeonOperations extends Component {
 						</div>
 						<div className='flex-grow-1 operation-child-container'>
 							<div className='row h-100 portfolio-box-mobile'>
-								<div className='col-md-4'>
+								<div className='mobile-child-operations col-md-4'>
 									<div className='portfolio-box rounded'></div>
 								</div>
-								<div className='col-md-4'>
+								<div className='mobile-child-operations col-md-4'>
 									<div className='portfolio-box rounded'></div>
 								</div>
-								<div className='col-md-4'>
+								<div className='mobile-child-operations col-md-4'>
 									<div className='portfolio-box rounded'></div>
 								</div>
+								<BurgeonMobileFirstOperations />
 							</div>
 						</div>
 						<div className='flex-grow-1 operation-child-container'>

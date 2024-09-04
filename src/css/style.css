@@ -44,12 +44,14 @@ body {
   position: absolute;
   left: 0;
   right: 0;
+  margin-top: 1.5rem;
 }
 
 .bai-navbar {
   margin-left: 24px;
   margin-right: 24px;
   background-color: #FFFFFF;
+  border-radius: var(--bs-border-radius-pill);
 }
 
 .burgeon-nav-mobile-button {
@@ -132,9 +134,16 @@ body {
   height: 100vh;
 }
 
-.adairesolutions-box {
+.valbury-box {
   background-color: #D9D9D9;
-  height: 100%;
+}
+
+.valbury-box:nth-child(1) {
+  margin-bottom: 12px;
+}
+
+.valbury-box:nth-child(2) {
+  margin-top: 12px;
 }
 
 .operation-child-container {
@@ -149,6 +158,10 @@ body {
 .ecommerce-box {
   background-color: #D9D9D9;
   height: 100%;
+}
+
+.burgeon-mobile-first-operations {
+  display: none;
 }
 
 /* Animation */
