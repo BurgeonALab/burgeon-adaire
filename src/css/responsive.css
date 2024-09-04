@@ -32,7 +32,7 @@
   }
 
   .burgeon-nav-mobile-button {
-    display: block;
+    display: block !important;
   }
 }
 

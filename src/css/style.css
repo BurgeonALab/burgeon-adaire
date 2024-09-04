@@ -55,7 +55,7 @@ body {
 }
 
 .burgeon-nav-mobile-button {
-  display: none;
+  display: none !important;
 }
 
 .burgeon-nav-menu {

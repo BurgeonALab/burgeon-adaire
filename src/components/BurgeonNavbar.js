@@ -46,8 +46,8 @@ export default class BurgeonNavbar extends Component {
               <span className='burgeon-nav-title ms-3 d-flex align-items-center'><strong>Burgeon Adaire International</strong></span>
             </div>
             <div className='w-50 d-flex flex-row-reverse'>
-              <div className='burgeon-nav-mobile-button'>
-                <button type='button' data-bs-toggle='offcanvas' data-bs-target='#burgeonNavbarMobile' aria-controls='burgeonNavbarMobile' className='btn btn-link d-flex align-items-center justify-content-center text-decoration-none'>
+              <div className='burgeon-nav-mobile-button d-flex align-items-center justify-content-center'>
+                <button type='button' data-bs-toggle='offcanvas' data-bs-target='#burgeonNavbarMobile' aria-controls='burgeonNavbarMobile' className='btn btn-link'>
                   <FontAwesomeIcon icon={faBars} className='link-dark' size='lg' />
                 </button>
                 <div className='offcanvas offcanvas-end' data-bs-scroll='true' tabIndex={-1} id='burgeonNavbarMobile' aria-labelledby='burgeonNavbarMobileLabel'>
