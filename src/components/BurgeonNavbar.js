@@ -37,13 +37,13 @@ export default class BurgeonNavbar extends Component {
   render() {
     return (
       <nav id="burgeon-navbar" className="navbar-position w-100">
-        <div className="bai-navbar p-3">
+        <div className="bai-navbar py-3 padding-twelve-rl">
           <div className="d-flex flex-row">
-            <div className="mx-3 d-flex w-50">
+            <div className="margin-twelve-rl d-flex w-50">
               <a className="navbar-brand" href="https://burgeonadaire.com">
                 <img alt="PT. Burgeon Adaire International Logo" src={Logo} height="40"></img>
               </a>
-              <span className='burgeon-nav-title ms-3 d-flex align-items-center text-light'><strong>Burgeon Adaire International</strong></span>
+              <span className='burgeon-nav-title ms-3 d-flex align-items-center text-light fw-medium'>Burgeon Adaire International</span>
             </div>
             <div className='w-50 d-flex flex-row-reverse'>
               <div className='burgeon-nav-mobile-button d-flex align-items-center justify-content-center'>
@@ -62,7 +62,7 @@ export default class BurgeonNavbar extends Component {
                 </div>
               </div>
               <div className='burgeon-nav-menu'>
-                <ul className="nav d-flex me-3">
+                <ul className="nav d-flex margin-twelve-rl">
                   <li className="nav-item ms-3 d-flex align-items-center">
                     <a className='text-light text-decoration-none'>Identity</a>
                   </li>

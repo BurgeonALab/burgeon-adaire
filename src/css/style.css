@@ -58,6 +58,16 @@ body {
   border-radius: var(--bs-border-radius-pill);
 }
 
+.margin-twelve-rl {
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.padding-twelve-rl {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 .burgeon-nav-mobile-button {
   display: none !important;
 }
