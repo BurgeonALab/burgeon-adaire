@@ -1,0 +1,25 @@
+[debug] [2024-09-05T02:09:45.971Z] ----------------------------------------------------------------------
+[debug] [2024-09-05T02:09:45.975Z] Command:       /usr/bin/node-20 /usr/local/bin/firebase deploy
+[debug] [2024-09-05T02:09:45.975Z] CLI Version:   13.16.0
+[debug] [2024-09-05T02:09:45.976Z] Platform:      linux
+[debug] [2024-09-05T02:09:45.976Z] Node Version:  v20.12.2
+[debug] [2024-09-05T02:09:45.976Z] Time:          Thu Sep 05 2024 09:09:45 GMT+0700 (Western Indonesia Time)
+[debug] [2024-09-05T02:09:45.976Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-09-05T02:09:46.059Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-05T02:09:46.059Z] > authorizing via signed-in user (imgerraour@gmail.com)
+[debug] [2024-09-05T02:09:46.059Z] [iam] checking project burgeon-adaire for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-09-05T02:09:46.062Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions [none]
+[debug] [2024-09-05T02:09:46.062Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions x-goog-quota-user=projects/burgeon-adaire
+[debug] [2024-09-05T02:09:46.063Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-05T02:09:47.200Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions 200
+[debug] [2024-09-05T02:09:47.201Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-05T02:09:47.202Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire [none]
+[debug] [2024-09-05T02:09:47.658Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire 200
+[debug] [2024-09-05T02:09:47.658Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire {"projectId":"burgeon-adaire","projectNumber":"764018528295","displayName":"burgeon-adaire","name":"projects/burgeon-adaire","resources":{"hostingSite":"burgeon-adaire","storageBucket":"burgeon-adaire.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1f80c389-05e9-49ad-886d-4353e415e995"}
+[info] 
+[info] === Deploying to 'burgeon-adaire'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-09-05T02:09:47.665Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions [none]
+[debug] [2024-09-05T02:09:47.666Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}

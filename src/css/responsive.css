@@ -1,16 +1,24 @@
 @media (max-width: 1400px) {
-  .sky-video-box {
-    height: 40vh;
-  }
-}
-
-@media (max-width: 1200px) {
-  .about-box {
-    height: 50vh;
-  }
-
   .c-abstract-box {
-    height: 50vh;
+    height: 70vh;
+  }
+
+  .sky-video-box-mobile {
+    height: 30vh;
+  }
+
+  .valbury-container-mobile {
+    flex-direction: row !important;
+  }
+
+  .valbury-box:nth-child(1) {
+    margin-bottom: 0px;
+    margin-right: 12px;
+  }
+
+  .valbury-box:nth-child(2) {
+    margin-top: 0px;
+    margin-left: 12px;
   }
 }
 
@@ -37,6 +45,10 @@
 }
 
 @media (max-width: 768px) {
+  .about-box {
+    height: 50vh;
+  }
+
   .burgeon-nav-title {
     display: none !important;
   }
@@ -63,21 +75,10 @@
 
   .valbury-container-mobile {
     height: 25% !important;
-    flex-direction: row !important;
   }
 
   .other-operations-container-mobile {
     height: 75% !important;
-  }
-
-  .valbury-box:nth-child(1) {
-    margin-bottom: 0px;
-    margin-right: 12px;
-  }
-
-  .valbury-box:nth-child(2) {
-    margin-top: 0px;
-    margin-left: 12px;
   }
 
   .burgeon-mobile-first-operations {
@@ -104,29 +105,5 @@
 
   .sky-video-box {
     height: 25vh;
-  }
-
-  .valbury-container-mobile {
-    height: 20%;
-  }
-
-  .other-operations-container-mobile {
-    height: 80%;
-  }
-}
-
-@media (max-width: 400px) {
-  .c-abstract-box {
-    height: 65vh;
-  }
-}
-
-@media (max-width: 280px) {
-  .about-box {
-    height: 30vh;
-  }
-
-  .c-abstract-box {
-    height: 70vh;
   }
 }
