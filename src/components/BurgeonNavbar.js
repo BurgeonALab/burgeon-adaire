@@ -43,7 +43,10 @@ export default class BurgeonNavbar extends Component {
               <a className="navbar-brand" href="https://burgeonadaire.com">
                 <img alt="PT. Burgeon Adaire International Logo" src={Logo} height="40"></img>
               </a>
-              <span className='burgeon-nav-title ms-3 d-flex align-items-center text-light fw-medium'>Burgeon Adaire International</span>
+              <span className='burgeon-nav-title ms-3 d-flex align-items-center text-light'>
+                <span className='fw-medium'>Burgeon Adaire&nbsp;</span>
+                <span className='fw-light'>International</span>
+              </span>
             </div>
             <div className='w-50 d-flex flex-row-reverse'>
               <div className='burgeon-nav-mobile-button d-flex align-items-center justify-content-center'>
