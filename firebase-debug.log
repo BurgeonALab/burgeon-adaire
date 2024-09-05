@@ -1,25 +1,78 @@
-[debug] [2024-09-05T02:09:45.971Z] ----------------------------------------------------------------------
-[debug] [2024-09-05T02:09:45.975Z] Command:       /usr/bin/node-20 /usr/local/bin/firebase deploy
-[debug] [2024-09-05T02:09:45.975Z] CLI Version:   13.16.0
-[debug] [2024-09-05T02:09:45.976Z] Platform:      linux
-[debug] [2024-09-05T02:09:45.976Z] Node Version:  v20.12.2
-[debug] [2024-09-05T02:09:45.976Z] Time:          Thu Sep 05 2024 09:09:45 GMT+0700 (Western Indonesia Time)
-[debug] [2024-09-05T02:09:45.976Z] ----------------------------------------------------------------------
+[debug] [2024-09-05T03:22:41.742Z] ----------------------------------------------------------------------
+[debug] [2024-09-05T03:22:41.745Z] Command:       /usr/bin/node-20 /usr/local/bin/firebase deploy
+[debug] [2024-09-05T03:22:41.746Z] CLI Version:   13.16.0
+[debug] [2024-09-05T03:22:41.746Z] Platform:      linux
+[debug] [2024-09-05T03:22:41.746Z] Node Version:  v20.12.2
+[debug] [2024-09-05T03:22:41.747Z] Time:          Thu Sep 05 2024 10:22:41 GMT+0700 (Western Indonesia Time)
+[debug] [2024-09-05T03:22:41.747Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-09-05T02:09:46.059Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-09-05T02:09:46.059Z] > authorizing via signed-in user (imgerraour@gmail.com)
-[debug] [2024-09-05T02:09:46.059Z] [iam] checking project burgeon-adaire for permissions ["firebase.projects.get","firebasehosting.sites.update"]
-[debug] [2024-09-05T02:09:46.062Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions [none]
-[debug] [2024-09-05T02:09:46.062Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions x-goog-quota-user=projects/burgeon-adaire
-[debug] [2024-09-05T02:09:46.063Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-09-05T02:09:47.200Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions 200
-[debug] [2024-09-05T02:09:47.201Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
-[debug] [2024-09-05T02:09:47.202Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire [none]
-[debug] [2024-09-05T02:09:47.658Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire 200
-[debug] [2024-09-05T02:09:47.658Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire {"projectId":"burgeon-adaire","projectNumber":"764018528295","displayName":"burgeon-adaire","name":"projects/burgeon-adaire","resources":{"hostingSite":"burgeon-adaire","storageBucket":"burgeon-adaire.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1f80c389-05e9-49ad-886d-4353e415e995"}
+[debug] [2024-09-05T03:22:41.827Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-09-05T03:22:41.828Z] > authorizing via signed-in user (imgerraour@gmail.com)
+[debug] [2024-09-05T03:22:41.828Z] [iam] checking project burgeon-adaire for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-09-05T03:22:41.830Z] > refreshing access token with scopes: []
+[debug] [2024-09-05T03:22:41.832Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-09-05T03:22:41.832Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-05T03:22:42.336Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-09-05T03:22:42.336Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-09-05T03:22:42.343Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions [none]
+[debug] [2024-09-05T03:22:42.343Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions x-goog-quota-user=projects/burgeon-adaire
+[debug] [2024-09-05T03:22:42.343Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-05T03:22:43.656Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions 200
+[debug] [2024-09-05T03:22:43.657Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/burgeon-adaire:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-09-05T03:22:43.658Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire [none]
+[debug] [2024-09-05T03:22:44.401Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire 200
+[debug] [2024-09-05T03:22:44.402Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/burgeon-adaire {"projectId":"burgeon-adaire","projectNumber":"764018528295","displayName":"burgeon-adaire","name":"projects/burgeon-adaire","resources":{"hostingSite":"burgeon-adaire","storageBucket":"burgeon-adaire.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_1f80c389-05e9-49ad-886d-4353e415e995"}
 [info] 
 [info] === Deploying to 'burgeon-adaire'...
 [info] 
 [info] i  deploying hosting 
-[debug] [2024-09-05T02:09:47.665Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions [none]
-[debug] [2024-09-05T02:09:47.666Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-09-05T03:22:44.412Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions [none]
+[debug] [2024-09-05T03:22:44.413Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-09-05T03:22:45.902Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions 200
+[debug] [2024-09-05T03:22:45.902Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions {"name":"projects/764018528295/sites/burgeon-adaire/versions/eb5992da6b155983","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[burgeon-adaire]: beginning deploy... 
+[info] i  hosting[burgeon-adaire]: found 30 files in dist 
+[debug] [2024-09-05T03:22:45.929Z] [hosting] uploading with 200 concurrency
+[debug] [2024-09-05T03:22:45.988Z] [hosting] hash cache [ZGlzdA] stored for 30 files
+[debug] [2024-09-05T03:22:45.988Z] [hosting][hash queue][FINAL] {"max":44,"min":22,"avg":24.9,"active":0,"complete":30,"success":30,"errored":0,"retried":0,"total":30,"elapsed":53}
+[debug] [2024-09-05T03:22:45.989Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/764018528295/sites/burgeon-adaire/versions/eb5992da6b155983:populateFiles [none]
+[debug] [2024-09-05T03:22:45.989Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/764018528295/sites/burgeon-adaire/versions/eb5992da6b155983:populateFiles {"files":{"/sitemap.xml":"985a4a2b6cf6270935c81c6bf7d6542a55e02859a386213b903d6fc8c3979ce6","/site.webmanifest":"339bbcdeb7868118fe13b309274fe9a4085dfd3a45c247454cef9b1286103288","/robots.txt":"2beaa84f76caf09f22ac5d4db4bcd2447f3ac4df1d690ac75c2d52527a8a3a0d","/index.html":"d181626a35fd675086ec90348d225d795e537e0b376e370e51a8d7b00aca1b55","/browserconfig.xml":"401b01d45785b12d5ba67737841a3dc44625a05cbb6a2122650a2e04a7330aee","/ads.txt":"d8b6f889b29eea864f7457fbbbe03542ff7a2d7cd0390dba11f13b289029affd","/404.html":"3e6b2e71fe1c86ad9cd132fdd4dee936c4b10533869f3277403448901772c7e6","/style/index.css":"2165b46ad5f74874be98bf8be4fa80019777cc00dbd778d1099cabe21767ba8f","/favicon.ico":"fe1d008d4000a121935e3a602cd66948c9402ff315bba881ba80fcee6523300f","/scripts/runtime~index.billionaire.js":"b15170ff19c9d6e7243946531d74023e5c90949a274e58d519ad28f53567a49a","/scripts/312.billionaire.js":"118f49a448e143492dc760fef3625638c1d49017de48708af68eb3cb362f0768","/assets/images/valbury.webp":"9c2b9c751650dc3b12bdd28963291d6d1948b60f18b666db5b2a300cbdde51b5","/assets/images/safari-pinned-tab.svg":"0c847f2ac7f1c659d7dd75bc96253f5d5721ce555ccb58df70338e5a5ebe1ca9","/assets/images/mstile-150x150.png":"401ebb9b7cd24bc2056bef443a4e6070341b66b2ce100b41b33bb4911193d320","/scripts/index.billionaire.js":"9f5343dd11ff078d71baa8ecc9be770428c876891a96ccd345ea5301bad05b9a","/assets/images/logo_white.webp":"387d51d0789ca20481a545dcfa02bae371ffacd5b0fdb86352ab910b5c1afd4f","/assets/images/logo_black.webp":"d045001102abbd362ef7b051a533b2de892e07cdfa14592153e2b9442d5d1014","/assets/images/logo.png":"59fe7e93d0dd23dc2b1e5fe649dc8487b1771844d594a1778ff6f54bffe4a100","/assets/images/lions-club-international.webp":"7239236acf2535ea2e0a479fc131db1564ff896db41c295e6a6634e2e7454b36","/assets/images/gerald-zandisko.webp":"571d954ba10f07f333e76e1157d4be227a48e7eb6766398fcd2989782c461b9c","/assets/images/favicon-32x32.png":"9d849c7874cf6e26cbe252cc0f008fccee81f202da1a632c99be0fd1c7c310fe","/assets/images/favicon-16x16.png":"a115e0b77acf8b14bb568167059822db924ffbdbdc94c27eac1d2dc4bb550b93","/assets/images/bai-pepperstone.webp":"60440fa248cccc3555a22e35c08795194338d8cdfd084fb78bd9b76c4d91e020","/assets/images/android-chrome-192x192.png":"890b525e31e0ed6ec44530c6673856ff7a954ccf9004f641befb03d33c86df0b","/assets/images/apple-touch-icon.png":"4f3cb6dfc15903593517df6ae95e8160700bd56b638e700892f896f2941f233a","/assets/images/android-chrome-512x512.png":"7085f6af26f930fd1dbff65ea416d263ca867ace6621a09842b3ccc9c7f940bb","/assets/images/adaire-solutions.webp":"4655ab220dc504598ca2e1b6974aa4489dac8aea3ed3881d390f5cd90d53b716","/assets/images/a-tiger-and-an-ox.webp":"a722b24f0b334139b84c1e5c796e4c0cebc7a9f2c5277ae11a8ac0bb2c755579","/style/699.css":"ab40590327fbf72e0048466cc2c9ea6d9011cfcbd87d3b516840489f7a95e7c6","/scripts/699.billionaire.js":"82a777e4f6a7bc750dbf9916a4304613f0bf7b6f34dd6809940355292adda884"}}
+[debug] [2024-09-05T03:22:48.565Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/764018528295/sites/burgeon-adaire/versions/eb5992da6b155983:populateFiles 200
+[debug] [2024-09-05T03:22:48.566Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/764018528295/sites/burgeon-adaire/versions/eb5992da6b155983:populateFiles {"uploadRequiredHashes":["2165b46ad5f74874be98bf8be4fa80019777cc00dbd778d1099cabe21767ba8f","9f5343dd11ff078d71baa8ecc9be770428c876891a96ccd345ea5301bad05b9a"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files"}
+[debug] [2024-09-05T03:22:48.567Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files/2165b46ad5f74874be98bf8be4fa80019777cc00dbd778d1099cabe21767ba8f [none]
+[debug] [2024-09-05T03:22:48.567Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files/2165b46ad5f74874be98bf8be4fa80019777cc00dbd778d1099cabe21767ba8f [stream]
+[debug] [2024-09-05T03:22:48.569Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files/9f5343dd11ff078d71baa8ecc9be770428c876891a96ccd345ea5301bad05b9a [none]
+[debug] [2024-09-05T03:22:48.569Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files/9f5343dd11ff078d71baa8ecc9be770428c876891a96ccd345ea5301bad05b9a [stream]
+[debug] [2024-09-05T03:22:48.571Z] [hosting][populate queue][FINAL] {"max":2581,"min":2581,"avg":2581,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":2585}
+[debug] [2024-09-05T03:22:48.571Z] [hosting] uploads queued: 2
+[debug] [2024-09-05T03:22:50.108Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files/2165b46ad5f74874be98bf8be4fa80019777cc00dbd778d1099cabe21767ba8f 200
+[debug] [2024-09-05T03:22:50.108Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files/2165b46ad5f74874be98bf8be4fa80019777cc00dbd778d1099cabe21767ba8f [stream]
+[debug] [2024-09-05T03:22:50.124Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files/9f5343dd11ff078d71baa8ecc9be770428c876891a96ccd345ea5301bad05b9a 200
+[debug] [2024-09-05T03:22:50.124Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/burgeon-adaire/versions/eb5992da6b155983/files/9f5343dd11ff078d71baa8ecc9be770428c876891a96ccd345ea5301bad05b9a [stream]
+[debug] [2024-09-05T03:22:50.124Z] [hosting][upload queue][FINAL] {"max":1557,"min":1542,"avg":1549.5,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":1558}
+[info] ✔  hosting[burgeon-adaire]: file upload complete 
+[debug] [2024-09-05T03:22:50.126Z] [hosting] deploy completed after 4219ms
+[debug] [2024-09-05T03:22:50.126Z] [
+  {
+    "config": {
+      "cleanUrls": true,
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "burgeon-adaire"
+    },
+    "version": "projects/764018528295/sites/burgeon-adaire/versions/eb5992da6b155983"
+  }
+]
+[info] i  hosting[burgeon-adaire]: finalizing version... 
+[debug] [2024-09-05T03:22:50.129Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions/eb5992da6b155983 updateMask=status%2Cconfig
+[debug] [2024-09-05T03:22:50.129Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/burgeon-adaire/versions/eb5992da6b155983 {"status":"FINALIZED","config":{"rewrites":[{"glob":"/","path":"/index.html"}],"cleanUrls":true}}
