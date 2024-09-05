@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import {
-  BAILogoGenWhite
+  Logo
 } from './images';
 
 export default class BurgeonOutro extends Component {
   render() {
     return (
       <div className='preload'>
-        <img src={BAILogoGenWhite} alt="PT. Burgeon Adaire International Logo"></img>
+        <img src={Logo} alt="PT. Burgeon Adaire International Logo"></img>
       </div>
     );
   }

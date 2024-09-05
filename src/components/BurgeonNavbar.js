@@ -5,7 +5,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 import {
-  BAILogo,
+  Logo,
 } from './images';
 import $ from 'jquery';
 
@@ -41,9 +41,9 @@ export default class BurgeonNavbar extends Component {
           <div className="d-flex flex-row">
             <div className="mx-3 d-flex w-50">
               <a className="navbar-brand" href="https://burgeonadaire.com">
-                <img alt="PT. Burgeon Adaire International Logo" src={BAILogo} height="40"></img>
+                <img alt="PT. Burgeon Adaire International Logo" src={Logo} height="40"></img>
               </a>
-              <span className='burgeon-nav-title ms-3 d-flex align-items-center'><strong>Burgeon Adaire International</strong></span>
+              <span className='burgeon-nav-title ms-3 d-flex align-items-center text-light'><strong>Burgeon Adaire International</strong></span>
             </div>
             <div className='w-50 d-flex flex-row-reverse'>
               <div className='burgeon-nav-mobile-button d-flex align-items-center justify-content-center'>
@@ -64,22 +64,28 @@ export default class BurgeonNavbar extends Component {
               <div className='burgeon-nav-menu'>
                 <ul className="nav d-flex me-3">
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a>Identity</a>
+                    <a className='text-light text-decoration-none'>Identity</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a>Operations</a>
+                    <a className='text-light text-decoration-none'>Operations</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a>Gratitude</a>
+                    <a className='text-light text-decoration-none'>Gratitude</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a className='nav-link dropdown-toggle p-0 link-dark' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                    <a className='nav-link dropdown-toggle p-0 link-light' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
                       Legal
                     </a>
                     <ul className='dropdown-menu dropdown-menu-end'>
-                      <li><a className='dropdown-item' href='#'>Privacy Policy</a></li>
-                      <li><a className='dropdown-item' href='#'>Cookie Policy</a></li>
-                      <li><a className='dropdown-item' href='#'>Terms & Conditions</a></li>
+                      <li>
+                        <a className='dropdown-item link-light' href='#'>Privacy Policy</a>
+                      </li>
+                      <li>
+                        <a className='dropdown-item link-light' href='#'>Cookie Policy</a>
+                      </li>
+                      <li>
+                        <a className='dropdown-item link-light' href='#'>Terms & Conditions</a>
+                      </li>
                     </ul>
                   </li>
                 </ul>

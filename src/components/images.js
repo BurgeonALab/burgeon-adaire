@@ -1,6 +1,4 @@
-import BAILogo from '../../public/assets/logo.png';
-import BAILogoGenBlack from '../../public/assets/logo_black.webp';
-import BAILogoGenWhite from '../../public/assets/logo_white.webp';
+import Logo from '../../public/assets/logo.webp';
 import BurgeonAdairePepperstone from '../../public/assets/bai-pepperstone.webp';
 import TigerOx from '../../public/assets/images/a-tiger-and-an-ox.webp';
 import ValburyAsiaFutures from '../../public/assets/partners/valbury.webp';
@@ -9,9 +7,7 @@ import AdaireSolutions from '../../public/assets/partners/adaire-solutions.webp'
 import LionsClub from '../../public/assets/partners/lions-club-international.webp';
 
 export {
-  BAILogo,
-  BAILogoGenBlack,
-  BAILogoGenWhite,
+  Logo,
   BurgeonAdairePepperstone,
   TigerOx,
   ValburyAsiaFutures,
