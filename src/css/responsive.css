@@ -69,7 +69,8 @@
     text-align: center;
   }
 
-  .portfolio-box-mobile .col-md-4:nth-child(2), .portfolio-box-mobile .col-md-4:nth-child(3) {
+  .portfolio-box-mobile .col-md-4:nth-child(2),
+  .portfolio-box-mobile .col-md-4:nth-child(3) {
     margin-top: 24px;
   }
 
@@ -86,6 +87,11 @@
   }
 
   .mobile-child-operations {
+    display: none;
+  }
+
+  .operation-container-overlay-container
+  {
     display: none;
   }
 }

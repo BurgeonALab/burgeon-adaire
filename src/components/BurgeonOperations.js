@@ -1,27 +1,95 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-// 	faChevronLeft,
-// 	faChevronRight,
-// } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faChevronLeft,
+} from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 import { TickerTape } from "react-ts-tradingview-widgets";
 import {
 	BurgeonMobileFirstOperations
-} from '../components'
-// import $ from 'jquery';
+} from '../components';
+import $ from 'jquery';
 
 export default class BurgeonOperations extends Component {
-	// jQuery = () => {
-	// }
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			valburysignal: {},
+			VSLoaded: false,
+		};
+	}
+
+	getValburySignal = () => {
+		fetch('https://86c7czpmn0.execute-api.us-east-1.amazonaws.com/valbury-bulletin')
+			.then(response => response.json())
+			.then((data) => {
+				this.setState({
+					valburysignal: data['document']['xauusd_signals'].pop(),
+					VSLoaded: true,
+				});
+			})
+			.catch(error => {
+				console.log(error);
+			});
+	}
+
+	jQuery = () => {
+		var valorder = this.state.valburysignal.order;
+		var windowWidth = $(window).width();
+		$(function () {
+			if (valorder === 'buy') {
+				$('.valbury-box:first-child').css('background-color', '#1F4B8A');
+			} else {
+				$('.valbury-box:first-child').css('background-color', '#A32525');
+			}
+
+			$('#overlay-hide-toggle').on("click", function () {
+				$('.operation-container-overlay').toggleClass("width-70");
+				$('.overlay-button').toggleClass("rotate-overlay-button");
+				$('.overlay-content').toggleClass("hide-section");
+				$('.operation-container-overlay-container').toggleClass("pointer-events-none");
+				$('.operation-container-overlay').toggleClass("pointer-events-auto");
+			});
+
+			if (windowWidth <= 768) {
+				$('.valbury-box:nth-child(1)').on("click", function () {
+					$('.valbury-box:nth-child(2)').removeClass('width-60-percent');
+					$(this).addClass('width-60-percent');
+				});
+
+				$('.valbury-box:nth-child(2)').on("click", function () {
+					$('.valbury-box:nth-child(1)').removeClass('width-60-percent');
+					$(this).addClass('width-60-percent');
+				});
+			}
+		});
+	}
 
 	componentDidMount() {
-		// this.jQuery()
+		this.getValburySignal();
+		this.jQuery();
 	}
+
 	render() {
 		return (
 			<div className='container-fluid py-3'>
-				{/* <div className='col-md-12 operation-container py-3'>
-				</div> */}
+				<div className='col-md-12 operation-container-overlay-container py-3'>
+					<div className='py-3 h-100 me-5'>
+						<div className='operation-container-overlay'>
+							<div className='d-flex flex-row justify-content-center align-items-center h-100'>
+								<div className='overlay-content margin-twentyfour-rl'>
+									<h2 className='text-light'>Operations</h2>
+									<p className='lead text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+								</div>
+								<div className='margin-twentyfour-rl'>
+									<a id="overlay-hide-toggle" role='button'>
+										<FontAwesomeIcon icon={faChevronLeft} className='overlay-button link-light' size='lg' />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div className='row operations-container'>
 					<div className='valbury-container-mobile col-xxl-3 py-3 d-flex flex-column'>
 						<div className='valbury-box flex-grow-1 rounded'></div>

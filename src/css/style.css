@@ -56,6 +56,12 @@ body {
   margin-right: 24px;
   background-color: #3B3B4C;
   border-radius: var(--bs-border-radius-pill);
+  transition: margin 500ms;
+}
+
+.margin-twentyfour-rl {
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 .margin-twelve-rl {
@@ -175,12 +181,52 @@ body {
   display: none;
 }
 
+.operation-container-overlay-container {
+  height: 100vh;
+  position: absolute;
+  left: 0;
+}
+
+.operation-container-overlay {
+  background-color: #1C1C24;
+  height: 100%;
+  border-top-right-radius: var(--bs-border-radius)!important;
+  border-bottom-right-radius: var(--bs-border-radius)!important;
+  transition: width 500ms;
+  width: 100%;
+}
+
+.width-70 {
+  width: 70px;
+}
+
+.width-60-percent {
+  width: 60%;
+}
+
+.rotate-overlay-button {
+  transform: rotate(180deg);
+}
+
+.hide-section {
+  display: none;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
 /* Navigation Dropdown */
 
 .dropdown-menu {
   background-color: #272731;
   --bs-dropdown-link-hover-bg: #3B3B4C;
   --bs-nav-link-hover-color: #F8F9FA;
+  --bs-dropdown-link-active-bg: #1C1C24;
 }
 
 /* Animation */
@@ -193,4 +239,12 @@ body {
 @keyframes halfOpacity {
   0% { opacity: 1; }
   100% { opacity: 0.5; }
+}
+
+.overlay-button {
+  transition: transform 500ms;
+}
+
+#chevron-nav {
+  transition: transform 500ms;
 }

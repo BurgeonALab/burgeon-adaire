@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faXmark,
   faBars,
+  faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 import {
@@ -26,6 +27,10 @@ export default class BurgeonNavbar extends Component {
           $('#burgeon-navbar').css('position', 'absolute');
           $('#burgeon-navbar .bai-navbar').css('border-radius', 'var(--bs-border-radius-pill)');
         }
+      });
+
+      $('#dropdown-nav').on("click", function () {
+        $('#chevron-nav').toggleClass("rotate-overlay-button");
       });
     });
   }
@@ -76,8 +81,9 @@ export default class BurgeonNavbar extends Component {
                     <a className='text-light text-decoration-none'>Gratitude</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a className='nav-link dropdown-toggle p-0 link-light' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                    <a id="dropdown-nav" className='nav-link p-0 link-light' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
                       Legal
+                      <FontAwesomeIcon id="chevron-nav" icon={faChevronDown} className='ms-2 link-light' size='sm' />
                     </a>
                     <ul className='dropdown-menu dropdown-menu-end'>
                       <li>
