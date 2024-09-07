@@ -12,7 +12,7 @@ html {
   scrollbar-width: none;
 }
 
-html::-webkit-scrollbar { 
+html::-webkit-scrollbar {
   display: none;
 }
 
@@ -102,8 +102,8 @@ body {
   bottom: 0;
   right: 0;
   width: auto;
-  border-top-left-radius: var(--bs-border-radius)!important;
-  border-top-right-radius: var(--bs-border-radius)!important;
+  border-top-left-radius: var(--bs-border-radius) !important;
+  border-top-right-radius: var(--bs-border-radius) !important;
   pointer-events: auto;
 }
 
@@ -190,14 +190,14 @@ body {
 .operation-container-overlay {
   background-color: #1C1C24;
   height: 100%;
-  border-top-right-radius: var(--bs-border-radius)!important;
-  border-bottom-right-radius: var(--bs-border-radius)!important;
+  border-top-right-radius: var(--bs-border-radius) !important;
+  border-bottom-right-radius: var(--bs-border-radius) !important;
   transition: width 500ms;
   width: 100%;
 }
 
 .width-70 {
-  width: 70px;
+  width: 70px !important;
 }
 
 .width-60-percent {
@@ -232,13 +232,23 @@ body {
 /* Animation */
 
 @keyframes fullOpacity {
-  0% { opacity: 0.5; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes halfOpacity {
-  0% { opacity: 1; }
-  100% { opacity: 0.5; }
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
 }
 
 .overlay-button {

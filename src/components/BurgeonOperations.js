@@ -7,6 +7,7 @@ import { TickerTape } from "react-ts-tradingview-widgets";
 import {
 	BurgeonMobileFirstOperations
 } from '../components';
+import moment from 'moment';
 import $ from 'jquery';
 
 export default class BurgeonOperations extends Component {
@@ -15,11 +16,25 @@ export default class BurgeonOperations extends Component {
 
 		this.state = {
 			valburysignal: {},
+			marketday: "",
 			VSLoaded: false,
+			DateLoaded: false,
 		};
 	}
 
-	getValburySignal = () => {
+	ValburyData = () => {
+		fetch('http://worldtimeapi.org/api/timezone/Asia/Jakarta')
+			.then(response => response.json())
+			.then((data) => {
+				this.setState({
+					marketday: data['datetime'],
+					DateLoaded: true,
+				});
+			})
+			.catch(error => {
+				console.log(error);
+			});
+
 		fetch('https://86c7czpmn0.execute-api.us-east-1.amazonaws.com/valbury-bulletin')
 			.then(response => response.json())
 			.then((data) => {
@@ -31,16 +46,20 @@ export default class BurgeonOperations extends Component {
 			.catch(error => {
 				console.log(error);
 			});
-	}
 
-	jQuery = () => {
 		var valorder = this.state.valburysignal.order;
 		var windowWidth = $(window).width();
+		var dateraw = moment(Date(this.state.marketday)).format('dddd').toString();
+
 		$(function () {
-			if (valorder === 'buy') {
-				$('.valbury-box:first-child').css('background-color', '#1F4B8A');
+			if (dateraw === 'Monday' || dateraw === 'Monday' || dateraw === 'Tuesday' || dateraw === 'Wednesday' || dateraw === 'Thrusday' || dateraw === 'Friday') {
+				if (valorder === 'buy') {
+					$('.valbury-box:first-child').css('background-color', '#1F4B8A');
+				} else if (valorder === 'sell') {
+					$('.valbury-box:first-child').css('background-color', '#A32525');
+				}
 			} else {
-				$('.valbury-box:first-child').css('background-color', '#A32525');
+				$('.valbury-box:first-child').css('background-color', '#272731');
 			}
 
 			$('#overlay-hide-toggle').on("click", function () {
@@ -66,8 +85,7 @@ export default class BurgeonOperations extends Component {
 	}
 
 	componentDidMount() {
-		this.getValburySignal();
-		this.jQuery();
+		this.ValburyData();
 	}
 
 	render() {
