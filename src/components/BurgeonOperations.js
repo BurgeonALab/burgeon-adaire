@@ -7,6 +7,7 @@ import { TickerTape } from "react-ts-tradingview-widgets";
 import {
 	BurgeonMobileFirstOperations
 } from '../components';
+import "moment/locale/id";
 import moment from 'moment';
 import $ from 'jquery';
 
@@ -50,10 +51,10 @@ export default class BurgeonOperations extends Component {
 		var valorder = this.state.valburysignal.order;
 		var windowWidth = $(window).width();
 		var dateraw = new Date(Date(this.state.marketday));
-		var dateday = moment(dateraw).format('dddd');
+		var dateday = moment(dateraw).locale('id').format('dddd');
 
 		$(function () {
-			if (dateday === 'Monday' || dateday === 'Monday' || dateday === 'Tuesday' || dateday === 'Wednesday' || dateday === 'Thrusday' || dateday === 'Friday') {
+			if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
 				if (valorder === 'buy') {
 					$('.valbury-box:first-child').css('background-color', '#1F4B8A');
 				} else if (valorder === 'sell') {
