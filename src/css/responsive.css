@@ -22,6 +22,12 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .jumbotron-overlay {
+    width: 80%;
+  }
+}
+
 @media (max-width: 992px) {
   .burgeon-nav-menu {
     display: none !important;
@@ -41,6 +47,10 @@
 
   .burgeon-nav-mobile-button {
     display: block !important;
+  }
+
+  .jumbotron-overlay {
+    display: none !important;
   }
 }
 
@@ -90,8 +100,7 @@
     display: none;
   }
 
-  .operation-container-overlay-container
-  {
+  .operation-container-overlay-container {
     display: none;
   }
 }

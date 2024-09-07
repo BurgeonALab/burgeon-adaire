@@ -52,11 +52,9 @@ body {
 }
 
 .bai-navbar {
-  margin-left: 24px;
-  margin-right: 24px;
   background-color: #3B3B4C;
   border-radius: var(--bs-border-radius-pill);
-  transition: margin 500ms;
+  transition: all 500ms;
 }
 
 .margin-twentyfour-rl {
@@ -100,7 +98,7 @@ body {
   background-color: #3B3B4C;
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
   width: auto;
   border-top-left-radius: var(--bs-border-radius) !important;
   border-top-right-radius: var(--bs-border-radius) !important;
@@ -218,6 +216,41 @@ body {
 
 .pointer-events-auto {
   pointer-events: auto;
+}
+
+.jumbotron-overlay {
+  padding-right: 24px;
+  right: 0;
+  bottom: 0;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+}
+
+.jumbotron-overlay-text-box {
+  padding: 0 0 0 12px;
+}
+
+.jumbotron-item {
+  height: 150px;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: var(--bs-border-radius);
+}
+
+.slick-slide {
+  margin: 0px 24px 0px 0px;
+}
+
+.slick-list {
+  margin: 0px -24px 0px 0px;
+  padding-left: 12px !important;
+  padding-right: 24px !important;
+}
+
+
+.slick-arrow {
+  display: none !important;
 }
 
 /* Navigation Dropdown */

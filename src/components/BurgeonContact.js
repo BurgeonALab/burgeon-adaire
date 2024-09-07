@@ -8,7 +8,7 @@ export default class BurgeonContact extends Component {
   render() {
     return (
       <div className='contact-mobile contact-container'>
-        <div className='contact-box me-5 shadow'>
+        <div className='contact-box ms-5 shadow'>
           <div className='p-3'>
             <div className='d-flex flex-row align-items-center'>
               <a className='link-light text-decoration-none'>

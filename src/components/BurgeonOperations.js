@@ -33,7 +33,7 @@ export default class BurgeonOperations extends Component {
 				});
 			})
 			.catch(error => {
-				console.log(error);
+				console.log('Date: No Data');
 			});
 
 		fetch('https://86c7czpmn0.execute-api.us-east-1.amazonaws.com/valbury-bulletin')
@@ -45,7 +45,7 @@ export default class BurgeonOperations extends Component {
 				});
 			})
 			.catch(error => {
-				console.log(error);
+				console.log('Signal: No Data');
 			});
 
 		var valorder = this.state.valburysignal.order;
@@ -54,14 +54,22 @@ export default class BurgeonOperations extends Component {
 		var dateday = moment(dateraw).locale('id').format('dddd');
 
 		$(function () {
-			if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
-				if (valorder === 'buy') {
-					$('.valbury-box:first-child').css('background-color', '#1F4B8A');
-				} else if (valorder === 'sell') {
-					$('.valbury-box:first-child').css('background-color', '#A32525');
+			if (valorder == undefined) {
+				if (dateday === 'Sabtu' || dateday === 'Minggu') {
+					$('.valbury-box:first-child').css('background-color', '#272731');
+				} else {
+					$('.valbury-box:first-child').css('background-color', '#272731');
 				}
 			} else {
-				$('.valbury-box:first-child').css('background-color', '#272731');
+				if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
+					if (valorder === 'buy') {
+						$('.valbury-box:first-child').css('background-color', '#1F4B8A');
+					} else if (valorder === 'sell') {
+						$('.valbury-box:first-child').css('background-color', '#A32525');
+					}
+				} else {
+					$('.valbury-box:first-child').css('background-color', '#272731');
+				}
 			}
 
 			$('#overlay-hide-toggle').on("click", function () {
