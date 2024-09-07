@@ -23,7 +23,7 @@ export default class BurgeonOperations extends Component {
 	}
 
 	ValburyData = () => {
-		fetch('http://worldtimeapi.org/api/timezone/Asia/Jakarta')
+		fetch('https://worldtimeapi.org/api/timezone/Asia/Jakarta')
 			.then(response => response.json())
 			.then((data) => {
 				this.setState({
@@ -49,10 +49,11 @@ export default class BurgeonOperations extends Component {
 
 		var valorder = this.state.valburysignal.order;
 		var windowWidth = $(window).width();
-		var dateraw = moment(Date(this.state.marketday)).format('dddd').toString();
+		var dateraw = new Date(Date(this.state.marketday));
+		var dateday = moment(dateraw).format('dddd');
 
 		$(function () {
-			if (dateraw === 'Monday' || dateraw === 'Monday' || dateraw === 'Tuesday' || dateraw === 'Wednesday' || dateraw === 'Thrusday' || dateraw === 'Friday') {
+			if (dateday === 'Monday' || dateday === 'Monday' || dateday === 'Tuesday' || dateday === 'Wednesday' || dateday === 'Thrusday' || dateday === 'Friday') {
 				if (valorder === 'buy') {
 					$('.valbury-box:first-child').css('background-color', '#1F4B8A');
 				} else if (valorder === 'sell') {

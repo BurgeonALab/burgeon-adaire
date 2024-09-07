@@ -4,7 +4,7 @@
   "description": "PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode=production",
+    "build": "webpack --mode=development",
     "start-live": "npx webpack serve",
     "firebase-emulator": "firebase emulators:start",
     "deploy": "firebase deploy"
