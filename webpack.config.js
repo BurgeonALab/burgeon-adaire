@@ -31,11 +31,15 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
+          compress: {
+            drop_console: true,
+          },
+          mangle: true,
           format: {
             comments: false,
           },
         },
-        extractComments: false,
+        extractComments: true,
       }),
       new CssMinimizerPlugin(),
     ],

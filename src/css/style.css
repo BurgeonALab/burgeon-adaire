@@ -35,7 +35,6 @@ body {
   min-height: 100vh;
   width: 100%;
   margin-bottom: 16px;
-  position: relative;
 }
 
 .jumbotron-logo {
@@ -264,12 +263,11 @@ body {
 }
 
 #jumbotron-player {
-  opacity: 20% !important;
-  position: absolute !important;
-  width: 100% !important;
-  object-fit: cover !important;
-  height: 100vh !important;
-  top: 0 !important;
+  opacity: 20%;
+  position: absolute;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 .badge-fit-content {
