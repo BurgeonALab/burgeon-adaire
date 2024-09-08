@@ -47,9 +47,42 @@ export default class BurgeonOperations extends Component {
 			.catch(error => {
 				console.log('Signal: No Data');
 			});
+	}
 
-		var valorder = this.state.valburysignal.order;
+	jQuery = () => {
 		var windowWidth = $(window).width();
+
+		$('#overlay-hide-toggle').on("click", function () {
+			$('.operation-container-overlay').toggleClass("width-70");
+			$('.overlay-button').toggleClass("rotate-overlay-button");
+			$('.overlay-content').toggleClass("hide-section");
+			$('.operation-container-overlay-container').toggleClass("pointer-events-none");
+			$('.operation-container-overlay').toggleClass("pointer-events-auto");
+		});
+
+		if (windowWidth <= 768) {
+			$('.valbury-box:nth-child(1)').on("click", function () {
+				$('.valbury-box:nth-child(2)').removeClass('width-60-percent');
+				$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+				$('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+				$(this).addClass('width-60-percent');
+			});
+			$('.valbury-box:nth-child(2)').on("click", function () {
+				$('.valbury-box:nth-child(1)').removeClass('width-60-percent');
+				$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+				$('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+				$(this).addClass('width-60-percent');
+			});
+		}
+	}
+
+	componentDidMount() {
+		this.ValburyData();
+		this.jQuery();
+	}
+
+	render() {
+		var valorder = this.state.valburysignal.order;
 		var dateraw = new Date(Date(this.state.marketday));
 		var dateday = moment(dateraw).locale('id').format('dddd');
 
@@ -57,59 +90,26 @@ export default class BurgeonOperations extends Component {
 			if (valorder == undefined) {
 				if (dateday === 'Sabtu' || dateday === 'Minggu') {
 					$('.valbury-box:first-child').css('background-color', '#272731');
-					var statusmarket = document.getElementById("status-market");
-					statusmarket.innerHTML = 'Close';
+					$("#status-market").html("Close");
 				} else {
 					$('.valbury-box:first-child').css('background-color', '#272731');
-					var statusmarket = document.getElementById("status-market");
-					statusmarket.innerHTML = 'Unavailable';
+					$("#status-market").html("Unavailable");
 				}
 			} else {
 				if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
+					$("#status-market").html("Open");
 					if (valorder === 'buy') {
 						$('.valbury-box:first-child').css('background-color', '#1F4B8A');
 					} else if (valorder === 'sell') {
 						$('.valbury-box:first-child').css('background-color', '#A32525');
 					}
-					var statusmarket = document.getElementById("status-market");
-					statusmarket.innerHTML = 'Open';
 				} else {
 					$('.valbury-box:first-child').css('background-color', '#272731');
-					var statusmarket = document.getElementById("status-market");
-					statusmarket.innerHTML = 'Close';
+					$("#status-market").html("Close");
 				}
 			}
-
-			$('#overlay-hide-toggle').on("click", function () {
-				$('.operation-container-overlay').toggleClass("width-70");
-				$('.overlay-button').toggleClass("rotate-overlay-button");
-				$('.overlay-content').toggleClass("hide-section");
-				$('.operation-container-overlay-container').toggleClass("pointer-events-none");
-				$('.operation-container-overlay').toggleClass("pointer-events-auto");
-			});
-
-			if (windowWidth <= 768) {
-				$('.valbury-box:nth-child(1)').on("click", function () {
-					$('.valbury-box:nth-child(2)').removeClass('width-60-percent');
-					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
-					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
-					$(this).addClass('width-60-percent');
-				});
-				$('.valbury-box:nth-child(2)').on("click", function () {
-					$('.valbury-box:nth-child(1)').removeClass('width-60-percent');
-					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
-					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
-					$(this).addClass('width-60-percent');
-				});
-			}
 		});
-	}
 
-	componentDidMount() {
-		this.ValburyData();
-	}
-
-	render() {
 		return (
 			<div className='container-fluid py-3'>
 				<div className='col-md-12 operation-container-overlay-container py-3'>
