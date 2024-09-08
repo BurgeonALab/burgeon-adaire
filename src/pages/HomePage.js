@@ -17,16 +17,18 @@ export default class HomePage extends Component {
     return (
       <div className="bottom-footer-container container-fluid">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12 p-0">
             <BurgeonHead />
             <BurgeonContact />
             <BurgeonNavbar />
             <BurgeonJumbotron />
-            <BurgeonAbout />
-            <BurgeonAbstract />
-            <BurgeonOperations />
-            <BurgeonOutro />
-            <BurgeonPartners />
+            <div className='padding-twelve-rl'>
+              <BurgeonAbout />
+              <BurgeonAbstract />
+              <BurgeonOperations />
+              <BurgeonOutro />
+              <BurgeonPartners />
+            </div>
           </div>
         </div>
         <BurgeonFooter />

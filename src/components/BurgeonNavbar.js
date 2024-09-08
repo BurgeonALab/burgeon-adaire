@@ -42,7 +42,7 @@ export default class BurgeonNavbar extends Component {
   render() {
     return (
       <nav id="burgeon-navbar" className="navbar-position w-100">
-        <div className="bai-navbar py-3 padding-twelve-rl">
+        <div className="bai-navbar py-3 padding-twelve-rl margin-twentyfour-rl">
           <div className="d-flex flex-row">
             <div className="margin-twelve-rl d-flex w-50">
               <a className="navbar-brand" href="https://burgeonadaire.com">

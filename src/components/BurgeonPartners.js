@@ -50,12 +50,12 @@ export default class BurgeonOutro extends Component {
         <div className='row'>
           <div className='col-md-12 py-3'>
             <div className='gratitude-text-center'>
-              <h2 className='text-white'>Gratitude</h2>
-              <p className='lead text-white mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <h2 className='text-light'>Gratitude</h2>
+              <p className='lead text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
           <div className='col-md-6 py-3'>
-            <h3 className='text-white fw-light text-center mb-0'>Associates</h3>
+            <h3 className='text-light fw-light text-center mb-0'>Associates</h3>
             <Marquee>
               {this.state.associates.map((element, i) => (
                 <a key={i} href={element.link} target='_blank' rel='noopener'>
@@ -65,7 +65,7 @@ export default class BurgeonOutro extends Component {
             </Marquee>
           </div>
           <div className='col-md-6 py-3'>
-            <h3 className='text-white fw-light text-center mb-0'>Partners</h3>
+            <h3 className='text-light fw-light text-center mb-0'>Partners</h3>
           </div>
         </div>
       </div>

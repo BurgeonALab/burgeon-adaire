@@ -20,11 +20,21 @@
     margin-top: 0px;
     margin-left: 12px;
   }
-}
 
-@media (max-width: 1200px) {
-  .jumbotron-overlay {
-    width: 80%;
+  .portfolio-everything-mobile {
+    padding-left: 70px !important;
+  }
+
+  .ecommerce-box {
+    padding-left: 70px !important;
+  }
+
+  .valbury-box:nth-child(2) {
+    padding-left: 24px !important;
+  }
+
+  .abstract-player {
+    object-position: 0px -350px;
   }
 }
 
@@ -51,6 +61,22 @@
 
   .jumbotron-overlay {
     display: none !important;
+  }
+
+  .about-rightbox-focus {
+    width: 100%;
+  }
+
+  .about-rightbox-focus p,
+  .about-rightbox-focus h3 {
+    text-align: center;
+  }
+
+  .about-rightbox-focus-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 }
 
@@ -103,6 +129,18 @@
   .operation-container-overlay-container {
     display: none;
   }
+
+  .valbury-box {
+    padding-left: 24px !important;
+  }
+
+  .portfolio-everything-mobile {
+    padding-left: 24px !important;
+  }
+
+  .ecommerce-box {
+    padding-left: 24px !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -120,5 +158,25 @@
 
   .sky-video-box {
     height: 25vh;
+  }
+
+  .about-leftbox-description-mobile {
+    display: none;
+  }
+
+  .about-leftbox-header-mobile {
+    margin-bottom: 0px;
+  }
+
+  .about-rightbox-focus p {
+    display: none;
+  }
+
+  .about-rightbox-focus h3 {
+    margin-bottom: 0px;
+  }
+
+  .operation-header-mobile {
+    font-size: 1rem;
   }
 }

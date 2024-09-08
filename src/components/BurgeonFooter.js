@@ -17,7 +17,7 @@ import { ReactSVG } from 'react-svg';
 export default class BurgeonFooter extends Component {
   render() {
     return (
-      <div className="footer text-white">
+      <div className="footer text-light">
         <div>
           <div className="container-fluid py-3">
             <div className="row">

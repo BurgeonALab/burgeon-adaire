@@ -34,9 +34,12 @@ body {
 .bai-jumbotron {
   min-height: 100vh;
   width: 100%;
+  margin-bottom: 16px;
+  position: relative;
 }
 
 .jumbotron-logo {
+  transition: transform 500ms;
   opacity: 30%;
 }
 
@@ -148,7 +151,12 @@ body {
 }
 
 .valbury-box {
+  padding-left: 70px !important;
   background-color: #D9D9D9;
+}
+
+.valbury-box-container-mobile-hide {
+  display: none !important;
 }
 
 .valbury-box:nth-child(1) {
@@ -219,7 +227,6 @@ body {
 }
 
 .jumbotron-overlay {
-  padding-right: 24px;
   right: 0;
   bottom: 0;
   height: 50%;
@@ -228,7 +235,7 @@ body {
 }
 
 .jumbotron-overlay-text-box {
-  padding: 0 0 0 12px;
+  padding: 0 24px 0 12px;
 }
 
 .jumbotron-item {
@@ -239,18 +246,34 @@ body {
 }
 
 .slick-slide {
-  margin: 0px 24px 0px 0px;
+  margin: 0px 30px 0px 0px;
 }
 
 .slick-list {
-  margin: 0px -24px 0px 0px;
   padding-left: 12px !important;
-  padding-right: 24px !important;
+  padding-right: 12px !important;
 }
-
 
 .slick-arrow {
   display: none !important;
+}
+
+.about-rightbox-focus {
+  width: fit-content;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#jumbotron-player {
+  opacity: 20% !important;
+  position: absolute !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  height: 100vh !important;
+  top: 0 !important;
+}
+
+.badge-fit-content {
+  width: fit-content;
 }
 
 /* Navigation Dropdown */

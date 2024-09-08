@@ -57,8 +57,12 @@ export default class BurgeonOperations extends Component {
 			if (valorder == undefined) {
 				if (dateday === 'Sabtu' || dateday === 'Minggu') {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					var statusmarket = document.getElementById("status-market");
+					statusmarket.innerHTML = 'Close';
 				} else {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					var statusmarket = document.getElementById("status-market");
+					statusmarket.innerHTML = 'Unavailable';
 				}
 			} else {
 				if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
@@ -67,8 +71,12 @@ export default class BurgeonOperations extends Component {
 					} else if (valorder === 'sell') {
 						$('.valbury-box:first-child').css('background-color', '#A32525');
 					}
+					var statusmarket = document.getElementById("status-market");
+					statusmarket.innerHTML = 'Open';
 				} else {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					var statusmarket = document.getElementById("status-market");
+					statusmarket.innerHTML = 'Close';
 				}
 			}
 
@@ -83,11 +91,14 @@ export default class BurgeonOperations extends Component {
 			if (windowWidth <= 768) {
 				$('.valbury-box:nth-child(1)').on("click", function () {
 					$('.valbury-box:nth-child(2)').removeClass('width-60-percent');
+					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
 					$(this).addClass('width-60-percent');
 				});
-
 				$('.valbury-box:nth-child(2)').on("click", function () {
 					$('.valbury-box:nth-child(1)').removeClass('width-60-percent');
+					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
 					$(this).addClass('width-60-percent');
 				});
 			}
@@ -120,8 +131,25 @@ export default class BurgeonOperations extends Component {
 				</div>
 				<div className='row operations-container'>
 					<div className='valbury-container-mobile col-xxl-3 py-3 d-flex flex-column'>
-						<div className='valbury-box flex-grow-1 rounded'></div>
-						<div className='valbury-box flex-grow-1 rounded'></div>
+						<div className='valbury-box flex-grow-1 rounded p-4'>
+							<div className='valbury-box-container-mobile h-100 d-flex flex-column justify-content-between'>
+								<h5 className='text-light operation-header-mobile'>Valbury Signal</h5>
+								<div className='d-flex flex-row justify-content-end'>
+									<div className='d-flex flex-column align-items-end'>
+										<span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
+										<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className='valbury-box flex-grow-1 rounded p-4'>
+							<div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
+								<h5 className='text-light operation-header-mobile'>Economic News</h5>
+								<div className='d-flex flex-column align-items-end'>
+									<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div className='other-operations-container-mobile col-xxl-9 d-flex flex-column py-3'>
 						<div>
@@ -171,19 +199,47 @@ export default class BurgeonOperations extends Component {
 						<div className='flex-grow-1 operation-child-container'>
 							<div className='row h-100 portfolio-box-mobile'>
 								<div className='mobile-child-operations col-md-4'>
-									<div className='portfolio-box rounded'></div>
+									<div className='portfolio-everything-mobile portfolio-box rounded p-4'>
+										<div className='d-flex h-100 flex-column justify-content-between'>
+											<h5 className='text-light'>Portfolio</h5>
+											<div className='d-flex flex-column align-items-end'>
+												<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div className='mobile-child-operations col-md-4'>
-									<div className='portfolio-box rounded'></div>
+									<div className='portfolio-box rounded p-4'>
+										<div className='d-flex h-100 flex-column justify-content-between'>
+											<h5 className='text-light'>Blog</h5>
+											<div className='d-flex flex-column align-items-end'>
+												<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div className='mobile-child-operations col-md-4'>
-									<div className='portfolio-box rounded'></div>
+									<div className='portfolio-box rounded p-4'>
+										<div className='d-flex h-100 flex-column justify-content-between'>
+											<h5 className='text-light'>The Adaire Solutions</h5>
+											<div className='d-flex flex-column align-items-end'>
+												<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+											</div>
+										</div>
+									</div>
 								</div>
 								<BurgeonMobileFirstOperations />
 							</div>
 						</div>
 						<div className='flex-grow-1 operation-child-container'>
-							<div className='ecommerce-box rounded'></div>
+							<div className='ecommerce-box rounded p-4'>
+								<div className='d-flex h-100 flex-column justify-content-between'>
+									<h5 className='text-light'>eCommerce</h5>
+									<div className='d-flex flex-column align-items-end'>
+										<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
