@@ -205,8 +205,12 @@ body {
   width: 70px !important;
 }
 
-.width-60-percent {
-  width: 60%;
+.width-80-percent {
+  width: 80% !important;
+}
+
+.width-20-percent {
+  width: 20% !important;
 }
 
 .rotate-overlay-button {

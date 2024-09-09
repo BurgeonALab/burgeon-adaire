@@ -62,16 +62,20 @@ export default class BurgeonOperations extends Component {
 
 		if (windowWidth <= 768) {
 			$('.valbury-box:nth-child(1)').on("click", function () {
-				$('.valbury-box:nth-child(2)').removeClass('width-60-percent');
+				$(this).removeClass('width-20-percent');
+				$(this).addClass('width-80-percent');
+				$('.valbury-box:nth-child(2)').removeClass('width-80-percent');
+				$('.valbury-box:nth-child(2)').addClass('width-20-percent');
 				$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
 				$('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
-				$(this).addClass('width-60-percent');
 			});
 			$('.valbury-box:nth-child(2)').on("click", function () {
-				$('.valbury-box:nth-child(1)').removeClass('width-60-percent');
+				$(this).removeClass('width-20-percent');
+				$(this).addClass('width-80-percent');
+				$('.valbury-box:nth-child(1)').removeClass('width-80-percent');
+				$('.valbury-box:nth-child(1)').addClass('width-20-percent');
 				$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
 				$('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
-				$(this).addClass('width-60-percent');
 			});
 		}
 	}
@@ -131,7 +135,7 @@ export default class BurgeonOperations extends Component {
 				</div>
 				<div className='row operations-container'>
 					<div className='valbury-container-mobile col-xxl-3 py-3 d-flex flex-column'>
-						<div className='valbury-box flex-grow-1 rounded p-4'>
+						<div className='valbury-box h-50 rounded p-4'>
 							<div className='valbury-box-container-mobile h-100 d-flex flex-column justify-content-between'>
 								<h5 className='text-light operation-header-mobile'>Valbury Signal</h5>
 								<div className='d-flex flex-row justify-content-end'>
@@ -142,7 +146,7 @@ export default class BurgeonOperations extends Component {
 								</div>
 							</div>
 						</div>
-						<div className='valbury-box flex-grow-1 rounded p-4'>
+						<div className='valbury-box h-50 rounded p-4'>
 							<div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
 								<h5 className='text-light operation-header-mobile'>Economic News</h5>
 								<div className='d-flex flex-column align-items-end'>

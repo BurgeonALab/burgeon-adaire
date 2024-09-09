@@ -36,7 +36,9 @@ export default class BurgeonJumbotron extends Component {
   render() {
     return (
       <div className="bai-jumbotron d-flex align-items-center justify-content-center mb-4">
-        <video id="jumbotron-player" poster={SmokeGreyThumbnail} src={SmokeGrey} autoPlay loop muted></video>
+        <video id="jumbotron-player" poster={SmokeGreyThumbnail} autoPlay loop muted>
+          <source src={SmokeGrey} type='video/mp4'></source>
+        </video>
         <div className='jumbotron-overlay d-flex flex-column justify-content-center'>
           <div className='jumbotron-overlay-text-box mb-4'>
             <h3 className='text-light text-end'>Core Values</h3>

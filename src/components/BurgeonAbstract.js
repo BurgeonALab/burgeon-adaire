@@ -18,7 +18,9 @@ export default class BurgeonAbstract extends Component {
 					</div>
 					<div className='sky-video-box-mobile offset-xxl-1 col-xxl-3'>
 						<div className='sky-video-content position-relative rounded'>
-							<video id="abstract-player" className='w-100 h-100 object-fit-cover rounded' poster={SkyVideoThumbnail} src={SkyVideo} autoPlay loop muted></video>
+							<video id="abstract-player" className='w-100 h-100 object-fit-cover rounded' poster={SkyVideoThumbnail} autoPlay loop muted>
+								<source src={SkyVideo} type='video/mp4'></source>
+							</video>
 						</div>
 					</div>
 				</div>
