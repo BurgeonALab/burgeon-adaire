@@ -97,6 +97,7 @@ export default class BurgeonOperations extends Component {
 			if (valorder == undefined) {
 				if (dateday === 'Sabtu' || dateday === 'Minggu') {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
 					$("#status-market").removeClass("text-bg-light");
 					$("#status-market").removeClass("text-bg-warning");
@@ -105,6 +106,7 @@ export default class BurgeonOperations extends Component {
 					$("#status-market").addClass("text-bg-dark");
 				} else {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
 					$("#status-market").removeClass("text-bg-light");
 					$("#status-market").removeClass("text-bg-warning");
@@ -114,6 +116,7 @@ export default class BurgeonOperations extends Component {
 				}
 			} else {
 				if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
+					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
 					$("#status-market").removeClass("text-bg-light");
 					$("#status-market").removeClass("text-bg-warning");
@@ -122,18 +125,22 @@ export default class BurgeonOperations extends Component {
 					$("#status-market").addClass("text-bg-success");
 					if (valorder === 'buy') {
 						if (valorderDate != datedayDate) {
+							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Expired");
 							$("#status-signal").addClass("text-bg-warning");
 						} else {
+							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Active");
 							$("#status-signal").addClass("text-bg-primary");
 						}
 						$('.valbury-box:first-child').css('background-color', '#1F4B8A');
 					} else if (valorder === 'sell') {
 						if (valorderDate != datedayDate) {
+							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Expired");
 							$("#status-signal").addClass("text-bg-warning");
 						} else {
+							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Active");
 							$("#status-signal").addClass("text-bg-primary");
 						}
@@ -141,6 +148,7 @@ export default class BurgeonOperations extends Component {
 					}
 				} else {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
 					$("#status-market").removeClass("text-bg-light");
 					$("#status-market").removeClass("text-bg-warning");
