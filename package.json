@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --env NODE_ENV=production",
-    "start-live": "npx webpack --config webpack.config.js serve --env NODE_ENV=development",
+    "start-live": "npx webpack serve --config webpack.config.js --env NODE_ENV=development",
     "firebase-emulator": "firebase emulators:start",
     "deploy": "firebase deploy"
   },

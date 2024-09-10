@@ -9,7 +9,7 @@ const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin'
 
 module.exports = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production';
-  
+
   return {
     mode: isDevelopment ? 'development' : 'production',
     devServer: {

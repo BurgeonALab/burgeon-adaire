@@ -267,7 +267,7 @@ body {
 }
 
 #jumbotron-player {
-  opacity: 20%;
+  opacity: 30%;
   position: absolute;
   width: 100%;
   object-fit: cover;

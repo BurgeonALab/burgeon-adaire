@@ -79,6 +79,14 @@
     align-items: center;
     height: 100%;
   }
+
+  .outro-text-mobile {
+    font-size: 1.25rem !important;
+  }
+
+  .outro-credit-mobile {
+    align-items: start !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -141,6 +149,15 @@
 
   .ecommerce-box {
     padding-left: 24px !important;
+  }
+
+  .outro-mobile {
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .outro-text-mobile {
+    text-align: center !important;
   }
 }
 

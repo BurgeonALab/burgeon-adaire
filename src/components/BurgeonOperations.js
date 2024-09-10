@@ -90,26 +90,63 @@ export default class BurgeonOperations extends Component {
 		var dateraw = new Date(Date(this.state.marketday));
 		var dateday = moment(dateraw).locale('id').format('dddd');
 
+		var valorderDate = moment(this.state.valburysignal.date).locale('id').format('ll');
+		var datedayDate = moment(dateraw).locale('id').format('ll');
+
 		$(function () {
 			if (valorder == undefined) {
 				if (dateday === 'Sabtu' || dateday === 'Minggu') {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					$("#status-market").removeClass("text-bg-dark");
+					$("#status-market").removeClass("text-bg-light");
+					$("#status-market").removeClass("text-bg-warning");
+					$("#status-market").removeClass("text-bg-primary");
 					$("#status-market").html("Close");
+					$("#status-market").addClass("text-bg-dark");
 				} else {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					$("#status-market").removeClass("text-bg-dark");
+					$("#status-market").removeClass("text-bg-light");
+					$("#status-market").removeClass("text-bg-warning");
+					$("#status-market").removeClass("text-bg-primary");
 					$("#status-market").html("Unavailable");
+					$("#status-market").addClass("text-bg-light");
 				}
 			} else {
 				if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
+					$("#status-market").removeClass("text-bg-dark");
+					$("#status-market").removeClass("text-bg-light");
+					$("#status-market").removeClass("text-bg-warning");
+					$("#status-market").removeClass("text-bg-primary");
 					$("#status-market").html("Open");
+					$("#status-market").addClass("text-bg-success");
 					if (valorder === 'buy') {
+						if (valorderDate != datedayDate) {
+							$("#status-signal").html("Expired");
+							$("#status-signal").addClass("text-bg-warning");
+						} else {
+							$("#status-signal").html("Active");
+							$("#status-signal").addClass("text-bg-primary");
+						}
 						$('.valbury-box:first-child').css('background-color', '#1F4B8A');
 					} else if (valorder === 'sell') {
+						if (valorderDate != datedayDate) {
+							$("#status-signal").html("Expired");
+							$("#status-signal").addClass("text-bg-warning");
+						} else {
+							$("#status-signal").html("Active");
+							$("#status-signal").addClass("text-bg-primary");
+						}
 						$('.valbury-box:first-child').css('background-color', '#A32525');
 					}
 				} else {
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					$("#status-market").removeClass("text-bg-dark");
+					$("#status-market").removeClass("text-bg-light");
+					$("#status-market").removeClass("text-bg-warning");
+					$("#status-market").removeClass("text-bg-primary");
 					$("#status-market").html("Close");
+					$("#status-market").addClass("text-bg-dark");
 				}
 			}
 		});
@@ -141,6 +178,7 @@ export default class BurgeonOperations extends Component {
 								<div className='d-flex flex-row justify-content-end'>
 									<div className='d-flex flex-column align-items-end'>
 										<span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
+										<span id="status-signal" className="badge text-bg-secondary badge-fit-content mt-2">Status Signal</span>
 										<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
 									</div>
 								</div>
