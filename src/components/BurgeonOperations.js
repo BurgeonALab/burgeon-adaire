@@ -24,11 +24,11 @@ export default class BurgeonOperations extends Component {
 	}
 
 	ValburyData = () => {
-		fetch('https://worldtimeapi.org/api/timezone/Asia/Jakarta')
+		fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia%2FJakarta')
 			.then(response => response.json())
 			.then((data) => {
 				this.setState({
-					marketday: data['datetime'],
+					marketday: data['dateTime'],
 					DateLoaded: true,
 				});
 			})
@@ -89,13 +89,13 @@ export default class BurgeonOperations extends Component {
 		var valorder = this.state.valburysignal.order;
 		var dateraw = new Date(Date(this.state.marketday));
 		var dateday = moment(dateraw).locale('id').format('dddd');
-
 		var valorderDate = moment(this.state.valburysignal.date).locale('id').format('ll');
 		var datedayDate = moment(dateraw).locale('id').format('ll');
 
 		$(function () {
 			if (valorder == undefined) {
 				if (dateday === 'Sabtu' || dateday === 'Minggu') {
+					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
 					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
@@ -104,7 +104,9 @@ export default class BurgeonOperations extends Component {
 					$("#status-market").removeClass("text-bg-primary");
 					$("#status-market").html("Close");
 					$("#status-market").addClass("text-bg-dark");
+					$("#status-signal").hide();
 				} else {
+					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
 					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
@@ -113,6 +115,7 @@ export default class BurgeonOperations extends Component {
 					$("#status-market").removeClass("text-bg-primary");
 					$("#status-market").html("Unavailable");
 					$("#status-market").addClass("text-bg-light");
+					$("#status-signal").html("Waiting");
 				}
 			} else {
 				if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
@@ -125,10 +128,12 @@ export default class BurgeonOperations extends Component {
 					$("#status-market").addClass("text-bg-success");
 					if (valorder === 'buy') {
 						if (valorderDate != datedayDate) {
+							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Expired");
 							$("#status-signal").addClass("text-bg-warning");
 						} else {
+							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Active");
 							$("#status-signal").addClass("text-bg-primary");
@@ -136,10 +141,12 @@ export default class BurgeonOperations extends Component {
 						$('.valbury-box:first-child').css('background-color', '#1F4B8A');
 					} else if (valorder === 'sell') {
 						if (valorderDate != datedayDate) {
+							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Expired");
 							$("#status-signal").addClass("text-bg-warning");
 						} else {
+							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Active");
 							$("#status-signal").addClass("text-bg-primary");
@@ -147,6 +154,7 @@ export default class BurgeonOperations extends Component {
 						$('.valbury-box:first-child').css('background-color', '#A32525');
 					}
 				} else {
+					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
 					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
