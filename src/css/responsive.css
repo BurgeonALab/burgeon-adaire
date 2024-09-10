@@ -110,7 +110,7 @@
     text-align: center;
   }
 
-  .gratitude-text-center {
+  .partner-text-center {
     text-align: center;
   }
 
@@ -120,11 +120,11 @@
   }
 
   .valbury-container-mobile {
-    height: 25% !important;
+    height: 35% !important;
   }
 
   .other-operations-container-mobile {
-    height: 75% !important;
+    height: 65% !important;
   }
 
   .burgeon-mobile-first-operations {
@@ -209,8 +209,32 @@
   .about-rightbox-focus h3 {
     margin-bottom: 0px;
   }
+  
+  .outro-header-mobile p {
+    font-size: 1rem !important;
+  }
 
-  .operation-header-mobile {
+  .outro-text-mobile {
+    font-size: 1rem !important;
+  }
+  
+  .outro-credit-mobile p {
+    font-size: 1rem;
+  }
+
+  .c-abstract-box p {
+    font-size: 1rem;
+  }
+
+  .about-credit-mobile {
+    font-size: 1rem;
+  }
+
+  .partner-text-center p {
+    font-size: 1rem;
+  }
+
+  .valbury-box-container-mobile h5 {
     font-size: 1rem;
   }
 }

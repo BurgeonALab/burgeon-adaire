@@ -182,7 +182,7 @@ export default class BurgeonOperations extends Component {
 					<div className='valbury-container-mobile col-xxl-3 py-3 d-flex flex-column'>
 						<div className='valbury-box h-50 rounded p-4'>
 							<div className='valbury-box-container-mobile h-100 d-flex flex-column justify-content-between'>
-								<h5 className='text-light operation-header-mobile'>Valbury Signal</h5>
+								<h5 className='text-light'>Valbury Signal</h5>
 								<div className='d-flex flex-row justify-content-end'>
 									<div className='d-flex flex-column align-items-end'>
 										<span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
@@ -194,7 +194,7 @@ export default class BurgeonOperations extends Component {
 						</div>
 						<div className='valbury-box h-50 rounded p-4'>
 							<div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
-								<h5 className='text-light operation-header-mobile'>Economic News</h5>
+								<h5 className='text-light'>Economic News</h5>
 								<div className='d-flex flex-column align-items-end'>
 									<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
 								</div>

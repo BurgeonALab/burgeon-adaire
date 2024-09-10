@@ -14,7 +14,7 @@ export default class BurgeonAbout extends Component {
                     <p className='about-leftbox-description-mobile text-light text-center mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                   </div>
                   <div className='justify-content-end position-absolute bottom-0'>
-                    <p className='text-light lead fw-medium mb-0'>Photo credit</p>
+                    <p className='about-credit-mobile text-light lead fw-medium mb-0'>Photo credit</p>
                   </div>
                 </div>
               </div>
@@ -31,7 +31,7 @@ export default class BurgeonAbout extends Component {
                     </div>
                   </div>
                   <div className='justify-content-end position-absolute bottom-0'>
-                    <p className='text-light lead fw-medium mb-0'>Photo credit</p>
+                    <p className='about-credit-mobile text-light lead fw-medium mb-0'>Photo credit</p>
                   </div>
                 </div>
               </div>

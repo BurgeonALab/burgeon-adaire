@@ -49,7 +49,7 @@ export default class BurgeonOutro extends Component {
       <div className='container-fluid'>
         <div className='row'>
           <div className='col-md-12 py-3'>
-            <div className='gratitude-text-center'>
+            <div className='partner-text-center'>
               <h2 className='text-light'>Lorem Ipsum</h2>
               <p className='lead text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
