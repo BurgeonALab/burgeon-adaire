@@ -43,7 +43,7 @@ body {
 }
 
 #burgeon-navbar {
-  z-index: 9998;
+  z-index: 9997;
 }
 
 .navbar-position {
@@ -83,7 +83,7 @@ body {
 }
 
 .offcanvas {
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .contact-container {
@@ -93,7 +93,7 @@ body {
   left: 0;
   right: 0;
   pointer-events: none;
-  z-index: 9997;
+  z-index: 9996;
 }
 
 .contact-box {
@@ -125,6 +125,16 @@ body {
 
 .outro-container {
   min-height: 100vh;
+  padding: 24px;
+  background-image: linear-gradient(to bottom, rgba(18, 18, 23, 1) 10%, rgba(18, 18, 23, 0.5), rgba(18, 18, 23, 1) 75%);
+}
+
+.outro-box {
+  padding-bottom: 12px;
+}
+
+.outro-header-box {
+  padding-top: 12px;
 }
 
 .sky-video-content {
@@ -152,6 +162,7 @@ body {
 .valbury-box {
   padding-left: 70px !important;
   background-color: #D9D9D9;
+  transition: all 500ms;
 }
 
 .valbury-box-container-mobile-hide {
@@ -279,8 +290,17 @@ body {
   width: fit-content;
 }
 
+.outro-images-container {
+  z-index: 9999;
+}
+
 .outro-events {
   pointer-events: auto;
+}
+
+.outro-cover {
+  opacity: 50%;
+  object-fit: cover;
 }
 
 /* Navigation Dropdown */

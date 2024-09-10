@@ -25,12 +25,16 @@ export default class HomePage extends Component {
             <BurgeonAbout />
             <BurgeonAbstract />
             <BurgeonOperations />
+          </div>
+          <div className="col-md-12 px-0">
             <BurgeonOutro />
+          </div>
+          <div className="col-md-12">
             <BurgeonPartners />
           </div>
         </div>
         <BurgeonFooter />
-      </div>
+      </div >
     );
   }
 }

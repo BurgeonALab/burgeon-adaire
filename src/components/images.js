@@ -5,6 +5,7 @@ import ValburyAsiaFutures from '../../public/assets/partners/valbury.webp';
 import GeraldZandisko from '../../public/assets/partners/gerald-zandisko.webp';
 import AdaireSolutions from '../../public/assets/partners/adaire-solutions.webp';
 import LionsClub from '../../public/assets/partners/lions-club-international.webp';
+import OutroCover from '../../public/assets/images/outro-cover.webp';
 
 export {
   Logo,
@@ -14,4 +15,5 @@ export {
   GeraldZandisko,
   AdaireSolutions,
   LionsClub,
+  OutroCover,
 }
