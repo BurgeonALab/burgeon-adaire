@@ -279,6 +279,10 @@ body {
   width: fit-content;
 }
 
+.outro-events {
+  pointer-events: auto;
+}
+
 /* Navigation Dropdown */
 
 .dropdown-menu {

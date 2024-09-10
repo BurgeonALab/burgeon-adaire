@@ -84,8 +84,8 @@
     font-size: 1.25rem !important;
   }
 
-  .outro-credit-mobile {
-    align-items: start !important;
+  .outro-link-mobile {
+    display: grid;
   }
 }
 
@@ -158,6 +158,22 @@
 
   .outro-text-mobile {
     text-align: center !important;
+  }
+
+  .outro-link-mobile {
+    display: inline;
+  }
+
+  .outro-header-mobile h2, .outro-header-mobile p {
+    text-align: center;
+  }
+
+  .tiger-ox {
+    padding-top: 24px;
+  }
+
+  .outro-text-mobile {
+    padding-bottom: 24px;
   }
 }
 
