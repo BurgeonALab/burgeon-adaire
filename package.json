@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --env NODE_ENV=production",
-    "semi-deploy": "webpack --config webpack.config.js --env NODE_ENV=production && aws s3 cp ./dist/scripts s3://burgeonadaire-storage/bundles --recursive && aws s3 cp ./dist/resources/compressed s3://burgeonadaire-storage/compressed --recursive && aws s3 cp ./dist/assets/images s3://burgeonadaire-storage --recursive && aws s3 cp ./dist/assets/videos s3://burgeonadaire-storage/videos --recursive",
+    "semi-deploy": "webpack --config webpack.config.js --env NODE_ENV=production && aws s3 rm --recursive s3://burgeonadaire-storage && aws s3 cp ./dist/bundles s3://burgeonadaire-storage/bundles --recursive && aws s3 cp ./dist/resources/compressed s3://burgeonadaire-storage/compressed --recursive && aws s3 cp ./dist/assets/images s3://burgeonadaire-storage --recursive && aws s3 cp ./dist/assets/videos s3://burgeonadaire-storage/videos --recursive && aws s3 cp ./dist/styles s3://burgeonadaire-storage/styles --recursive",
     "start-live": "npx webpack serve --config webpack.config.js --env NODE_ENV=development",
     "firebase-emulator": "firebase emulators:start",
     "deploy": "firebase deploy"
