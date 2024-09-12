@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
 import Marquee from "react-fast-marquee";
-import {
-  ValburyAsiaFutures,
-  GeraldZandisko,
-  AdaireSolutions,
-  LionsClub,
-} from './images';
 
 export default class BurgeonOutro extends Component {
   constructor(props) {
@@ -16,28 +10,28 @@ export default class BurgeonOutro extends Component {
           id: 0,
           name: "Valbury Asia Group",
           desc: "Valbury Asia Group Wealth Management",
-          logo: ValburyAsiaFutures,
+          logo: "https://images.burgeonadaire.com/valbury.webp",
           link: "https://valbury.co.id/sales/trading-valbury?fc=VMD1059F",
         },
         {
           id: 1,
           name: "Gerald Zandisko",
           desc: "Gerald Zandisko's Homepage",
-          logo: GeraldZandisko,
+          logo: "https://images.burgeonadaire.com/gerald-zandisko.webp",
           link: "https://geraldzandisko.burgeonadaire.com",
         },
         {
           id: 2,
           name: "PT. The Adaire Solutions",
           desc: "PT. The Adaire Solutions's Homepage",
-          logo: AdaireSolutions,
+          logo: "https://images.burgeonadaire.com/adaire-solutions.webp",
           link: "https://adairesolutions.com",
         },
         {
           id: 3,
           name: "Lions Club International",
           desc: "Lions Club International's Hompage",
-          logo: LionsClub,
+          logo: "https://images.burgeonadaire.com/lions-club-international.webp",
           link: "https://lionsclubs.org",
         },
       ]

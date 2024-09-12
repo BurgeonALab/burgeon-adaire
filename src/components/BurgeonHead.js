@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
-import {
-  Icon16,
-  Icon32,
-  AppleTouchIcon,
-  MSTileIcon,
-  SafariTab,
-} from './icons';
 
 export default class BurgeonHead extends Component {
   render() {
@@ -56,12 +49,12 @@ export default class BurgeonHead extends Component {
         <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css' />
 
         {/* Favicon */}
-        <link rel="apple-touch-icon" sizes="180x180" href={AppleTouchIcon} />
-        <link rel="icon" type="image/png" sizes="32x32" href={Icon32} />
-        <link rel="icon" type="image/png" sizes="16x16" href={Icon16} />
+        <link rel="apple-touch-icon" sizes="180x180" href="https://d1q59wxhrwc2fc.cloudfront.net/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://d1q59wxhrwc2fc.cloudfront.net/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://d1q59wxhrwc2fc.cloudfront.net/favicon-16x16.png" />
         <link rel="manifest" href="./site.webmanifest" />
-        <link rel="mask-icon" href={SafariTab} color="#5bbad5" />
-        <meta name="msapplication-TileImage" content={MSTileIcon} />
+        <link rel="mask-icon" href="https://d1q59wxhrwc2fc.cloudfront.net/safari-pinned-tab.svg" color="#5bbad5" />
+        <meta name="msapplication-TileImage" content="https://d1q59wxhrwc2fc.cloudfront.net/mstile-150x150.png" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="msapplication-config" content="./browserconfig.xml" />
         <meta name="theme-color" content="#ffffff" />

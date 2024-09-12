@@ -5,9 +5,6 @@ import {
   faChevronDown,
 } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
-import {
-  Logo,
-} from './images';
 import $ from 'jquery';
 
 export default class BurgeonNavbar extends Component {
@@ -46,7 +43,7 @@ export default class BurgeonNavbar extends Component {
           <div className="d-flex flex-row">
             <div className="margin-twelve-rl d-flex w-50">
               <a className="navbar-brand" href="https://burgeonadaire.com">
-                <img alt="PT. Burgeon Adaire International Logo" src={Logo} height="40"></img>
+                <img alt="PT. Burgeon Adaire International Logo" src="https://images.burgeonadaire.com/logo.webp" height="40"></img>
               </a>
               <span className='burgeon-nav-title ms-3 d-flex align-items-center text-light'>
                 <span className='fw-medium'>Burgeon Adaire&nbsp;</span>

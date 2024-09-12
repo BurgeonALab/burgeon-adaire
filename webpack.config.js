@@ -6,6 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production';
@@ -23,12 +24,13 @@ module.exports = (env) => {
       index: './src/index.js',
     },
     output: {
-      filename: 'scripts/[name].billionaire.js',
-      chunkFilename: 'scripts/[name].billionaire.js',
+      filename: 'scripts/main.[name].billionaire.js',
+      chunkFilename: 'scripts/chunk.[name].billionaire.js',
       path: path.resolve(__dirname, 'dist/'),
       clean: true,
     },
     optimization: {
+      chunkIds: "natural",
       splitChunks: {
         chunks: 'all',
         minSize: 0,
@@ -60,30 +62,6 @@ module.exports = (env) => {
           use: {
             loader: 'babel-loader',
           },
-        },
-        {
-          test: /\.(png|webp|jpe?g|gif|ico)$/i,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                outputPath: 'assets/images',
-                name: '[name].[ext]',
-              },
-            },
-          ],
-        },
-        {
-          test: /\.(mp4)$/i,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                outputPath: 'assets/videos',
-                name: '[name].[ext]',
-              },
-            },
-          ],
         },
         {
           test: /\.svg/,
@@ -125,7 +103,8 @@ module.exports = (env) => {
       }),
       new CopyPlugin(
         [
-          { from: "./public/assets/favicons/safari-pinned-tab.svg", to: "assets/images" },
+          { from: "./public/assets/videos", to: "./assets/videos" },
+          { from: "./public/assets/images", to: "./assets/images" },
           { from: "./public/robots.txt", to: "./" },
           { from: "./public/sitemap.xml", to: "./" },
           { from: "./public/browserconfig.xml", to: "./" },
@@ -136,16 +115,22 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         template: './public/index.html',
         filename: './index.html',
-        favicon: "./public/assets/favicons/favicon.ico",
+        favicon: "./public/favicon.ico",
       }),
       new HtmlWebpackPlugin({
         inject: false,
         template: './public/404.html',
         filename: './404.html',
-        favicon: "./public/assets/favicons/favicon.ico",
+        favicon: "./public/favicon.ico",
       }),
       new MiniCssExtractPlugin({
         filename: "style/[name].css",
+      }),
+      new CompressionPlugin({
+        algorithm: "gzip",
+        compressionOptions: { level: 9 },
+        test: /\.(js|css)$/,
+        filename: "./resources/compressed/[name].gzip",
       }),
     ].filter(Boolean),
   }

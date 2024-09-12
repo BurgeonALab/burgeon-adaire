@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import {
-  BurgeonAdairePepperstone
-} from './images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
@@ -23,7 +20,7 @@ export default class BurgeonFooter extends Component {
             <div className="row">
               <div className="burgeon-partner-major col-lg-6 d-flex justify-content-start align-items-center">
                 <a href='https://trk.pepperstonepartners.com/aff_c?offer_id=367&aff_id=34824' target='_blank' rel='noopener'>
-                  <img className='partner-pepperstone' alt="Pepperstone Official Partner" src={BurgeonAdairePepperstone} height={80}></img>
+                  <img className='partner-pepperstone' alt="Pepperstone Official Partner" src="https://images.burgeonadaire.com/bai-pepperstone.webp" height={80}></img>
                 </a>
               </div>
               <div className="burgeon-partner-major col-lg-6 d-flex justify-content-end align-items-center">

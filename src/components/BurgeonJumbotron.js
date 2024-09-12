@@ -1,13 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Logo
-} from './images';
 import Slider from "react-slick";
 import $ from 'jquery';
-import {
-  SmokeGrey,
-  SmokeGreyThumbnail,
-} from './videos';
 
 const settings = {
   infinite: false,
@@ -36,8 +29,8 @@ export default class BurgeonJumbotron extends Component {
   render() {
     return (
       <div className="bai-jumbotron d-flex align-items-center justify-content-center mb-4">
-        <video id="jumbotron-player" poster={SmokeGreyThumbnail} autoPlay loop muted>
-          <source src={SmokeGrey} type='video/mp4'></source>
+        <video id="jumbotron-player" poster="https://images.burgeonadaire.com/smokegrey_thumbnail.webp" autoPlay loop muted>
+          <source src="https://videos.burgeonadaire.com/videos/smokegrey.mp4" type='video/mp4'></source>
         </video>
         <div className='jumbotron-overlay d-flex flex-column justify-content-center'>
           <div className='jumbotron-overlay-text-box mb-4'>
@@ -65,7 +58,7 @@ export default class BurgeonJumbotron extends Component {
             </Slider>
           </div>
         </div>
-        <img src={Logo} alt="PT. Burgeon Adaire International Logo" className="jumbotron-logo d-block"></img>
+        <img src="https://images.burgeonadaire.com/logo.webp" alt="PT. Burgeon Adaire International Logo" className="jumbotron-logo d-block"></img>
       </div>
     );
   }
