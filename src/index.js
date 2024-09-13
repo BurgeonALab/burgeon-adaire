@@ -1,3 +1,4 @@
+__webpack_public_path__ = process.env.ASSET_PATH;
 // React
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';

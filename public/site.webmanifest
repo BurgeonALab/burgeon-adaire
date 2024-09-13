@@ -1,14 +1,14 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "PT. Burgeon Adaire International",
+    "short_name": "Burgeon Adaire International",
     "icons": [
         {
-            "src": "https://d1q59wxhrwc2fc.cloudfront.net/android-chrome-192x192.png",
+            "src": "https://images.burgeonadaire.com/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "https://d1q59wxhrwc2fc.cloudfront.net/android-chrome-512x512.png",
+            "src": "https://images.burgeonadaire.com/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }

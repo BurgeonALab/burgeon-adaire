@@ -10,6 +10,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production';
+  const ASSET_PATH = process.env.ASSET_PATH || 'https://resources.burgeonadaire.com/';
 
   return {
     mode: isDevelopment ? 'development' : 'production',
@@ -27,7 +28,7 @@ module.exports = (env) => {
       filename: 'bundles/main.[name].billionaire.js',
       chunkFilename: 'bundles/chunk.[name].billionaire.js',
       path: path.resolve(__dirname, 'dist/'),
-      publicPath: isDevelopment ? '' : '',
+      publicPath: isDevelopment ? '' : ASSET_PATH,
       clean: true,
     },
     optimization: {
@@ -36,7 +37,9 @@ module.exports = (env) => {
         chunks: 'all',
         minSize: 0,
       },
-      runtimeChunk: true,
+      runtimeChunk: {
+        name: 'runtime',
+      },
       minimize: true,
       minimizer: [
         new TerserPlugin({
