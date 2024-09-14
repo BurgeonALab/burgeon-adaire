@@ -37,6 +37,10 @@
     height: 100% !important;
     width: 100%;
   }
+
+  .background-partner-overlay {
+    background-position-x: 70px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -46,14 +50,6 @@
 
   .tiger-ox {
     height: 384px;
-  }
-
-  .burgeon-partner-major {
-    justify-content: center !important;
-  }
-
-  .burgeon-partner-major img {
-    margin-top: 36px;
   }
 
   .burgeon-nav-mobile-button {
@@ -87,6 +83,10 @@
   .outro-link-mobile {
     display: grid;
   }
+
+  .background-partner-overlay {
+    background-position-x: 550px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -107,10 +107,6 @@
   }
 
   .operation-text-center {
-    text-align: center;
-  }
-
-  .partner-text-center {
     text-align: center;
   }
 
@@ -164,7 +160,8 @@
     display: inline;
   }
 
-  .outro-header-mobile h2, .outro-header-mobile p {
+  .outro-header-mobile h2,
+  .outro-header-mobile p {
     text-align: center;
   }
 
@@ -175,19 +172,57 @@
   .outro-text-mobile {
     padding-bottom: 24px;
   }
+
+  .background-partner-overlay {
+    background-position-x: 450px;
+  }
+
+  .vr {
+    display: none;
+  }
+
+  .partner-margin-text-mobile {
+    margin: 0;
+  }
+
+  .pepperstone-header-mobile {
+    text-align: center;
+  }
+
+  .pepperstone-text-mobile {
+    text-align: center;
+  }
+
+  .pepperstone-misc-mobile {
+    flex-direction: column !important;
+  }
+
+  .pepperstone-misc-mobile img {
+    align-self: center;
+    margin-bottom: 16px;
+    height: 60px;
+  }
+
+  .aws-logo-mobile img {
+    height: 41px;
+  }
+
+  .pepperstone-misc-mobile .btn {
+    align-self: center;
+  }
+
+  .aws-logo-mobile {
+    justify-content: center !important;
+  }
+
+  .another-partner-text-mobile p {
+    text-align: center;
+  }
 }
 
 @media (max-width: 576px) {
   .tiger-ox {
     height: 308px !important;
-  }
-
-  .partner-pepperstone {
-    height: 64px;
-  }
-
-  .partner-aws {
-    height: 48px;
   }
 
   .sky-video-box {
@@ -209,7 +244,7 @@
   .about-rightbox-focus h3 {
     margin-bottom: 0px;
   }
-  
+
   .outro-header-mobile p {
     font-size: 1rem !important;
   }
@@ -217,7 +252,7 @@
   .outro-text-mobile {
     font-size: 1rem !important;
   }
-  
+
   .outro-credit-mobile p {
     font-size: 1rem;
   }
@@ -230,11 +265,39 @@
     font-size: 1rem;
   }
 
-  .partner-text-center p {
+  .valbury-box-container-mobile h5 {
     font-size: 1rem;
   }
 
-  .valbury-box-container-mobile h5 {
+  .background-partner-overlay {
+    background-position-x: 250px;
+  }
+
+  .pepperstone-text-mobile {
     font-size: 1rem;
+  }
+
+  .partner-right-container {
+    height: 250px;
+  }
+
+  .background-partner-overlay {
+    background-position-y: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-partner-overlay {
+    background-position-x: 120px;
+  }
+}
+
+@media (max-width: 360px) {
+  .background-partner-overlay {
+    background-position-x: 20px;
+  }
+
+  .pepperstone-misc-mobile img {
+    height: 50px;
   }
 }

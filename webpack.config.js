@@ -10,7 +10,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production';
-  const ASSET_PATH = process.env.ASSET_PATH || 'https://resources.burgeonadaire.com/';
+  const ASSET_PATH = process.env.ASSET_PATH || '/';
 
   return {
     mode: isDevelopment ? 'development' : 'production',
@@ -28,7 +28,7 @@ module.exports = (env) => {
       filename: 'bundles/main.[name].billionaire.js',
       chunkFilename: 'bundles/chunk.[name].billionaire.js',
       path: path.resolve(__dirname, 'dist/'),
-      publicPath: isDevelopment ? '' : ASSET_PATH,
+      publicPath: ASSET_PATH,
       clean: true,
     },
     optimization: {
@@ -99,7 +99,8 @@ module.exports = (env) => {
       isDevelopment && new ReactRefreshWebpackPlugin(),
       new webpack.ProvidePlugin({
         $: 'jquery',
-        jQuery: 'jquery'
+        jQuery: 'jquery',
+        process: 'process/browser',
       }),
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
@@ -135,6 +136,9 @@ module.exports = (env) => {
         compressionOptions: { level: 9 },
         test: /\.(js|css)$/,
         filename: "./resources/compressed/[name].gzip",
+      }),
+      new webpack.DefinePlugin({
+        'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
       }),
     ].filter(Boolean),
   }

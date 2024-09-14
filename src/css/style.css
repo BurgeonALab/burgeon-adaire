@@ -303,6 +303,40 @@ body {
   object-fit: cover;
 }
 
+.vr {
+  width: 5px;
+}
+
+.background-partner-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  opacity: 0.6;
+  background-image: url('https://images.burgeonadaire.com/pepperstone-logo-bai.webp');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: 220px;
+  background-position-x: 200px;
+  pointer-events: none;
+}
+
+.partner-right-container {
+  height: 500px;
+}
+
+.partner-right-box {
+  background-color: #272731;
+}
+
+.btn-pepperstone {
+  --bs-btn-bg: #8B0000;
+  --bs-btn-border-color: #8B0000;
+  --bs-btn-hover-bg: #610000;
+  --bs-btn-hover-border-color: #610000;
+}
+
 /* Navigation Dropdown */
 
 .dropdown-menu {

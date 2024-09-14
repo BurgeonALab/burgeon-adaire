@@ -89,7 +89,7 @@ export default class BurgeonOperations extends Component {
 		var valorder = this.state.valburysignal.order;
 		var dateraw = new Date(Date(this.state.marketday));
 		var dateday = moment(dateraw).locale('id').format('dddd');
-		var valorderDate = moment(this.state.valburysignal.date).locale('id').format('ll');
+		var valorderDate = moment(new Date(Date(this.state.valburysignal.date))).locale('id').format('ll');
 		var datedayDate = moment(dateraw).locale('id').format('ll');
 
 		$(function () {
@@ -163,6 +163,7 @@ export default class BurgeonOperations extends Component {
 					$("#status-market").removeClass("text-bg-primary");
 					$("#status-market").html("Close");
 					$("#status-market").addClass("text-bg-dark");
+					$("#status-signal").hide();
 				}
 			}
 		});
