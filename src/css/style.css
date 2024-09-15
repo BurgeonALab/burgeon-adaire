@@ -27,8 +27,19 @@ body {
   flex-direction: column;
 }
 
+.footer-hr {
+  color: #8B0000;
+  margin: 0;
+  border: 4px solid;
+}
+
 .footer {
   margin-top: auto;
+}
+
+.footer-image-container {
+  height: 100%;
+  background-color: #272731;
 }
 
 .bai-jumbotron {
@@ -54,7 +65,7 @@ body {
 }
 
 .bai-navbar {
-  background-color: #3B3B4C;
+  background-color: #272731;
   border-radius: var(--bs-border-radius-pill);
   transition: all 500ms;
 }
@@ -97,7 +108,7 @@ body {
 }
 
 .contact-box {
-  background-color: #3B3B4C;
+  background-color: #1c1c24;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -255,7 +266,7 @@ body {
 .jumbotron-item {
   height: 150px;
   padding: 24px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(59, 59, 76, 0.3);
   border-radius: var(--bs-border-radius);
 }
 
@@ -274,7 +285,7 @@ body {
 
 .about-rightbox-focus {
   width: fit-content;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(59, 59, 76, 0.3);
 }
 
 #jumbotron-player {
@@ -335,6 +346,8 @@ body {
   --bs-btn-border-color: #8B0000;
   --bs-btn-hover-bg: #610000;
   --bs-btn-hover-border-color: #610000;
+  --bs-btn-active-bg: #380000;
+  --bs-btn-active-border-color: #380000;
 }
 
 /* Navigation Dropdown */

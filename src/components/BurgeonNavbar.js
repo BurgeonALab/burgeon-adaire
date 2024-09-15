@@ -15,12 +15,14 @@ export default class BurgeonNavbar extends Component {
           $('#burgeon-navbar').css('margin-top', '0px');
           $('#burgeon-navbar').css('position', 'fixed');
           $('#burgeon-navbar .bai-navbar').css('margin-left', '0px');
+          $('#burgeon-navbar .bai-navbar').css('box-shadow', 'var(--bs-box-shadow)');
           $('#burgeon-navbar .bai-navbar').css('margin-right', '0px');
           $('#burgeon-navbar .bai-navbar').css('border-radius', '0px');
         } else {
           $('#burgeon-navbar').css('margin-top', '1.5rem ');
           $('#burgeon-navbar .bai-navbar').css('margin-left', '24px');
           $('#burgeon-navbar .bai-navbar').css('margin-right', '24px');
+          $('#burgeon-navbar .bai-navbar').css('box-shadow', '');
           $('#burgeon-navbar').css('position', 'absolute');
           $('#burgeon-navbar .bai-navbar').css('border-radius', 'var(--bs-border-radius-pill)');
         }

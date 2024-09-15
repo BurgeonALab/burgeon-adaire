@@ -30,7 +30,7 @@ export default class BurgeonOutro extends Component {
         {
           id: 3,
           name: "Lions Club International",
-          desc: "Lions Club International's Hompage",
+          desc: "Lions Club International's Homepage",
           logo: "https://images.burgeonadaire.com/lions-club-international.webp",
           link: "https://lionsclubs.org",
         },

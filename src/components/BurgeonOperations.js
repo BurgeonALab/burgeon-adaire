@@ -36,7 +36,7 @@ export default class BurgeonOperations extends Component {
 				console.log('Date: No Data');
 			});
 
-		fetch('https://86c7czpmn0.execute-api.us-east-1.amazonaws.com/valbury-bulletin')
+		fetch('https://api.burgeonadaire.com/valbury-bulletin')
 			.then(response => response.json())
 			.then((data) => {
 				this.setState({
@@ -89,7 +89,7 @@ export default class BurgeonOperations extends Component {
 		var valorder = this.state.valburysignal.order;
 		var dateraw = new Date(Date(this.state.marketday));
 		var dateday = moment(dateraw).locale('id').format('dddd');
-		var valorderDate = moment(new Date(Date(this.state.valburysignal.date))).locale('id').format('ll');
+		var valorderDate = moment(new Date((this.state.valburysignal.date))).locale('id').format('ll');
 		var datedayDate = moment(dateraw).locale('id').format('ll');
 
 		$(function () {

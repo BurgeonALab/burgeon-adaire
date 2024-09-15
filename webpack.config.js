@@ -128,8 +128,8 @@ module.exports = (env) => {
         favicon: "./public/favicon.ico",
       }),
       new MiniCssExtractPlugin({
-        filename: "compiled/main.[name].[contenthash].css",
-        chunkFilename: "compiled/chunk.[name].[chunkhash].css",
+        filename: isDevelopment ? "compiled/[name].css" : "compiled/main.[name].[contenthash].css",
+        chunkFilename: isDevelopment ? "compiled/[name].css" : "compiled/chunk.[name].[chunkhash].css",
       }),
       new CompressionPlugin({
         algorithm: "gzip",

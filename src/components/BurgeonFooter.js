@@ -12,38 +12,114 @@ import {
 import { ReactSVG } from 'react-svg';
 
 export default class BurgeonFooter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      socialsymbol: [
+        {
+          id: 0,
+          type: 'symbol',
+          name: "Instagram",
+          desc: "PT. Burgeon Adaire International's Instagram Profile Page",
+          link: "https://www.instagram.com/burgeonadaire",
+          icon: faInstagram,
+        },
+        {
+          id: 1,
+          type: 'symbol',
+          name: "LinkedIn",
+          desc: "PT. Burgeon Adaire International's LinkedIn Profile Page",
+          link: "https://linkedin.com/company/burgeonadaire",
+          icon: faLinkedin,
+        },
+        {
+          id: 2,
+          type: 'symbol',
+          name: "Twitter",
+          desc: "PT. Burgeon Adaire International's Twitter X Profile Page",
+          link: "https://twitter.com/burgeonadaire",
+          icon: faXTwitter,
+        },
+      ],
+      socialsvg: [
+        {
+          id: 0,
+          type: 'svg',
+          name: "The Org",
+          desc: "PT. Burgeon Adaire International's The Org Profile Page",
+          link: "https://theorg.com/org/pt-burgeon-adaire-international",
+          icon: TheOrg,
+          height: 'auto',
+          width: '28px',
+        },
+        {
+          id: 1,
+          type: 'svg',
+          name: "PitchBook",
+          desc: "PT. Burgeon Adaire International's PitchBook Profile Page",
+          link: "https://theorg.com/org/pt-burgeon-adaire-international",
+          icon: PitchBook,
+          height: '28px',
+          width: 'auto',
+        },
+      ]
+    }
+  }
+
   render() {
     return (
       <div className="footer text-light">
-        <div className='container-fluid py-3'>
+        <div className='container-fluid'>
           <div className='row'>
             <div className='col-md-12'>
-              <p className="text-center">© 2024 <strong>PT. Burgeon Adaire International</strong>. All rights reserved</p>
-              <div className='mb-3 d-flex flex-row justify-content-center'>
-                <div className='mx-2 d-flex justify-content-center align-items-center'>
-                  <a className='d-block' href='https://www.instagram.com/burgeonadaire' target='_blank' rel='noopener'>
-                    <FontAwesomeIcon icon={faInstagram} className='link-light' size='lg' />
-                  </a>
+              <div className='row'>
+                <div className='col-md-7 p-0'>
+                  <div className='footer-image-container'></div>
                 </div>
-                <div className='mx-2 d-flex justify-content-center align-items-center'>
-                  <a className='d-block' href='https://theorg.com/org/pt-burgeon-adaire-international' target='_blank' rel='noopener'>
-                    <ReactSVG title='The Org' desc='PT. Burgeon Adaire International Organizational' src={TheOrg} />
-                  </a>
-                </div>
-                <div className='mx-2 d-flex justify-content-center align-items-center'>
-                  <a className='d-block' href='https://linkedin.com/company/burgeonadaire' target='_blank' rel='noopener'>
-                    <FontAwesomeIcon icon={faLinkedin} className='link-light' size='lg' />
-                  </a>
-                </div>
-                <div className='mx-2 d-flex justify-content-center align-items-center'>
-                  <a className='d-block' href='https://twitter.com/burgeonadaire' target='_blank' rel='noopener'>
-                    <FontAwesomeIcon icon={faXTwitter} className='link-light' size='lg' />
-                  </a>
-                </div>
-                <div className='mx-2 d-flex justify-content-center align-items-center'>
-                  <a className='d-block' href='https://pitchbook.com' target='_blank' rel='noopener'>
-                    <ReactSVG title='PitchBook' desc='PitchBook Profile' src={PitchBook} />
-                  </a>
+                <div className='col-md-5 p-4'>
+                  <div className='row'>
+                    <div className='col-md-6 d-flex flex-column justify-content-end'>
+                      <div className='mt-3'>
+                        <p className='lead fw-medium mb-0'>Links</p>
+                        <p className='mb-0 mt-3 fw-light'>Identity</p>
+                        <p className='mb-0 mt-3 fw-light'>Operations</p>
+                        <p className='mb-0 mt-3 fw-light'>Gratitude</p>
+                        <p className='mb-0 mt-3 fw-light'>Privacy Policy</p>
+                        <p className='mb-0 mt-3 fw-light'>Cookie Policy</p>
+                        <p className='mb-0 mt-3 fw-light'>Terms & Conditions</p>
+                      </div>
+                    </div>
+                    <div className='social-media-footer-mobile col-md-6 d-flex flex-column justify-content-end'>
+                      <div className='mb-0 d-flex flex-column align-items-end'>
+                        {
+                          this.state.socialsvg.map((element, i) => (
+                            <div key={i} className='mt-3 d-flex justify-content-center align-items-center'>
+                              <a className='d-block' href={element.link} target='_blank' rel='noopener'>
+                                <ReactSVG
+                                  beforeInjection={(svg) => {
+                                    svg.setAttribute('style', 'height: ' + element.height + '; width: ' + element.width + ';');
+                                  }}
+                                  title={element.name}
+                                  desc={element.desc}
+                                  src={element.icon}
+                                />
+                              </a>
+                            </div>
+                          ))
+                        }
+                        {
+                          this.state.socialsymbol.map((element, i) => (
+                            <div key={i} className='mt-3 d-flex justify-content-center align-items-center'>
+                              <a className='d-block' href={element.link} target='_blank' rel='noopener'>
+                                <FontAwesomeIcon icon={element.icon} className='link-light' size='2xl' />
+                              </a>
+                            </div>
+                          ))
+                        }
+                      </div>
+                    </div>
+                  </div>
+                  <p className='mb-0 mt-5'>© 2024 <strong>PT. Burgeon Adaire International</strong>. All rights reserved</p>
                 </div>
               </div>
             </div>

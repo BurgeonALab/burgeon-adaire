@@ -207,8 +207,14 @@
     height: 60px;
   }
 
+  .system-logo-mobile {
+    flex-direction: column;
+  }
+
   .system-logo-mobile img {
     height: 36px;
+    margin-left: 0px !important;
+    margin-bottom: 16px;
   }
 
   .pepperstone-misc-mobile .btn {
@@ -237,6 +243,18 @@
 
   .associates-box-mobile img {
     height: 36px;
+  }
+
+  .footer p {
+    text-align: center;
+  }
+
+  .social-media-footer-mobile {
+    align-items: center;
+  }
+
+  .footer-image-container {
+    height: 250px;
   }
 }
 
@@ -313,6 +331,10 @@
 @media (max-width: 480px) {
   .background-partner-overlay {
     background-position-x: 120px;
+  }
+
+  .footer-image-container {
+    height: 200px;
   }
 }
 
