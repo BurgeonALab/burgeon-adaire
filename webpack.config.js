@@ -25,8 +25,8 @@ module.exports = (env) => {
       index: './src/index.js',
     },
     output: {
-      filename: 'compiled/main.[name].billionaire.[hash].js',
-      chunkFilename: 'compiled/chunk.[name].billionaire.[hash].js',
+      filename: 'compiled/main.[name].billionaire.[contenthash].js',
+      chunkFilename: 'compiled/chunk.[name].billionaire.[chunkhash].js',
       path: path.resolve(__dirname, 'dist'),
       publicPath: isDevelopment ? '/' : ASSET_PATH,
       clean: true,
@@ -128,13 +128,14 @@ module.exports = (env) => {
         favicon: "./public/favicon.ico",
       }),
       new MiniCssExtractPlugin({
-        filename: "compiled/[name].[hash].css",
+        filename: "compiled/main.[name].[contenthash].css",
+        chunkFilename: "compiled/chunk.[name].[chunkhash].css",
       }),
       new CompressionPlugin({
         algorithm: "gzip",
         compressionOptions: { level: 9 },
         test: /\.(js|css)$/,
-        filename: "../compressed/[name].[hash].gzip",
+        filename: "../compressed/[name].[contenthash].gzip",
       }),
     ].filter(Boolean),
   }
