@@ -1,4 +1,3 @@
-import BurgeonConfig from './config';
 import BurgeonPreload from './BurgeonPreload';
 import BurgeonHead from './BurgeonHead';
 import BurgeonNavbar from './BurgeonNavbar';
@@ -13,7 +12,6 @@ import BurgeonPartners from './BurgeonPartners';
 import BurgeonMobileFirstOperations from './BurgeonMobileFirstOperations';
 
 export {
-  BurgeonConfig,
   BurgeonPreload,
   BurgeonHead,
   BurgeonNavbar,

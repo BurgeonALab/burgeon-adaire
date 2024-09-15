@@ -69,24 +69,39 @@ export default class BurgeonOutro extends Component {
               <div className='background-partner-overlay rounded'></div>
             </div>
           </div>
-          <div className='col-lg-9 d-flex justify-content-end align-items-center py-3 another-partner-text-mobile'>
+          <div className='col-lg-8 d-flex justify-content-end align-items-center py-3 another-partner-text-mobile'>
             <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
-          <div className='col-lg-3 d-flex justify-content-end align-items-center py-3 aws-logo-mobile'>
-            <img src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={56} alt="Powered by AWS Cloud Computing"></img>
+          <div className='col-lg-4 d-flex justify-content-end align-items-center py-3 system-logo-mobile'>
+            <img className='ms-4' src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={46} alt="Powered by AWS Cloud Computing"></img>
+            <img className='ms-4' src="https://images.burgeonadaire.com/firebase.webp" height={46} alt="Built with Firebase"></img>
           </div>
-          <div className='col-md-6 py-3'>
-            <h3 className='text-light fw-light text-center mb-0'>Associates</h3>
-            <Marquee>
-              {this.state.associates.map((element, i) => (
-                <a key={i} href={element.link} target='_blank' rel='noopener'>
-                  <img src={element.logo} height={56} alt={element.desc} className="partners-opacity valbury my-5 mx-5"></img>
-                </a>
-              ))}
-            </Marquee>
+          <div className='associates-box-mobile col-md-7 py-3 d-flex flex-column justify-content-evenly'>
+            <div className='d-flex justify-content-end'>
+              <img src="https://images.burgeonadaire.com/logo.webp" height={46} alt="PT. Burgeon Adaire International Logo"></img>
+            </div>
+            <div className='associates-text-mobile'>
+              <h2 className='text-light'>Our Associates</h2>
+              <p className='text-light lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
           </div>
-          <div className='col-md-6 py-3'>
-            <h3 className='text-light fw-light text-center mb-0'>Partners</h3>
+          <div className='col-md-5 py-3'>
+            <div className='partners-marquee-box d-flex flex-column justify-content-center'>
+              <Marquee
+                direction='right'
+                gradient='true'
+                gradientColor='#121217'
+                gradientWidth={100}
+              >
+                {this.state.associates.map((element, i) => (
+                  <a key={i} href={element.link} target='_blank' rel='noopener'>
+                    <div className='partners-small-box p-4 rounded me-5'>
+                      <img src={element.logo} height={56} alt={element.desc} className="partners-opacity"></img>
+                    </div>
+                  </a>
+                ))}
+              </Marquee>
+            </div>
           </div>
         </div>
       </div>

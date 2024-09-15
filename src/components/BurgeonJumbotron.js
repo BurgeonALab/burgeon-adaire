@@ -40,19 +40,19 @@ export default class BurgeonJumbotron extends Component {
           <div className="slider-container">
             <Slider {...settings}>
               <div className='jumbotron-item' style={{ width: 300 }}>
-                <p className='text-light lead fw-medium mb-2'>Lorem Ipsum</p>
+                <p className='text-light lead fw-medium mb-2'>Development</p>
                 <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
               <div className='jumbotron-item' style={{ width: 300 }}>
-                <p className='text-light lead fw-medium mb-2'>Lorem Ipsum</p>
+                <p className='text-light lead fw-medium mb-2'>Cooperation</p>
                 <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
               <div className='jumbotron-item' style={{ width: 300 }}>
-                <p className='text-light lead fw-medium mb-2'>Lorem Ipsum</p>
+                <p className='text-light lead fw-medium mb-2'>Mastery</p>
                 <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
               <div className='jumbotron-item' style={{ width: 300 }}>
-                <p className='text-light lead fw-medium mb-2'>Lorem Ipsum</p>
+                <p className='text-light lead fw-medium mb-2'>Trustworthiness</p>
                 <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </Slider>

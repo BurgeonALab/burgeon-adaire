@@ -346,6 +346,14 @@ body {
   --bs-dropdown-link-active-bg: #1C1C24;
 }
 
+.partners-marquee-box {
+  height: 400px;
+}
+
+.partners-small-box {
+  background-color: #272731;
+}
+
 /* Animation */
 
 @keyframes fullOpacity {

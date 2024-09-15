@@ -10,7 +10,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production';
-  const ASSET_PATH = process.env.ASSET_PATH || '/';
+  const ASSET_PATH = env.ASSET_PATH || 'https://resources.burgeonadaire.com/';
 
   return {
     mode: isDevelopment ? 'development' : 'production',
@@ -25,10 +25,10 @@ module.exports = (env) => {
       index: './src/index.js',
     },
     output: {
-      filename: 'bundles/main.[name].billionaire.js',
-      chunkFilename: 'bundles/chunk.[name].billionaire.js',
-      path: path.resolve(__dirname, 'dist/'),
-      publicPath: ASSET_PATH,
+      filename: 'compiled/main.[name].billionaire.[hash].js',
+      chunkFilename: 'compiled/chunk.[name].billionaire.[hash].js',
+      path: path.resolve(__dirname, 'dist'),
+      publicPath: isDevelopment ? '/' : ASSET_PATH,
       clean: true,
     },
     optimization: {
@@ -100,7 +100,6 @@ module.exports = (env) => {
       new webpack.ProvidePlugin({
         $: 'jquery',
         jQuery: 'jquery',
-        process: 'process/browser',
       }),
       new webpack.IgnorePlugin({
         resourceRegExp: /^\.\/locale$/,
@@ -129,16 +128,13 @@ module.exports = (env) => {
         favicon: "./public/favicon.ico",
       }),
       new MiniCssExtractPlugin({
-        filename: "styles/[name].css",
+        filename: "compiled/[name].[hash].css",
       }),
       new CompressionPlugin({
         algorithm: "gzip",
         compressionOptions: { level: 9 },
         test: /\.(js|css)$/,
-        filename: "./resources/compressed/[name].gzip",
-      }),
-      new webpack.DefinePlugin({
-        'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH),
+        filename: "../compressed/[name].[hash].gzip",
       }),
     ].filter(Boolean),
   }

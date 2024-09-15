@@ -6,3 +6,6 @@ dist/
 
 # JetBrains
 .idea/
+
+#Compressed bundle
+compressed/
