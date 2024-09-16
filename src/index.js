@@ -21,6 +21,9 @@ import './css/style.css';
 import './css/responsive.css';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
+const TermsCondition = lazy(() => import('./pages/TermsCondition'));
 
 function App() {
   return (
@@ -28,6 +31,9 @@ function App() {
       <Suspense fallback={<BurgeonPreload />}>
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/cookie-policy' element={<CookiePolicy />} />
+          <Route path='/terms-and-condition' element={<TermsCondition />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

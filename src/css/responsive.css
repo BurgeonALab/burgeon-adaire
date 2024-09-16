@@ -91,6 +91,10 @@
   .system-logo-mobile {
     justify-content: space-between !important;
   }
+
+  .system-logo-mobile img {
+    margin-left: 0px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -253,8 +257,64 @@
     align-items: center;
   }
 
+  .social-media-footer-mobile-items {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .social-media-footer-mobile-links {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 40px !important;
+  }
+
+  .footer-text-mobile {
+    margin-top: 40px !important;
+  }
+
   .footer-image-container {
     height: 250px;
+  }
+
+  .footer-link-right-mobile {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .footer-link-box-mobile {
+    margin-top: 40px !important;
+  }
+
+  .footer-item-link-mobile {
+    display: inline-block !important;
+    margin: 0 !important;
+    margin-right: 12px !important;
+    margin-left: 12px !important;
+    margin-top: 16px !important;
+  }
+
+  .burgeon-mobile-first-operations .slick-list {
+    padding: 0 !important;
+    height: 100% !important;
+  }
+
+  .burgeon-mobile-first-operations .slick-slider {
+    height: 100% !important;
+  }
+
+  .burgeon-mobile-first-operations .slick-track {
+    height: 100% !important;
+  }
+
+  .burgeon-mobile-first-operations .slick-slide {
+    margin: 0px 0px 0px 0px;
+    display: grid !important;
+  }
+
+  .burgeon-mobile-first-operations .slick-arrow {
+    display: none !important;
   }
 }
 
@@ -326,6 +386,10 @@
   .associates-text-mobile p {
     font-size: 1rem;
   }
+
+  .footer-image-container p {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -335,6 +399,12 @@
 
   .footer-image-container {
     height: 200px;
+  }
+
+  .footer-link-right-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

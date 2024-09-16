@@ -6,6 +6,23 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 import $ from 'jquery';
+import { Link } from "react-router-dom";
+
+const LinkNav = () => {
+  return (
+    <ul className='dropdown-menu dropdown-menu-end'>
+      <li>
+        <Link to="/privacy-policy" className='text-decoration-none dropdown-item link-light'>Privacy Policy</Link>
+      </li>
+      <li>
+        <Link to="/cookie-policy" className='text-decoration-none dropdown-item link-light'>Cookie Policy</Link>
+      </li>
+      <li>
+        <Link to="/terms-and-policy" className='text-decoration-none dropdown-item link-light'>Terms & Conditions</Link>
+      </li>
+    </ul>
+  );
+};
 
 export default class BurgeonNavbar extends Component {
   jQuery = () => {
@@ -84,17 +101,7 @@ export default class BurgeonNavbar extends Component {
                       Legal
                       <FontAwesomeIcon id="chevron-nav" icon={faChevronDown} className='ms-2 link-light' size='sm' />
                     </a>
-                    <ul className='dropdown-menu dropdown-menu-end'>
-                      <li>
-                        <a className='dropdown-item link-light' href='#'>Privacy Policy</a>
-                      </li>
-                      <li>
-                        <a className='dropdown-item link-light' href='#'>Cookie Policy</a>
-                      </li>
-                      <li>
-                        <a className='dropdown-item link-light' href='#'>Terms & Conditions</a>
-                      </li>
-                    </ul>
+                    <LinkNav />
                   </li>
                 </ul>
               </div>

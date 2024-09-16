@@ -74,26 +74,64 @@ export default class BurgeonFooter extends Component {
             <div className='col-md-12'>
               <div className='row'>
                 <div className='col-md-7 p-0'>
-                  <div className='footer-image-container'></div>
+                  <div className='footer-image-container d-flex align-items-start pt-4 ps-4'>
+                    <p className='lead text-light fw-medium mb-0'>Photo credit</p>
+                  </div>
                 </div>
                 <div className='col-md-5 p-4'>
                   <div className='row'>
                     <div className='col-md-6 d-flex flex-column justify-content-end'>
                       <div className='mt-3'>
+                        <p className='lead fw-medium mb-0'>Portfolio</p>
+                        <div className='footer-link-right-mobile'>
+                          <a className='text-decoration-none link-light' href="https://geraldzandisko.burgeonadaire.com" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Gerald Zandisko</p>
+                          </a>
+                          <a className='text-decoration-none link-light' href="https://www.myfxbook.com/members/gerraour" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Myfxbook</p>
+                          </a>
+                        </div>
+                      </div>
+                      <div className='footer-link-box-mobile mt-3'>
+                        <p className='lead fw-medium mb-0'>Companies</p>
+                        <div className='footer-link-right-mobile'>
+                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>The Adaire Solutions</p>
+                          </a>
+                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>eCommerce</p>
+                          </a>
+                        </div>
+                      </div>
+                      <div className='footer-link-box-mobile mt-3'>
                         <p className='lead fw-medium mb-0'>Links</p>
-                        <p className='mb-0 mt-3 fw-light'>Identity</p>
-                        <p className='mb-0 mt-3 fw-light'>Operations</p>
-                        <p className='mb-0 mt-3 fw-light'>Gratitude</p>
-                        <p className='mb-0 mt-3 fw-light'>Privacy Policy</p>
-                        <p className='mb-0 mt-3 fw-light'>Cookie Policy</p>
-                        <p className='mb-0 mt-3 fw-light'>Terms & Conditions</p>
+                        <div className='footer-link-right-mobile'>
+                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Identity</p>
+                          </a>
+                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Operations</p>
+                          </a>
+                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Gratitude</p>
+                          </a>
+                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Privacy Policy</p>
+                          </a>
+                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Cookie Policy</p>
+                          </a>
+                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Terms & Conditions</p>
+                          </a>
+                        </div>
                       </div>
                     </div>
                     <div className='social-media-footer-mobile col-md-6 d-flex flex-column justify-content-end'>
-                      <div className='mb-0 d-flex flex-column align-items-end'>
+                      <div className='social-media-footer-mobile-items mb-0 d-flex flex-column align-items-end'>
                         {
                           this.state.socialsvg.map((element, i) => (
-                            <div key={i} className='mt-3 d-flex justify-content-center align-items-center'>
+                            <div key={i} className='social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center'>
                               <a className='d-block' href={element.link} target='_blank' rel='noopener'>
                                 <ReactSVG
                                   beforeInjection={(svg) => {
@@ -109,7 +147,7 @@ export default class BurgeonFooter extends Component {
                         }
                         {
                           this.state.socialsymbol.map((element, i) => (
-                            <div key={i} className='mt-3 d-flex justify-content-center align-items-center'>
+                            <div key={i} className='social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center'>
                               <a className='d-block' href={element.link} target='_blank' rel='noopener'>
                                 <FontAwesomeIcon icon={element.icon} className='link-light' size='2xl' />
                               </a>
@@ -119,7 +157,7 @@ export default class BurgeonFooter extends Component {
                       </div>
                     </div>
                   </div>
-                  <p className='mb-0 mt-5'>© 2024 <strong>PT. Burgeon Adaire International</strong>. All rights reserved</p>
+                  <p className='mb-0 mt-5 footer-text-mobile'>© 2024 <strong>PT. Burgeon Adaire International</strong>. All rights reserved</p>
                 </div>
               </div>
             </div>
