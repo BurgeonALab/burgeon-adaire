@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
 	faChevronLeft,
+	faChevronUp,
 } from '@fortawesome/free-solid-svg-icons';
 import React, { Component } from 'react';
 import { TickerTape } from "react-ts-tradingview-widgets";
@@ -58,6 +59,19 @@ export default class BurgeonOperations extends Component {
 			$('.overlay-content').toggleClass("hide-section");
 			$('.operation-container-overlay-container').toggleClass("pointer-events-none");
 			$('.operation-container-overlay').toggleClass("pointer-events-auto");
+		});
+
+		$('#overlay-hide-mobile-toggle').on("click", function () {
+			$('.overlay-button').toggleClass("rotate-overlay-button");
+			$('.hide-mobile-overlay-content').toggleClass("hide-section");
+			$('.overlay-container-mobile-box').toggleClass("height-70");
+			$('.overlay-container-mobile-box').toggleClass("width-70");
+			$('.overlay-container-mobile-box').toggleClass("border-radius-conditional-click");
+			$('.overlay-container-mobile').toggleClass("padding-left-conditional-click");
+			$('.valbury-container-mobile').toggleClass("margin-top-conditional-click");
+			$('.outro-container').toggleClass("margin-top-conditional-click");
+			$('.overlay-container-mobile').toggleClass('pointer-events-none');
+			$('.overlay-container-mobile-box').toggleClass("pointer-events-auto");
 		});
 
 		if (windowWidth <= 768) {
@@ -184,6 +198,19 @@ export default class BurgeonOperations extends Component {
 									</a>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+				<div className='overlay-container-mobile'>
+					<div className='overlay-container-mobile-box h-100'>
+						<div className='hide-mobile-overlay-content'>
+							<h2 className='text-light'>Operations</h2>
+							<p className='lead text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+						<div className='d-flex justify-content-center'>
+							<a id="overlay-hide-mobile-toggle" role='button'>
+								<FontAwesomeIcon icon={faChevronUp} className='overlay-button link-light' size='lg' />
+							</a>
 						</div>
 					</div>
 				</div>

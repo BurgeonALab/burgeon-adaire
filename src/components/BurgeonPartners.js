@@ -34,13 +34,20 @@ export default class BurgeonOutro extends Component {
           logo: "https://images.burgeonadaire.com/lions-club-international.webp",
           link: "https://lionsclubs.org",
         },
+        {
+          id: 4,
+          name: "Junior Chamber International",
+          desc: "Junior Chamber International's Homepage",
+          logo: "https://images.burgeonadaire.com/jci-logo.webp",
+          link: "https://jci.cc",
+        },
       ]
     }
   }
 
   render() {
     return (
-      <div className='container-fluid'>
+      <div className='burgeon-partners container-fluid'>
         <div className='row'>
           <div className='col-lg-9 py-3'>
             <div className='d-flex flex-column justify-content-between h-100'>
@@ -91,7 +98,7 @@ export default class BurgeonOutro extends Component {
                 direction='right'
                 gradient='true'
                 gradientColor='#121217'
-                gradientWidth={100}
+                gradientWidth={70}
               >
                 {this.state.associates.map((element, i) => (
                   <a key={i} href={element.link} target='_blank' rel='noopener'>

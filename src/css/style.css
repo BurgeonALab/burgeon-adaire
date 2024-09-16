@@ -104,7 +104,7 @@ body {
   left: 0;
   right: 0;
   pointer-events: none;
-  z-index: 9996;
+  z-index: 9995;
 }
 
 .contact-box {
@@ -225,6 +225,10 @@ body {
 
 .width-70 {
   width: 70px !important;
+}
+
+.height-70 {
+  height: 70px !important;
 }
 
 .width-80-percent {
@@ -365,6 +369,10 @@ body {
 
 .partners-small-box {
   background-color: #272731;
+}
+
+.overlay-container-mobile {
+  display: none;
 }
 
 /* Animation */

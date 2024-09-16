@@ -6,4 +6,28 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://burgeonadaire.com</loc>
+    <lastmod>2024-08-04</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://burgeonadaire.com/privacy-policy</loc>
+    <lastmod>2024-09-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://burgeonadaire.com/cookie-policy</loc>
+    <lastmod>2024-09-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://burgeonadaire.com/terms-and-policy</loc>
+    <lastmod>2024-09-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
