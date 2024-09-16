@@ -112,7 +112,7 @@ module.exports = (env) => {
           { from: "./public/robots.txt", to: "./" },
           { from: "./public/sitemap.xml", to: "./" },
           { from: "./public/browserconfig.xml", to: "./configurations" },
-          { from: "./public/site.webmanifest", to: "./configurations" },
+          { from: "./public/webmanifest.json", to: "./configurations" },
           { from: "./public/ads.txt", to: "./" },
         ],
       ),

@@ -75,21 +75,55 @@ export default class BurgeonOperations extends Component {
 		});
 
 		if (windowWidth <= 768) {
+			var varvafFirst = 'still';
+			var varvafSecond = 'still';
 			$('.valbury-box:nth-child(1)').on("click", function () {
-				$(this).removeClass('width-20-percent');
-				$(this).addClass('width-80-percent');
-				$('.valbury-box:nth-child(2)').removeClass('width-80-percent');
-				$('.valbury-box:nth-child(2)').addClass('width-20-percent');
-				$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
-				$('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+				if (varvafFirst === 'readycollapse') {
+					$(this).removeClass('width-80-percent');
+					$('.valbury-box:nth-child(2)').removeClass('width-20-percent');
+					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+					varvafFirst = 'still';
+				} else if (varvafSecond === 'readycollapse') {
+					$('.valbury-box:nth-child(2)').addClass('width-20-percent');
+					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+					$('.valbury-box:nth-child(1)').removeClass('width-20-percent');
+					$('.valbury-box:nth-child(1)').addClass('width-80-percent');
+					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+					varvafFirst = 'readycollapse';
+					varvafSecond = 'still';
+				} else {
+					$(this).removeClass('width-20-percent');
+					$(this).addClass('width-80-percent');
+					$('.valbury-box:nth-child(2)').removeClass('width-80-percent');
+					$('.valbury-box:nth-child(2)').addClass('width-20-percent');
+					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+					varvafFirst = 'readycollapse';
+				}
 			});
 			$('.valbury-box:nth-child(2)').on("click", function () {
-				$(this).removeClass('width-20-percent');
-				$(this).addClass('width-80-percent');
-				$('.valbury-box:nth-child(1)').removeClass('width-80-percent');
-				$('.valbury-box:nth-child(1)').addClass('width-20-percent');
-				$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
-				$('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+				if (varvafSecond === 'readycollapse') {
+					$(this).removeClass('width-80-percent');
+					$('.valbury-box:nth-child(1)').removeClass('width-20-percent');
+					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+					varvafSecond = 'still';
+				} else if (varvafFirst === 'readycollapse') {
+					$('.valbury-box:nth-child(1)').addClass('width-20-percent');
+					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+					$('.valbury-box:nth-child(2)').removeClass('width-20-percent');
+					$('.valbury-box:nth-child(2)').addClass('width-80-percent');
+					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+					varvafSecond = 'readycollapse';
+					varvafFirst = 'still';
+				} else {
+					$(this).removeClass('width-20-percent');
+					$(this).addClass('width-80-percent');
+					$('.valbury-box:nth-child(1)').removeClass('width-80-percent');
+					$('.valbury-box:nth-child(1)').addClass('width-20-percent');
+					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+					varvafSecond = 'readycollapse';
+				}
 			});
 		}
 	}
