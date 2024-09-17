@@ -81,6 +81,7 @@ export default class BurgeonOperations extends Component {
 				if (varvafFirst === 'readycollapse') {
 					$(this).removeClass('width-80-percent');
 					$('.valbury-box:nth-child(2)').removeClass('width-20-percent');
+					$('.valbury-box:nth-child(2)').removeClass('width-80-percent');
 					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
 					varvafFirst = 'still';
 				} else if (varvafSecond === 'readycollapse') {
@@ -105,6 +106,7 @@ export default class BurgeonOperations extends Component {
 				if (varvafSecond === 'readycollapse') {
 					$(this).removeClass('width-80-percent');
 					$('.valbury-box:nth-child(1)').removeClass('width-20-percent');
+					$('.valbury-box:nth-child(1)').removeClass('width-80-percent');
 					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
 					varvafSecond = 'still';
 				} else if (varvafFirst === 'readycollapse') {

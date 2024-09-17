@@ -98,7 +98,7 @@ export default class BurgeonOutro extends Component {
                 direction='right'
                 gradient='true'
                 gradientColor='#121217'
-                gradientWidth={70}
+                gradientWidth={50}
               >
                 {this.state.associates.map((element, i) => (
                   <a key={i} href={element.link} target='_blank' rel='noopener'>
