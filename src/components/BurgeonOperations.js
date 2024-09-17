@@ -62,7 +62,7 @@ export default class BurgeonOperations extends Component {
 		});
 
 		$('#overlay-hide-mobile-toggle').on("click", function () {
-			$('.overlay-button').toggleClass("rotate-overlay-button");
+			$('.overlay-mobile-button').toggleClass("rotate-overlay-mobile-button");
 			$('.hide-mobile-overlay-content').toggleClass("hide-section");
 			$('.overlay-container-mobile-box').toggleClass("height-70");
 			$('.overlay-container-mobile-box').toggleClass("width-70");
@@ -77,10 +77,35 @@ export default class BurgeonOperations extends Component {
 		if (windowWidth <= 768) {
 			var varvafFirst = 'still';
 			var varvafSecond = 'still';
+			var orderdata = 'still';
 			$('.valbury-box:nth-child(1)').on("click", function () {
 				if (varvafFirst === 'readycollapse') {
+					if (orderdata === 'readyhide') {
+						if (windowWidth <= 391) {
+							$('#status-message-mobile').show();
+							$('#status-market').show();
+							$('#status-signal').show();
+							$('.signal-order-box-custom').hide();
+							orderdata = 'hide';
+						} else {
+							$('.signal-order-box-custom').hide();
+							orderdata = 'hide';
+						}
+					} else {
+						if (windowWidth <= 391) {
+							$('#status-message-mobile').hide();
+							$('#status-market').hide();
+							$('#status-signal').hide();
+							$('.signal-order-box-custom').show();
+							orderdata = 'still';
+						} else {
+							$('.signal-order-box-custom').show();
+							orderdata = 'still';
+						}
+					}
 					$(this).removeClass('width-80-percent');
 					$('.valbury-box:nth-child(2)').removeClass('width-20-percent');
+					$('.signal-order-box-custom').hide();
 					$('.valbury-box:nth-child(2)').removeClass('width-80-percent');
 					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
 					varvafFirst = 'still';
@@ -97,13 +122,28 @@ export default class BurgeonOperations extends Component {
 					$(this).addClass('width-80-percent');
 					$('.valbury-box:nth-child(2)').removeClass('width-80-percent');
 					$('.valbury-box:nth-child(2)').addClass('width-20-percent');
+					if (windowWidth <= 391) {
+						$('#status-message-mobile').hide();
+						$('#status-market').hide();
+						$('#status-signal').hide();
+						$('.signal-order-box-custom').show();
+					} else {
+						$('.signal-order-box-custom').show();
+					}
 					$('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
 					$('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
 					varvafFirst = 'readycollapse';
+					orderdata = 'readyhide';
 				}
 			});
 			$('.valbury-box:nth-child(2)').on("click", function () {
 				if (varvafSecond === 'readycollapse') {
+					if (orderdata === 'readyhide') {
+						$('#status-message-mobile').show();
+						$('#status-market').show();
+						$('#status-signal').show();
+						$('.signal-order-box-custom').hide();
+					}
 					$(this).removeClass('width-80-percent');
 					$('.valbury-box:nth-child(1)').removeClass('width-20-percent');
 					$('.valbury-box:nth-child(1)').removeClass('width-80-percent');
@@ -143,40 +183,77 @@ export default class BurgeonOperations extends Component {
 		var datedayDate = moment(dateraw).locale('id').format('ll');
 
 		$(function () {
+			var windowValbury = $(window).width();
 			if (valorder == undefined) {
+				// 
+				$(".data-detail-valbury").attr('style', 'display:flex !important');
+				$(".data-unavailable-signal").hide().removeClass('data-unavailable');
+				$(".signal-order-box-custom").removeClass("data-unavailable-background");
+				// 
 				if (dateday === 'Sabtu' || dateday === 'Minggu') {
+					// 
+					$(".data-detail-valbury").attr('style', 'display:flex !important');
+					$(".data-unavailable-signal").hide().removeClass('data-unavailable');
+					$(".signal-order-box-custom").removeClass("data-unavailable-background");
+					// 
 					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					// Clean
 					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
 					$("#status-market").removeClass("text-bg-light");
 					$("#status-market").removeClass("text-bg-warning");
 					$("#status-market").removeClass("text-bg-primary");
+					//
 					$("#status-market").html("Close");
 					$("#status-market").addClass("text-bg-dark");
 					$("#status-signal").hide();
 				} else {
+					// 
+					$(".data-detail-valbury").attr('style', 'display:flex !important');
+					$(".data-unavailable-signal").hide().removeClass('data-unavailable');
+					$(".signal-order-box-custom").removeClass("data-unavailable-background");
+					// 
 					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					// Clean
 					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
 					$("#status-market").removeClass("text-bg-light");
 					$("#status-market").removeClass("text-bg-warning");
 					$("#status-market").removeClass("text-bg-primary");
+					//
 					$("#status-market").html("Unavailable");
 					$("#status-market").addClass("text-bg-light");
 					$("#status-signal").html("Waiting");
 				}
 			} else {
 				if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
+					// 
+					$(".data-detail-valbury").attr('style', 'display:flex !important');
+					$(".data-unavailable-signal").hide().removeClass('data-unavailable');
+					$(".signal-order-box-custom").removeClass("data-unavailable-background");
+					// 
+					$("#status-market").html("Open");
+					// Clean
 					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
 					$("#status-market").removeClass("text-bg-light");
 					$("#status-market").removeClass("text-bg-warning");
 					$("#status-market").removeClass("text-bg-primary");
-					$("#status-market").html("Open");
+					//
 					$("#status-market").addClass("text-bg-success");
+					if (windowValbury <= 768) {
+						$("#status-message-mobile").show();
+					} else if (windowValbury >= 768) {
+						$("#status-message").show();
+					}
 					if (valorder === 'buy') {
+						// 
+						$(".data-detail-valbury").attr('style', 'display:flex !important');
+						$(".data-unavailable-signal").hide().removeClass('data-unavailable');
+						$(".signal-order-box-custom").removeClass("data-unavailable-background");
+						// 
 						if (valorderDate != datedayDate) {
 							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
@@ -190,6 +267,11 @@ export default class BurgeonOperations extends Component {
 						}
 						$('.valbury-box:first-child').css('background-color', '#1F4B8A');
 					} else if (valorder === 'sell') {
+						// 
+						$(".data-detail-valbury").attr('style', 'display:flex !important');
+						$(".data-unavailable-signal").hide().removeClass('data-unavailable');
+						$(".signal-order-box-custom").removeClass("data-unavailable-background");
+						// 
 						if (valorderDate != datedayDate) {
 							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
@@ -204,13 +286,20 @@ export default class BurgeonOperations extends Component {
 						$('.valbury-box:first-child').css('background-color', '#A32525');
 					}
 				} else {
+					// 
+					$(".data-detail-valbury").attr('style', 'display:flex !important');
+					$(".data-unavailable-signal").hide().removeClass('data-unavailable');
+					$(".signal-order-box-custom").removeClass("data-unavailable-background");
+					// 
 					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
+					// Clean
 					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
 					$("#status-market").removeClass("text-bg-light");
 					$("#status-market").removeClass("text-bg-warning");
 					$("#status-market").removeClass("text-bg-primary");
+					//
 					$("#status-market").html("Close");
 					$("#status-market").addClass("text-bg-dark");
 					$("#status-signal").hide();
@@ -245,22 +334,43 @@ export default class BurgeonOperations extends Component {
 						</div>
 						<div className='d-flex justify-content-center'>
 							<a id="overlay-hide-mobile-toggle" role='button'>
-								<FontAwesomeIcon icon={faChevronUp} className='overlay-button link-light' size='lg' />
+								<FontAwesomeIcon icon={faChevronUp} className='overlay-mobile-button link-light' size='lg' />
 							</a>
 						</div>
 					</div>
 				</div>
 				<div className='row operations-container'>
 					<div className='valbury-container-mobile col-xxl-3 py-3 d-flex flex-column'>
-						<div className='valbury-box h-50 rounded p-4'>
+						<div className='valbury-box h-50 rounded p-4 position-relative'>
 							<div className='valbury-box-container-mobile h-100 d-flex flex-column justify-content-between'>
-								<h5 className='text-light'>Valbury Signal</h5>
-								<div className='d-flex flex-row justify-content-end'>
+								<h5 className='text-light'>VAF Trading Suggestions</h5>
+								<div className='d-flex flex-column justify-content-center'>
+									<div className='signal-order-box-custom'>
+										<p className='data-unavailable-signal mb-0'>Data Unavailable</p>
+										<p className='signal-order-text text-light text-end fw-bold mb-0'>{this.state.valburysignal.order}</p>
+										<div className='d-flex flex-row data-detail-valbury'>
+											<div className='flex-grow-1'>
+												<p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Price:</p>
+												<p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Stop Loss:</p>
+												<p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Take Profit 1:</p>
+												<p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Take Profit 2:</p>
+											</div>
+											<div>
+												<p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.price}</p>
+												<p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.stoploss}</p>
+												<p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.takeprofit1}</p>
+												<p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.takeprofit2}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div className='ordering-badges-valbury-mobile d-flex flex-row justify-content-between align-items-end'>
+									<span id="status-message" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
 									<div className='d-flex flex-column align-items-end'>
 										<span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
 										<span id="status-signal" className="badge text-bg-secondary badge-fit-content mt-2">Status Signal</span>
-										<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
 									</div>
+									<span id="status-message-mobile" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
 								</div>
 							</div>
 						</div>
