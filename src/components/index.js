@@ -9,7 +9,6 @@ import BurgeonAbstract from './BurgeonAbstract';
 import BurgeonOperations from './BurgeonOperations';
 import BurgeonOutro from './BurgeonOutro';
 import BurgeonPartners from './BurgeonPartners';
-import BurgeonMobileFirstOperations from './BurgeonMobileFirstOperations';
 
 export {
   BurgeonPreload,
@@ -23,5 +22,4 @@ export {
   BurgeonOperations,
   BurgeonOutro,
   BurgeonPartners,
-  BurgeonMobileFirstOperations,
 }

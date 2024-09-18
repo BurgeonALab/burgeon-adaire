@@ -8,7 +8,7 @@ const settings = {
   fade: true,
 };
 
-export default class BurgeonMobileFirstOperations extends Component {
+export default class BMediumOperations extends Component {
   render() {
     return (
       <div className='burgeon-mobile-first-operations col-md-12'>
