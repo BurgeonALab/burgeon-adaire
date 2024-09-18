@@ -418,7 +418,7 @@ body {
 }
 
 .data-unavailable-background {
-  background-color: #1B1B22;
+  background-color: #1B1B22 !important;
 }
 
 .data-sell-background {

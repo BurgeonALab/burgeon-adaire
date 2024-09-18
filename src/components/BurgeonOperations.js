@@ -187,6 +187,15 @@ export default class BurgeonOperations extends Component {
 			$(".data-unavailable-signal").hide().removeClass('data-unavailable');
 			$(".signal-order-box-custom").removeClass("data-unavailable-background");
 			$(".signal-order-box-custom").removeClass("data-sell-background");
+			$(".ordering-badges-valbury-mobile").attr('style', 'justify-content:space-between !important');
+		}
+
+		function DataTradeUnavailable($) {
+			$(".data-detail-valbury").attr('style', 'display:none !important');
+			$(".data-unavailable-signal").show().addClass('data-unavailable');
+			$(".signal-order-box-custom").addClass("data-unavailable-background");
+			$(".signal-order-box-custom").addClass("data-sell-background");
+			$(".ordering-badges-valbury-mobile").attr('style', 'justify-content:flex-end !important');
 		}
 
 		function MarketBadgesClean($) {
@@ -228,7 +237,8 @@ export default class BurgeonOperations extends Component {
 					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
 					MarketBadgesClean(jQuery);
-					$("#status-market").html("Unavailable");
+					$("#status-market").html("XAU/USD");
+					DataTradeUnavailable(jQuery);
 					$("#status-market").addClass("text-bg-light");
 					$("#status-signal").html("Waiting");
 				}
