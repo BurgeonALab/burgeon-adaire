@@ -3,7 +3,7 @@ import {
 	faChevronLeft,
 	faChevronUp,
 } from '@fortawesome/free-solid-svg-icons';
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { TickerTape } from "react-ts-tradingview-widgets";
 import {
 	BurgeonMobileFirstOperations
@@ -52,6 +52,7 @@ export default class BurgeonOperations extends Component {
 
 	jQuery = () => {
 		var windowWidth = $(window).width();
+		var accumulateOrder = this.state.valburysignal;
 
 		$('#overlay-hide-toggle').on("click", function () {
 			$('.operation-container-overlay').toggleClass("width-70");
@@ -82,10 +83,16 @@ export default class BurgeonOperations extends Component {
 				if (varvafFirst === 'readycollapse') {
 					if (orderdata === 'readyhide') {
 						if (windowWidth <= 391) {
-							$('#status-message-mobile').show();
-							$('#status-market').show();
-							$('#status-signal').show();
-							$('.signal-order-box-custom').hide();
+							if (accumulateOrder == undefined) {
+								$('#status-message-mobile').show();
+								$('#status-market').show();
+								$('#status-signal').show();
+								$('.signal-order-box-custom').hide();
+							} else {
+								$('#status-market').show();
+								$('#status-signal').show();
+								$('.signal-order-box-custom').hide();
+							}
 							orderdata = 'hide';
 						} else {
 							$('.signal-order-box-custom').hide();
@@ -139,10 +146,16 @@ export default class BurgeonOperations extends Component {
 			$('.valbury-box:nth-child(2)').on("click", function () {
 				if (varvafSecond === 'readycollapse') {
 					if (orderdata === 'readyhide') {
-						$('#status-message-mobile').show();
-						$('#status-market').show();
-						$('#status-signal').show();
-						$('.signal-order-box-custom').hide();
+						if (accumulateOrder == undefined) {
+							$('#status-message-mobile').show();
+							$('#status-market').show();
+							$('#status-signal').show();
+							$('.signal-order-box-custom').hide();
+						} else {
+							$('#status-market').show();
+							$('#status-signal').show();
+							$('.signal-order-box-custom').hide();
+						}
 					}
 					$(this).removeClass('width-80-percent');
 					$('.valbury-box:nth-child(1)').removeClass('width-20-percent');
