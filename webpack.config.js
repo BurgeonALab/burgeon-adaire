@@ -135,7 +135,7 @@ module.exports = (env) => {
         algorithm: "gzip",
         compressionOptions: { level: 9 },
         test: /\.(js|css)$/,
-        filename: "../compressed/[name].[contenthash].gzip",
+        filename: "../compressed/[name].gzip",
       }),
     ].filter(Boolean),
   }

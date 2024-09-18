@@ -298,7 +298,7 @@ body {
 }
 
 #jumbotron-player {
-  opacity: 30%;
+  opacity: 20%;
   position: absolute;
   width: 100%;
   object-fit: cover;
@@ -419,6 +419,10 @@ body {
 
 .data-unavailable-background {
   background-color: #1B1B22;
+}
+
+.data-sell-background {
+  background-color: #631A1A;
 }
 
 /* Animation */

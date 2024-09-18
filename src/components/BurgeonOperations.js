@@ -189,12 +189,14 @@ export default class BurgeonOperations extends Component {
 				$(".data-detail-valbury").attr('style', 'display:flex !important');
 				$(".data-unavailable-signal").hide().removeClass('data-unavailable');
 				$(".signal-order-box-custom").removeClass("data-unavailable-background");
+				$(".signal-order-box-custom").removeClass("data-sell-background");
 				// 
 				if (dateday === 'Sabtu' || dateday === 'Minggu') {
 					// 
 					$(".data-detail-valbury").attr('style', 'display:flex !important');
 					$(".data-unavailable-signal").hide().removeClass('data-unavailable');
 					$(".signal-order-box-custom").removeClass("data-unavailable-background");
+					$(".signal-order-box-custom").removeClass("data-sell-background");
 					// 
 					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
@@ -205,7 +207,7 @@ export default class BurgeonOperations extends Component {
 					$("#status-market").removeClass("text-bg-warning");
 					$("#status-market").removeClass("text-bg-primary");
 					//
-					$("#status-market").html("Close");
+					$("#status-market").html("XAU/USD");
 					$("#status-market").addClass("text-bg-dark");
 					$("#status-signal").hide();
 				} else {
@@ -213,6 +215,7 @@ export default class BurgeonOperations extends Component {
 					$(".data-detail-valbury").attr('style', 'display:flex !important');
 					$(".data-unavailable-signal").hide().removeClass('data-unavailable');
 					$(".signal-order-box-custom").removeClass("data-unavailable-background");
+					$(".signal-order-box-custom").removeClass("data-sell-background");
 					// 
 					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
@@ -233,8 +236,9 @@ export default class BurgeonOperations extends Component {
 					$(".data-detail-valbury").attr('style', 'display:flex !important');
 					$(".data-unavailable-signal").hide().removeClass('data-unavailable');
 					$(".signal-order-box-custom").removeClass("data-unavailable-background");
+					$(".signal-order-box-custom").removeClass("data-sell-background");
 					// 
-					$("#status-market").html("Open");
+					$("#status-market").html("XAU/USD");
 					// Clean
 					$("#status-market").removeClass("text-bg-secondary");
 					$("#status-market").removeClass("text-bg-dark");
@@ -253,12 +257,13 @@ export default class BurgeonOperations extends Component {
 						$(".data-detail-valbury").attr('style', 'display:flex !important');
 						$(".data-unavailable-signal").hide().removeClass('data-unavailable');
 						$(".signal-order-box-custom").removeClass("data-unavailable-background");
+						$(".signal-order-box-custom").removeClass("data-sell-background");
 						// 
 						if (valorderDate != datedayDate) {
 							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Expired");
-							$("#status-signal").addClass("text-bg-warning");
+							$("#status-signal").addClass("text-bg-danger");
 						} else {
 							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
@@ -271,12 +276,13 @@ export default class BurgeonOperations extends Component {
 						$(".data-detail-valbury").attr('style', 'display:flex !important');
 						$(".data-unavailable-signal").hide().removeClass('data-unavailable');
 						$(".signal-order-box-custom").removeClass("data-unavailable-background");
+						$(".signal-order-box-custom").removeClass("data-sell-background");
 						// 
 						if (valorderDate != datedayDate) {
 							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
 							$("#status-signal").html("Expired");
-							$("#status-signal").addClass("text-bg-warning");
+							$("#status-signal").addClass("text-bg-danger");
 						} else {
 							$("#status-signal").show();
 							$("#status-signal").removeClass("text-bg-secondary");
@@ -284,12 +290,14 @@ export default class BurgeonOperations extends Component {
 							$("#status-signal").addClass("text-bg-primary");
 						}
 						$('.valbury-box:first-child').css('background-color', '#A32525');
+						$(".signal-order-box-custom").addClass("data-sell-background");
 					}
 				} else {
 					// 
 					$(".data-detail-valbury").attr('style', 'display:flex !important');
 					$(".data-unavailable-signal").hide().removeClass('data-unavailable');
 					$(".signal-order-box-custom").removeClass("data-unavailable-background");
+					$(".signal-order-box-custom").removeClass("data-sell-background");
 					// 
 					$("#status-signal").show();
 					$('.valbury-box:first-child').css('background-color', '#272731');
@@ -300,7 +308,7 @@ export default class BurgeonOperations extends Component {
 					$("#status-market").removeClass("text-bg-warning");
 					$("#status-market").removeClass("text-bg-primary");
 					//
-					$("#status-market").html("Close");
+					$("#status-market").html("XAU/USD");
 					$("#status-market").addClass("text-bg-dark");
 					$("#status-signal").hide();
 				}
