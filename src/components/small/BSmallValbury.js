@@ -72,7 +72,7 @@ export default class BSmallValbury extends Component {
       $('.valbury-box:nth-child(1)').on("click", function () {
         if (varvafFirst === 'readycollapse') {
           if (orderdata === 'readyhide') {
-            if (windowWidth <= 390) {
+            if (windowWidth <= 768) {
               if (countOrder == undefined) {
                 $('#status-market').show();
                 $('#status-signal').show();
