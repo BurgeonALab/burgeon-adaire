@@ -42,7 +42,6 @@ export default class BSmallValbury extends Component {
 
   jQuery = () => {
     var windowWidth = $(window).width();
-    var accumulateOrder = this.state.valburysignal;
 
     $('#overlay-hide-toggle').on("click", function () {
       $('.operation-container-overlay').toggleClass("width-70");
@@ -72,24 +71,18 @@ export default class BSmallValbury extends Component {
       $('.valbury-box:nth-child(1)').on("click", function () {
         if (varvafFirst === 'readycollapse') {
           if (orderdata === 'readyhide') {
-            if (windowWidth <= 391) {
-              if (accumulateOrder == undefined) {
-                $('#status-message-mobile').show();
-                $('#status-market').show();
-                $('#status-signal').show();
-                $('.signal-order-box-custom').hide();
-              } else {
-                $('#status-market').show();
-                $('#status-signal').show();
-                $('.signal-order-box-custom').hide();
-              }
+            if (windowWidth <= 390) {
+              $('#status-message-mobile').show();
+              $('#status-market').show();
+              $('#status-signal').show();
+              $('.signal-order-box-custom').hide();
               orderdata = 'hide';
             } else {
               $('.signal-order-box-custom').hide();
               orderdata = 'hide';
             }
           } else {
-            if (windowWidth <= 391) {
+            if (windowWidth <= 390) {
               $('#status-message-mobile').hide();
               $('#status-market').hide();
               $('#status-signal').hide();
@@ -119,7 +112,7 @@ export default class BSmallValbury extends Component {
           $(this).addClass('width-80-percent');
           $('.valbury-box:nth-child(2)').removeClass('width-80-percent');
           $('.valbury-box:nth-child(2)').addClass('width-20-percent');
-          if (windowWidth <= 391) {
+          if (windowWidth <= 390) {
             $('#status-message-mobile').hide();
             $('#status-market').hide();
             $('#status-signal').hide();
@@ -136,16 +129,10 @@ export default class BSmallValbury extends Component {
       $('.valbury-box:nth-child(2)').on("click", function () {
         if (varvafSecond === 'readycollapse') {
           if (orderdata === 'readyhide') {
-            if (accumulateOrder == undefined) {
-              $('#status-message-mobile').show();
-              $('#status-market').show();
-              $('#status-signal').show();
-              $('.signal-order-box-custom').hide();
-            } else {
-              $('#status-market').show();
-              $('#status-signal').show();
-              $('.signal-order-box-custom').hide();
-            }
+            $('#status-message-mobile').show();
+            $('#status-market').show();
+            $('#status-signal').show();
+            $('.signal-order-box-custom').hide();
           }
           $(this).removeClass('width-80-percent');
           $('.valbury-box:nth-child(1)').removeClass('width-20-percent');
@@ -250,7 +237,11 @@ export default class BSmallValbury extends Component {
           MarketBadgesClean(jQuery);
           $("#status-market").addClass("text-bg-success");
           if (windowValbury <= 768) {
-            $("#status-message-mobile").show();
+            if (valorder == undefined) {
+              $("#status-message-mobile").hide();
+            } else {
+              $("#status-message-mobile").show();
+            }
           } else if (windowValbury >= 768) {
             $("#status-message").show();
           }
