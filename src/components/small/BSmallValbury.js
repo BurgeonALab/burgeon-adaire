@@ -44,6 +44,8 @@ export default class BSmallValbury extends Component {
     var windowWidth = $(window).width();
     var initiateOrder = this.state.valburysignal;
     var countOrder = initiateOrder.length;
+    var setdate = new Date(Date(this.state.marketday));
+    var dayorder = moment(setdate).locale('id').format('dddd');
 
     $('#overlay-hide-toggle').on("click", function () {
       $('.operation-container-overlay').toggleClass("width-70");
@@ -118,6 +120,10 @@ export default class BSmallValbury extends Component {
               $('.signal-order-box-custom').hide();
               orderdata = 'hide';
             }
+            if (dayorder === 'Sabtu' || dayorder === 'Minggu') {
+              $('#status-signal').hide();
+              $('#status-message-mobile').hide();
+            }
           } else {
             if (windowWidth <= 390) {
               $('#status-message-mobile').hide();
@@ -165,6 +171,10 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(1)').removeClass('width-20-percent');
           $('.valbury-box:nth-child(1)').removeClass('width-80-percent');
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+          if (dayorder === 'Sabtu' || dayorder === 'Minggu') {
+            $('#status-signal').hide();
+            $('#status-message-mobile').hide();
+          }
           varvafSecond = 'still';
         } else if (varvafFirst === 'readycollapse') {
           $('#status-message-mobile').show();
@@ -216,6 +226,9 @@ export default class BSmallValbury extends Component {
       $(".signal-order-box-custom").addClass("data-unavailable-background");
       $(".signal-order-box-custom").addClass("data-sell-background");
       $(".ordering-badges-valbury-mobile").attr('style', 'justify-content:flex-end !important');
+      if (dateday === 'Sabtu' || dateday === 'Minggu') {
+        $('.signal-order-text').hide();
+      }
     }
 
     function MarketBadgesClean($) {
@@ -246,27 +259,27 @@ export default class BSmallValbury extends Component {
         DataTradeClean(jQuery);
         if (dateday === 'Sabtu' || dateday === 'Minggu') {
           DataTradeClean(jQuery);
+          MarketBadgesClean(jQuery);
           $("#status-signal").show();
           $('.valbury-box:first-child').css('background-color', '#272731');
-          MarketBadgesClean(jQuery);
           $("#status-market").html("XAU/USD");
           $("#status-market").addClass("text-bg-dark");
           $("#status-signal").hide();
         } else {
           DataTradeClean(jQuery);
+          MarketBadgesClean(jQuery);
           $("#status-signal").show();
           $('.valbury-box:first-child').css('background-color', '#272731');
-          MarketBadgesClean(jQuery);
           $("#status-market").html("XAU/USD");
-          DataTradeUnavailable(jQuery);
           $("#status-market").addClass("text-bg-light");
           $("#status-signal").html("Waiting");
+          DataTradeUnavailable(jQuery);
         }
       } else {
         if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
           DataTradeClean(jQuery);
-          $("#status-market").html("XAU/USD");
           MarketBadgesClean(jQuery);
+          $("#status-market").html("XAU/USD");
           $("#status-market").addClass("text-bg-success");
           if (windowValbury <= 768) {
             if (valorder == undefined) {
@@ -297,12 +310,13 @@ export default class BSmallValbury extends Component {
           }
         } else {
           DataTradeClean(jQuery);
+          MarketBadgesClean(jQuery);
           $("#status-signal").show();
           $('.valbury-box:first-child').css('background-color', '#272731');
-          MarketBadgesClean(jQuery);
           $("#status-market").html("XAU/USD");
           $("#status-market").addClass("text-bg-dark");
           $("#status-signal").hide();
+          DataTradeUnavailable(jQuery);
         }
       }
     });
