@@ -403,6 +403,15 @@
     display: none !important;
   }
 
+  .vaf-slide-container {
+    margin-top: 92px;
+    flex-direction: column !important;
+  }
+
+  .vaf-slide-button {
+    margin-bottom: 12px;
+  }
+
   /* Overlay Mobile End */
 }
 

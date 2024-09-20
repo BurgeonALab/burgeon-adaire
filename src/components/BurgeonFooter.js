@@ -57,7 +57,7 @@ export default class BurgeonFooter extends Component {
           type: 'svg',
           name: "PitchBook",
           desc: "PT. Burgeon Adaire International's PitchBook Profile Page",
-          link: "https://theorg.com/org/pt-burgeon-adaire-international",
+          link: "https://pitchbook.com",
           icon: PitchBook,
           height: '28px',
           width: 'auto',
@@ -85,20 +85,20 @@ export default class BurgeonFooter extends Component {
                         <p className='lead fw-medium mb-0'>Portfolio</p>
                         <div className='footer-link-right-mobile'>
                           <a className='text-decoration-none link-light' href="https://geraldzandisko.burgeonadaire.com" target='_blank' rel='noopener'>
-                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Gerald Zandisko</p>
+                            <p className='burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light'>Gerald Zandisko</p>
                           </a>
                           <a className='text-decoration-none link-light' href="https://www.myfxbook.com/members/gerraour" target='_blank' rel='noopener'>
-                            <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Myfxbook</p>
+                            <p className='burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light'>Myfxbook</p>
                           </a>
                         </div>
                       </div>
                       <div className='footer-link-box-mobile mt-3'>
                         <p className='lead fw-medium mb-0'>Companies</p>
                         <div className='footer-link-right-mobile'>
-                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                          <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                             <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>The Adaire Solutions</p>
                           </a>
-                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                          <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                             <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>eCommerce</p>
                           </a>
                         </div>
@@ -106,22 +106,22 @@ export default class BurgeonFooter extends Component {
                       <div className='footer-link-box-mobile mt-3'>
                         <p className='lead fw-medium mb-0'>Links</p>
                         <div className='footer-link-right-mobile'>
-                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                          <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                             <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Identity</p>
                           </a>
-                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                          <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                             <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Operations</p>
                           </a>
-                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                          <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                             <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Gratitude</p>
                           </a>
-                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                          <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                             <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Privacy Policy</p>
                           </a>
-                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                          <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                             <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Cookie Policy</p>
                           </a>
-                          <a className='text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                          <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                             <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Terms & Conditions</p>
                           </a>
                         </div>
@@ -135,6 +135,7 @@ export default class BurgeonFooter extends Component {
                               <a className='d-block' href={element.link} target='_blank' rel='noopener'>
                                 <ReactSVG
                                   beforeInjection={(svg) => {
+                                    svg.classList.add('burgeon-adaire-link');
                                     svg.setAttribute('style', 'height: ' + element.height + '; width: ' + element.width + ';');
                                   }}
                                   title={element.name}
@@ -149,7 +150,7 @@ export default class BurgeonFooter extends Component {
                           this.state.socialsymbol.map((element, i) => (
                             <div key={i} className='social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center'>
                               <a className='d-block' href={element.link} target='_blank' rel='noopener'>
-                                <FontAwesomeIcon icon={element.icon} className='link-light' size='2xl' />
+                                <FontAwesomeIcon icon={element.icon} className='burgeon-adaire-link link-light' size='2xl' />
                               </a>
                             </div>
                           ))

@@ -425,6 +425,33 @@ body {
   background-color: #631A1A;
 }
 
+.vaf-slide-container {
+  position: absolute;
+  top: 0;
+  margin-top: 68px;
+}
+
+.vaf-slide-button.active {
+  background-color: #F8F9FA;
+}
+
+.vaf-slide-button {
+  margin-right: 12px;
+  height: 10px;
+  width: 10px;
+  background-color: #A1AEBC;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.burgeon-adaire-link {
+  transition: all 0.3s;
+}
+
+.burgeon-adaire-link:hover {
+  color: #8B0000 !important;
+}
+
 /* Animation */
 
 @keyframes fullOpacity {

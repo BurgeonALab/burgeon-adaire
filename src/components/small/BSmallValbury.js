@@ -14,9 +14,9 @@ export default class BSmallValbury extends Component {
     };
   }
 
-  ValburyData = () => {
-    fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia%2FJakarta')
-      .then(response => response.json())
+  ValburyData = async () => {
+    await fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia%2FJakarta')
+      .then(async response => await response.json())
       .then((data) => {
         this.setState({
           marketday: data['dateTime'],
@@ -27,8 +27,8 @@ export default class BSmallValbury extends Component {
         console.log('Date: No Data');
       });
 
-    fetch('https://api.burgeonadaire.com/valbury-bulletin')
-      .then(response => response.json())
+    await fetch('https://api.burgeonadaire.com/valbury-bulletin')
+      .then(async response => await response.json())
       .then((data) => {
         this.setState({
           valburysignal: data['document']['xauusd_signals'].pop(),
@@ -172,10 +172,11 @@ export default class BSmallValbury extends Component {
       });
     }
   }
+
   componentDidMount() {
-    this.ValburyData();
-    this.jQuery();
+    Promise.all([this.ValburyData(), this.jQuery()]);
   }
+
   render() {
     var valorder = this.state.valburysignal.order;
     var dateraw = new Date(Date(this.state.marketday));
@@ -288,10 +289,36 @@ export default class BSmallValbury extends Component {
       }
     });
 
+    const goldSlider = () => {
+      console.log("XAU/USD");
+      $('.vaf-slide-button.yen').removeClass('active');
+      $('.vaf-slide-button.crude').removeClass('active');
+      $('.vaf-slide-button.gold').addClass('active');
+    }
+
+    const crudeSlider = () => {
+      console.log("Crude Oil");
+      $('.vaf-slide-button.gold').removeClass('active');
+      $('.vaf-slide-button.yen').removeClass('active');
+      $('.vaf-slide-button.crude').addClass('active');
+    }
+
+    const yenSlider = () => {
+      console.log("USD/JPY");
+      $('.vaf-slide-button.gold').removeClass('active');
+      $('.vaf-slide-button.crude').removeClass('active');
+      $('.vaf-slide-button.yen').addClass('active');
+    }
+
     return (
       <div className='valbury-box h-50 rounded p-4 position-relative'>
         <div className='valbury-box-container-mobile h-100 d-flex flex-column justify-content-between'>
           <h5 className='text-light'>VAF Trading Suggestions</h5>
+          <div className='d-flex flex-row vaf-slide-container'>
+            <a onClick={goldSlider} className='vaf-slide-button gold active'></a>
+            <a onClick={crudeSlider} className='vaf-slide-button crude'></a>
+            <a onClick={yenSlider} className='vaf-slide-button yen'></a>
+          </div>
           <div className='d-flex flex-column justify-content-center'>
             <div className='signal-order-box-custom'>
               <p className='data-unavailable-signal mb-0'>Data Unavailable</p>
