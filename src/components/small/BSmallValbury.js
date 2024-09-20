@@ -314,7 +314,7 @@ export default class BSmallValbury extends Component {
           </div>
           <div className='ordering-badges-valbury-mobile d-flex flex-row justify-content-between align-items-end'>
             <span id="status-message" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
-            <div className='d-flex flex-column align-items-end'>
+            <div className='two-badges-small d-flex flex-column align-items-end'>
               <span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
               <span id="status-signal" className="badge text-bg-secondary badge-fit-content mt-2">Status Signal</span>
             </div>
