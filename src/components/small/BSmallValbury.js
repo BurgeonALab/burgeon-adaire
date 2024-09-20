@@ -7,7 +7,7 @@ export default class BSmallValbury extends Component {
     super(props);
 
     this.state = {
-      valburysignal: {},
+      valburysignal: [],
       marketday: "",
       VSLoaded: false,
       DateLoaded: false,
@@ -96,7 +96,7 @@ export default class BSmallValbury extends Component {
         if (varvafFirst === 'readycollapse') {
           if (orderdata === 'readyhide') {
             if (windowWidth <= 768) {
-              if (countOrder == undefined) {
+              if (countOrder == undefined || countOrder.length == 0) {
                 $('.vaf-slide-container').css('margin-top', '92px');
                 $('.signal-order-box-custom').css('margin-top', '');
                 $('.valbury-box-container-mobile h5').show();
@@ -149,7 +149,7 @@ export default class BSmallValbury extends Component {
       $('.valbury-box:nth-child(2)').on("click", function () {
         if (varvafSecond === 'readycollapse') {
           if (orderdata === 'readyhide') {
-            if (windowWidth <= 768 || countOrder == undefined) {
+            if (windowWidth <= 768 || countOrder == undefined || countOrder.length == 0) {
               $('#status-market').show();
               $('#status-signal').show();
               $('.signal-order-box-custom').hide();
