@@ -42,7 +42,8 @@ export default class BSmallValbury extends Component {
 
   jQuery = () => {
     var windowWidth = $(window).width();
-    var countOrder = this.state.valburysignal;
+    var initiateOrder = this.state.valburysignal;
+    var countOrder = initiateOrder.length;
 
     $('#overlay-hide-toggle').on("click", function () {
       $('.operation-container-overlay').toggleClass("width-70");
