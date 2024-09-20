@@ -317,6 +317,7 @@
   .burgeon-mobile-first-operations .slick-slide {
     margin: 0px 0px 0px 0px;
     display: grid !important;
+    transition: opacity 500ms, visibility 500ms, width 500ms, margin 500ms !important;
   }
 
   .burgeon-mobile-first-operations .slick-arrow {
@@ -405,7 +406,6 @@
 
   .vaf-slide-container {
     margin-top: 92px;
-    flex-direction: column !important;
   }
 
   .vaf-slide-button {

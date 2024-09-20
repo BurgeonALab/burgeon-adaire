@@ -69,15 +69,44 @@ export default class BSmallValbury extends Component {
       var varvafFirst = 'still';
       var varvafSecond = 'still';
       var orderdata = 'still';
-      $('.valbury-box:nth-child(1)').on("click", function () {
+
+      $('.ordering-badges-valbury-mobile').on("click", function () {
+        $(this).removeClass('width-20-percent');
+        $(this).addClass('width-80-percent');
+        $('.valbury-box:nth-child(2)').removeClass('width-80-percent');
+        $('.valbury-box:nth-child(2)').addClass('width-20-percent');
+        if (windowWidth <= 390) {
+          $('.vaf-slide-container').css('margin-top', '24px');
+          $('.signal-order-box-custom').css('margin-top', '220px');
+          $('.valbury-box-container-mobile h5').hide();
+          $('#status-message-mobile').hide();
+          $('#status-market').hide();
+          $('#status-signal').hide();
+          $('.signal-order-box-custom').show();
+        } else {
+          $('.signal-order-box-custom').show();
+        }
+        $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+        $('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+        varvafFirst = 'readycollapse';
+        orderdata = 'readyhide';
+      });
+
+      $('.signal-order-box-custom').on("click", function () {
         if (varvafFirst === 'readycollapse') {
           if (orderdata === 'readyhide') {
             if (windowWidth <= 768) {
               if (countOrder == undefined) {
+                $('.vaf-slide-container').css('margin-top', '92px');
+                $('.signal-order-box-custom').css('margin-top', '');
+                $('.valbury-box-container-mobile h5').show();
                 $('#status-market').show();
                 $('#status-signal').show();
                 $('.signal-order-box-custom').hide();
               } else {
+                $('.vaf-slide-container').css('margin-top', '92px');
+                $('.signal-order-box-custom').css('margin-top', '');
+                $('.valbury-box-container-mobile h5').show();
                 $('#status-message-mobile').show();
                 $('#status-market').show();
                 $('#status-signal').show();
@@ -114,25 +143,9 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
           varvafFirst = 'readycollapse';
           varvafSecond = 'still';
-        } else {
-          $(this).removeClass('width-20-percent');
-          $(this).addClass('width-80-percent');
-          $('.valbury-box:nth-child(2)').removeClass('width-80-percent');
-          $('.valbury-box:nth-child(2)').addClass('width-20-percent');
-          if (windowWidth <= 390) {
-            $('#status-message-mobile').hide();
-            $('#status-market').hide();
-            $('#status-signal').hide();
-            $('.signal-order-box-custom').show();
-          } else {
-            $('.signal-order-box-custom').show();
-          }
-          $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
-          $('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
-          varvafFirst = 'readycollapse';
-          orderdata = 'readyhide';
         }
       });
+
       $('.valbury-box:nth-child(2)').on("click", function () {
         if (varvafSecond === 'readycollapse') {
           if (orderdata === 'readyhide') {
@@ -153,6 +166,10 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
           varvafSecond = 'still';
         } else if (varvafFirst === 'readycollapse') {
+          $('#status-message-mobile').show();
+          $('.vaf-slide-container').css('margin-top', '92px');
+          $('.signal-order-box-custom').css('margin-top', '');
+          $('.valbury-box-container-mobile h5').show();
           $('.valbury-box:nth-child(1)').addClass('width-20-percent');
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
