@@ -11,6 +11,8 @@ export default class TermsCondition extends Component {
         <BurgeonSEO
           title="Terms and Condition • PT. Burgeon Adaire International"
           description="Terms and Condition."
+          sitename="PT. Burgeon Adaire International"
+          canoncial="https://burgeonadaire.com"
         />
       </Fragment>
     );

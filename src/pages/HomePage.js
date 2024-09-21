@@ -23,6 +23,8 @@ export default class HomePage extends Component {
         <BurgeonSEO
           title="Home • PT. Burgeon Adaire International"
           description="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value."
+          sitename="PT. Burgeon Adaire International"
+          canoncial="https://burgeonadaire.com"
         />
         <div className='bottom-footer-container'>
           <div className="container-fluid">
