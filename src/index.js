@@ -2,6 +2,9 @@
 import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import {
+  HelmetProvider,
+} from 'react-helmet-async';
+import {
   BrowserRouter,
   Routes,
   Route,
@@ -27,16 +30,18 @@ const TermsCondition = lazy(() => import('./pages/TermsCondition'));
 
 function App() {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<BurgeonPreload />}>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-          <Route path='/cookie-policy' element={<CookiePolicy />} />
-          <Route path='/terms-and-condition' element={<TermsCondition />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Suspense fallback={<BurgeonPreload />}>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+            <Route path='/cookie-policy' element={<CookiePolicy />} />
+            <Route path='/terms-and-condition' element={<TermsCondition />} />
+          </Routes>
+        </Suspense>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

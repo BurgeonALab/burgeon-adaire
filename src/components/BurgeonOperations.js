@@ -11,10 +11,77 @@ import React, {
 import { TickerTape } from "react-ts-tradingview-widgets";
 import "moment/locale/id";
 
-const BSmallValbury = lazy(() => import('../components/small/BSmallValbury'));
+const BSmallValbury = lazy(() => import('./small/BSmallValbury'));
 const BMediumOperations = lazy(() => import('./medium/BMediumOperations'));
+const BSmallNews = lazy(() => import('./small/BSmallNews'));
 
 export default class BurgeonOperations extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			goldnews: [],
+			oilnews: [],
+			usdnews: [],
+			GoldLoaded: false,
+			OilLoaded: false,
+			USLoaded: false,
+		};
+	}
+
+	FetchNews = async () => {
+		const GoldNews = async () => {
+			await fetch('https://resources.burgeonadaire.com/news-api/gold-data.json')
+				.then(async response => await response.json())
+				.then((data) => {
+					this.setState({
+						goldnews: data,
+						GoldLoaded: true,
+					});
+				})
+				.catch(error => {
+					error = "Date: No Data"
+					console.log(error);
+				});
+		};
+
+		const OilNews = async () => {
+			await fetch('https://resources.burgeonadaire.com/news-api/oil-data.json')
+				.then(async response => await response.json())
+				.then((data) => {
+					this.setState({
+						oilnews: data,
+						OilLoaded: true,
+					});
+				})
+				.catch(error => {
+					error = "Date: No Data"
+					console.log(error);
+				});
+		};
+
+		const USDNews = async () => {
+			await fetch('https://resources.burgeonadaire.com/news-api/united-states.json')
+				.then(async response => await response.json())
+				.then((data) => {
+					this.setState({
+						usdnews: data,
+						USLoaded: true,
+					});
+				})
+				.catch(error => {
+					error = "Date: No Data"
+					console.log(error);
+				});
+		};
+
+		Promise.all([GoldNews(), OilNews(), USDNews()]);
+	}
+
+	componentDidMount() {
+		this.FetchNews();
+	}
+
 	render() {
 		return (
 			<div className='container-fluid py-3'>
@@ -53,14 +120,9 @@ export default class BurgeonOperations extends Component {
 						<Suspense fallback={<p className='text-light d-none'>Loading</p>}>
 							<BSmallValbury />
 						</Suspense>
-						<div className='valbury-box h-50 rounded p-4'>
-							<div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
-								<h5 className='text-light'>Economic News</h5>
-								<div className='d-flex flex-column align-items-end'>
-									<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
-								</div>
-							</div>
-						</div>
+						<Suspense fallback={<p className='text-light d-none'>Loading</p>}>
+							<BSmallNews />
+						</Suspense>
 					</div>
 					<div className='other-operations-container-mobile col-xxl-9 d-flex flex-column py-3'>
 						<div>

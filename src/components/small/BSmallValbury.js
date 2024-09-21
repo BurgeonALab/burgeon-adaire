@@ -15,30 +15,38 @@ export default class BSmallValbury extends Component {
   }
 
   ValburyData = async () => {
-    await fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia%2FJakarta')
-      .then(async response => await response.json())
-      .then((data) => {
-        this.setState({
-          marketday: data['dateTime'],
-          DateLoaded: true,
+    const TimeData = async () => {
+      await fetch('https://timeapi.io/api/time/current/zone?timeZone=Asia%2FJakarta')
+        .then(async response => await response.json())
+        .then((data) => {
+          this.setState({
+            marketday: data['dateTime'],
+            DateLoaded: true,
+          });
+        })
+        .catch(error => {
+          error = "Date: No data"
+          console.log(error);
         });
-      })
-      .catch(error => {
-        console.log('Date: No Data');
-      });
+    };
 
-    await fetch('https://api.burgeonadaire.com/valbury-bulletin')
-      .then(async response => await response.json())
-      .then((data) => {
-        this.setState({
-          valburysignal: data['document']['xauusd_signals'].pop(),
-          VSLoaded: true,
+    const LatestDate = async () => {
+      await fetch('https://api.burgeonadaire.com/valbury-bulletin')
+        .then(async response => await response.json())
+        .then((data) => {
+          this.setState({
+            valburysignal: data['document']['xauusd_signals'].pop(),
+            VSLoaded: true,
+          });
+        })
+        .catch(error => {
+          error = "Signal: No Data"
+          console.log(error);
         });
-      })
-      .catch(error => {
-        console.log('Signal: No Data');
-      });
-  }
+    };
+
+    Promise.all([TimeData(), LatestDate()]);
+  };
 
   jQuery = () => {
     var windowWidth = $(window).width();
@@ -222,7 +230,11 @@ export default class BSmallValbury extends Component {
 
     function DataTradeUnavailable($) {
       $(".data-detail-valbury").attr('style', 'display:none !important');
-      $(".data-unavailable-signal").show().addClass('data-unavailable');
+      if (dateday === 'Sabtu' || dateday === 'Minggu') {
+        $(".data-closed-signal").show().addClass('data-unavailable');
+      } else {
+        $(".data-unavailable-signal").show().addClass('data-unavailable');
+      }
       $(".signal-order-box-custom").addClass("data-unavailable-background");
       $(".signal-order-box-custom").addClass("data-sell-background");
       $(".ordering-badges-valbury-mobile").attr('style', 'justify-content:flex-end !important');
@@ -354,6 +366,7 @@ export default class BSmallValbury extends Component {
           <div className='d-flex flex-column justify-content-center'>
             <div className='signal-order-box-custom'>
               <p className='data-unavailable-signal mb-0'>Data Unavailable</p>
+              <p className='data-closed-signal mb-0'>Market Closed</p>
               <p className='signal-order-text text-light text-end fw-bold mb-0'>{this.state.valburysignal.order}</p>
               <div className='d-flex flex-row data-detail-valbury'>
                 <div className='flex-grow-1'>

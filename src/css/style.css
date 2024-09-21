@@ -413,6 +413,10 @@ body {
   font-weight: 500;
 }
 
+.data-closed-signal {
+  display: none;
+}
+
 .data-unavailable-signal {
   display: none;
 }
