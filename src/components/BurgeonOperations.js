@@ -10,6 +10,7 @@ import React, {
 } from 'react';
 import { TickerTape } from "react-ts-tradingview-widgets";
 import "moment/locale/id";
+import $ from 'jquery';
 
 const BSmallValbury = lazy(() => import('./small/BSmallValbury'));
 const BMediumOperations = lazy(() => import('./medium/BMediumOperations'));
@@ -27,6 +28,29 @@ export default class BurgeonOperations extends Component {
 			OilLoaded: false,
 			USLoaded: false,
 		};
+	}
+
+	jQuery = () => {
+		$('#overlay-hide-toggle').on("click", function () {
+			$('.operation-container-overlay').toggleClass("width-70");
+			$('.overlay-button').toggleClass("rotate-overlay-button");
+			$('.overlay-content').toggleClass("hide-section");
+			$('.operation-container-overlay-container').toggleClass("pointer-events-none");
+			$('.operation-container-overlay').toggleClass("pointer-events-auto");
+		});
+
+		$('#overlay-hide-mobile-toggle').on("click", function () {
+			$('.overlay-mobile-button').toggleClass("rotate-overlay-mobile-button");
+			$('.hide-mobile-overlay-content').toggleClass("hide-section");
+			$('.overlay-container-mobile-box').toggleClass("height-70");
+			$('.overlay-container-mobile-box').toggleClass("width-70");
+			$('.overlay-container-mobile-box').toggleClass("border-radius-conditional-click");
+			$('.overlay-container-mobile').toggleClass("padding-left-conditional-click");
+			$('.valbury-container-mobile').toggleClass("margin-top-conditional-click");
+			$('.outro-container').toggleClass("margin-top-conditional-click");
+			$('.overlay-container-mobile').toggleClass('pointer-events-none');
+			$('.overlay-container-mobile-box').toggleClass("pointer-events-auto");
+		});
 	}
 
 	FetchNews = async () => {
@@ -79,6 +103,7 @@ export default class BurgeonOperations extends Component {
 	}
 
 	componentDidMount() {
+		this.jQuery();
 		this.FetchNews();
 	}
 
