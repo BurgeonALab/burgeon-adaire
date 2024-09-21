@@ -28,23 +28,27 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
 const TermsCondition = lazy(() => import('./pages/TermsCondition'));
 
+const helmetContext = {};
+
 function App() {
   return (
-    <HelmetProvider>
-      <BrowserRouter>
-        <Suspense fallback={<BurgeonPreload />}>
+    <Suspense fallback={<BurgeonPreload />}>
+      <HelmetProvider context={helmetContext}>
+        <BrowserRouter>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/cookie-policy' element={<CookiePolicy />} />
             <Route path='/terms-and-condition' element={<TermsCondition />} />
           </Routes>
-        </Suspense>
-      </BrowserRouter>
-    </HelmetProvider>
+        </BrowserRouter>
+      </HelmetProvider>
+    </Suspense>
   );
 }
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
-root.render(<App />);
+root.render(
+  <App />
+);

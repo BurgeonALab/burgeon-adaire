@@ -277,6 +277,7 @@ export default class BSmallValbury extends Component {
           $("#status-market").html("XAU/USD");
           $("#status-market").addClass("text-bg-dark");
           $("#status-signal").hide();
+          DataTradeUnavailable(jQuery);
         } else {
           DataTradeClean(jQuery);
           MarketBadgesClean(jQuery);
