@@ -269,7 +269,10 @@ export default class BSmallValbury extends Component {
   };
 
   componentDidMount() {
-    Promise.all([this.ValburyData(), this.jQuery()]);
+    const VAFInterval = setInterval(() => {
+      Promise.all([this.ValburyData(), this.jQuery()]);
+      return () => clearInterval(VAFInterval);
+    }, 5000);
     this.FetchNews();
   }
 
