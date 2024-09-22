@@ -14,7 +14,6 @@ import $ from 'jquery';
 
 const BSmallValbury = lazy(() => import('./small/BSmallValbury'));
 const BMediumOperations = lazy(() => import('./medium/BMediumOperations'));
-const BSmallNews = lazy(() => import('./small/BSmallNews'));
 
 export default class BurgeonOperations extends Component {
 	jQuery = () => {
@@ -81,9 +80,6 @@ export default class BurgeonOperations extends Component {
 					<div className='valbury-container-mobile col-xxl-3 py-3 d-flex flex-column'>
 						<Suspense fallback={<p className='text-light d-none'>Loading</p>}>
 							<BSmallValbury />
-						</Suspense>
-						<Suspense fallback={<p className='text-light d-none'>Loading</p>}>
-							<BSmallNews />
 						</Suspense>
 					</div>
 					<div className='other-operations-container-mobile col-xxl-9 d-flex flex-column py-3'>

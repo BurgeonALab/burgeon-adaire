@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import moment from 'moment';
 import $ from 'jquery';
 
@@ -9,8 +9,16 @@ export default class BSmallValbury extends Component {
     this.state = {
       valburysignal: [],
       marketday: "",
+      goldnews: [],
+      oilnews: [],
+      usdnews: [],
+      sumnews: [],
       VSLoaded: false,
       DateLoaded: false,
+      GoldLoaded: false,
+      OilLoaded: false,
+      USLoaded: false,
+      SumsLoaded: false,
     };
   }
 
@@ -47,6 +55,55 @@ export default class BSmallValbury extends Component {
 
     Promise.all([TimeData(), LatestDate()]);
   };
+
+  FetchNews = async () => {
+    const GoldNews = async () => {
+      await fetch('https://resources.burgeonadaire.com/news-api/gold-data.json')
+        .then(async response => await response.json())
+        .then((data) => {
+          this.setState({
+            sumnews: [...this.state.sumnews, data['data'].slice(0, 2)],
+            GoldLoaded: true,
+          });
+        })
+        .catch(error => {
+          error = "Date: No Data"
+          console.log(error);
+        });
+    };
+
+    const OilNews = async () => {
+      await fetch('https://resources.burgeonadaire.com/news-api/oil-data.json')
+        .then(async response => await response.json())
+        .then((data) => {
+          this.setState({
+            sumnews: [...this.state.sumnews, data['data'].slice(0, 2)],
+            OilLoaded: true,
+          });
+        })
+        .catch(error => {
+          error = "Date: No Data"
+          console.log(error);
+        });
+    };
+
+    const USDNews = async () => {
+      await fetch('https://resources.burgeonadaire.com/news-api/united-states.json')
+        .then(async response => await response.json())
+        .then((data) => {
+          this.setState({
+            sumnews: [...this.state.sumnews, data['data'].slice(0, 2)],
+            USLoaded: true,
+          });
+        })
+        .catch(error => {
+          error = "Date: No Data"
+          console.log(error);
+        });
+    };
+
+    Promise.all([GoldNews(), OilNews(), USDNews()]);
+  }
 
   jQuery = () => {
     var windowWidth = $(window).width();
@@ -213,6 +270,7 @@ export default class BSmallValbury extends Component {
 
   componentDidMount() {
     Promise.all([this.ValburyData(), this.jQuery()]);
+    this.FetchNews();
   }
 
   render() {
@@ -337,66 +395,76 @@ export default class BSmallValbury extends Component {
     });
 
     const goldSlider = () => {
-      console.log("XAU/USD");
       $('.vaf-slide-button.yen').removeClass('active');
       $('.vaf-slide-button.crude').removeClass('active');
       $('.vaf-slide-button.gold').addClass('active');
+      $("#status-market").html("XAU/USD");
     }
 
     const crudeSlider = () => {
-      console.log("Crude Oil");
       $('.vaf-slide-button.gold').removeClass('active');
       $('.vaf-slide-button.yen').removeClass('active');
       $('.vaf-slide-button.crude').addClass('active');
+      $("#status-market").html("CLR");
     }
 
     const yenSlider = () => {
-      console.log("USD/JPY");
       $('.vaf-slide-button.gold').removeClass('active');
       $('.vaf-slide-button.crude').removeClass('active');
       $('.vaf-slide-button.yen').addClass('active');
+      $("#status-market").html("USD/JPY");
     }
 
     return (
-      <div className='valbury-box h-50 rounded p-4 position-relative'>
-        <div className='valbury-box-container-mobile h-100 d-flex flex-column justify-content-between'>
-          <h5 className='text-light'>VAF Trading Suggestions</h5>
-          <div className='d-flex flex-row vaf-slide-container'>
-            <a onClick={goldSlider} className='vaf-slide-button gold active'></a>
-            <a onClick={crudeSlider} className='vaf-slide-button crude'></a>
-            <a onClick={yenSlider} className='vaf-slide-button yen'></a>
-          </div>
-          <div className='d-flex flex-column justify-content-center'>
-            <div className='signal-order-box-custom'>
-              <p className='data-unavailable-signal mb-0'>Data Unavailable</p>
-              <p className='data-closed-signal mb-0'>Market Closed</p>
-              <p className='signal-order-text text-light text-end fw-bold mb-0'>{this.state.valburysignal.order}</p>
-              <div className='d-flex flex-row data-detail-valbury'>
-                <div className='flex-grow-1'>
-                  <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Price:</p>
-                  <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Stop Loss:</p>
-                  <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Take Profit 1:</p>
-                  <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Take Profit 2:</p>
-                </div>
-                <div>
-                  <p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.price}</p>
-                  <p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.stoploss}</p>
-                  <p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.takeprofit1}</p>
-                  <p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.takeprofit2}</p>
+      <Fragment>
+        <div className='valbury-box h-50 rounded p-4 position-relative'>
+          <div className='valbury-box-container-mobile h-100 d-flex flex-column justify-content-between'>
+            <h5 className='text-light'>VAF Trading Suggestions</h5>
+            <div className='d-flex flex-row vaf-slide-container'>
+              <a onClick={goldSlider} className='vaf-slide-button gold active'></a>
+              <a onClick={crudeSlider} className='vaf-slide-button crude'></a>
+              <a onClick={yenSlider} className='vaf-slide-button yen'></a>
+            </div>
+            <div className='d-flex flex-column justify-content-center'>
+              <div className='signal-order-box-custom'>
+                <p className='data-unavailable-signal mb-0'>Data Unavailable</p>
+                <p className='data-closed-signal mb-0'>Market Closed</p>
+                <p className='signal-order-text text-light text-end fw-bold mb-0'>{this.state.valburysignal.order}</p>
+                <div className='d-flex flex-row data-detail-valbury'>
+                  <div className='flex-grow-1'>
+                    <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Price:</p>
+                    <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Stop Loss:</p>
+                    <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Take Profit 1:</p>
+                    <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Take Profit 2:</p>
+                  </div>
+                  <div>
+                    <p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.price}</p>
+                    <p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.stoploss}</p>
+                    <p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.takeprofit1}</p>
+                    <p className='signal-order-description mb-0 text-start fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.takeprofit2}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className='ordering-badges-valbury-mobile d-flex flex-row justify-content-between align-items-end'>
-            <span id="status-message" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
-            <div className='two-badges-small d-flex flex-column align-items-end'>
-              <span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
-              <span id="status-signal" className="badge text-bg-secondary badge-fit-content mt-2">Status Signal</span>
+            <div className='ordering-badges-valbury-mobile d-flex flex-row justify-content-between align-items-end'>
+              <span id="status-message" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
+              <div className='two-badges-small d-flex flex-column align-items-end'>
+                <span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
+                <span id="status-signal" className="badge text-bg-secondary badge-fit-content mt-2">Status Signal</span>
+              </div>
+              <span id="status-message-mobile" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
             </div>
-            <span id="status-message-mobile" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
           </div>
         </div>
-      </div>
+        <div className='valbury-box h-50 rounded p-4'>
+          <div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
+            <h5 className='text-light'>Economic News</h5>
+            <div className='d-flex flex-column align-items-end'>
+              <span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+            </div>
+          </div>
+        </div>
+      </Fragment>
     );
   }
 }
