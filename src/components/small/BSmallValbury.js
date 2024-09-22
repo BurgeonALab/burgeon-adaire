@@ -111,6 +111,8 @@ export default class BSmallValbury extends Component {
     var countOrder = initiateOrder.length;
     var setdate = new Date(Date(this.state.marketday));
     var dayorder = moment(setdate).locale('id').format('dddd');
+    var daytime = moment(setdate).locale('id').format('hh:mm:ss').toString();
+    var dayopen = '05:00:00';
 
     if (windowWidth <= 768) {
       var varvafFirst = 'still';
@@ -165,7 +167,7 @@ export default class BSmallValbury extends Component {
               $('.signal-order-box-custom').hide();
               orderdata = 'hide';
             }
-            if (dayorder === 'Sabtu' || dayorder === 'Minggu') {
+            if (dayorder === 'Sabtu' || dayorder === 'Minggu' || dayorder === 'Senin' && daytime != dayopen) {
               $('#status-signal').hide();
               $('#status-message-mobile').hide();
             }
@@ -216,7 +218,7 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(1)').removeClass('width-20-percent');
           $('.valbury-box:nth-child(1)').removeClass('width-80-percent');
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
-          if (dayorder === 'Sabtu' || dayorder === 'Minggu') {
+          if (dayorder === 'Sabtu' || dayorder === 'Minggu' || dayorder === 'Senin' && daytime != dayopen) {
             $('#status-signal').hide();
             $('#status-message-mobile').hide();
           }
@@ -269,10 +271,7 @@ export default class BSmallValbury extends Component {
   };
 
   componentDidMount() {
-    const VAFInterval = setInterval(() => {
-      Promise.all([this.ValburyData(), this.jQuery()]);
-      return () => clearInterval(VAFInterval);
-    }, 5000);
+    Promise.all([this.ValburyData(), this.jQuery()]);
     this.FetchNews();
   }
 
@@ -282,6 +281,8 @@ export default class BSmallValbury extends Component {
     var dateday = moment(dateraw).locale('id').format('dddd');
     var valorderDate = moment(new Date((this.state.valburysignal.date))).locale('id').format('ll');
     var datedayDate = moment(dateraw).locale('id').format('ll');
+    var datetime = moment(dateraw).locale('id').format('hh:mm:ss').toString();
+    var timeopen = '05:00:00';
 
     function DataTradeClean($) {
       $(".data-detail-valbury").attr('style', 'display:flex !important');
@@ -293,7 +294,7 @@ export default class BSmallValbury extends Component {
 
     function DataTradeUnavailable($) {
       $(".data-detail-valbury").attr('style', 'display:none !important');
-      if (dateday === 'Sabtu' || dateday === 'Minggu') {
+      if (dateday === 'Sabtu' || dateday === 'Minggu' || dateday === 'Senin' && datetime != timeopen) {
         $(".data-closed-signal").show().addClass('data-unavailable');
       } else {
         $(".data-unavailable-signal").show().addClass('data-unavailable');
@@ -301,9 +302,11 @@ export default class BSmallValbury extends Component {
       $(".signal-order-box-custom").addClass("data-unavailable-background");
       $(".signal-order-box-custom").addClass("data-sell-background");
       $(".ordering-badges-valbury-mobile").attr('style', 'justify-content:flex-end !important');
-      if (dateday === 'Sabtu' || dateday === 'Minggu') {
+      if (dateday === 'Sabtu' || dateday === 'Minggu' || dateday === 'Senin' && datetime != timeopen) {
         $('.signal-order-text').hide();
       }
+      $("#status-message").hide();
+      $("#status-message-mobile").hide();
     }
 
     function MarketBadgesClean($) {
@@ -328,71 +331,103 @@ export default class BSmallValbury extends Component {
       $("#status-signal").addClass("text-bg-primary");
     }
 
-    $(function () {
+    function MarketClosed($) {
+      DataTradeClean(jQuery);
+      MarketBadgesClean(jQuery);
+      $("#status-signal").show();
+      $('.valbury-box:first-child').css('background-color', '#272731');
+      $("#status-market").html("XAU/USD");
+      $("#status-market").addClass("text-bg-dark");
+      $("#status-signal").hide();
+      DataTradeUnavailable(jQuery);
+    }
+
+    function MarketWaiting($) {
+      DataTradeClean(jQuery);
+      MarketBadgesClean(jQuery);
+      $("#status-signal").show();
+      $('.valbury-box:first-child').css('background-color', '#272731');
+      $("#status-market").html("XAU/USD");
+      $("#status-market").addClass("text-bg-light");
+      $("#status-signal").html("Waiting");
+      DataTradeUnavailable(jQuery);
+    }
+
+    function MarketOpen($) {
       var windowValbury = $(window).width();
+      DataTradeClean(jQuery);
+      MarketBadgesClean(jQuery);
+      $("#status-market").html("XAU/USD");
+      $("#status-market").addClass("text-bg-success");
+      if (windowValbury <= 768) {
+        if (valorder == undefined) {
+          $("#status-message-mobile").hide();
+        } else {
+          $("#status-message-mobile").show();
+        }
+      } else if (windowValbury >= 768) {
+        $("#status-message").show();
+      }
+    }
+
+    function MarketSell($) {
+      if (dateday === 'Sabtu' || dateday === 'Minggu' || dateday === 'Senin' && datetime != timeopen) {
+        MarketClosed(jQuery);
+      } else {
+        DataTradeClean(jQuery);
+        if (valorderDate != datedayDate) {
+          BadgeWarning(jQuery);
+        } else {
+          BadgeActive(jQuery);
+        }
+        $('.valbury-box:first-child').css('background-color', '#A32525');
+        $(".signal-order-box-custom").addClass("data-sell-background");
+      }
+    }
+
+    function MarketBuy($) {
+      if (dateday === 'Sabtu' || dateday === 'Minggu' || dateday === 'Senin' && datetime != timeopen) {
+        MarketClosed(jQuery);
+      } else {
+        DataTradeClean(jQuery);
+        if (valorderDate != datedayDate) {
+          BadgeWarning(jQuery);
+        } else {
+          BadgeActive(jQuery);
+        }
+        $('.valbury-box:first-child').css('background-color', '#1F4B8A');
+      }
+    }
+
+    function MarketUnavailable($) {
+      DataTradeClean(jQuery);
+      MarketBadgesClean(jQuery);
+      $("#status-signal").show();
+      $('.valbury-box:first-child').css('background-color', '#272731');
+      $("#status-market").html("XAU/USD");
+      $("#status-market").addClass("text-bg-dark");
+      $("#status-signal").hide();
+      DataTradeUnavailable(jQuery);
+    }
+
+    $(function () {
       if (valorder == undefined) {
         DataTradeClean(jQuery);
         if (dateday === 'Sabtu' || dateday === 'Minggu') {
-          DataTradeClean(jQuery);
-          MarketBadgesClean(jQuery);
-          $("#status-signal").show();
-          $('.valbury-box:first-child').css('background-color', '#272731');
-          $("#status-market").html("XAU/USD");
-          $("#status-market").addClass("text-bg-dark");
-          $("#status-signal").hide();
-          DataTradeUnavailable(jQuery);
+          MarketClosed(jQuery);
         } else {
-          DataTradeClean(jQuery);
-          MarketBadgesClean(jQuery);
-          $("#status-signal").show();
-          $('.valbury-box:first-child').css('background-color', '#272731');
-          $("#status-market").html("XAU/USD");
-          $("#status-market").addClass("text-bg-light");
-          $("#status-signal").html("Waiting");
-          DataTradeUnavailable(jQuery);
+          MarketWaiting(jQuery);
         }
       } else {
         if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
-          DataTradeClean(jQuery);
-          MarketBadgesClean(jQuery);
-          $("#status-market").html("XAU/USD");
-          $("#status-market").addClass("text-bg-success");
-          if (windowValbury <= 768) {
-            if (valorder == undefined) {
-              $("#status-message-mobile").hide();
-            } else {
-              $("#status-message-mobile").show();
-            }
-          } else if (windowValbury >= 768) {
-            $("#status-message").show();
-          }
+          MarketOpen(jQuery);
           if (valorder === 'buy') {
-            DataTradeClean(jQuery);
-            if (valorderDate != datedayDate) {
-              BadgeWarning(jQuery);
-            } else {
-              BadgeActive(jQuery);
-            }
-            $('.valbury-box:first-child').css('background-color', '#1F4B8A');
+            MarketBuy(jQuery);
           } else if (valorder === 'sell') {
-            DataTradeClean(jQuery);
-            if (valorderDate != datedayDate) {
-              BadgeWarning(jQuery);
-            } else {
-              BadgeActive(jQuery);
-            }
-            $('.valbury-box:first-child').css('background-color', '#A32525');
-            $(".signal-order-box-custom").addClass("data-sell-background");
+            MarketSell(jQuery);
           }
         } else {
-          DataTradeClean(jQuery);
-          MarketBadgesClean(jQuery);
-          $("#status-signal").show();
-          $('.valbury-box:first-child').css('background-color', '#272731');
-          $("#status-market").html("XAU/USD");
-          $("#status-market").addClass("text-bg-dark");
-          $("#status-signal").hide();
-          DataTradeUnavailable(jQuery);
+          MarketUnavailable(jQuery);
         }
       }
     });
