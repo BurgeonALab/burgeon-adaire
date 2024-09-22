@@ -17,19 +17,6 @@ const BMediumOperations = lazy(() => import('./medium/BMediumOperations'));
 const BSmallNews = lazy(() => import('./small/BSmallNews'));
 
 export default class BurgeonOperations extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			goldnews: [],
-			oilnews: [],
-			usdnews: [],
-			GoldLoaded: false,
-			OilLoaded: false,
-			USLoaded: false,
-		};
-	}
-
 	jQuery = () => {
 		$('#overlay-hide-toggle').on("click", function () {
 			$('.operation-container-overlay').toggleClass("width-70");
@@ -53,58 +40,8 @@ export default class BurgeonOperations extends Component {
 		});
 	}
 
-	FetchNews = async () => {
-		const GoldNews = async () => {
-			await fetch('https://resources.burgeonadaire.com/news-api/gold-data.json')
-				.then(async response => await response.json())
-				.then((data) => {
-					this.setState({
-						goldnews: data,
-						GoldLoaded: true,
-					});
-				})
-				.catch(error => {
-					error = "Date: No Data"
-					console.log(error);
-				});
-		};
-
-		const OilNews = async () => {
-			await fetch('https://resources.burgeonadaire.com/news-api/oil-data.json')
-				.then(async response => await response.json())
-				.then((data) => {
-					this.setState({
-						oilnews: data,
-						OilLoaded: true,
-					});
-				})
-				.catch(error => {
-					error = "Date: No Data"
-					console.log(error);
-				});
-		};
-
-		const USDNews = async () => {
-			await fetch('https://resources.burgeonadaire.com/news-api/united-states.json')
-				.then(async response => await response.json())
-				.then((data) => {
-					this.setState({
-						usdnews: data,
-						USLoaded: true,
-					});
-				})
-				.catch(error => {
-					error = "Date: No Data"
-					console.log(error);
-				});
-		};
-
-		Promise.all([GoldNews(), OilNews(), USDNews()]);
-	}
-
 	componentDidMount() {
 		this.jQuery();
-		this.FetchNews();
 	}
 
 	render() {

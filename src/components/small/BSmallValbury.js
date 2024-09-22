@@ -59,6 +59,7 @@ export default class BSmallValbury extends Component {
       var varvafFirst = 'still';
       var varvafSecond = 'still';
       var orderdata = 'still';
+      var firstvaf = 'still';
 
       function ShowVafDetailFirst($) {
         $('.valbury-box:nth-child(1)').removeClass('width-20-percent');
@@ -162,6 +163,7 @@ export default class BSmallValbury extends Component {
             $('#status-signal').hide();
             $('#status-message-mobile').hide();
           }
+          firstvaf = 'still';
           varvafSecond = 'still';
         } else if (varvafFirst === 'readycollapse') {
           $('#status-message-mobile').show();
@@ -173,6 +175,7 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
           $('.valbury-box:nth-child(2)').addClass('width-80-percent');
           $('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+          firstvaf = 'readyexpand';
           varvafSecond = 'readycollapse';
           varvafFirst = 'still';
         } else {
@@ -182,6 +185,7 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(1)').addClass('width-20-percent');
           $('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+          firstvaf = 'readyexpand';
           varvafSecond = 'readycollapse';
         };
       }
@@ -192,6 +196,13 @@ export default class BSmallValbury extends Component {
 
       $('.signal-order-box-custom').on("click", function () {
         HideVafDetailFirst(jQuery);
+      });
+
+      $('.valbury-box:nth-child(1)').on("click", function () {
+        if (firstvaf === 'readyexpand') {
+          ToogleVafRight(jQuery);
+          firstvaf = 'still';
+        };
       });
 
       $('.valbury-box:nth-child(2)').on("click", function () {

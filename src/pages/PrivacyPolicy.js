@@ -9,7 +9,7 @@ export default class PrivacyPolicy extends Component {
     return (
       <Fragment>
         <BurgeonSEO
-          title="Privacy Policy • PT. Burgeon Adaire International"
+          title="Privacy Policy | PT. Burgeon Adaire International"
           description="Privacy Policy."
           sitename="PT. Burgeon Adaire International"
           canoncial="https://burgeonadaire.com"
