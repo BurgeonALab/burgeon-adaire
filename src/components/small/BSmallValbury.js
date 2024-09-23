@@ -61,48 +61,48 @@ export default class BSmallValbury extends Component {
       await fetch('https://resources.burgeonadaire.com/news-api/gold-data.json')
         .then(async response => await response.json())
         .then((data) => {
-          this.setState({
-            sumnews: [...this.state.sumnews, data['data'].slice(0, 2)],
-            GoldLoaded: true,
-          });
+          var tempData = data['data'].slice(0, 2);
+          this.setState(previousState => ({
+            sumnews: [...previousState.sumnews, ...tempData],
+          }));
         })
         .catch(error => {
-          error = "Date: No Data"
+          error = "Date: No Data";
           console.log(error);
         });
     };
 
-    const OilNews = async () => {
-      await fetch('https://resources.burgeonadaire.com/news-api/oil-data.json')
-        .then(async response => await response.json())
-        .then((data) => {
-          this.setState({
-            sumnews: [...this.state.sumnews, data['data'].slice(0, 2)],
-            OilLoaded: true,
-          });
-        })
-        .catch(error => {
-          error = "Date: No Data"
-          console.log(error);
-        });
-    };
-
-    const USDNews = async () => {
+    const USNews = async () => {
       await fetch('https://resources.burgeonadaire.com/news-api/united-states.json')
         .then(async response => await response.json())
         .then((data) => {
-          this.setState({
-            sumnews: [...this.state.sumnews, data['data'].slice(0, 2)],
-            USLoaded: true,
-          });
+          var tempData = data['data'].slice(0, 2);
+          this.setState(previousState => ({
+            sumnews: [...previousState.sumnews, ...tempData],
+          }));
         })
         .catch(error => {
-          error = "Date: No Data"
+          error = "Date: No Data";
           console.log(error);
         });
     };
 
-    Promise.all([GoldNews(), OilNews(), USDNews()]);
+    const CrudeOil = async () => {
+      await fetch('https://resources.burgeonadaire.com/news-api/oil-data.json')
+        .then(async response => await response.json())
+        .then((data) => {
+          var tempData = data['data'].slice(0, 2);
+          this.setState(previousState => ({
+            sumnews: [...previousState.sumnews, ...tempData],
+          }));
+        })
+        .catch(error => {
+          error = "Date: No Data";
+          console.log(error);
+        });
+    };
+
+    Promise.all([GoldNews(), USNews(), CrudeOil()]);
   }
 
   jQuery = () => {
