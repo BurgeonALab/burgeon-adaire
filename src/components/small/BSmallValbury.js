@@ -125,7 +125,7 @@ export default class BSmallValbury extends Component {
         $('.valbury-box:nth-child(1)').addClass('width-80-percent');
         $('.valbury-box:nth-child(2)').removeClass('width-80-percent');
         $('.valbury-box:nth-child(2)').addClass('width-20-percent');
-        if (windowWidth <= 390) {
+        if (windowWidth <= 420) {
           $('.vaf-slide-container').css('margin-top', '24px');
           $('.signal-order-box-custom').css('margin-top', '220px');
           $('.valbury-box-container-mobile h5').hide();
@@ -171,9 +171,8 @@ export default class BSmallValbury extends Component {
               $('#status-signal').hide();
               $('#status-message-mobile').hide();
             }
-            $('#status-message-mobile').hide();
           } else {
-            if (windowWidth <= 390) {
+            if (windowWidth <= 420) {
               $('#status-message-mobile').hide();
               $('#status-market').hide();
               $('#status-signal').hide();
@@ -227,6 +226,7 @@ export default class BSmallValbury extends Component {
           if (countOrder == undefined || countOrder.length == 0) {
             $('#status-message-mobile').hide();
           }
+          $('#status-message-mobile').show();
           firstvaf = 'still';
           varvafSecond = 'still';
         } else if (varvafFirst === 'readycollapse') {
