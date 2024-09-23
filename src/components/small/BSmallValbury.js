@@ -1,6 +1,15 @@
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
+import Slider from "react-slick";
+
 import $ from 'jquery';
+
+const settings = {
+  infinite: false,
+  slidesToShow: 1,
+  speed: 500,
+  fade: true,
+};
 
 export default class BSmallValbury extends Component {
   constructor(props) {
@@ -464,6 +473,8 @@ export default class BSmallValbury extends Component {
       MarketStatus();
     });
 
+    console.log(this.state.sumnews);
+
     return (
       <Fragment>
         <div className='valbury-box h-50 rounded p-4 position-relative'>
@@ -507,7 +518,15 @@ export default class BSmallValbury extends Component {
         </div>
         <div className='valbury-box h-50 rounded p-4'>
           <div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
-            <h5 className='text-light'>Economic News</h5>
+            <Slider {...settings}>
+              {
+                this.state.sumnews.map((data, index) => (
+                  <div key={index}>
+                    <h5 className='text-light'>{data.title}</h5>
+                  </div>
+                ))
+              }
+            </Slider>
             <div className='d-flex flex-column align-items-end'>
               <span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
             </div>
