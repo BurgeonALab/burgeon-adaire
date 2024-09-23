@@ -525,22 +525,38 @@ export default class BSmallValbury extends Component {
             </div>
           </div>
         </div>
-        <div className='valbury-box h-50 rounded p-4'>
+        <div className='valbury-box h-50 rounded'>
           <div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
             <Slider {...settings}>
               {
                 this.state.sumnews.map((data, index) => (
-                  <div key={index}>
-                    <h5 className='news-title text-light'>{data.title}</h5>
-                    <h5 className='news-title-mobile text-light'>{data.title.slice(0, data.title.length - (data.title.length / 2)) + "..."}</h5>
-                    <h5 className='news-title-mobile-expanded text-light'>{data.title}</h5>
+                  <div key={index} className='h-100'>
+                    <img loading="lazy" className='news-content-image' src={data.image_url}></img>
+                    <div className='news-content-container d-flex flex-column justify-content-between'>
+                      <div>
+                        <a href={data.news_url} className='text-decoration-none' target='_blank' rel='noopener'>
+                          <h5 className='news-title text-light'>{data.title}</h5>
+                        </a>
+                        <a href={data.news_url} className='text-decoration-none' target='_blank' rel='noopener'>
+                          <h5 className='news-title-mobile text-light'>{data.title.slice(0, data.title.length - (data.title.length / 2)) + "..."}</h5>
+                        </a>
+                        <a href={data.news_url} className='text-decoration-none' target='_blank' rel='noopener'>
+                          <h5 className='news-title-mobile-expanded text-light'>{data.title}</h5>
+                        </a>
+                        <p className='text-light'>{moment(data.date).locale('en').format('ll')}</p>
+                      </div>
+                      <div>
+                        <p className='text-light mb-2 fw-bold'>{data.sentiment}</p>
+                        <p className='text-light mb-0 fw-medium'>{data.topics[0]}</p>
+                      </div>
+                    </div>
                   </div>
                 ))
               }
             </Slider>
-            <div className='d-flex flex-column align-items-end'>
+            {/* <div className='d-flex flex-column align-items-end'>
               <span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
-            </div>
+            </div> */}
           </div>
         </div>
       </Fragment>
