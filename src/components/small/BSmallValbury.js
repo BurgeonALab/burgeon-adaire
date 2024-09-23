@@ -5,7 +5,6 @@ import $ from 'jquery';
 export default class BSmallValbury extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       valburysignal: [],
       marketday: "",
@@ -125,7 +124,7 @@ export default class BSmallValbury extends Component {
         $('.valbury-box:nth-child(1)').addClass('width-80-percent');
         $('.valbury-box:nth-child(2)').removeClass('width-80-percent');
         $('.valbury-box:nth-child(2)').addClass('width-20-percent');
-        if (windowWidth <= 420) {
+        if (windowWidth <= 450) {
           $('.vaf-slide-container').css('margin-top', '24px');
           $('.signal-order-box-custom').css('margin-top', '220px');
           $('.valbury-box-container-mobile h5').hide();
@@ -157,10 +156,9 @@ export default class BSmallValbury extends Component {
                 $('.vaf-slide-container').css('margin-top', '92px');
                 $('.signal-order-box-custom').css('margin-top', '');
                 $('.valbury-box-container-mobile h5').show();
-                $('#status-message-mobile').show();
+                $('.signal-order-box-custom').hide();
                 $('#status-market').show();
                 $('#status-signal').show();
-                $('.signal-order-box-custom').hide();
               }
               orderdata = 'hide';
             } else {
@@ -171,8 +169,12 @@ export default class BSmallValbury extends Component {
               $('#status-signal').hide();
               $('#status-message-mobile').hide();
             }
+            if (firstvaf === 'readyexpand' || dayorder === 'Sabtu' || dayorder === 'Minggu' || dayorder === 'Senin' && daytime <= dayopen) {
+              $('#status-message-mobile').hide();
+            }
+            $('#status-message-mobile').show();
           } else {
-            if (windowWidth <= 420) {
+            if (windowWidth <= 450) {
               $('#status-message-mobile').hide();
               $('#status-market').hide();
               $('#status-signal').hide();
@@ -183,7 +185,7 @@ export default class BSmallValbury extends Component {
               orderdata = 'still';
             }
           }
-          $(this).removeClass('width-80-percent');
+          $('.valbury-box:nth-child(1)').removeClass('width-80-percent');
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
           $('.signal-order-box-custom').hide();
           $('.valbury-box:nth-child(2)').removeClass('width-80-percent');
