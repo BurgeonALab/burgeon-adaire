@@ -522,7 +522,8 @@ export default class BSmallValbury extends Component {
               {
                 this.state.sumnews.map((data, index) => (
                   <div key={index}>
-                    <h5 className='text-light'>{data.title}</h5>
+                    <h5 className='news-title text-light'>{data.title}</h5>
+                    <h5 className='news-title-mobile text-light'>{data.title.slice(0, data.title.length - (data.title.length / 2)) + "..."}</h5>
                   </div>
                 ))
               }

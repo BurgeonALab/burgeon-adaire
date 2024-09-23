@@ -385,6 +385,10 @@ body {
   --bs-btn-active-border-color: #380000;
 }
 
+.news-title-mobile {
+  display: none;
+}
+
 /* Navigation Dropdown */
 
 .dropdown-menu {

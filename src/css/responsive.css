@@ -531,6 +531,14 @@
   .other-operations-container-mobile {
     height: 60% !important;
   }
+
+  .news-title {
+    display: none;
+  }
+
+  .news-title-mobile {
+    display: block;
+  }
 }
 
 @media (max-width: 360px) {
