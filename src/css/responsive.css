@@ -491,6 +491,22 @@
   .overlay-container-mobile-box p {
     font-size: 1rem;
   }
+
+  .valbury-box h5 {
+    font-size: 1rem;
+  }
+
+  .valbury-box h5 {
+    font-size: 1rem;
+  }
+
+  .portfolio-box h5 {
+    font-size: 1rem;
+  }
+
+  .ecommerce-box h5 {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
