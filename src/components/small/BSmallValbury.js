@@ -110,7 +110,7 @@ export default class BSmallValbury extends Component {
     var countOrder = initiateOrder.length;
     var setdate = new Date(Date(this.state.marketday));
     var dayorder = moment(setdate).locale('id').format('dddd');
-    var daytime = moment(setdate).locale('id').format('hh:mm:ss').toString();
+    var daytime = moment(setdate).locale('id').format('HH:mm:ss').toString();
     var dayopen = '05:00:00';
 
     if (windowWidth <= 768) {
@@ -288,7 +288,7 @@ export default class BSmallValbury extends Component {
     var dateday = moment(dateraw).locale('id').format('dddd');
     var valorderDate = moment(new Date((this.state.valburysignal.date))).locale('id').format('ll');
     var datedayDate = moment(dateraw).locale('id').format('ll');
-    var datetime = moment(dateraw).locale('id').format('hh:mm:ss').toString();
+    var datetime = moment(dateraw).locale('id').format('HH:mm:ss').toString();
     var timeopen = '05:00:00';
 
     function DataTradeClean($) {
@@ -417,32 +417,6 @@ export default class BSmallValbury extends Component {
       DataTradeUnavailable(jQuery);
     };
 
-    function MarketStyle() {
-      if (valorder == undefined) {
-        DataTradeClean(jQuery);
-        if (dateday === 'Sabtu' || dateday === 'Minggu') {
-          MarketClosed(jQuery);
-        } else {
-          MarketWaiting(jQuery);
-        }
-      } else {
-        if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
-          MarketOpen(jQuery);
-          if (valorder === 'buy') {
-            MarketBuy(jQuery);
-          } else if (valorder === 'sell') {
-            MarketSell(jQuery);
-          }
-        } else {
-          MarketUnavailable(jQuery);
-        }
-      };
-    };
-
-    $(function () {
-      MarketStyle();
-    });
-
     const goldSlider = () => {
       $('.vaf-slide-button.yen').removeClass('active');
       $('.vaf-slide-button.crude').removeClass('active');
@@ -463,6 +437,28 @@ export default class BSmallValbury extends Component {
       $('.vaf-slide-button.yen').addClass('active');
       $("#status-market").html("USD/JPY");
     }
+
+    $(function () {
+      if (valorder == undefined) {
+        DataTradeClean(jQuery);
+        if (dateday === 'Sabtu' || dateday === 'Minggu') {
+          MarketClosed(jQuery);
+        } else {
+          MarketWaiting(jQuery);
+        }
+      } else {
+        if (dateday === 'Senin' || dateday === 'Selasa' || dateday === 'Rabu' || dateday === 'Kamis' || dateday === 'Jumat') {
+          MarketOpen(jQuery);
+          if (valorder === 'buy') {
+            MarketBuy(jQuery);
+          } else if (valorder === 'sell') {
+            MarketSell(jQuery);
+          }
+        } else {
+          MarketUnavailable(jQuery);
+        }
+      };
+    });
 
     return (
       <Fragment>
