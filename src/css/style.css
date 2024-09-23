@@ -389,6 +389,10 @@ body {
   display: none;
 }
 
+.news-title-mobile-expanded {
+  display: none;
+}
+
 /* Navigation Dropdown */
 
 .dropdown-menu {

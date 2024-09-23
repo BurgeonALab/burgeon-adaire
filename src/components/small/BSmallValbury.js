@@ -129,6 +129,8 @@ export default class BSmallValbury extends Component {
       var firstvaf = 'still';
 
       function ShowVafDetailFirst($) {
+        $('.news-title').hide();
+        $('.news-title-mobile-expanded').hide();
         $('.valbury-box:nth-child(1)').removeClass('width-20-percent');
         $('.valbury-box:nth-child(2)').removeClass('width-80-percent');
         $('.valbury-box:nth-child(1)').addClass('width-80-percent');
@@ -169,7 +171,8 @@ export default class BSmallValbury extends Component {
               $('#status-signal').show();
             }
             $('.signal-order-box-custom').hide();
-            orderdata = 'hide';
+            $('.news-title').hide();
+            $('.news-title-mobile-expanded').hide();
             orderdata = 'hide';
             if (dayorder === 'Sabtu' || dayorder === 'Minggu' || dayorder === 'Senin' && daytime <= dayopen) {
               $('#status-signal').hide();
@@ -234,10 +237,17 @@ export default class BSmallValbury extends Component {
           if (countOrder == undefined || countOrder.length == 0) {
             $('#status-message-mobile').hide();
           }
+          $('.news-title-mobile-expanded').hide();
+          $('.news-title-mobile').show();
           $('#status-message-mobile').show();
           firstvaf = 'still';
           varvafSecond = 'still';
         } else if (varvafFirst === 'readycollapse') {
+          $('.valbury-box-container-mobile h5').show();
+          $('.news-title').hide();
+          $('.news-title-mobile').hide();
+          $('.news-title-mobile-expanded').show();
+          $('#status-message-mobile').show();
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
           $('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
           $('.valbury-box:nth-child(1)').addClass('width-20-percent');
@@ -245,12 +255,13 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(2)').addClass('width-80-percent');
           $('.vaf-slide-container').css('margin-top', '92px');
           $('.signal-order-box-custom').css('margin-top', '');
-          $('.valbury-box-container-mobile h5').show();
-          $('#status-message-mobile').show();
           firstvaf = 'readyexpand';
           varvafSecond = 'readycollapse';
           varvafFirst = 'still';
         } else {
+          $('.news-title').hide();
+          $('.news-title-mobile').hide();
+          $('.news-title-mobile-expanded').show();
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
           $('.valbury-box:nth-child(1)').removeClass('width-80-percent');
           $('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
@@ -473,8 +484,6 @@ export default class BSmallValbury extends Component {
       MarketStatus();
     });
 
-    console.log(this.state.sumnews);
-
     return (
       <Fragment>
         <div className='valbury-box h-50 rounded p-4 position-relative'>
@@ -524,6 +533,7 @@ export default class BSmallValbury extends Component {
                   <div key={index}>
                     <h5 className='news-title text-light'>{data.title}</h5>
                     <h5 className='news-title-mobile text-light'>{data.title.slice(0, data.title.length - (data.title.length / 2)) + "..."}</h5>
+                    <h5 className='news-title-mobile-expanded text-light'>{data.title}</h5>
                   </div>
                 ))
               }
