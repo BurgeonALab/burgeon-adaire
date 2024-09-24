@@ -5,11 +5,15 @@ import Slider from "react-slick";
 import {
   faChevronLeft,
   faChevronRight,
+  faCaretUp,
+  faCaretDown,
 } from '@fortawesome/free-solid-svg-icons';
 
 export default class BSmallNews extends Component {
   constructor(props) {
     super(props);
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
     this.state = {
       goldnews: [],
       oilnews: [],
@@ -20,6 +24,14 @@ export default class BSmallNews extends Component {
       USLoaded: false,
       SumsLoaded: false,
     };
+  }
+
+  next() {
+    this.slider.slickNext();
+  }
+
+  previous() {
+    this.slider.slickPrev();
   }
 
   FetchNews = async () => {
@@ -87,7 +99,7 @@ export default class BSmallNews extends Component {
       <Fragment>
         <div className='valbury-box h-50 rounded'>
           <div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
-            <Slider {...settings}>
+            <Slider ref={c => (this.slider = c)} {...settings}>
               {
                 this.state.sumnews.map((data, index) => (
                   <div key={index} className='h-100'>
@@ -108,13 +120,15 @@ export default class BSmallNews extends Component {
                       <div className='news-content-detail d-flex flex-row align-items-between'>
                         <div className='flex-grow-1'>
                           {
-                            data.sentiment === 'Negative' ? <p className='text-light mb-0 fw-bold'>Negative</p> : data.sentiment === 'Positive' ? <p className='text-light mb-0 fw-bold'>Positive</p> : <p className='text-light mb-0 fw-bold'>Neutral</p>
+                            data.sentiment === 'Negative' ? <FontAwesomeIcon icon={faCaretDown} className='text-danger' size='xl' /> : data.sentiment === 'Positive' ? <FontAwesomeIcon icon={faCaretUp} className='text-success' size='xl' /> : <p className='text-light mb-0 fw-bold'>Neutral</p>
                           }
-                          <p className='text-light mb-0 fw-medium'>{data.topics[0]}</p>
+                          {
+                            data.topics[0] === 'USA' ? <p className='text-light mb-0 fw-medium'>USA</p> : data.topics[0] === 'India' ? <p className='text-light mb-0 fw-medium'>USA</p> : <p className='text-light mb-0 fw-medium'>{data.topics[0]}</p>
+                          }
                         </div>
                         <div>
                           <div className='news-pagination d-flex flex-row align-items-center h-100'>
-                            <a role='button' className='d-flex'>
+                            <a role='button' className='d-flex' onClick={this.previous}>
                               <FontAwesomeIcon icon={faChevronLeft} className='link-light' size='sm' />
                             </a>
                             <div className='px-2'>
@@ -124,7 +138,7 @@ export default class BSmallNews extends Component {
                             <div className='px-2'>
                               <p className='text-light mb-0 fw-medium'>&nbsp;{this.state.sumnews.length}</p>
                             </div>
-                            <a role='button' className='d-flex'>
+                            <a role='button' className='d-flex' onClick={this.next}>
                               <FontAwesomeIcon icon={faChevronRight} className='link-light' size='sm' />
                             </a>
                           </div>
