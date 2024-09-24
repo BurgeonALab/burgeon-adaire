@@ -97,7 +97,7 @@ export default class BurgeonNavbar extends Component {
                     <a className='text-light text-decoration-none'>Gratitude</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a id="dropdown-nav" className='nav-link p-0 link-light' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+                    <a id="dropdown-nav" className='nav-link p-0 link-light' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
                       Legal
                       <FontAwesomeIcon id="chevron-nav" icon={faChevronDown} className='ms-2 link-light' size='sm' />
                     </a>

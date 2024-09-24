@@ -83,27 +83,6 @@ export default class BSmallNews extends Component {
       fade: true,
     };
 
-    const SliderCount = () => {
-      var currentNumber = 1;
-      return (
-        <div className='news-pagination d-flex flex-row align-items-center h-100'>
-          <a role='button' className='d-flex'>
-            <FontAwesomeIcon icon={faChevronLeft} className='link-light' size='sm' />
-          </a>
-          <div className='px-2'>
-            <p className='text-light mb-0 fw-medium'>{currentNumber}&nbsp;</p>
-          </div>
-          <p className='text-light mb-0 fw-medium'>/</p>
-          <div className='px-2'>
-            <p className='text-light mb-0 fw-medium'>&nbsp;{this.state.sumnews.length}</p>
-          </div>
-          <a role='button' className='d-flex'>
-            <FontAwesomeIcon icon={faChevronRight} className='link-light' size='sm' />
-          </a>
-        </div>
-      );
-    }
-
     return (
       <Fragment>
         <div className='valbury-box h-50 rounded'>
@@ -112,7 +91,7 @@ export default class BSmallNews extends Component {
               {
                 this.state.sumnews.map((data, index) => (
                   <div key={index} className='h-100'>
-                    <img loading="lazy" className='news-content-image' src={data.image_url}></img>
+                    <img loading="lazy" className='news-content-image' src={data.image_url} alt={data.title}></img>
                     <div className='news-content-container d-flex flex-column justify-content-between'>
                       <div className='news-content-detail'>
                         <a href={data.news_url} className='text-decoration-none' target='_blank' rel='noopener'>
@@ -134,7 +113,21 @@ export default class BSmallNews extends Component {
                           <p className='text-light mb-0 fw-medium'>{data.topics[0]}</p>
                         </div>
                         <div>
-                          <SliderCount />
+                          <div className='news-pagination d-flex flex-row align-items-center h-100'>
+                            <a role='button' className='d-flex'>
+                              <FontAwesomeIcon icon={faChevronLeft} className='link-light' size='sm' />
+                            </a>
+                            <div className='px-2'>
+                              <p className='text-light mb-0 fw-medium'>{index + 1}&nbsp;</p>
+                            </div>
+                            <p className='text-light mb-0 fw-medium'>/</p>
+                            <div className='px-2'>
+                              <p className='text-light mb-0 fw-medium'>&nbsp;{this.state.sumnews.length}</p>
+                            </div>
+                            <a role='button' className='d-flex'>
+                              <FontAwesomeIcon icon={faChevronRight} className='link-light' size='sm' />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>

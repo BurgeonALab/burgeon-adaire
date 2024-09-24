@@ -431,9 +431,9 @@ export default class BSmallValbury extends Component {
           <div className='valbury-box-container-mobile h-100 d-flex flex-column justify-content-between'>
             <h5 className='text-light'>VAF Trading Suggestions</h5>
             <div className='d-flex flex-row vaf-slide-container'>
-              <a onClick={goldSlider} className='vaf-slide-button gold active'></a>
-              <a onClick={crudeSlider} className='vaf-slide-button crude'></a>
-              <a onClick={yenSlider} className='vaf-slide-button yen'></a>
+              <a role='button' onClick={goldSlider} className='vaf-slide-button gold active'></a>
+              <a role='button' onClick={crudeSlider} className='vaf-slide-button crude'></a>
+              <a role='button' onClick={yenSlider} className='vaf-slide-button yen'></a>
             </div>
             <div className='d-flex flex-column justify-content-center'>
               <div className='signal-order-box-custom'>

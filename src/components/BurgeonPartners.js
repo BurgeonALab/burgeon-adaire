@@ -62,7 +62,9 @@ export default class BurgeonOutro extends Component {
               </div>
               <div className='pepperstone-misc-mobile d-flex flex-row justify-content-between align-items-end'>
                 <img alt="Pepperstone Official Partner" src="https://images.burgeonadaire.com/bai-pepperstone.webp" height={80}></img>
-                <a href="https://trk.pepperstonepartners.com/aff_c?offer_id=367&aff_id=34824" className='btn btn-dark btn-pepperstone' rel='noopener'><span className='fw-medium'>Join Pepperstone Now!</span></a>
+                <a href="https://trk.pepperstonepartners.com/aff_c?offer_id=367&aff_id=34824" className='btn btn-dark btn-pepperstone' target="_blank" rel='noopener'>
+                  <span className='fw-medium'>Join Pepperstone Now!</span>
+                </a>
               </div>
             </div>
           </div>

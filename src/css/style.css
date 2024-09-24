@@ -539,6 +539,22 @@ body {
   object-fit: cover;
 }
 
+.burgeon-adaire-link-svg-inside>path {
+  transition: all 0.3s;
+}
+
+.burgeon-adaire-link-svg-inside>path:hover {
+  fill: #8B0000 !important;
+}
+
+/* .burgeon-adaire-link-svg-inside > g > g:hover {
+  fill: #8B0000 !important;
+}
+
+.burgeon-adaire-link-svg-inside > g > g > path:hover {
+  fill: #8B0000 !important;
+} */
+
 /* Animation */
 
 @keyframes fullOpacity {

@@ -95,6 +95,16 @@
   .system-logo-mobile img {
     margin-left: 0px !important;
   }
+
+  .two-badges-small {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .ordering-badges-valbury-mobile {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
 }
 
 @media (min-width: 768px) {
@@ -552,18 +562,5 @@
 
   .pepperstone-misc-mobile img {
     height: 50px;
-  }
-}
-
-@media screen and (max-width: 1367px),
-screen and (max-height: 769px) {
-  .two-badges-small {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
-  .ordering-badges-valbury-mobile {
-    flex-direction: column !important;
-    align-items: flex-start !important;
   }
 }
