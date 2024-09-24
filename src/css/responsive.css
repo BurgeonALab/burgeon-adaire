@@ -32,7 +32,7 @@
   .news-content-container {
     padding-left: 24px;
   }
-  
+
   .valbury-box {
     height: 100% !important;
     width: 50%;
@@ -410,6 +410,10 @@
 
   .vaf-slide-button {
     margin-bottom: 12px;
+  }
+
+  .news-pagination {
+    display: none !important;
   }
 
   /* Overlay Mobile End */

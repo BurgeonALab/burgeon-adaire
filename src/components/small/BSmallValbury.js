@@ -1,15 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
-import Slider from "react-slick";
-
 import $ from 'jquery';
-
-const settings = {
-  infinite: false,
-  slidesToShow: 1,
-  speed: 500,
-  fade: true,
-};
 
 export default class BSmallValbury extends Component {
   constructor(props) {
@@ -64,55 +55,6 @@ export default class BSmallValbury extends Component {
     Promise.all([TimeData(), LatestDate()]);
   };
 
-  FetchNews = async () => {
-    const GoldNews = async () => {
-      await fetch('https://resources.burgeonadaire.com/news-api/gold-data.json')
-        .then(async response => await response.json())
-        .then((data) => {
-          var tempData = data['data'].slice(0, 2);
-          this.setState(previousState => ({
-            sumnews: [...previousState.sumnews, ...tempData],
-          }));
-        })
-        .catch(error => {
-          error = "Date: No Data";
-          console.log(error);
-        });
-    };
-
-    const USNews = async () => {
-      await fetch('https://resources.burgeonadaire.com/news-api/united-states.json')
-        .then(async response => await response.json())
-        .then((data) => {
-          var tempData = data['data'].slice(0, 2);
-          this.setState(previousState => ({
-            sumnews: [...previousState.sumnews, ...tempData],
-          }));
-        })
-        .catch(error => {
-          error = "Date: No Data";
-          console.log(error);
-        });
-    };
-
-    const CrudeOil = async () => {
-      await fetch('https://resources.burgeonadaire.com/news-api/oil-data.json')
-        .then(async response => await response.json())
-        .then((data) => {
-          var tempData = data['data'].slice(0, 2);
-          this.setState(previousState => ({
-            sumnews: [...previousState.sumnews, ...tempData],
-          }));
-        })
-        .catch(error => {
-          error = "Date: No Data";
-          console.log(error);
-        });
-    };
-
-    Promise.all([GoldNews(), USNews(), CrudeOil()]);
-  }
-
   jQuery = () => {
     var windowWidth = $(window).width();
     var initiateOrder = this.state.valburysignal;
@@ -147,7 +89,7 @@ export default class BSmallValbury extends Component {
           $('.signal-order-box-custom').show();
         }
         $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
-        $('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+        $('.news-content-detail').addClass('valbury-box-container-mobile-hide');
         varvafFirst = 'readycollapse';
         orderdata = 'readyhide';
       }
@@ -198,14 +140,14 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(1)').removeClass('width-80-percent');
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
           $('.valbury-box:nth-child(2)').removeClass('width-80-percent');
-          $('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+          $('.news-content-detail').removeClass('valbury-box-container-mobile-hide');
           varvafFirst = 'still';
         } else if (varvafSecond === 'readycollapse') {
           $('.valbury-box:nth-child(1)').removeClass('width-20-percent');
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
           $('.valbury-box:nth-child(2)').addClass('width-20-percent');
           $('.valbury-box:nth-child(1)').addClass('width-80-percent');
-          $('.valbury-box:nth-child(2) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
+          $('.news-content-detail').addClass('valbury-box-container-mobile-hide');
           varvafFirst = 'readycollapse';
           varvafSecond = 'still';
         }
@@ -249,7 +191,7 @@ export default class BSmallValbury extends Component {
           $('.news-title-mobile-expanded').show();
           $('#status-message-mobile').show();
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
-          $('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+          $('.news-content-detail').removeClass('valbury-box-container-mobile-hide');
           $('.valbury-box:nth-child(1)').addClass('width-20-percent');
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
           $('.valbury-box:nth-child(2)').addClass('width-80-percent');
@@ -264,7 +206,7 @@ export default class BSmallValbury extends Component {
           $('.news-title-mobile-expanded').show();
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
           $('.valbury-box:nth-child(1)').removeClass('width-80-percent');
-          $('.valbury-box:nth-child(2) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
+          $('.news-content-detail').removeClass('valbury-box-container-mobile-hide');
           $('.valbury-box:nth-child(2)').addClass('width-80-percent');
           $('.valbury-box:nth-child(1)').addClass('width-20-percent');
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').addClass('valbury-box-container-mobile-hide');
@@ -298,7 +240,6 @@ export default class BSmallValbury extends Component {
 
   componentDidMount() {
     Promise.all([this.ValburyData(), this.jQuery()]);
-    this.FetchNews();
   }
 
   render() {
@@ -523,40 +464,6 @@ export default class BSmallValbury extends Component {
               </div>
               <span id="status-message-mobile" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
             </div>
-          </div>
-        </div>
-        <div className='valbury-box h-50 rounded'>
-          <div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
-            <Slider {...settings}>
-              {
-                this.state.sumnews.map((data, index) => (
-                  <div key={index} className='h-100'>
-                    <img loading="lazy" className='news-content-image' src={data.image_url}></img>
-                    <div className='news-content-container d-flex flex-column justify-content-between'>
-                      <div>
-                        <a href={data.news_url} className='text-decoration-none' target='_blank' rel='noopener'>
-                          <h5 className='news-title text-light'>{data.title}</h5>
-                        </a>
-                        <a href={data.news_url} className='text-decoration-none' target='_blank' rel='noopener'>
-                          <h5 className='news-title-mobile text-light'>{data.title.slice(0, data.title.length - (data.title.length / 2)) + "..."}</h5>
-                        </a>
-                        <a href={data.news_url} className='text-decoration-none' target='_blank' rel='noopener'>
-                          <h5 className='news-title-mobile-expanded text-light'>{data.title}</h5>
-                        </a>
-                        <p className='text-light'>{moment(data.date).locale('en').format('ll')}</p>
-                      </div>
-                      <div>
-                        <p className='text-light mb-2 fw-bold'>{data.sentiment}</p>
-                        <p className='text-light mb-0 fw-medium'>{data.topics[0]}</p>
-                      </div>
-                    </div>
-                  </div>
-                ))
-              }
-            </Slider>
-            {/* <div className='d-flex flex-column align-items-end'>
-              <span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
-            </div> */}
           </div>
         </div>
       </Fragment>
