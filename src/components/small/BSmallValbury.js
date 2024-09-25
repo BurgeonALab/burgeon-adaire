@@ -180,7 +180,7 @@ export default class BSmallValbury extends Component {
           }
           $('.news-title-mobile-expanded').hide();
           $('.news-title-mobile').show();
-          $('#status-message-mobile').show();
+          $('#status-message-mobile').hide();
           firstvaf = 'still';
           varvafSecond = 'still';
         } else if (varvafFirst === 'readycollapse') {
