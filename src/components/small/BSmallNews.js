@@ -97,7 +97,7 @@ export default class BSmallNews extends Component {
 
     return (
       <Fragment>
-        <div className='valbury-box h-50 rounded'>
+        <div className='valbury-news valbury-box h-50 rounded'>
           <div className='valbury-box-container-mobile d-flex h-100 flex-column justify-content-between'>
             <Slider ref={c => (this.slider = c)} {...settings}>
               {

@@ -57,8 +57,6 @@ export default class BSmallValbury extends Component {
 
   jQuery = () => {
     var windowWidth = $(window).width();
-    var initiateOrder = this.state.valburysignal;
-    var countOrder = initiateOrder.length;
     var setdate = new Date(Date(this.state.marketday));
     var dayorder = moment(setdate).locale('id').format('dddd');
     var daytime = moment(setdate).locale('id').format('HH:mm:ss').toString();
@@ -82,9 +80,9 @@ export default class BSmallValbury extends Component {
           $('#status-message-mobile').hide();
           $('#status-market').hide();
           $('#status-signal').hide();
+          $('.signal-order-box-custom').show();
           $('.vaf-slide-container').css('margin-top', '24px');
           $('.signal-order-box-custom').css('margin-top', '220px');
-          $('.signal-order-box-custom').show();
         } else {
           $('.signal-order-box-custom').show();
         }
@@ -97,20 +95,22 @@ export default class BSmallValbury extends Component {
       function HideVafDetailFirst($) {
         if (varvafFirst === 'readycollapse') {
           if (orderdata === 'readyhide') {
-            if (countOrder == undefined || countOrder.length == 0) {
+            if ($('.data-unavailable-signal').is(':hidden')) {
               $('.signal-order-box-custom').hide();
-              $('.vaf-slide-container').css('margin-top', '92px');
-              $('.signal-order-box-custom').css('margin-top', '');
               $('.valbury-box-container-mobile h5').show();
               $('#status-market').show();
               $('#status-signal').show();
+              $('#status-message-mobile').show();
+              $('.vaf-slide-container').css('margin-top', '92px');
+              $('.signal-order-box-custom').css('margin-top', '');
             } else {
               $('.signal-order-box-custom').hide();
-              $('.vaf-slide-container').css('margin-top', '92px');
-              $('.signal-order-box-custom').css('margin-top', '');
               $('.valbury-box-container-mobile h5').show();
+              $('#status-message-mobile').show();
               $('#status-market').show();
               $('#status-signal').show();
+              $('.vaf-slide-container').css('margin-top', '92px');
+              $('.signal-order-box-custom').css('margin-top', '');
             }
             $('.signal-order-box-custom').hide();
             $('.news-title').hide();
@@ -155,7 +155,7 @@ export default class BSmallValbury extends Component {
       function ToogleVafRight($) {
         if (varvafSecond === 'readycollapse') {
           if (orderdata === 'readyhide') {
-            if (windowWidth <= 768 || countOrder == undefined || countOrder.length == 0) {
+            if (windowWidth <= 768 || $('.data-unavailable-signal').is(':visible')) {
               $('.signal-order-box-custom').hide();
               $('#status-message-mobile').hide();
               $('#status-market').show();
@@ -175,18 +175,17 @@ export default class BSmallValbury extends Component {
             $('#status-signal').hide();
             $('#status-message-mobile').hide();
           }
-          if (countOrder == undefined || countOrder.length == 0) {
-            $('#status-message-mobile').hide();
+          if ($('.data-unavailable-signal').is(':hidden')) {
+            $('#status-message-mobile').show();
           }
           $('.news-title-mobile-expanded').hide();
           $('.news-title-mobile').show();
-          $('#status-message-mobile').hide();
           firstvaf = 'still';
           varvafSecond = 'still';
         } else if (varvafFirst === 'readycollapse') {
-          $('.valbury-box-container-mobile h5').show();
           $('.news-title').hide();
           $('.news-title-mobile').hide();
+          $('.valbury-box-container-mobile h5').show();
           $('.news-title-mobile-expanded').show();
           $('#status-message-mobile').show();
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
@@ -231,7 +230,7 @@ export default class BSmallValbury extends Component {
         };
       });
 
-      $('.valbury-box:nth-child(2)').on("click", function () {
+      $('.valbury-news').on("click", function () {
         ToogleVafRight(jQuery);
       });
     };
