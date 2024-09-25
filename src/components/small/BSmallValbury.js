@@ -123,7 +123,6 @@ export default class BSmallValbury extends Component {
             if (firstvaf === 'readyexpand' || dayorder === 'Sabtu' || dayorder === 'Minggu' || dayorder === 'Senin' && daytime <= dayopen) {
               $('#status-message-mobile').hide();
             }
-            $('#status-message-mobile').show();
           } else {
             if (windowWidth <= 450) {
               $('#status-message-mobile').hide();
