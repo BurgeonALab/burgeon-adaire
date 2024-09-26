@@ -15,6 +15,7 @@ import $ from 'jquery';
 const BSmallValbury = lazy(() => import('./small/BSmallValbury'));
 const BSmallNews = lazy(() => import('./small/BSmallNews'));
 const BMediumOperations = lazy(() => import('./medium/BMediumOperations'));
+const BMediumExtras = lazy(() => import('./medium/BMediumExtras'));
 
 export default class BurgeonOperations extends Component {
 	jQuery = () => {
@@ -174,16 +175,7 @@ export default class BurgeonOperations extends Component {
 								</Suspense>
 							</div>
 						</div>
-						<div className='flex-grow-1 operation-child-container'>
-							<div className='ecommerce-box rounded p-4'>
-								<div className='d-flex h-100 flex-column justify-content-between'>
-									<h5 className='text-light'>eCommerce</h5>
-									<div className='d-flex flex-column align-items-end'>
-										<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
-									</div>
-								</div>
-							</div>
-						</div>
+						<BMediumExtras />
 					</div>
 				</div>
 			</div>

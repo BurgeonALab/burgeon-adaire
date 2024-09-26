@@ -85,6 +85,14 @@ body {
   padding-right: 12px;
 }
 
+.padding-twelve-r {
+  padding-right: 12px;
+}
+
+.padding-twelve-l {
+  padding-left: 12px;
+}
+
 .burgeon-nav-mobile-button {
   display: none !important;
 }
@@ -229,6 +237,11 @@ body {
 }
 
 .ecommerce-box {
+  background-color: #272731;
+  height: 100%;
+}
+
+.investment-box {
   background-color: #272731;
   height: 100%;
 }
@@ -555,8 +568,11 @@ body {
   fill: #8B0000 !important;
 } */
 
-/* Animation */
+.extras-container-mobile {
+  display: none !important;
+}
 
+/* Animation */
 @keyframes fullOpacity {
   0% {
     opacity: 0.5;
