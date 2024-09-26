@@ -104,9 +104,9 @@ export default class BSmallValbury extends Component {
               $('.vaf-slide-container').css('margin-top', '92px');
               $('.signal-order-box-custom').css('margin-top', '');
             } else {
+              $('#status-message-mobile').hide();
               $('.signal-order-box-custom').hide();
               $('.valbury-box-container-mobile h5').show();
-              $('#status-message-mobile').show();
               $('#status-market').show();
               $('#status-signal').show();
               $('.vaf-slide-container').css('margin-top', '92px');
@@ -175,8 +175,10 @@ export default class BSmallValbury extends Component {
             $('#status-signal').hide();
             $('#status-message-mobile').hide();
           }
-          if ($('.data-unavailable-signal').is(':hidden')) {
+          if ($('.data-unavailable-signal').is(':visible')) {
             $('#status-message-mobile').show();
+          } else {
+            $('#status-message-mobile').hide();
           }
           $('.news-title-mobile-expanded').hide();
           $('.news-title-mobile').show();
