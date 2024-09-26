@@ -7,19 +7,19 @@ import {
   BurgeonNavbar,
   BurgeonFooter,
   BurgeonContact,
-  BurgeonCookiePolicy,
+  BurgeonTermsConditions,
 } from '../components';
 import { BurgeonSEO } from '../components/BurgeonSEO';
 
-export default class CookiePolicy extends Component {
+export default class TermsConditions extends Component {
   render() {
     return (
       <Fragment>
         <BurgeonSEO
-          title="Cookie Policy | PT. Burgeon Adaire International"
-          description="Cookie Policy."
+          title="Terms and Condition | PT. Burgeon Adaire International"
+          description="Terms and Condition."
           sitename="PT. Burgeon Adaire International"
-          canoncial="https://burgeonadaire.com/cookie-policy"
+          canoncial="https://burgeonadaire.com/terms-and-conditions"
         />
         <div className='bottom-footer-container'>
           <div className="container-fluid">
@@ -28,7 +28,7 @@ export default class CookiePolicy extends Component {
                 <BurgeonHead />
                 <BurgeonContact />
                 <BurgeonNavbar />
-                <BurgeonCookiePolicy />
+                <BurgeonTermsConditions />
               </div>
             </div>
           </div>

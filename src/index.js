@@ -26,7 +26,7 @@ import './css/responsive.css';
 const HomePage = lazy(() => import('./pages/HomePage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'));
-const TermsCondition = lazy(() => import('./pages/TermsCondition'));
+const TermsConditions = lazy(() => import('./pages/TermsConditions'));
 
 const helmetContext = {};
 
@@ -39,7 +39,7 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/privacy-policy' element={<PrivacyPolicy />} />
             <Route path='/cookie-policy' element={<CookiePolicy />} />
-            <Route path='/terms-and-condition' element={<TermsCondition />} />
+            <Route path='/terms-and-condition' element={<TermsConditions />} />
           </Routes>
         </BrowserRouter>
       </HelmetProvider>

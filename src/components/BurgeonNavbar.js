@@ -18,7 +18,7 @@ const LinkNav = () => {
         <Link to="/cookie-policy" className='text-decoration-none dropdown-item link-light'>Cookie Policy</Link>
       </li>
       <li>
-        <Link to="/terms-and-policy" className='text-decoration-none dropdown-item link-light'>Terms & Conditions</Link>
+        <Link to="/terms-and-condition" className='text-decoration-none dropdown-item link-light'>Terms & Conditions</Link>
       </li>
     </ul>
   );
@@ -61,9 +61,9 @@ export default class BurgeonNavbar extends Component {
         <div className="bai-navbar py-3 padding-twelve-rl margin-twentyfour-rl">
           <div className="d-flex flex-row">
             <div className="margin-twelve-rl d-flex w-50">
-              <a className="navbar-brand" href="https://burgeonadaire.com">
+              <Link to="/">
                 <img alt="PT. Burgeon Adaire International Logo" src="https://images.burgeonadaire.com/logo.webp" height="40"></img>
-              </a>
+              </Link>
               <span className='burgeon-nav-title ms-3 d-flex align-items-center text-light'>
                 <span className='fw-medium'>Burgeon Adaire&nbsp;</span>
                 <span className='fw-light'>International</span>

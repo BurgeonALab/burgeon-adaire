@@ -1,20 +1,23 @@
 import React, {
   Component,
   Fragment,
+  Suspense,
+  lazy,
 } from 'react';
 import {
   BurgeonHead,
   BurgeonNavbar,
   BurgeonFooter,
   BurgeonJumbotron,
-  BurgeonAbout,
   BurgeonContact,
-  BurgeonAbstract,
-  BurgeonOperations,
-  BurgeonOutro,
-  BurgeonPartners,
 } from '../components';
 import { BurgeonSEO } from '../components/BurgeonSEO';
+
+const BurgeonAbout = lazy(() => import('../components/BurgeonAbout'));
+const BurgeonAbstract = lazy(() => import('../components/BurgeonAbstract'));
+const BurgeonOperations = lazy(() => import('../components/BurgeonOperations'));
+const BurgeonOutro = lazy(() => import('../components/BurgeonOutro'));
+const BurgeonPartners = lazy(() => import('../components/BurgeonPartners'));
 
 export default class HomePage extends Component {
   render() {
@@ -34,15 +37,24 @@ export default class HomePage extends Component {
                 <BurgeonContact />
                 <BurgeonNavbar />
                 <BurgeonJumbotron />
-                <BurgeonAbout />
-                <BurgeonAbstract />
-                <BurgeonOperations />
-                <BurgeonOutro />
-                <BurgeonPartners />
+                <Suspense fallback={<p className='d-none'>Loading</p>}>
+                  <BurgeonAbout />
+                </Suspense>
+                <Suspense fallback={<p className='d-none'>Loading</p>}>
+                  <BurgeonAbstract />
+                </Suspense>
+                <Suspense fallback={<p className='d-none'>Loading</p>}>
+                  <BurgeonOperations />
+                </Suspense>
+                <Suspense fallback={<p className='d-none'>Loading</p>}>
+                  <BurgeonOutro />
+                </Suspense>
+                <Suspense fallback={<p className='d-none'>Loading</p>}>
+                  <BurgeonPartners />
+                </Suspense>
               </div>
             </div>
           </div>
-          <hr className='footer-hr' />
           <BurgeonFooter />
         </div>
       </Fragment>
