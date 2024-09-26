@@ -7,7 +7,7 @@ export default class BurgeonAbout extends Component {
         <div className="row">
           <div className="col-md-6">
             <div className="about-box py-3">
-              <div className="about-item rounded p-4">
+              <div className="about-item about-item-blue rounded p-4">
                 <div className='h-100 position-relative'>
                   <div className='d-flex flex-column justify-content-center h-100'>
                     <h3 className='about-leftbox-header-mobile text-light text-center'>Lorem Ipsum</h3>
@@ -22,7 +22,7 @@ export default class BurgeonAbout extends Component {
           </div>
           <div className="col-md-6">
             <div className="about-box py-3">
-              <div className="about-item rounded p-4">
+              <div className="about-item about-item-brown rounded p-4">
                 <div className='position-relative h-100'>
                   <div className='about-rightbox-focus-mobile'>
                     <div className='about-rightbox-focus p-4 rounded'>

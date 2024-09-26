@@ -77,7 +77,6 @@ export default class BSmallValbury extends Component {
         $('.valbury-box:nth-child(2)').addClass('width-20-percent');
         if (windowWidth <= 450) {
           $('.valbury-box-container-mobile h5').hide();
-          $('#status-message-mobile').hide();
           $('#status-market').hide();
           $('#status-signal').hide();
           $('.signal-order-box-custom').show();
@@ -100,11 +99,9 @@ export default class BSmallValbury extends Component {
               $('.valbury-box-container-mobile h5').show();
               $('#status-market').show();
               $('#status-signal').show();
-              $('#status-message-mobile').show();
               $('.vaf-slide-container').css('margin-top', '92px');
               $('.signal-order-box-custom').css('margin-top', '');
             } else {
-              $('#status-message-mobile').hide();
               $('.signal-order-box-custom').hide();
               $('.valbury-box-container-mobile h5').show();
               $('#status-market').show();
@@ -118,14 +115,9 @@ export default class BSmallValbury extends Component {
             orderdata = 'hide';
             if (dayorder === 'Sabtu' || dayorder === 'Minggu' || dayorder === 'Senin' && daytime <= dayopen) {
               $('#status-signal').hide();
-              $('#status-message-mobile').hide();
-            }
-            if (firstvaf === 'readyexpand' || dayorder === 'Sabtu' || dayorder === 'Minggu' || dayorder === 'Senin' && daytime <= dayopen) {
-              $('#status-message-mobile').hide();
             }
           } else {
             if (windowWidth <= 450) {
-              $('#status-message-mobile').hide();
               $('#status-market').hide();
               $('#status-signal').hide();
               $('.signal-order-box-custom').show();
@@ -157,12 +149,10 @@ export default class BSmallValbury extends Component {
           if (orderdata === 'readyhide') {
             if (windowWidth <= 768 || $('.data-unavailable-signal').is(':visible')) {
               $('.signal-order-box-custom').hide();
-              $('#status-message-mobile').hide();
               $('#status-market').show();
               $('#status-signal').show();
             } else {
               $('.signal-order-box-custom').hide();
-              $('#status-message-mobile').show();
               $('#status-market').show();
               $('#status-signal').show();
             }
@@ -173,23 +163,18 @@ export default class BSmallValbury extends Component {
           $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
           if (dayorder === 'Sabtu' || dayorder === 'Minggu' || dayorder === 'Senin' && daytime <= dayopen) {
             $('#status-signal').hide();
-            $('#status-message-mobile').hide();
-          }
-          if ($('.data-unavailable-signal').is(':visible')) {
-            $('#status-message-mobile').show();
-          } else {
-            $('#status-message-mobile').hide();
           }
           $('.news-title-mobile-expanded').hide();
           $('.news-title-mobile').show();
           firstvaf = 'still';
           varvafSecond = 'still';
         } else if (varvafFirst === 'readycollapse') {
-          $('.news-title').hide();
-          $('.news-title-mobile').hide();
           $('.valbury-box-container-mobile h5').show();
           $('.news-title-mobile-expanded').show();
-          $('#status-message-mobile').show();
+          // Hide
+          $('.news-title').hide();
+          $('.news-title-mobile').hide();
+          // End Hide
           $('.valbury-box:nth-child(2)').removeClass('width-20-percent');
           $('.news-content-detail').removeClass('valbury-box-container-mobile-hide');
           $('.valbury-box:nth-child(1)').addClass('width-20-percent');
@@ -272,8 +257,6 @@ export default class BSmallValbury extends Component {
       if (dateday === 'Sabtu' || dateday === 'Minggu' || dateday === 'Senin' && datetime <= timeopen) {
         $('.signal-order-text').hide();
       }
-      $("#status-message").hide();
-      $("#status-message-mobile").hide();
     };
 
     function MarketBadgesClean($) {
@@ -321,17 +304,6 @@ export default class BSmallValbury extends Component {
     };
 
     function MarketOpen($) {
-      var windowValbury = $(window).width();
-
-      if (windowValbury <= 768) {
-        if (valorder == undefined) {
-          $("#status-message-mobile").hide();
-        } else {
-          $("#status-message-mobile").show();
-        }
-      } else if (windowValbury >= 768) {
-        $("#status-message").show();
-      }
       $("#status-market").addClass("text-bg-success");
       $("#status-market").html("XAU/USD");
       DataTradeClean(jQuery);
@@ -456,13 +428,9 @@ export default class BSmallValbury extends Component {
                 </div>
               </div>
             </div>
-            <div className='ordering-badges-valbury-mobile d-flex flex-row justify-content-between align-items-end'>
-              <span id="status-message" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
-              <div className='two-badges-small d-flex flex-column align-items-end'>
-                <span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
-                <span id="status-signal" className="badge text-bg-secondary badge-fit-content mt-2">Status Signal</span>
-              </div>
-              <span id="status-message-mobile" className="badge text-bg-warning badge-fit-content mt-2">Be Wisely</span>
+            <div className='ordering-badges-valbury-mobile d-flex flex-column align-items-end'>
+              <span id="status-market" className="badge text-bg-secondary badge-fit-content mt-2">Status Market</span>
+              <span id="status-signal" className="badge text-bg-secondary badge-fit-content mt-2">Status Signal</span>
             </div>
           </div>
         </div>

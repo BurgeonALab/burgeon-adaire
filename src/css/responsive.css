@@ -96,11 +96,6 @@
     margin-left: 0px !important;
   }
 
-  .two-badges-small {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-  }
-
   .ordering-badges-valbury-mobile {
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -429,10 +424,11 @@
   .extras-container {
     display: none !important;
   }
-  
+
   .extras-container-mobile {
     display: flex !important;
   }
+
   /* Overlay Mobile End */
 }
 

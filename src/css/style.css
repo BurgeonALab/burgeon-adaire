@@ -560,6 +560,16 @@ body {
   fill: #8B0000 !important;
 }
 
+.about-item.about-item-blue {
+  background-size: cover;
+  background-image: linear-gradient(to top, rgba(18, 18, 23, 0.9) 30%, rgba(18, 18, 23, 0.4)), url('https://images.burgeonadaire.com/about-blue.webp');
+}
+
+.about-item.about-item-brown {
+  background-size: cover;
+  background-image: linear-gradient(to top, rgba(18, 18, 23, 0.9) 30%, rgba(18, 18, 23, 0.4)), url('https://images.burgeonadaire.com/about-brown.webp');
+}
+
 /* .burgeon-adaire-link-svg-inside > g > g:hover {
   fill: #8B0000 !important;
 }

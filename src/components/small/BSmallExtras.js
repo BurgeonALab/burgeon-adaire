@@ -7,7 +7,7 @@ export default class BSmallExtras extends Component {
   render() {
     return (
       <Fragment>
-        <div className='extras-container-mobile d-flex flex-row h-50'>
+        <div className='extras-container-mobile d-flex flex-row flex-grow-1'>
           <div className='flex-grow-1 operation-child-container'>
             <div className='h-100'>
               <div className='ecommerce-box rounded p-4'>
