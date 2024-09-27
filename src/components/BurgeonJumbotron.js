@@ -28,7 +28,7 @@ export default class BurgeonJumbotron extends Component {
 
   render() {
     return (
-      <div className="bai-jumbotron d-flex align-items-center justify-content-center mb-4">
+      <div className="bai-jumbotron d-flex align-items-center justify-content-center">
         <video id="jumbotron-player" poster="https://images.burgeonadaire.com/smokegrey_thumbnail.webp" autoPlay loop muted>
           <source src="https://resources.burgeonadaire.com/videos/smokegrey.mp4" type='video/mp4'></source>
         </video>
