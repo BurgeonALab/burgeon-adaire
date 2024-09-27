@@ -58,7 +58,7 @@ export default class BSmallValbury extends Component {
   };
 
   jQuery = () => {
-    BAIContainerButtons({marketday: this.state.marketday});
+    BAIContainerButtons({ marketday: this.state.marketday });
   };
 
   componentDidMount() {
@@ -120,32 +120,32 @@ export default class BSmallValbury extends Component {
     };
 
     function MarketClosed($) {
+      DataTradeClean(jQuery);
+      MarketBadgesClean(jQuery);
       $("#status-signal").hide();
       $("#status-signal").show();
       $("#status-market").addClass("text-bg-dark");
       $("#status-market").html("XAU/USD");
       $('.valbury-box:first-child').css('background-color', '#272731');
-      DataTradeClean(jQuery);
-      MarketBadgesClean(jQuery);
       DataTradeUnavailable(jQuery);
     };
 
     function MarketWaiting($) {
+      DataTradeClean(jQuery);
+      MarketBadgesClean(jQuery);
       $("#status-signal").show();
       $("#status-market").addClass("text-bg-light");
       $("#status-market").html("XAU/USD");
       $("#status-signal").html("Waiting");
       $('.valbury-box:first-child').css('background-color', '#272731');
-      DataTradeClean(jQuery);
-      MarketBadgesClean(jQuery);
       DataTradeUnavailable(jQuery);
     };
 
     function MarketOpen($) {
-      $("#status-market").addClass("text-bg-success");
-      $("#status-market").html("XAU/USD");
       DataTradeClean(jQuery);
       MarketBadgesClean(jQuery);
+      $("#status-market").addClass("text-bg-success");
+      $("#status-market").html("XAU/USD");
     };
 
     function MarketSell($) {
@@ -178,13 +178,12 @@ export default class BSmallValbury extends Component {
     };
 
     function MarketUnavailable($) {
+      DataTradeClean(jQuery);
+      MarketBadgesClean(jQuery);
       $("#status-signal").hide();
-      $("#status-signal").show();
       $("#status-market").addClass("text-bg-dark");
       $("#status-market").html("XAU/USD");
       $('.valbury-box:first-child').css('background-color', '#272731');
-      DataTradeClean(jQuery);
-      MarketBadgesClean(jQuery);
       DataTradeUnavailable(jQuery);
     };
 
