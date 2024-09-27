@@ -8,6 +8,7 @@ import {
   faCaretUp,
   faCaretDown,
 } from '@fortawesome/free-solid-svg-icons';
+import { BAIContainerButtons } from '../../functions/BAIContainerButtons';
 
 export default class BSmallNews extends Component {
   constructor(props) {
@@ -83,8 +84,13 @@ export default class BSmallNews extends Component {
     Promise.all([GoldNews(), USNews(), CrudeOil()]);
   }
 
+  jQuery = () => {
+    BAIContainerButtons({ marketday: this.state.marketday });
+  };
+
   componentDidMount() {
     this.FetchNews();
+    this.jQuery();
   }
 
   render() {

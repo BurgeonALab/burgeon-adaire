@@ -111,6 +111,7 @@
 @media (max-width: 768px) {
   .about-box {
     height: 50vh;
+    width: 100% !important;
   }
 
   .burgeon-nav-title {
@@ -397,6 +398,8 @@
     margin-top: 86px;
   }
 
+  /* Overlay Mobile End */
+
   .ordering-badges-valbury-mobile {
     flex-direction: column !important;
   }
@@ -429,7 +432,9 @@
     display: flex !important;
   }
 
-  /* Overlay Mobile End */
+  .about-container {
+    flex-direction: column !important;
+  }
 }
 
 @media (max-width: 576px) {
