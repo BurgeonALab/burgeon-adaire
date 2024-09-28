@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from 'react';
 
-const ServerIndex = () => {
+const App = () => {
   return (
     <Fragment>
       <h1>Hello from Server-Side Rendered React App!</h1>
@@ -19,4 +19,4 @@ function Counter() {
 }
 
 
-export default ServerIndex;
+export default App;

@@ -1,15 +1,16 @@
 const express = require('express');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
-const ServerIndex = require('../src/ServerIndex').default;
-const path = require('path');
-
+const App = require('../client/App').default;
 const app = express();
 const PORT = process.env.PORT || 3001;
-app.use(express.static(path.resolve(__dirname, '../ssr')));
 
-app.get('/', (req, res) => {
-  const content = ReactDOMServer.renderToString(<ServerIndex />);
+app.use(express.static('ssr-public'));
+
+app.get('*', (req, res) => {
+  const content = ReactDOMServer.renderToString(
+    <App />
+  );
   const html = `
     <!DOCTYPE html>
     <html lang="en">
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
       </head>
       <body>
         <div id="root">${content}</div>
+        <script src="/bundle.js"></script>
       </body>
     </html>
   `;

@@ -22,7 +22,7 @@ module.exports = (env) => {
       maxAssetSize: 500 * 1024,
     },
     entry: {
-      index: './src/ClientIndex.js',
+      index: './src/index.js',
     },
     output: {
       filename: 'compiled/main.[name].billionaire.[contenthash].js',

@@ -10,5 +10,6 @@ dist/
 #Compressed bundle
 compressed/
 
-#Server folder
-ssr/
+#SSR folder
+ssr-public/
+ssr-dist/

@@ -1,18 +1,20 @@
 {
   "name": "burgeon-adaire",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "description": "PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value.",
   "main": "./src/index.js",
   "scripts": {
-    "build": "del-cli --force ./compressed && webpack --config webpack.custom.js --env NODE_ENV=production",
+    "build": "del-cli --force ./compressed && webpack --config webpack.config.js --env NODE_ENV=production",
     "s3": "aws s3 rm s3://burgeonadaire-storage/compiled --recursive && aws s3 rm s3://burgeonadaire-storage/compressed --recursive && aws s3 cp ./dist/compiled s3://burgeonadaire-storage/compiled --recursive && aws s3 cp ./dist/compiled s3://burgeonadaire-storage/compiled --recursive && aws s3 cp ./dist/assets/images s3://burgeonadaire-storage --recursive && aws s3 cp ./dist/assets/videos s3://burgeonadaire-storage/videos --recursive && aws s3 cp ./compressed s3://burgeonadaire-storage/compressed --recursive && aws s3 cp ./dist/configurations s3://burgeonadaire-storage --recursive",
     "s3-light": "aws s3 rm s3://burgeonadaire-storage/compiled --recursive && aws s3 rm s3://burgeonadaire-storage/compressed --recursive && aws s3 cp ./dist/compiled s3://burgeonadaire-storage/compiled --recursive && aws s3 cp ./dist/compiled s3://burgeonadaire-storage/compiled --recursive && aws s3 cp ./compressed s3://burgeonadaire-storage/compressed --recursive && aws s3 cp ./dist/configurations s3://burgeonadaire-storage --recursive",
-    "start-live": "npx webpack serve --config webpack.custom.js --env NODE_ENV=development",
+    "start-live": "npx webpack serve --config webpack.config.js --env NODE_ENV=development",
     "firebase-emulator": "firebase emulators:start",
     "deploy": "firebase deploy",
-    "build:server": "webpack --config webpack.server.js",
-    "build:client": "webpack --config webpack.config.js",
-    "start:server": "node ssr/server.js"
+    "build:server": "webpack --config ssr-webpack/ssr.server.js",
+    "build:client": "webpack --config ssr-webpack/ssr.client.js",
+    "build:ssr": "npm run build:client && npm run build:server",
+    "start:dev": "concurrently \"npm run build:server && nodemon --exec babel-node src/server/index.js\"  \"npm run build:client -- --watch\"",
+    "start": "npm run start:dev"
   },
   "keywords": [],
   "author": "PT. Burgeon Adaire International",
