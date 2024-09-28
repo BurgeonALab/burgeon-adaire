@@ -3,7 +3,7 @@ import React, { useState, Fragment } from 'react';
 const App = () => {
   return (
     <Fragment>
-      <h1>Hello from Server-Side Rendered React App!</h1>
+      <h1>PT. Burgeon Adaire International</h1>
       <Counter />
     </Fragment>
   );

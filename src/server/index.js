@@ -17,7 +17,7 @@ app.get('*', (req, res) => {
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>React SSR</title>
+        <title>PT. Burgeon Adaire International</title>
       </head>
       <body>
         <div id="root">${content}</div>
