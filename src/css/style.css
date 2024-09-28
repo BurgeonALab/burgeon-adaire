@@ -70,6 +70,11 @@ body {
   transition: all 500ms;
 }
 
+.padding-twentyfour-rl {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .margin-twentyfour-rl {
   margin-left: 24px;
   margin-right: 24px;
@@ -397,6 +402,34 @@ body {
   --bs-btn-hover-border-color: #610000;
   --bs-btn-active-bg: #380000;
   --bs-btn-active-border-color: #380000;
+}
+
+.btn-cp {
+  --bs-btn-bg: #121217;
+  --bs-btn-border-color: #121217;
+  --bs-btn-hover-bg: #0D0D10;
+  --bs-btn-hover-border-color: #0D0D10;
+  --bs-btn-active-bg: #070709;
+  --bs-btn-active-border-color: #070709;
+  position: absolute !important;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  left: 0;
+  padding: 18px;
+  margin-top: 24px;
+}
+
+.btn-cp-mobile {
+  --bs-btn-bg: #121217;
+  --bs-btn-border-color: #121217;
+  --bs-btn-hover-bg: #0D0D10;
+  --bs-btn-hover-border-color: #0D0D10;
+  --bs-btn-active-bg: #070709;
+  --bs-btn-active-border-color: #070709;
+  padding: 18px;
+  width: 100%;
+  margin-top: 24px;
+  border-radius: 0px;
 }
 
 .news-title-mobile {

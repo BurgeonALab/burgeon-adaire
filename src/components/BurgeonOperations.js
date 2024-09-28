@@ -55,6 +55,9 @@ export default class BurgeonOperations extends Component {
 								<div className='overlay-content margin-twentyfour-rl'>
 									<h2 className='text-light'>Operations</h2>
 									<p className='lead text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<a href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request" className='btn btn-dark btn-cp' target="_blank" rel='noopener'>
+										<span className='fw-medium'>Get Our Company Profile!</span>
+									</a>
 								</div>
 								<div className='margin-twentyfour-rl'>
 									<a id="overlay-hide-toggle" role='button'>
@@ -68,10 +71,13 @@ export default class BurgeonOperations extends Component {
 				<div className='overlay-container-mobile'>
 					<div className='overlay-container-mobile-box h-100'>
 						<div className='hide-mobile-overlay-content'>
-							<h2 className='text-light'>Operations</h2>
-							<p className='lead text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<h2 className='text-light padding-twentyfour-rl'>Operations</h2>
+							<p className='lead text-light mb-0 padding-twentyfour-rl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<a href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request" className='btn btn-dark btn-cp-mobile' target="_blank" rel='noopener'>
+								<span className='fw-medium'>Get Our Company Profile!</span>
+							</a>
 						</div>
-						<div className='d-flex justify-content-center'>
+						<div className='d-flex justify-content-center padding-twentyfour-rl'>
 							<a id="overlay-hide-mobile-toggle" role='button'>
 								<FontAwesomeIcon icon={faChevronUp} className='overlay-mobile-button link-light' size='lg' />
 							</a>
