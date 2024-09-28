@@ -41,6 +41,13 @@ export default class BurgeonOutro extends Component {
           logo: "https://images.burgeonadaire.com/jci-logo.webp",
           link: "https://jci.cc",
         },
+        {
+          id: 5,
+          name: "The Buddhist Society",
+          desc: "The Buddhist Society's Homepage",
+          logo: "https://images.burgeonadaire.com/the-buddhist-society.webp",
+          link: "https://thebuddhistsociety.org",
+        },
       ]
     }
   }
