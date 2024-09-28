@@ -54,7 +54,7 @@ export default class BurgeonOperations extends Component {
 							<div className='d-flex flex-row justify-content-between align-items-center h-100'>
 								<div className='overlay-content margin-twentyfour-rl'>
 									<h2 className='text-light'>Operations</h2>
-									<p className='lead text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<p className='lead text-light mb-0'>Our work at PT. Burgeon Adaire International touches on a wide range of fields, from trading and investing to web app development, media projects, and eCommerce. We focus on bringing innovation and expertise to everything we do.</p>
 									<a href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request" className='btn btn-dark btn-cp' target="_blank" rel='noopener'>
 										<span className='fw-medium'>Get Our Company Profile!</span>
 									</a>
@@ -72,7 +72,7 @@ export default class BurgeonOperations extends Component {
 					<div className='overlay-container-mobile-box h-100'>
 						<div className='hide-mobile-overlay-content'>
 							<h2 className='text-light padding-twentyfour-rl'>Operations</h2>
-							<p className='lead text-light mb-0 padding-twentyfour-rl'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+							<p className='lead text-light mb-0 padding-twentyfour-rl'>Our work at PT. Burgeon Adaire International touches on a wide range of fields, from trading and investing to web app development, media projects, and eCommerce. We focus on bringing innovation and expertise to everything we do.</p>
 							<a href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request" className='btn btn-dark btn-cp-mobile' target="_blank" rel='noopener'>
 								<span className='fw-medium'>Get Our Company Profile!</span>
 							</a>
