@@ -122,7 +122,7 @@ export default class BurgeonFooter extends Component {
                         </div>
                         <div className='footer-link-box-mobile mt-3'>
                           <p className='lead fw-medium mb-0'>Companies</p>
-                          <div className='footer-link-right-mobile'>
+                          <div className='link-blank-space footer-link-right-mobile'>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="https://adairesolutions.com" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>The Adaire Solutions</p>
                             </a>
@@ -133,7 +133,7 @@ export default class BurgeonFooter extends Component {
                         </div>
                         <div className='footer-link-box-mobile mt-3'>
                           <p className='lead fw-medium mb-0'>Links</p>
-                          <div className='footer-link-right-mobile'>
+                          <div className='link-blank-space footer-link-right-mobile'>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Identity</p>
                             </a>
