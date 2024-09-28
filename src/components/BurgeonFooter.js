@@ -12,6 +12,7 @@ import {
   TheOrg,
   PitchBook,
 } from './vectors';
+import $ from 'jquery';
 import { ReactSVG } from 'react-svg';
 
 export default class BurgeonFooter extends Component {
@@ -54,6 +55,7 @@ export default class BurgeonFooter extends Component {
           icon: TheOrg,
           height: 'auto',
           width: '28px',
+          classname: 'social-media-footer-items-org social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center',
         },
         {
           id: 1,
@@ -64,9 +66,30 @@ export default class BurgeonFooter extends Component {
           icon: PitchBook,
           height: '28px',
           width: 'auto',
+          classname: 'social-media-footer-items-pitchbook social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center',
         },
       ]
     }
+  }
+
+  jQuery = () => {
+    $('.social-media-footer-items-org').on('mouseenter', function () {
+      $('.burgeon-adaire-link-svg-inside>path').attr('style', 'fill: #8B0000 !important;')
+    });
+    $('.social-media-footer-items-org').on('mouseleave', function () {
+      $('.burgeon-adaire-link-svg-inside>path').attr('style', 'fill: #FFFFFF !important;')
+    });
+
+    $('.social-media-footer-items-pitchbook').on('mouseenter', function () {
+      $('.burgeon-adaire-link-svg-inside > g > g > path').attr('style', 'fill: #8B0000 !important;')
+    });
+    $('.social-media-footer-items-pitchbook').on('mouseleave', function () {
+      $('.burgeon-adaire-link-svg-inside > g > g > path').attr('style', 'fill: #FFFFFF !important;')
+    });
+  };
+
+  componentDidMount() {
+    this.jQuery();
   }
 
   render() {
@@ -88,7 +111,7 @@ export default class BurgeonFooter extends Component {
                       <div className='col-md-6 d-flex flex-column justify-content-end'>
                         <div className='mt-3'>
                           <p className='lead fw-medium mb-0'>Portfolio</p>
-                          <div className='footer-link-right-mobile'>
+                          <div className='link-blank-space footer-link-right-mobile'>
                             <a className='text-decoration-none link-light' href="https://geraldzandisko.burgeonadaire.com" target='_blank' rel='noopener'>
                               <p className='burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light'>Gerald Zandisko</p>
                             </a>
@@ -136,7 +159,7 @@ export default class BurgeonFooter extends Component {
                         <div className='social-media-footer-mobile-items mb-0 d-flex flex-column align-items-end'>
                           {
                             this.state.socialsvg.map((element, i) => (
-                              <div key={i} className='social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center'>
+                              <div key={i} className={element.classname}>
                                 <a className='d-block' href={element.link} target='_blank' rel='noopener'>
                                   <ReactSVG
                                     beforeInjection={(svg) => {

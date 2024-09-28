@@ -553,11 +553,11 @@ body {
 }
 
 .burgeon-adaire-link-svg-inside>path {
-  transition: all 0.3s;
+  transition: all 0.3s !important;
 }
 
-.burgeon-adaire-link-svg-inside>path:hover {
-  fill: #8B0000 !important;
+.burgeon-adaire-link-svg-inside>g>g>path {
+  transition: all 0.3s !important;
 }
 
 .about-item.about-item-blue {
@@ -570,16 +570,14 @@ body {
   background-image: linear-gradient(to top, rgba(18, 18, 23, 0.9) 30%, rgba(18, 18, 23, 0.4)), url('https://images.burgeonadaire.com/about-brown.webp');
 }
 
-/* .burgeon-adaire-link-svg-inside > g > g:hover {
-  fill: #8B0000 !important;
-}
-
-.burgeon-adaire-link-svg-inside > g > g > path:hover {
-  fill: #8B0000 !important;
-} */
-
 .extras-container-mobile {
   display: none !important;
+}
+
+.link-blank-space {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 /* Animation */
