@@ -123,7 +123,6 @@ export default class BSmallValbury extends Component {
       DataTradeClean(jQuery);
       MarketBadgesClean(jQuery);
       $("#status-signal").hide();
-      $("#status-signal").show();
       $("#status-market").addClass("text-bg-dark");
       $("#status-market").html("XAU/USD");
       $('.valbury-box:first-child').css('background-color', '#272731');
