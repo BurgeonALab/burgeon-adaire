@@ -33,16 +33,14 @@ const helmetContext = {};
 function App() {
   return (
     <Suspense fallback={<BurgeonPreload />}>
-      <HelmetProvider context={helmetContext}>
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/privacy-policy' element={<PrivacyPolicy />} />
-            <Route path='/cookie-policy' element={<CookiePolicy />} />
-            <Route path='/terms-and-condition' element={<TermsConditions />} />
-          </Routes>
-        </BrowserRouter>
-      </HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='/cookie-policy' element={<CookiePolicy />} />
+          <Route path='/terms-and-condition' element={<TermsConditions />} />
+        </Routes>
+      </BrowserRouter>
     </Suspense>
   );
 }
@@ -50,5 +48,7 @@ function App() {
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 root.render(
-  <App />
+  <HelmetProvider context={helmetContext}>
+    <App />
+  </HelmetProvider>
 );
