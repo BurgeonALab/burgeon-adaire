@@ -1,4 +1,6 @@
 const path = require('path');
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: "./src/client/index.js",
@@ -11,6 +13,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx']
   },
+  optimization: {
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ],
+  },
   module: {
     rules: [
       {
@@ -19,7 +27,19 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
-      }
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ],
+      },
     ]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "bundle.css",
+    }),
+  ]
 }
