@@ -1,6 +1,7 @@
 const path = require('path');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/client/index.js",
@@ -32,14 +33,28 @@ module.exports = {
         test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader"
+          { loader: "css-loader" },
         ],
+      },
+      {
+        test: /\.svg/,
+        use: {
+          loader: "svg-url-loader",
+          options: {
+            iesafe: true,
+          }
+        }
       },
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: "bundle.css",
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./src/client/favicon.ico", to: "./" }
+      ],
     }),
   ]
 }
