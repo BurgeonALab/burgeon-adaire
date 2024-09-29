@@ -105,8 +105,8 @@ module.exports = (env) => {
         resourceRegExp: /^\.\/locale$/,
         contextRegExp: /moment$/,
       }),
-      new CopyPlugin(
-        [
+      new CopyPlugin({
+        patterns: [
           { from: "./public/assets/videos", to: "./assets/videos" },
           { from: "./public/assets/images", to: "./assets/images" },
           { from: "./public/robots.txt", to: "./" },
@@ -116,7 +116,7 @@ module.exports = (env) => {
           { from: "./public/webmanifest.json", to: "./configurations" },
           { from: "./public/ads.txt", to: "./" },
         ],
-      ),
+      }),
       new HtmlWebpackPlugin({
         template: './public/index.html',
         filename: './index.html',
