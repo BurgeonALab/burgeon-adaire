@@ -11,9 +11,10 @@
     "firebase-emulator": "firebase emulators:start",
     "deploy": "firebase deploy",
     "build:server": "webpack --config ssr-webpack/ssr.server.js",
-    "build:client": "webpack --config ssr-webpack/ssr.client.js",
-    "build:ssr": "npm run build:client && npm run build:server",
-    "start:dev": "concurrently \"npm run build:server && nodemon --exec babel-node src/server/index.js\"  \"npm run build:client -- --watch\"",
+    "build:client:dev": "webpack --config ssr-webpack/ssr.client.js --mode development --env=development",
+    "build:client:prod": "webpack --config ssr-webpack/ssr.client.js --mode production --env=production",
+    "build:ssr": "npm run build:client:prod && npm run build:server",
+    "start:dev": "concurrently \"npm run build:server && nodemon --exec babel-node src/server/index.js\"  \"npm run build:client:prod -- --watch\"",
     "start": "npm run start:dev"
   },
   "keywords": [],

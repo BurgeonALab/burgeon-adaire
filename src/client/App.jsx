@@ -1,18 +1,19 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import { Route, Routes } from "react-router-dom";
-
-const HomePage = lazy(() => import('../ssr-pages/BurgeonSSRHome'));
-const PrivacyPolicy = lazy(() => import('../ssr-pages/BurgeonSSRPolicy'));
-const CookiePolicy = lazy(() => import('../ssr-pages/BurgeonSSRPolicy'));
-const TermsConditions = lazy(() => import('../ssr-pages/BurgeonSSRTAC'));
+import {
+  BurgeonSSRHome,
+  BurgeonSSRPolicy,
+  BurgeonSSRCookie,
+  BurgeonSSRTAC,
+} from '../ssr-pages'
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="/cookie-policy" element={<CookiePolicy />} />
-      <Route path="/terms-and-conditions" element={<TermsConditions />} />
+      <Route path="/" element={<BurgeonSSRHome />} />
+      <Route path="/privacy-policy" element={<BurgeonSSRPolicy />} />
+      <Route path="/cookie-policy" element={<BurgeonSSRCookie />} />
+      <Route path="/terms-and-conditions" element={<BurgeonSSRTAC />} />
     </Routes>
   );
 }
