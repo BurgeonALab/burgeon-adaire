@@ -3,7 +3,7 @@ import React, {
   Fragment,
 } from 'react';
 
-export default class BurgeonTermsConditions extends Component {
+export default class BurgeonSubTermsConditions extends Component {
   render() {
     return (
       <Fragment>

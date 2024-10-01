@@ -5,7 +5,6 @@ import React, {
   lazy,
 } from 'react';
 import {
-  BurgeonHead,
   BurgeonNavbar,
   BurgeonFooter,
   BurgeonJumbotron,
@@ -26,14 +25,11 @@ export default class HomePage extends Component {
         <BurgeonSEO
           title="Driving the Future | PT. Burgeon Adaire International"
           description="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value."
-          sitename="PT. Burgeon Adaire International"
-          canoncial="https://burgeonadaire.com"
         />
         <div className='bottom-footer-container'>
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-12">
-                <BurgeonHead />
                 <BurgeonContact />
                 <BurgeonNavbar />
                 <BurgeonJumbotron />

@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import {
   HelmetProvider,
 } from 'react-helmet-async';
+import './components/BurgeonSchema'
 import {
   BrowserRouter,
   Routes,

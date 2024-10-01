@@ -3,12 +3,13 @@ import React, {
   Fragment,
 } from 'react';
 import {
-  BurgeonHead,
   BurgeonNavbar,
   BurgeonFooter,
   BurgeonContact,
-  BurgeonTermsConditions,
 } from '../components';
+import {
+  BurgeonSubTermsConditions,
+} from './sub-pages';
 import { BurgeonSEO } from '../components/BurgeonSEO';
 
 export default class TermsConditions extends Component {
@@ -18,17 +19,14 @@ export default class TermsConditions extends Component {
         <BurgeonSEO
           title="Terms and Condition | PT. Burgeon Adaire International"
           description="Terms and Condition."
-          sitename="PT. Burgeon Adaire International"
-          canoncial="https://burgeonadaire.com/terms-and-conditions"
         />
         <div className='bottom-footer-container'>
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-12">
-                <BurgeonHead />
                 <BurgeonContact />
                 <BurgeonNavbar />
-                <BurgeonTermsConditions />
+                <BurgeonSubTermsConditions />
               </div>
             </div>
           </div>
