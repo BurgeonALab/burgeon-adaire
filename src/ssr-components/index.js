@@ -1,11 +1,11 @@
+import BurgeonSSRPreload from "./BurgeonSSRPreload";
 import BurgeonSSRContacts from "./BurgeonSSRContacts";
 import BurgeonSSRJumbotron from "./BurgeonSSRJumbotron";
 import BurgeonSSRNavbar from "./BurgeonSSRNavbar";
-import BurgeonSSRPreload from "./BurgeonSSRPreload";
 
 export {
+  BurgeonSSRPreload,
   BurgeonSSRContacts,
   BurgeonSSRJumbotron,
   BurgeonSSRNavbar,
-  BurgeonSSRPreload,
 }

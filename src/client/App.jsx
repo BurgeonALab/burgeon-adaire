@@ -2,11 +2,11 @@ import React, {
   lazy,
   Suspense,
 } from 'react';
-import { Route, Routes } from "react-router-dom";
-import { HelmetProvider } from 'react-helmet-async';
 import {
   BurgeonSSRPreload,
 } from '../ssr-components';
+import { Route, Routes } from "react-router-dom";
+import { HelmetProvider } from 'react-helmet-async';
 
 const SSRHomePage = lazy(() => import('../ssr-pages/BurgeonSSRHome'));
 const SSRPrivacyPolicy = lazy(() => import('../ssr-pages/BurgeonSSRPolicy'));

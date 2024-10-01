@@ -18,7 +18,7 @@ app.get('*', (req, res) => {
   res.send(
     `
       <!DOCTYPE html>
-      <html lang="en">
+      <html style="display: none" lang="en">
         <body>
           <div id="root">${html}</div>
           <script src="/webpacks.js"></script>
