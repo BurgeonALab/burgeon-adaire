@@ -1,30 +1,34 @@
 import React, {
   Component,
+  Fragment,
 } from 'react';
+import { BurgeonSEO } from '../ssr-components/BurgeonSSRSEO';
+import {
+  BurgeonSSRContacts,
+  BurgeonSSRJumbotron,
+  BurgeonSSRNavbar,
+} from '../ssr-components';
 
 export default class BurgeonSSRHome extends Component {
   render() {
     return (
-      <html lang="en">
-        <head>
-          <meta charSet="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <link rel="stylesheet" href="/bundle.css" />
-          <link rel="icon" href="/favicon.ico" />
-          <title>Driving the Future | PT. Burgeon Adaire International</title>
-        </head>
-        <body>
-          <div className='bottom-footer-container'>
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col-md-12">
-                  <h1 className='text-light'>PT. Burgeon Adaire International</h1>
-                </div>
+      <Fragment>
+        <BurgeonSEO
+          title="Driving the Future | PT. Burgeon Adaire International"
+          description="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value."
+        />
+        <div className='bottom-footer-container'>
+          <div className="container-fluid">
+            <div className="row">
+              <div className="col-md-12">
+                <BurgeonSSRContacts />
+                <BurgeonSSRNavbar />
+                <BurgeonSSRJumbotron />
               </div>
             </div>
           </div>
-        </body>
-      </html>
+        </div>
+      </Fragment>
     );
   }
 }

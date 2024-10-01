@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "dedent": "^1.5.3",
     "express": "^4.21.0",
     "firebase": "^10.13.2",
     "jquery": "^3.7.1",

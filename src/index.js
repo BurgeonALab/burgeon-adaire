@@ -38,7 +38,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
           <Route path='/cookie-policy' element={<CookiePolicy />} />
-          <Route path='/terms-and-condition' element={<TermsConditions />} />
+          <Route path='/terms-and-conditions' element={<TermsConditions />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
