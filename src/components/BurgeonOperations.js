@@ -86,14 +86,10 @@ export default class BurgeonOperations extends Component {
 				</div>
 				<div className='row operations-container'>
 					<div className='valbury-container-mobile col-xxl-3 py-3 d-flex flex-column'>
-						<Suspense fallback={
-							<div className='h-50 w-100 rounded bg-secondary'></div>
-						}>
+						<Suspense fallback={<p className='d-none'>Loading</p>}>
 							<BSmallValbury />
 						</Suspense>
-						<Suspense fallback={
-							<div className='h-50 w-100 rounded bg-secondary'></div>
-						}>
+						<Suspense fallback={<p className='d-none'>Loading</p>}>
 							<BSmallNews />
 						</Suspense>
 					</div>
@@ -174,9 +170,7 @@ export default class BurgeonOperations extends Component {
 										</div>
 									</div>
 								</div>
-								<Suspense fallback={
-									<div className='h-100 w-100 rounded bg-secondary'></div>
-								}>
+								<Suspense fallback={<p className='d-none'>Loading</p>}>
 									<BMediumOperations />
 								</Suspense>
 							</div>
