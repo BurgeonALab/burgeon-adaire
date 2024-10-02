@@ -8,10 +8,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 const dedent = require('dedent');
 
 module.exports = (env) => {
-  // const isProduction = env === 'production';
+  const isDevelopment = env.NODE_ENV !== 'production';
 
   return {
-    // devtool: isProduction ? 'source-map' : 'inline-source-map',
+    // devtool: isDevelopment ? 'inline-source-map' : 'source-map',
     entry: "./src/client/index.js",
     mode: "production",
     output: {
@@ -104,6 +104,6 @@ module.exports = (env) => {
           { from: "./src/client/favicon.ico", to: "./" }
         ],
       }),
-    ]
+    ],
   }
 }
