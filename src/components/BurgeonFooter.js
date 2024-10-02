@@ -19,7 +19,7 @@ export default class BurgeonFooter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      socialsymbol: [
+      footericon: [
         {
           id: 0,
           type: 'symbol',
@@ -44,10 +44,8 @@ export default class BurgeonFooter extends Component {
           link: "https://twitter.com/burgeonadaire",
           icon: faXTwitter,
         },
-      ],
-      socialsvg: [
         {
-          id: 0,
+          id: 3,
           type: 'svg',
           name: "The Org",
           desc: "PT. Burgeon Adaire International's The Org Profile Page",
@@ -58,7 +56,7 @@ export default class BurgeonFooter extends Component {
           classname: 'social-media-footer-items-org social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center',
         },
         {
-          id: 1,
+          id: 4,
           type: 'svg',
           name: "PitchBook",
           desc: "PT. Burgeon Adaire International's PitchBook Profile Page",
@@ -68,7 +66,7 @@ export default class BurgeonFooter extends Component {
           width: 'auto',
           classname: 'social-media-footer-items-pitchbook social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center',
         },
-      ]
+      ],
     }
   }
 
@@ -158,29 +156,27 @@ export default class BurgeonFooter extends Component {
                       <div className='social-media-footer-mobile col-md-6 d-flex flex-column justify-content-end'>
                         <div className='social-media-footer-mobile-items mb-0 d-flex flex-column align-items-end'>
                           {
-                            this.state.socialsvg.map((element, i) => (
-                              <div key={i} className={element.classname}>
-                                <a className='d-block' href={element.link} target='_blank' rel='noopener'>
-                                  <ReactSVG
-                                    beforeInjection={(svg) => {
-                                      svg.classList.add('burgeon-adaire-link-svg-inside');
-                                      svg.setAttribute('style', 'height: ' + element.height + '; width: ' + element.width + ';');
-                                    }}
-                                    title={element.name}
-                                    desc={element.desc}
-                                    src={element.icon}
-                                  />
-                                </a>
-                              </div>
-                            ))
-                          }
-                          {
-                            this.state.socialsymbol.map((element, i) => (
-                              <div key={i} className='social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center'>
-                                <a className='d-block' href={element.link} target='_blank' rel='noopener'>
-                                  <FontAwesomeIcon icon={element.icon} className='burgeon-adaire-link link-light' size='2xl' />
-                                </a>
-                              </div>
+                            this.state.footericon.map((element, i) => (
+                              element.type === 'symbol' ?
+                                <div key={i} className='social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center'>
+                                  <a className='d-block' href={element.link} target='_blank' rel='noopener'>
+                                    <FontAwesomeIcon icon={element.icon} className='burgeon-adaire-link link-light' size='2xl' />
+                                  </a>
+                                </div>
+                                :
+                                <div key={i} className={element.classname}>
+                                  <a className='d-block' href={element.link} target='_blank' rel='noopener'>
+                                    <ReactSVG
+                                      beforeInjection={(svg) => {
+                                        svg.classList.add('burgeon-adaire-link-svg-inside');
+                                        svg.setAttribute('style', 'height: ' + element.height + '; width: ' + element.width + ';');
+                                      }}
+                                      title={element.name}
+                                      desc={element.desc}
+                                      src={element.icon}
+                                    />
+                                  </a>
+                                </div>
                             ))
                           }
                         </div>
