@@ -8,6 +8,7 @@ import {
   BurgeonSSRJumbotron,
   BurgeonSSRNavbar,
   BurgeonSSRFooter,
+  BurgeonSSRAbout,
 } from '../ssr-components';
 
 export default class BurgeonSSRHome extends Component {
@@ -25,6 +26,7 @@ export default class BurgeonSSRHome extends Component {
                 <BurgeonSSRContacts />
                 <BurgeonSSRNavbar />
                 <BurgeonSSRJumbotron />
+                <BurgeonSSRAbout />
               </div>
             </div>
           </div>
