@@ -9,6 +9,7 @@ import {
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import $ from 'jquery';
+import { ReactSVG } from 'react-svg';
 
 export default class BurgeonSSRFooter extends Component {
   constructor(props) {
@@ -38,6 +39,28 @@ export default class BurgeonSSRFooter extends Component {
           desc: "PT. Burgeon Adaire International's Twitter X Profile Page",
           link: "https://twitter.com/burgeonadaire",
           icon: faXTwitter,
+        },
+        {
+          id: 3,
+          type: 'svg',
+          name: "The Org",
+          desc: "PT. Burgeon Adaire International's The Org Profile Page",
+          link: "https://theorg.com/org/pt-burgeon-adaire-international",
+          src: "./assets/the-org.svg",
+          height: 'auto',
+          width: '28px',
+          classname: 'social-media-footer-items-org social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center',
+        },
+        {
+          id: 4,
+          type: 'svg',
+          name: "PitchBook",
+          desc: "PT. Burgeon Adaire International's PitchBook Profile Page",
+          link: "https://pitchbook.com",
+          height: '28px',
+          src: "./assets/pitchbook.svg",
+          width: 'auto',
+          classname: 'social-media-footer-items-pitchbook social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center',
         },
       ],
     }
@@ -130,11 +153,26 @@ export default class BurgeonSSRFooter extends Component {
                         <div className='social-media-footer-mobile-items mb-0 d-flex flex-column align-items-end'>
                           {
                             this.state.socialsymbol.map((element, i) => (
-                              <div key={i} className='social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center'>
-                                <a className='d-block' href={element.link} target='_blank' rel='noopener'>
-                                  <FontAwesomeIcon icon={element.icon} className='burgeon-adaire-link link-light' size='2xl' />
-                                </a>
-                              </div>
+                              element.type === "symbol" ?
+                                <div key={i} className='social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center'>
+                                  <a className='d-block' href={element.link} target='_blank' rel='noopener'>
+                                    <FontAwesomeIcon icon={element.icon} className='burgeon-adaire-link link-light' size='2xl' />
+                                  </a>
+                                </div>
+                                :
+                                <div key={i} className={element.classname}>
+                                  <a className='d-block' href={element.link} target='_blank' rel='noopener'>
+                                    <ReactSVG
+                                      beforeInjection={(svg) => {
+                                        svg.classList.add('burgeon-adaire-link-svg-inside');
+                                        svg.setAttribute('style', 'height: ' + element.height + '; width: ' + element.width + ';');
+                                      }}
+                                      title={element.name}
+                                      desc={element.desc}
+                                      src={element.src}
+                                    />
+                                  </a>
+                                </div>
                             ))
                           }
                         </div>
