@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 // Styles
 import '../css/style.css';
 import '../css/responsive.css';
-import '../css/ssrdisplay.css';
+import '../css/ssr.css';
 // React
 import { hydrateRoot } from 'react-dom/client';
 import App from './App';

@@ -1,32 +1,25 @@
-import React, {
-  lazy,
-  Suspense,
-} from 'react';
-import {
-  BurgeonSSRPreload,
-} from '../ssr-components';
+import React from 'react';
 import { Route, Routes } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
-
-const SSRHomePage = lazy(() => import('../ssr-pages/BurgeonSSRHome'));
-const SSRPrivacyPolicy = lazy(() => import('../ssr-pages/BurgeonSSRPolicy'));
-const SSRCookiePolicy = lazy(() => import('../ssr-pages/BurgeonSSRCookie'));
-const SSRTermsConditions = lazy(() => import('../ssr-pages/BurgeonSSRTAC'));
+import {
+  BurgeonSSRHome,
+  BurgeonSSRPolicy,
+  BurgeonSSRCookie,
+  BurgeonSSRTAC,
+} from "../ssr-pages";
 
 const helmetContext = {};
 
 const App = () => {
   return (
-    <Suspense fallback={<BurgeonSSRPreload />}>
-      <HelmetProvider context={helmetContext}>
-        <Routes>
-          <Route path="/" element={<SSRHomePage />} />
-          <Route path="/privacy-policy" element={<SSRPrivacyPolicy />} />
-          <Route path="/cookie-policy" element={<SSRCookiePolicy />} />
-          <Route path="/terms-and-conditions" element={<SSRTermsConditions />} />
-        </Routes>
-      </HelmetProvider>
-    </Suspense>
+    <HelmetProvider context={helmetContext}>
+      <Routes>
+        <Route path="/" element={<BurgeonSSRHome />} />
+        <Route path="/privacy-policy" element={<BurgeonSSRPolicy />} />
+        <Route path="/cookie-policy" element={<BurgeonSSRCookie />} />
+        <Route path="/terms-and-conditions" element={<BurgeonSSRTAC />} />
+      </Routes>
+    </HelmetProvider>
   );
 }
 
