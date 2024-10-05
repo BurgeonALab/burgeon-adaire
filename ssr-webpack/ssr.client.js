@@ -14,10 +14,14 @@ module.exports = (env) => {
     // devtool: isDevelopment ? 'inline-source-map' : 'source-map',
     entry: "./src/client/index.js",
     mode: "production",
+    performance: {
+      hints: false,
+      maxAssetSize: 500 * 1024,
+    },
     output: {
       path: path.resolve(__dirname, '../ssr-public'),
-      filename: "bai.[name].js",
-      chunkFilename: "bai.[name].js",
+      filename: "./scripts/bai.[name].js",
+      chunkFilename: "./scripts/bai.[name].js",
       clean: true,
     },
     resolve: {
@@ -96,12 +100,13 @@ module.exports = (env) => {
         },
       }),
       new MiniCssExtractPlugin({
-        filename: "bai.[name].css",
-        chunkFilename: "bai.[name].css"
+        filename: "./styles/bai.[name].css",
+        chunkFilename: "./styles/bai.[name].css"
       }),
       new CopyPlugin({
         patterns: [
-          { from: "./src/client/favicon.ico", to: "./" }
+          { from: "./src/client/favicon.ico", to: "./" },
+          { from: "./public/assets/vectors", to: "./assets" }
         ],
       }),
     ],
