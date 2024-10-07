@@ -6,37 +6,56 @@ const settings = {
   slidesToShow: 1,
   speed: 500,
   fade: true,
+  dots: true,
+  dotsClass: "operations-dots",
+  customPaging: function () {
+    return (
+      <a>
+        <div className="operations-circle-indicator"></div>
+      </a>
+    );
+  },
 };
 
 export default class BMediumOperations extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [
+        {
+          id: 0,
+          name: 'Portfolio',
+          link: 'https://portfolio.burgeonadaire.com',
+        },
+        {
+          id: 0,
+          name: 'Blog',
+          link: 'https://blog.burgeonadaire.com',
+        },
+        {
+          id: 0,
+          name: 'The Adaire Solutions',
+          link: 'https://adairesolutions.com',
+        }
+      ],
+    };
+  }
+
   render() {
     return (
       <div className='burgeon-mobile-first-operations col-md-12'>
         <Slider {...settings}>
-          <div className='portfolio-box rounded p-4 h-100'>
-            <div className='d-flex h-100 flex-column justify-content-between'>
-              <h5 className='text-light'>Portfolio</h5>
-              <div className='d-flex flex-column align-items-end'>
-                <span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+          {
+            this.state.items.map((data, index) => (
+              <div key={index} className='portfolio-box rounded p-4 h-100'>
+                <div className='d-flex h-100 flex-column justify-content-between'>
+                  <a className='text-decoration-none' href={data.link} rel="noopener" target="_blank">
+                    <h5 className='text-light'>{data.name}</h5>
+                  </a>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className='portfolio-box rounded p-4 h-100'>
-            <div className='d-flex h-100 flex-column justify-content-between'>
-              <h5 className='text-light'>Blog</h5>
-              <div className='d-flex flex-column align-items-end'>
-                <span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
-              </div>
-            </div>
-          </div>
-          <div className='portfolio-box rounded p-4 h-100'>
-            <div className='d-flex h-100 flex-column justify-content-between'>
-              <h5 className='text-light'>The Adaire Solutions</h5>
-              <div className='d-flex flex-column align-items-end'>
-                <span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
-              </div>
-            </div>
-          </div>
+            ))
+          }
         </Slider>
       </div>
     );

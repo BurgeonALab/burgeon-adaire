@@ -613,6 +613,50 @@ body {
   align-items: start;
 }
 
+.operations-dots {
+  margin-bottom: 24px;
+  margin-right: 24px;
+  bottom: 0;
+  right: 0;
+  padding: 0 0;
+  list-style: none;
+  position: absolute;
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+.operations-dots li {
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.operations-dots li:last-child {
+  margin-left: 6px;
+  margin-right: 0px;
+}
+
+.operations-dots li:first-child {
+  margin-left: 0px;
+  margin-right: 6px;
+}
+
+.operations-dots li {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #A1AEBC;
+}
+
+.operations-dots li.slick-active {
+  background-color: #FFFFFF;
+}
+
+.operations-circle-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
 /* Animation */
 @keyframes fullOpacity {
   0% {
