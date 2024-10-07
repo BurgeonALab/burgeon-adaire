@@ -16,6 +16,8 @@ export function BAIContainerButtons(props) {
     var firstvaf = 'still';
 
     function ShowVafDetailFirst($) {
+      console.log('ShowVafDetailFirst');
+
       $('.news-title').hide();
       $('.news-title-mobile-expanded').hide();
       $('.valbury-box:nth-child(1)').removeClass('width-20-percent');
@@ -23,6 +25,8 @@ export function BAIContainerButtons(props) {
       $('.valbury-box:nth-child(1)').addClass('width-80-percent');
       $('.valbury-box:nth-child(2)').addClass('width-20-percent');
       if (windowWidth <= 450) {
+        console.log('ShowVafDetailFirst: windowWidth');
+
         $('.valbury-box-container-mobile h5').hide();
         $('#status-market').hide();
         $('#status-signal').hide();
@@ -39,8 +43,14 @@ export function BAIContainerButtons(props) {
     }
 
     function HideVafDetailFirst($) {
+      console.log('HideVafDetailFirst');
+
       if (varvafFirst === 'readycollapse') {
+        console.log('HideVafDetailFirst: varvafFirst readycollapse');
+
         if (orderdata === 'readyhide') {
+          console.log('HideVafDetailFirst: orderdata readyhide');
+
           if ($('.data-unavailable-signal').is(':hidden')) {
             $('.signal-order-box-custom').hide();
             $('.valbury-box-container-mobile h5').show();
@@ -65,6 +75,8 @@ export function BAIContainerButtons(props) {
           }
         } else {
           if (windowWidth <= 450) {
+            console.log("HideVafDetailFirst: windowWidth");
+
             $('#status-market').hide();
             $('#status-signal').hide();
             $('.signal-order-box-custom').show();
@@ -81,6 +93,8 @@ export function BAIContainerButtons(props) {
         $('.news-content-detail').removeClass('valbury-box-container-mobile-hide');
         varvafFirst = 'still';
       } else if (varvafSecond === 'readycollapse') {
+        console.log("HideVafDetailFirst: varvafSecond readycollapse");
+
         $('.valbury-box:nth-child(1)').removeClass('width-20-percent');
         $('.valbury-box:nth-child(1) .valbury-box-container-mobile').removeClass('valbury-box-container-mobile-hide');
         $('.valbury-box:nth-child(2)').addClass('width-20-percent');
@@ -92,9 +106,16 @@ export function BAIContainerButtons(props) {
     }
 
     function ToogleVafRight($) {
+      console.log('ToogleVafRight');
       if (varvafSecond === 'readycollapse') {
+        console.log("ToggleVafRight: varvafSecond readycollapse");
+
         if (orderdata === 'readyhide') {
+          console.log("ToggleVafRight: orderdata readyhide");
+
           if (windowWidth <= 768 || $('.data-unavailable-signal').is(':visible')) {
+            console.log("ToggleVafRight: windowWidth");
+
             $('.signal-order-box-custom').hide();
             $('#status-market').show();
             $('#status-signal').show();
@@ -116,6 +137,8 @@ export function BAIContainerButtons(props) {
         firstvaf = 'still';
         varvafSecond = 'still';
       } else if (varvafFirst === 'readycollapse') {
+        console.log("ToogleVafRight: varvafFirst readycollapse");
+
         $('.valbury-box-container-mobile h5').show();
         $('.news-title-mobile-expanded').show();
         // Hide
@@ -133,6 +156,8 @@ export function BAIContainerButtons(props) {
         varvafSecond = 'readycollapse';
         varvafFirst = 'still';
       } else {
+        console.log("ToogleVafRight: Base");
+
         $('.news-title').hide();
         $('.news-title-mobile').hide();
         $('.news-title-mobile-expanded').show();
