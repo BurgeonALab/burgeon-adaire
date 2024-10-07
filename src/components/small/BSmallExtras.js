@@ -11,10 +11,10 @@ export default class BSmallExtras extends Component {
           <div className='flex-grow-1 operation-child-container'>
             <div className='h-100'>
               <div className='ecommerce-box rounded p-4'>
-                <div className='d-flex h-100 flex-column justify-content-between'>
-                  <h5 className='text-light'>eCommerce</h5>
-                  <div className='d-flex flex-column align-items-end'>
-                    <span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+                <div className='d-flex h-100 flex-column'>
+                  <div>
+                    <h5 className='text-light'>eCommerce</h5>
+                    <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                   </div>
                 </div>
               </div>

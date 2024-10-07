@@ -18,6 +18,32 @@ const BMediumOperations = lazy(() => import('./medium/BMediumOperations'));
 const BMediumExtras = lazy(() => import('./medium/BMediumExtras'));
 
 export default class BurgeonOperations extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			items: [
+				{
+					id: 1,
+					hitoverlay: true,
+					name: 'Portfolio',
+					link: 'https://portfolio.burgeonadaire.com',
+				},
+				{
+					id: 2,
+					hitoverlay: false,
+					name: 'Blog',
+					link: 'https://blog.burgeonadaire.com',
+				},
+				{
+					id: 3,
+					hitoverlay: false,
+					name: 'The Adaire Solutions',
+					link: 'https://adairesolutions.com',
+				}
+			],
+		};
+	}
+
 	jQuery = () => {
 		$('#overlay-hide-toggle').on("click", function () {
 			$('.operation-container-overlay').toggleClass("width-70");
@@ -140,36 +166,30 @@ export default class BurgeonOperations extends Component {
 						</div>
 						<div className='flex-grow-1 operation-child-container'>
 							<div className='row h-100 portfolio-box-mobile'>
-								<div className='mobile-child-operations col-md-4'>
-									<div className='portfolio-everything-mobile portfolio-box rounded p-4'>
-										<div className='d-flex h-100 flex-column justify-content-between'>
-											<h5 className='text-light'>Portfolio</h5>
-											<div className='d-flex flex-column align-items-end'>
-												<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+								{this.state.items.map((data, index) => (
+									data.hitoverlay == true ?
+										<div key={index} className='mobile-child-operations col-md-4'>
+											<div className='portfolio-everything-mobile portfolio-box rounded p-4'>
+												<div className='d-flex h-100 flex-column'>
+													<a className="text-decoration-none" href={data.link} target="_blank" rel="noopener">
+														<h5 className='text-light'>{data.name}</h5>
+													</a>
+													<p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div className='mobile-child-operations col-md-4'>
-									<div className='portfolio-box rounded p-4'>
-										<div className='d-flex h-100 flex-column justify-content-between'>
-											<h5 className='text-light'>Blog</h5>
-											<div className='d-flex flex-column align-items-end'>
-												<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
+										:
+										<div key={index} className='mobile-child-operations col-md-4'>
+											<div className='portfolio-box rounded p-4'>
+												<div className='d-flex h-100 flex-column'>
+													<a className="text-decoration-none" href={data.link} target="_blank" rel="noopener">
+														<h5 className='text-light'>{data.name}</h5>
+													</a>
+													<p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div className='mobile-child-operations col-md-4'>
-									<div className='portfolio-box rounded p-4'>
-										<div className='d-flex h-100 flex-column justify-content-between'>
-											<h5 className='text-light'>The Adaire Solutions</h5>
-											<div className='d-flex flex-column align-items-end'>
-												<span className="badge badge-danger text-bg-danger badge-fit-content mt-2">WIP</span>
-											</div>
-										</div>
-									</div>
-								</div>
+								))}
 								<Suspense fallback={<p className='d-none'>Loading</p>}>
 									<BMediumOperations />
 								</Suspense>

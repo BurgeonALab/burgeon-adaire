@@ -48,10 +48,11 @@ export default class BMediumOperations extends Component {
           {
             this.state.items.map((data, index) => (
               <div key={index} className='portfolio-box rounded p-4 h-100'>
-                <div className='d-flex h-100 flex-column justify-content-between'>
+                <div className='d-flex h-100 flex-column'>
                   <a className='text-decoration-none' href={data.link} rel="noopener" target="_blank">
                     <h5 className='text-light'>{data.name}</h5>
                   </a>
+                  <p className='text-light'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
                 </div>
               </div>
             ))
