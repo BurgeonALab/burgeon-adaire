@@ -71,18 +71,31 @@ export default class BurgeonFooter extends Component {
   }
 
   jQuery = () => {
+    // The Org - Hover
     $('.social-media-footer-items-org').on('mouseenter', function () {
       $('.burgeon-adaire-link-svg-inside>path').attr('style', 'fill: #8B0000 !important;')
     });
+
     $('.social-media-footer-items-org').on('mouseleave', function () {
       $('.burgeon-adaire-link-svg-inside>path').attr('style', 'fill: #FFFFFF !important;')
     });
 
+    // PitchBook - Hover
     $('.social-media-footer-items-pitchbook').on('mouseenter', function () {
       $('.burgeon-adaire-link-svg-inside > g > g > path').attr('style', 'fill: #8B0000 !important;')
     });
+
     $('.social-media-footer-items-pitchbook').on('mouseleave', function () {
       $('.burgeon-adaire-link-svg-inside > g > g > path').attr('style', 'fill: #FFFFFF !important;')
+    });
+
+    // The Org and PitchBook Click
+    $('.social-media-footer-items-org').on('click', function () {
+      $('.burgeon-adaire-link-svg-inside>path').attr('style', 'fill: #8B0000 !important;')
+    });
+
+    $('.social-media-footer-items-pitchbook').on('click', function () {
+      $('.burgeon-adaire-link-svg-inside > g > g > path').attr('style', 'fill: #8B0000 !important;')
     });
   };
 
