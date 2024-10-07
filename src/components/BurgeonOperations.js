@@ -23,19 +23,19 @@ export default class BurgeonOperations extends Component {
 		this.state = {
 			items: [
 				{
-					id: 1,
+					id: 0,
 					hitoverlay: true,
 					name: 'Portfolio',
 					link: 'https://portfolio.burgeonadaire.com',
 				},
 				{
-					id: 2,
+					id: 1,
 					hitoverlay: false,
 					name: 'Blog',
 					link: 'https://blog.burgeonadaire.com',
 				},
 				{
-					id: 3,
+					id: 2,
 					hitoverlay: false,
 					name: 'The Adaire Solutions',
 					link: 'https://adairesolutions.com',
@@ -80,7 +80,7 @@ export default class BurgeonOperations extends Component {
 							<div className='d-flex flex-row justify-content-between align-items-center h-100'>
 								<div className='overlay-content margin-twentyfour-rl'>
 									<h2 className='text-light'>Operations</h2>
-									<p className='lead text-light mb-0'>Our work at PT. Burgeon Adaire International touches on a wide range of fields, from trading and investing to web app development, media projects, and eCommerce. We focus on bringing innovation and expertise to everything we do.</p>
+									<p className='lead text-light mb-0'>Our work at <strong>PT. Burgeon Adaire International</strong> touches on a wide range of fields, from trading and investing to web app development, media projects, and eCommerce. We focus on bringing innovation and expertise to everything we do.</p>
 									<a href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request" className='btn btn-dark btn-cp' target="_blank" rel='noopener'>
 										<span className='fw-medium'>Get Our Company Profile!</span>
 									</a>
@@ -98,7 +98,7 @@ export default class BurgeonOperations extends Component {
 					<div className='overlay-container-mobile-box h-100'>
 						<div className='hide-mobile-overlay-content'>
 							<h2 className='text-light padding-twentyfour-rl'>Operations</h2>
-							<p className='lead text-light mb-0 padding-twentyfour-rl'>Our work at PT. Burgeon Adaire International touches on a wide range of fields, from trading and investing to web app development, media projects, and eCommerce. We focus on bringing innovation and expertise to everything we do.</p>
+							<p className='lead text-light mb-0 padding-twentyfour-rl'>Our work at <strong>PT. Burgeon Adaire International</strong> touches on a wide range of fields, from trading and investing to web app development, media projects, and eCommerce. We focus on bringing innovation and expertise to everything we do.</p>
 							<a href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request" className='btn btn-dark btn-cp-mobile' target="_blank" rel='noopener'>
 								<span className='fw-medium'>Get Our Company Profile!</span>
 							</a>
@@ -120,7 +120,7 @@ export default class BurgeonOperations extends Component {
 						</Suspense>
 					</div>
 					<div className='other-operations-container-mobile col-xxl-9 d-flex flex-column py-3'>
-						<div>
+						<div className="tradingview-bai-tickertape">
 							<TickerTape
 								symbols={[
 									{
@@ -170,22 +170,32 @@ export default class BurgeonOperations extends Component {
 									data.hitoverlay == true ?
 										<div key={index} className='mobile-child-operations col-md-4'>
 											<div className='portfolio-everything-mobile portfolio-box rounded p-4'>
-												<div className='d-flex h-100 flex-column'>
-													<a className="text-decoration-none" href={data.link} target="_blank" rel="noopener">
-														<h5 className='text-light'>{data.name}</h5>
-													</a>
-													<p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+												<div className='d-flex h-100 flex-column justify-content-between'>
+													<div>
+														<a className="text-decoration-none" href={data.link} target="_blank" rel="noopener">
+															<h5 className='text-light'>{data.name}</h5>
+														</a>
+														<p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+													</div>
+													<div className='d-flex justify-content-end'>
+														<span className="badge text-bg-danger">WIP</span>
+													</div>
 												</div>
 											</div>
 										</div>
 										:
 										<div key={index} className='mobile-child-operations col-md-4'>
 											<div className='portfolio-box rounded p-4'>
-												<div className='d-flex h-100 flex-column'>
-													<a className="text-decoration-none" href={data.link} target="_blank" rel="noopener">
-														<h5 className='text-light'>{data.name}</h5>
-													</a>
-													<p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+												<div className='d-flex h-100 flex-column justify-content-between'>
+													<div>
+														<a className="text-decoration-none" href={data.link} target="_blank" rel="noopener">
+															<h5 className='text-light'>{data.name}</h5>
+														</a>
+														<p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+													</div>
+													<div className='d-flex justify-content-end'>
+														<span className="badge text-bg-danger">WIP</span>
+													</div>
 												</div>
 											</div>
 										</div>

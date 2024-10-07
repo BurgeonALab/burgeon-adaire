@@ -1,11 +1,7 @@
 import React, {
   Component,
   Fragment,
-  Suspense,
-  lazy,
 } from 'react';
-
-const BSmallExtras = lazy(() => import('../small/BSmallExtras'));
 
 export default class BMediumExtras extends Component {
   render() {
@@ -15,10 +11,13 @@ export default class BMediumExtras extends Component {
           <div className='flex-grow-1 operation-child-container'>
             <div className='h-100 padding-twelve-r'>
               <div className='ecommerce-box rounded p-4'>
-                <div className='d-flex h-100 flex-column'>
+                <div className='d-flex h-100 flex-column justify-content-between'>
                   <div>
                     <h5 className='text-light'>eCommerce</h5>
-                    <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <div className='d-flex justify-content-end'>
+                    <span className="badge text-bg-danger">WIP</span>
                   </div>
                 </div>
               </div>
@@ -27,19 +26,19 @@ export default class BMediumExtras extends Component {
           <div className='flex-grow-1 operation-child-container'>
             <div className='h-100 padding-twelve-l'>
               <div className='investment-box rounded p-4'>
-                <div className='d-flex h-100 flex-column'>
+                <div className='d-flex h-100 flex-column justify-content-between'>
                   <div>
                     <h5 className='text-light'>Investment</h5>
-                    <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+                    <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+                  <div className='d-flex justify-content-end'>
+                    <span className="badge text-bg-danger">WIP</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Suspense fallback={<p className='d-none'>Loading...</p>}>
-          <BSmallExtras />
-        </Suspense>
       </Fragment>
     );
   }

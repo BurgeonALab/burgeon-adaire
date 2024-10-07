@@ -432,10 +432,6 @@
     display: none !important;
   }
 
-  .extras-container-mobile {
-    display: flex !important;
-  }
-
   .about-container {
     flex-direction: column !important;
   }

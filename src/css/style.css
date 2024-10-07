@@ -663,6 +663,10 @@ body {
   background-position: center;
 }
 
+.tradingview-bai-tickertape .tradingview-widget-copyright {
+  display: none;
+}
+
 /* Animation */
 @keyframes fullOpacity {
   0% {
