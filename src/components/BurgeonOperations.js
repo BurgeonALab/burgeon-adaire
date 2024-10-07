@@ -82,7 +82,7 @@ export default class BurgeonOperations extends Component {
 									<h2 className='text-light'>Operations</h2>
 									<p className='lead text-light mb-0'>Our work at <strong>PT. Burgeon Adaire International</strong> touches on a wide range of fields, from trading and investing to web app development, media projects, and eCommerce. We focus on bringing innovation and expertise to everything we do.</p>
 									<a href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request" className='btn btn-dark btn-cp' target="_blank" rel='noopener'>
-										<span className='fw-medium'>Get Our Company Profile!</span>
+										<span className='fw-medium'>Get Our Company Profile</span>
 									</a>
 								</div>
 								<div className='margin-twentyfour-rl'>
@@ -100,7 +100,7 @@ export default class BurgeonOperations extends Component {
 							<h2 className='text-light padding-twentyfour-rl'>Operations</h2>
 							<p className='lead text-light mb-0 padding-twentyfour-rl'>Our work at <strong>PT. Burgeon Adaire International</strong> touches on a wide range of fields, from trading and investing to web app development, media projects, and eCommerce. We focus on bringing innovation and expertise to everything we do.</p>
 							<a href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request" className='btn btn-dark btn-cp-mobile' target="_blank" rel='noopener'>
-								<span className='fw-medium'>Get Our Company Profile!</span>
+								<span className='fw-medium'>Get Our Company Profile</span>
 							</a>
 						</div>
 						<div className='d-flex justify-content-center padding-twentyfour-rl'>
