@@ -657,6 +657,12 @@ body {
   border-radius: 5px;
 }
 
+.footer-image-container {
+  background-image: url('https://images.burgeonadaire.com/lantern.webp');
+  background-size: cover;
+  background-position: center;
+}
+
 /* Animation */
 @keyframes fullOpacity {
   0% {
