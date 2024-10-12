@@ -35,25 +35,25 @@ export default class BurgeonJumbotron extends Component {
         <div className='jumbotron-overlay d-flex flex-column justify-content-center'>
           <div className='jumbotron-overlay-text-box mb-4'>
             <h3 className='text-light text-end'>Core Values</h3>
-            <p className='text-light text-end mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p className='text-light text-end mb-0'>Our core values shape our identity and guide us toward success, driving our decisions and helping us achieve our goals consistently.</p>
           </div>
           <div className="slider-container">
             <Slider {...settings}>
               <div className='jumbotron-item' style={{ width: 300 }}>
                 <p className='text-light lead fw-medium mb-2'>Development</p>
-                <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className='text-light mb-0'>We are constantly pushing ourselves to grow and improve in everything we take on.</p>
               </div>
               <div className='jumbotron-item' style={{ width: 300 }}>
                 <p className='text-light lead fw-medium mb-2'>Cooperation</p>
-                <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className='text-light mb-0'>Collaboration and strong partnerships are fundamental to our approach.</p>
               </div>
               <div className='jumbotron-item' style={{ width: 300 }}>
                 <p className='text-light lead fw-medium mb-2'>Mastery</p>
-                <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className='text-light mb-0'>We pursue excellence through constant skill refinement and exceptional outcomes.</p>
               </div>
               <div className='jumbotron-item' style={{ width: 300 }}>
                 <p className='text-light lead fw-medium mb-2'>Trustworthiness</p>
-                <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p className='text-light mb-0'>Integrity and reliability are foundational to our work, fostering trust with clients and partners.</p>
               </div>
             </Slider>
           </div>
