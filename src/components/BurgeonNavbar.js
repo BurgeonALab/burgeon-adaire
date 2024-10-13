@@ -18,7 +18,7 @@ const LinkNav = () => {
         <Link to="/cookie-policy" className='text-decoration-none dropdown-item link-light'>Cookie Policy</Link>
       </li>
       <li>
-        <Link to="/terms-and-condition" className='text-decoration-none dropdown-item link-light'>Terms & Conditions</Link>
+        <Link to="/terms-and-conditions" className='text-decoration-none dropdown-item link-light'>Terms & Conditions</Link>
       </li>
     </ul>
   );
