@@ -64,7 +64,7 @@ export default class BurgeonOutro extends Component {
                 </div>
                 <div className='margin-twentyfour-rl partner-margin-text-mobile'>
                   <h2 className='text-light pepperstone-header-mobile'>Partnering with Pepperstone</h2>
-                  <p className='lead text-light pepperstone-text-mobile'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                  <p className='lead text-light pepperstone-text-mobile'>In partnership with Pepperstone, we strategically build our forex portfolio through the trading of commodities, currencies, and indices, enhancing our financial strength and growth. If you are interested in joining us on this path, please click the button below to get started.</p>
                 </div>
               </div>
               <div className='pepperstone-misc-mobile d-flex flex-row justify-content-between align-items-end'>
@@ -86,7 +86,7 @@ export default class BurgeonOutro extends Component {
             </div>
           </div>
           <div className='col-lg-8 d-flex justify-content-end align-items-center py-3 another-partner-text-mobile'>
-            <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p className='text-light mb-0'>We are proud to have relied on Amazon Web Services and Firebase over the years, ensuring that we consistently deliver high-quality services for both our team and our clients.</p>
           </div>
           <div className='col-lg-4 d-flex justify-content-end align-items-center py-3 system-logo-mobile'>
             <img className='ms-4' src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={46} alt="Powered by AWS Cloud Computing"></img>
