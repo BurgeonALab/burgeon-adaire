@@ -1,6 +1,6 @@
 const express = require('express');
 const React = require('react');
-const { renderToString } = require('react-dom/server');
+const { renderToPipeableStream } = require('react-dom/server');
 const { StaticRouter } = require('react-router-dom/server');
 const App = require('../client/App').default;
 const app = express();
@@ -9,23 +9,17 @@ const PORT = process.env.PORT || 3001;
 app.use(express.static('ssr-public'));
 
 app.get('*', (req, res) => {
-  const html = renderToString(
+  const { pipe } = renderToPipeableStream(
     <StaticRouter location={req.url}>
       <App />
-    </StaticRouter>
+    </StaticRouter>, {
+    bootstrapScripts: ['/webpacks.js'],
+    onShellReady() {
+      res.setHeader('content-type', 'text/html');
+      pipe(res);
+    }
+  }
   );
-
-  res.send(
-    `
-      <!DOCTYPE html>
-      <html style="visibility: hidden; background-color: #121217;" lang="en">
-        <body>
-          <div id="root">${html}</div>
-          <script src="/webpacks.js"></script>
-        </body>
-      </html>
-    `
-  )
 });
 
 app.listen(PORT, () => {
