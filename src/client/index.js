@@ -1,3 +1,5 @@
+// SSR Visible
+import '../functions/SSRFoucReady';
 // Schema
 import "../ssr-components/BurgeonSSRSchema";
 // Bootstrap
