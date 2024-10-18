@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class BurgeonOutro extends Component {
+export default class BurgeonPreload extends Component {
   render() {
     return (
       <div className='preload'>
