@@ -39,6 +39,7 @@ module.exports = (env) => {
       minimize: true,
       minimizer: [
         new TerserPlugin({
+          minify: TerserPlugin.swcMinify,
           terserOptions: {
             compress: {
               drop_console: true,
@@ -59,7 +60,33 @@ module.exports = (env) => {
           test: /\.(js|jsx)$/,
           exclude: /node_modules/,
           use: {
-            loader: 'babel-loader'
+            loader: "swc-loader",
+            options: {
+              module: {
+                type: "es6"
+              },
+              isModule: true,
+              jsc: {
+                minify: {
+                  compress: true,
+                  mangle: true,
+                  format: {
+                    asciiOnly: true,
+                    comments: /^ webpack/
+                  }
+                },
+                target: "es2016",
+                parser: {
+                  syntax: "typescript",
+                  tsx: true
+                },
+                transform: {
+                  react: {
+                    runtime: "automatic"
+                  }
+                }
+              }
+            }
           },
         },
         {
