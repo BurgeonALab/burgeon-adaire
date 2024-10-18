@@ -19,7 +19,7 @@ export default class BurgeonSSRFooter extends Component {
         {
           id: 0,
           type: 'symbol',
-          name: "Instagram",
+          iconname: "Instagram",
           desc: "PT. Burgeon Adaire International's Instagram Profile Page",
           link: "https://www.instagram.com/burgeonadaire",
           icon: faInstagram,
@@ -27,7 +27,7 @@ export default class BurgeonSSRFooter extends Component {
         {
           id: 1,
           type: 'symbol',
-          name: "LinkedIn",
+          iconname: "LinkedIn",
           desc: "PT. Burgeon Adaire International's LinkedIn Profile Page",
           link: "https://linkedin.com/company/burgeonadaire",
           icon: faLinkedin,
@@ -35,7 +35,7 @@ export default class BurgeonSSRFooter extends Component {
         {
           id: 2,
           type: 'symbol',
-          name: "Twitter",
+          iconname: "Twitter",
           desc: "PT. Burgeon Adaire International's Twitter X Profile Page",
           link: "https://twitter.com/burgeonadaire",
           icon: faXTwitter,
@@ -43,7 +43,7 @@ export default class BurgeonSSRFooter extends Component {
         {
           id: 3,
           type: 'svg',
-          name: "The Org",
+          iconname: "The Org",
           desc: "PT. Burgeon Adaire International's The Org Profile Page",
           link: "https://theorg.com/org/pt-burgeon-adaire-international",
           src: "./assets/the-org.svg",
@@ -54,7 +54,7 @@ export default class BurgeonSSRFooter extends Component {
         {
           id: 4,
           type: 'svg',
-          name: "PitchBook",
+          iconname: "PitchBook",
           desc: "PT. Burgeon Adaire International's PitchBook Profile Page",
           link: "https://pitchbook.com",
           height: '28px',
@@ -167,7 +167,7 @@ export default class BurgeonSSRFooter extends Component {
                                         svg.classList.add('burgeon-adaire-link-svg-inside');
                                         svg.setAttribute('style', 'height: ' + element.height + '; width: ' + element.width + ';');
                                       }}
-                                      title={element.name}
+                                      title={element.iconname}
                                       desc={element.desc}
                                       src={element.src}
                                     />
