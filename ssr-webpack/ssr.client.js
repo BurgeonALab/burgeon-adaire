@@ -8,8 +8,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const dedent = require('dedent');
 
 module.exports = (env) => {
-  const isDevelopment = env.NODE_ENV !== 'production';
-
+  // const isDevelopment = env.NODE_ENV !== 'production';
   return {
     // devtool: isDevelopment ? 'inline-source-map' : 'source-map',
     entry: "./src/client/index.js",

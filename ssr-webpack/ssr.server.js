@@ -3,8 +3,7 @@ const externals = require('webpack-node-externals');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = (env) => {
-  const isDevelopment = env.NODE_ENV !== 'production';
-
+  // const isDevelopment = env.NODE_ENV !== 'production';
   return {
     target: 'node',
     performance: {
