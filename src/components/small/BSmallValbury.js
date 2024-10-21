@@ -8,13 +8,17 @@ export default class BSmallValbury extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      valburysignal: [],
-      marketday: "",
+      xauusd: [],
+      clr: [],
+      usdjpy: [],
       goldnews: [],
       oilnews: [],
       usdnews: [],
       sumnews: [],
-      VSLoaded: false,
+      marketday: "",
+      XSLoaded: false,
+      CSLoaded: false,
+      USLoaded: false,
       DateLoaded: false,
       GoldLoaded: false,
       OilLoaded: false,
@@ -39,13 +43,13 @@ export default class BSmallValbury extends Component {
         });
     };
 
-    const LatestDate = async () => {
-      await fetch('https://api.burgeonadaire.com/valbury-bulletin')
+    const LatestXAU = async () => {
+      await fetch('https://api.burgeonadaire.com/xauusd-dailybulletin')
         .then(async response => await response.json())
         .then((data) => {
           this.setState({
-            valburysignal: data['document']['xauusd_signals'].pop(),
-            VSLoaded: true,
+            xauusd: data['document']['xauusd_signals'].pop(),
+            XSLoaded: true,
           });
         })
         .catch(error => {
@@ -54,7 +58,37 @@ export default class BSmallValbury extends Component {
         });
     };
 
-    Promise.all([TimeData(), LatestDate()]);
+    const LatestCLR = async () => {
+      await fetch('https://api.burgeonadaire.com/clr-dailybulletin')
+        .then(async response => await response.json())
+        .then((data) => {
+          this.setState({
+            clr: data['document']['clr_signals'].pop(),
+            CSLoaded: true,
+          });
+        })
+        .catch(error => {
+          error = "Signal: No Data"
+          console.log(error);
+        });
+    };
+
+    const LatestJPY = async () => {
+      await fetch('https://api.burgeonadaire.com/usdjpy-dailybulletin')
+        .then(async response => await response.json())
+        .then((data) => {
+          this.setState({
+            usdjpy: data['document']['usdjpy_signals'].pop(),
+            USLoaded: true,
+          });
+        })
+        .catch(error => {
+          error = "Signal: No Data"
+          console.log(error);
+        });
+    };
+
+    Promise.all([TimeData(), LatestXAU(), LatestCLR(), LatestJPY()]);
   };
 
   jQuery = () => {
@@ -66,10 +100,10 @@ export default class BSmallValbury extends Component {
   }
 
   render() {
-    var valorder = this.state.valburysignal.order;
+    var valorder = this.state.xauusd.order;
     var dateraw = new Date(Date(this.state.marketday));
     var dateday = moment(dateraw).locale('id').format('dddd');
-    var valorderDate = moment(new Date((this.state.valburysignal.date))).locale('id').format('ll');
+    var valorderDate = moment(new Date((this.state.xauusd.date))).locale('id').format('ll');
     var datedayDate = moment(dateraw).locale('id').format('ll');
     var datetime = moment(dateraw).locale('id').format('HH:mm:ss').toString();
     var timeopen = '05:00:00';
@@ -209,24 +243,81 @@ export default class BSmallValbury extends Component {
     }
 
     const goldSlider = () => {
-      $('.vaf-slide-button.yen').removeClass('active');
-      $('.vaf-slide-button.crude').removeClass('active');
-      $('.vaf-slide-button.gold').addClass('active');
-      $("#status-market").html("XAU/USD");
+      const goldData = this.state.xauusd;
+
+      if (goldData.length == 0 || goldData == undefined) {
+        console.log("Couldn't Fetch XAU/USD Data.");
+      } else {
+        $('.vaf-slide-button.yen').removeClass('active');
+        $('.vaf-slide-button.crude').removeClass('active');
+        $('.vaf-slide-button.gold').addClass('active');
+        $("#status-market").html("XAU/USD");
+        $("#signal-order").html(goldData.order);
+
+        $("#signal-price").html(goldData.price);
+        $("#signal-price").prepend('&nbsp;');
+
+        $("#signal-sl").html(goldData.stoploss);
+        $("#signal-sl").prepend('&nbsp;');
+
+        $("#signal-tp1").html(goldData.takeprofit1);
+        $("#signal-tp1").prepend('&nbsp;');
+
+        $("#signal-tp2").html(goldData.takeprofit2);
+        $("#signal-tp2").prepend('&nbsp;');
+      }
     }
 
     const crudeSlider = () => {
-      $('.vaf-slide-button.gold').removeClass('active');
-      $('.vaf-slide-button.yen').removeClass('active');
-      $('.vaf-slide-button.crude').addClass('active');
-      $("#status-market").html("CLR");
+      const crudeData = this.state.clr;
+
+      if (crudeData.length == 0 || crudeData == undefined) {
+        console.log("Couldn't Fetch CLR Data.");
+      } else {
+        $('.vaf-slide-button.gold').removeClass('active');
+        $('.vaf-slide-button.yen').removeClass('active');
+        $('.vaf-slide-button.crude').addClass('active');
+        $("#status-market").html("CLR");
+        $("#signal-order").html(crudeData.order);
+
+        $("#signal-price").html(crudeData.price);
+        $("#signal-price").prepend('&nbsp;');
+
+        $("#signal-sl").html(crudeData.stoploss);
+        $("#signal-sl").prepend('&nbsp;');
+
+        $("#signal-tp1").html(crudeData.takeprofit1);
+        $("#signal-tp1").prepend('&nbsp;');
+
+        $("#signal-tp2").html(crudeData.takeprofit2);
+        $("#signal-tp2").prepend('&nbsp;');
+      }
     }
 
     const yenSlider = () => {
-      $('.vaf-slide-button.gold').removeClass('active');
-      $('.vaf-slide-button.crude').removeClass('active');
-      $('.vaf-slide-button.yen').addClass('active');
-      $("#status-market").html("USD/JPY");
+      const yenData = this.state.usdjpy;
+
+      if (yenData.length == 0 || yenData == undefined) {
+        console.log("Couldn't Fetch USD/JPY Data.");
+      } else {
+        $('.vaf-slide-button.gold').removeClass('active');
+        $('.vaf-slide-button.crude').removeClass('active');
+        $('.vaf-slide-button.yen').addClass('active');
+        $("#status-market").html("USD/JPY");
+        $("#signal-order").html(yenData.order);
+
+        $("#signal-price").html(yenData.price);
+        $("#signal-price").prepend('&nbsp;');
+
+        $("#signal-sl").html(yenData.stoploss);
+        $("#signal-sl").prepend('&nbsp;');
+
+        $("#signal-tp1").html(yenData.takeprofit1);
+        $("#signal-tp1").prepend('&nbsp;');
+
+        $("#signal-tp2").html(yenData.takeprofit2);
+        $("#signal-tp2").prepend('&nbsp;');
+      }
     }
 
     $(function () {
@@ -247,7 +338,7 @@ export default class BSmallValbury extends Component {
               <div className='signal-order-box-custom'>
                 <p className='data-unavailable-signal mb-0'>Data Unavailable</p>
                 <p className='data-closed-signal mb-0'>Market Closed</p>
-                <p className='signal-order-text text-light text-end fw-bold mb-0'>{this.state.valburysignal.order}</p>
+                <p id="signal-order" className='signal-order-text text-light text-end fw-bold mb-0'>{this.state.xauusd.order}</p>
                 <div className='d-flex flex-row data-detail-valbury'>
                   <div className='flex-grow-1'>
                     <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Price:</p>
@@ -256,10 +347,10 @@ export default class BSmallValbury extends Component {
                     <p className='signal-order-description mb-0 text-end fw-bold my-1 text-light'>Take Profit 2:</p>
                   </div>
                   <div>
-                    <p className='signal-order-description mb-0 text-end fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.price}</p>
-                    <p className='signal-order-description mb-0 text-end fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.stoploss}</p>
-                    <p className='signal-order-description mb-0 text-end fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.takeprofit1}</p>
-                    <p className='signal-order-description mb-0 text-end fw-medium my-1 text-light'>&nbsp;{this.state.valburysignal.takeprofit2}</p>
+                    <p id="signal-price" className='signal-order-description mb-0 text-end fw-medium my-1 text-light'>&nbsp;{this.state.xauusd.price}</p>
+                    <p id="signal-sl" className='signal-order-description mb-0 text-end fw-medium my-1 text-light'>&nbsp;{this.state.xauusd.stoploss}</p>
+                    <p id="signal-tp1" className='signal-order-description mb-0 text-end fw-medium my-1 text-light'>&nbsp;{this.state.xauusd.takeprofit1}</p>
+                    <p id="signal-tp2" className='signal-order-description mb-0 text-end fw-medium my-1 text-light'>&nbsp;{this.state.xauusd.takeprofit2}</p>
                   </div>
                 </div>
               </div>
