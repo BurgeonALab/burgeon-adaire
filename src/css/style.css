@@ -667,6 +667,10 @@ body {
   display: none;
 }
 
+.contact-detail {
+  display: none;
+}
+
 /* Animation */
 @keyframes fullOpacity {
   0% {

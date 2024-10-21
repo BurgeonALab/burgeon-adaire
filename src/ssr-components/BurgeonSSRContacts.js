@@ -1,11 +1,15 @@
 import React, {
   Component,
   Fragment,
+  lazy,
+  Suspense,
 } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronUp
 } from '@fortawesome/free-solid-svg-icons';
+
+const BSmallSSRContactDetail = lazy(() => import('../ssr-components/ssr-small/BSmallSSRContactDetail'));
 
 export default class BurgeonSSRContacts extends Component {
   render() {
@@ -24,6 +28,9 @@ export default class BurgeonSSRContacts extends Component {
               </div>
             </div>
           </div>
+          <Suspense fallback={<p className='d-none'>Loading..</p>}>
+            <BSmallSSRContactDetail />
+          </Suspense>
         </div>
       </Fragment>
     );
