@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Marquee from "react-fast-marquee";
 
-export default class BurgeonOutro extends Component {
+export default class BurgeonPartners extends Component {
   constructor(props) {
     super(props);
     this.state = {
