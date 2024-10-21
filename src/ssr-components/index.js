@@ -3,7 +3,8 @@ import BurgeonSSRJumbotron from "./BurgeonSSRJumbotron";
 import BurgeonSSRNavbar from "./BurgeonSSRNavbar";
 import BurgeonSSRFooter from "./BurgeonSSRFooter";
 import BurgeonSSRAbout from "./BurgeonSSRAbout";
-import BurgeonSSRPreload from "./BurgeonSSRPreload";
+import BurgeonSSRPartners from "./BurgeonSSRPartners";
+import BurgeonSSROutro from "./BurgeonSSROutro";
 
 export {
   BurgeonSSRContacts,
@@ -11,5 +12,6 @@ export {
   BurgeonSSRNavbar,
   BurgeonSSRFooter,
   BurgeonSSRAbout,
-  BurgeonSSRPreload,
+  BurgeonSSRPartners,
+  BurgeonSSROutro,
 }
