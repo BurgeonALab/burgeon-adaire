@@ -11,19 +11,9 @@ export default class BSmallValbury extends Component {
       xauusd: [],
       clr: [],
       usdjpy: [],
-      goldnews: [],
-      oilnews: [],
-      usdnews: [],
-      sumnews: [],
       marketday: "",
-      XSLoaded: false,
-      CSLoaded: false,
-      USLoaded: false,
+      VSLoaded: false,
       DateLoaded: false,
-      GoldLoaded: false,
-      OilLoaded: false,
-      USLoaded: false,
-      SumsLoaded: false,
     };
   }
 
@@ -43,28 +33,15 @@ export default class BSmallValbury extends Component {
         });
     };
 
-    const LatestXAU = async () => {
-      await fetch('https://api.burgeonadaire.com/xauusd-dailybulletin')
+    const LatestSignal = async () => {
+      await fetch('https://api.burgeonadaire.com/vaf-dailybulletin')
         .then(async response => await response.json())
         .then((data) => {
           this.setState({
             xauusd: data['document']['xauusd_signals'].pop(),
-            XSLoaded: true,
-          });
-        })
-        .catch(error => {
-          error = "Signal: No Data"
-          console.log(error);
-        });
-    };
-
-    const LatestCLR = async () => {
-      await fetch('https://api.burgeonadaire.com/clr-dailybulletin')
-        .then(async response => await response.json())
-        .then((data) => {
-          this.setState({
             clr: data['document']['clr_signals'].pop(),
-            CSLoaded: true,
+            usd: data['document']['usdjpy_signals'].pop(),
+            VSLoaded: true,
           });
         })
         .catch(error => {
@@ -73,22 +50,7 @@ export default class BSmallValbury extends Component {
         });
     };
 
-    const LatestJPY = async () => {
-      await fetch('https://api.burgeonadaire.com/usdjpy-dailybulletin')
-        .then(async response => await response.json())
-        .then((data) => {
-          this.setState({
-            usdjpy: data['document']['usdjpy_signals'].pop(),
-            USLoaded: true,
-          });
-        })
-        .catch(error => {
-          error = "Signal: No Data"
-          console.log(error);
-        });
-    };
-
-    Promise.all([TimeData(), LatestXAU(), LatestCLR(), LatestJPY()]);
+    Promise.all([TimeData(), LatestSignal()]);
   };
 
   jQuery = () => {
@@ -265,6 +227,14 @@ export default class BSmallValbury extends Component {
 
         $("#signal-tp2").html(goldData.takeprofit2);
         $("#signal-tp2").prepend('&nbsp;');
+
+        if (goldData.order === 'sell') {
+          $(".signal-order-box-custom").addClass("data-sell-background");
+          $('.valbury-box:first-child').css('background-color', '#A32525');
+        } else if (goldData.order === 'buy') {
+          $(".signal-order-box-custom").removeClass("data-sell-background");
+          $('.valbury-box:first-child').css('background-color', '#1F4B8A');
+        }
       }
     }
 
@@ -291,6 +261,14 @@ export default class BSmallValbury extends Component {
 
         $("#signal-tp2").html(crudeData.takeprofit2);
         $("#signal-tp2").prepend('&nbsp;');
+
+        if (crudeData.order === 'sell') {
+          $(".signal-order-box-custom").addClass("data-sell-background");
+          $('.valbury-box:first-child').css('background-color', '#A32525');
+        } else if (crudeData.order === 'buy') {
+          $(".signal-order-box-custom").removeClass("data-sell-background");
+          $('.valbury-box:first-child').css('background-color', '#1F4B8A');
+        }
       }
     }
 
@@ -317,6 +295,14 @@ export default class BSmallValbury extends Component {
 
         $("#signal-tp2").html(yenData.takeprofit2);
         $("#signal-tp2").prepend('&nbsp;');
+
+        if (yenData.order === 'sell') {
+          $(".signal-order-box-custom").addClass("data-sell-background");
+          $('.valbury-box:first-child').css('background-color', '#A32525');
+        } else if (yenData.order === 'buy') {
+          $(".signal-order-box-custom").removeClass("data-sell-background");
+          $('.valbury-box:first-child').css('background-color', '#1F4B8A');
+        }
       }
     }
 
