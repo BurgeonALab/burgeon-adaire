@@ -40,7 +40,7 @@ export default class BSmallValbury extends Component {
           this.setState({
             xauusd: data['document']['xauusd_signals'].pop(),
             clr: data['document']['clr_signals'].pop(),
-            usd: data['document']['usdjpy_signals'].pop(),
+            usdjpy: data['document']['usdjpy_signals'].pop(),
             VSLoaded: true,
           });
         })
