@@ -40,7 +40,8 @@ export default class BSmallNews extends Component {
       await fetch('https://api.burgeonadaire.com/news/gold')
         .then(async response => await response.json())
         .then((data) => {
-          var tempData = data['data'].slice(0, 2);
+          var tempData = data['data'].slice(0, 3);
+          console.log(tempData);
           this.setState(previousState => ({
             sumnews: [...previousState.sumnews, ...tempData],
           }));
@@ -55,7 +56,8 @@ export default class BSmallNews extends Component {
       await fetch('https://api.burgeonadaire.com/news/usa')
         .then(async response => await response.json())
         .then((data) => {
-          var tempData = data['data'].slice(0, 2);
+          var tempData = data['data'].slice(0, 3);
+          console.log(tempData);
           this.setState(previousState => ({
             sumnews: [...previousState.sumnews, ...tempData],
           }));
@@ -70,7 +72,8 @@ export default class BSmallNews extends Component {
       await fetch('https://api.burgeonadaire.com/news/clr')
         .then(async response => await response.json())
         .then((data) => {
-          var tempData = data['data'].slice(0, 2);
+          var tempData = data['data'].slice(0, 3);
+          console.log(tempData);
           this.setState(previousState => ({
             sumnews: [...previousState.sumnews, ...tempData],
           }));
