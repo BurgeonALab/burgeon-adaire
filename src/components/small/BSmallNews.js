@@ -37,7 +37,7 @@ export default class BSmallNews extends Component {
 
   FetchNews = async () => {
     const GoldNews = async () => {
-      await fetch('https://resources.burgeonadaire.com/news-api/gold-data.json')
+      await fetch('https://api.burgeonadaire.com/news/gold')
         .then(async response => await response.json())
         .then((data) => {
           var tempData = data['data'].slice(0, 2);
@@ -52,7 +52,7 @@ export default class BSmallNews extends Component {
     };
 
     const USNews = async () => {
-      await fetch('https://resources.burgeonadaire.com/news-api/united-states.json')
+      await fetch('https://api.burgeonadaire.com/news/usa')
         .then(async response => await response.json())
         .then((data) => {
           var tempData = data['data'].slice(0, 2);
@@ -67,7 +67,7 @@ export default class BSmallNews extends Component {
     };
 
     const CrudeOil = async () => {
-      await fetch('https://resources.burgeonadaire.com/news-api/oil-data.json')
+      await fetch('https://api.burgeonadaire.com/news/clr')
         .then(async response => await response.json())
         .then((data) => {
           var tempData = data['data'].slice(0, 2);
