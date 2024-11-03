@@ -85,7 +85,8 @@ export default class BurgeonPartners extends Component {
               <div className='background-partner-overlay rounded'></div>
             </div>
           </div>
-          <div className='col-lg-8 d-flex justify-content-end align-items-center py-3 another-partner-text-mobile'>
+          <div className='col-lg-8 d-flex flex-column justify-content-end align-items-start py-3 another-partner-text-mobile'>
+            <h3 className='text-light'>Technologies</h3>
             <p className='text-light mb-0'>We are proud to have relied on Amazon Web Services and Firebase over the years, ensuring that we consistently deliver high-quality services for both our team and our clients.</p>
           </div>
           <div className='col-lg-4 d-flex justify-content-end align-items-center py-3 system-logo-mobile'>
