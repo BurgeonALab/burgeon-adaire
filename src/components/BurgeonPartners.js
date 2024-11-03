@@ -98,7 +98,7 @@ export default class BurgeonPartners extends Component {
             </div>
             <div className='associates-text-mobile'>
               <h2 className='text-light'>Our Associates</h2>
-              <p className='text-light lead'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p className='text-light lead'>Our dedication to excellence reaches beyond our team. In the world of finance and tech, collaboration is essential, and our partnerships deepen our expertise, expand our services, and drive shared growth.</p>
             </div>
           </div>
           <div className='col-md-5 py-3'>
