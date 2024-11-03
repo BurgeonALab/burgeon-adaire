@@ -94,7 +94,10 @@ export default class BurgeonNavbar extends Component {
                     <a className='text-light text-decoration-none'>Operations</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a className='text-light text-decoration-none'>Gratitude</a>
+                    <a className='text-light text-decoration-none'>Acknowledgment</a>
+                  </li>
+                  <li className="nav-item ms-3 d-flex align-items-center">
+                    <a className='text-light text-decoration-none'>Partners</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
                     <a id="dropdown-nav" className='nav-link p-0 link-light' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
