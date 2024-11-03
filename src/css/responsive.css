@@ -245,6 +245,11 @@
     text-align: center;
   }
 
+  .another-partner-text-mobile h3 {
+    text-align: center;
+    width: 100%;
+  }
+
   .partners-marquee-box {
     height: 200px;
   }
