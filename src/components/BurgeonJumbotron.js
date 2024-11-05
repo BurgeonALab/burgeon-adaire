@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense, lazy } from 'react';
 import Slider from "react-slick";
 import $ from 'jquery';
 
@@ -9,7 +9,33 @@ const settings = {
   variableWidth: true,
 };
 
+const BSmallSSRJumbotronSlider = lazy(() => import('./small/BSmallJumbotronSlider'));
+
 export default class BurgeonJumbotron extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      values: [
+        {
+          vname: "Development",
+          description: "We are constantly pushing ourselves to grow and improve in everything we take on."
+        },
+        {
+          vname: "Cooperation",
+          description: "Collaboration and strong partnerships are fundamental to our approach."
+        },
+        {
+          vname: "Mastery",
+          description: "We pursue excellence through constant skill refinement and exceptional outcomes."
+        },
+        {
+          vname: "Trustworthiness",
+          description: "Integrity and reliability are foundational to our work, fostering trust with clients and partners."
+        }
+      ]
+    }
+  }
+
   jQuery = () => {
     $(function () {
       $(window).on("scroll", function () {
@@ -39,22 +65,11 @@ export default class BurgeonJumbotron extends Component {
           </div>
           <div className="slider-container">
             <Slider {...settings}>
-              <div className='jumbotron-item' style={{ width: 300 }}>
-                <p className='text-light lead fw-medium mb-2'>Development</p>
-                <p className='text-light mb-0'>We are constantly pushing ourselves to grow and improve in everything we take on.</p>
-              </div>
-              <div className='jumbotron-item' style={{ width: 300 }}>
-                <p className='text-light lead fw-medium mb-2'>Cooperation</p>
-                <p className='text-light mb-0'>Collaboration and strong partnerships are fundamental to our approach.</p>
-              </div>
-              <div className='jumbotron-item' style={{ width: 300 }}>
-                <p className='text-light lead fw-medium mb-2'>Mastery</p>
-                <p className='text-light mb-0'>We pursue excellence through constant skill refinement and exceptional outcomes.</p>
-              </div>
-              <div className='jumbotron-item' style={{ width: 300 }}>
-                <p className='text-light lead fw-medium mb-2'>Trustworthiness</p>
-                <p className='text-light mb-0'>Integrity and reliability are foundational to our work, fostering trust with clients and partners.</p>
-              </div>
+              {this.state.values.map((data, i) => (
+                <Suspense>
+                  <BSmallSSRJumbotronSlider DataTitle={data.vname} DataDescription={data.description} />
+                </Suspense>
+              ))}
             </Slider>
           </div>
         </div>
