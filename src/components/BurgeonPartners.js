@@ -105,7 +105,7 @@ export default class BurgeonPartners extends Component {
           <div className='col-md-5 py-3'>
             <div className='partners-marquee-box d-flex flex-column justify-content-center'>
               <Marquee
-                direction='right'
+                direction='left'
                 gradient='true'
                 gradientColor='#121217'
                 gradientWidth={50}
