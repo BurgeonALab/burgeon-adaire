@@ -70,7 +70,7 @@ export default class BurgeonPartners extends Component {
               <div className='pepperstone-misc-mobile d-flex flex-row justify-content-between align-items-end'>
                 <img alt="Pepperstone Official Partner" src="https://images.burgeonadaire.com/bai-pepperstone.webp" height={80}></img>
                 <a href="https://trk.pepperstonepartners.com/aff_c?offer_id=367&aff_id=34824" className='btn btn-dark btn-pepperstone' target="_blank" rel='noopener'>
-                  <span className='fw-medium'>Join Pepperstone Now!</span>
+                  <span className='fw-medium'>Join Pepperstone Now</span>
                 </a>
               </div>
             </div>
@@ -87,11 +87,20 @@ export default class BurgeonPartners extends Component {
           </div>
           <div className='col-lg-8 d-flex flex-column justify-content-end align-items-start py-3 another-partner-text-mobile'>
             <h3 className='text-light'>Technologies</h3>
-            <p className='text-light mb-0'>We are proud to have relied on Amazon Web Services and Firebase over the years, ensuring that we consistently deliver high-quality services for both our team and our clients.</p>
+            <p className='text-light mb-0'>We are proud to have relied on <span className="fw-medium"><a href="https://aws.amazon.com" className='text-decoration-none text-white' target='_blank' rel='noopener'>Amazon Web Services</a></span> and <span className="fw-medium"><a href="https://cloud.google.com" className='text-decoration-none text-white' target='_blank' rel='noopener'>Google Cloud Platform</a></span> over the years, ensuring that we consistently deliver high-quality services for both our team and our clients.</p>
           </div>
           <div className='col-lg-4 d-flex justify-content-end align-items-center py-3 system-logo-mobile'>
-            <img className='ms-4' src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={46} alt="Powered by AWS Cloud Computing"></img>
-            <img className='ms-4' src="https://images.burgeonadaire.com/firebase.webp" height={46} alt="Built with Firebase"></img>
+            <img className='ms-4' src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={56} alt="Powered by AWS Cloud Computing" />
+            <img
+              className='ms-4'
+              src="https://images.burgeonadaire.com/gcp-logo.webp"
+              onError={({ currentTarget }) => {
+                currentTarget.onerror = null;
+                currentTarget.src = './assets/images/gcp-icon.webp'
+              }}
+              height={56}
+              alt="Built with Google Cloud Platform"
+            />
           </div>
           <div className='associates-box-mobile col-md-7 py-3 d-flex flex-column justify-content-evenly'>
             <div className='d-flex justify-content-end'>
