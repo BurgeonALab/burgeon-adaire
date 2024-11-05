@@ -127,18 +127,26 @@ export default class BurgeonFooter extends Component {
                           </div>
                         </div>
                         <div className='footer-link-box-mobile mt-3'>
-                          <p className='lead fw-medium mb-0'>Companies</p>
+                          <p className='lead fw-medium mb-0'>Associates</p>
                           <div className='link-blank-space footer-link-right-mobile'>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="https://adairesolutions.com" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>The Adaire Solutions</p>
                             </a>
+                            <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                              <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Organizations</p>
+                            </a>
+                          </div>
+                        </div>
+                        <div className='footer-link-box-mobile mt-3'>
+                          <p className='lead fw-medium mb-0'>Services</p>
+                          <div className='link-blank-space footer-link-right-mobile'>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>eCommerce</p>
                             </a>
                           </div>
                         </div>
                         <div className='footer-link-box-mobile mt-3'>
-                          <p className='lead fw-medium mb-0'>Links</p>
+                          <p className='lead fw-medium mb-0'>Company</p>
                           <div className='link-blank-space footer-link-right-mobile'>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Identity</p>
@@ -147,8 +155,16 @@ export default class BurgeonFooter extends Component {
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Operations</p>
                             </a>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
-                              <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Gratitude</p>
+                              <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Acknowledgment</p>
                             </a>
+                            <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                              <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Partners</p>
+                            </a>
+                          </div>
+                        </div>
+                        <div className='footer-link-box-mobile mt-3'>
+                          <p className='lead fw-medium mb-0'>Link</p>
+                          <div className='link-blank-space footer-link-right-mobile'>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Privacy Policy</p>
                             </a>
@@ -157,6 +173,14 @@ export default class BurgeonFooter extends Component {
                             </a>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Terms & Conditions</p>
+                            </a>
+                          </div>
+                        </div>
+                        <div className='footer-link-box-mobile mt-3'>
+                          <p className='lead fw-medium mb-0'>Resources</p>
+                          <div className='link-blank-space footer-link-right-mobile'>
+                            <a className='burgeon-adaire-link text-decoration-none link-light' href="#" target='_blank' rel='noopener'>
+                              <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Portal</p>
                             </a>
                           </div>
                         </div>
