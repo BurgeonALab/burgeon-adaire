@@ -54,7 +54,7 @@ export default class BurgeonPartners extends Component {
 
   render() {
     return (
-      <div className='burgeon-partners container-fluid'>
+      <section id="partners" className='burgeon-partners container-fluid'>
         <div className='row'>
           <div className='col-lg-9 py-3'>
             <div className='d-flex flex-column justify-content-between h-100'>
@@ -130,7 +130,7 @@ export default class BurgeonPartners extends Component {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

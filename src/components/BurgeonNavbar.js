@@ -49,6 +49,17 @@ export default class BurgeonNavbar extends Component {
         $('#chevron-nav').toggleClass("rotate-overlay-button");
       });
     });
+
+    const linkBtn = $('.bai-link');
+    linkBtn.on("click", function () {
+      setTimeout(() => {
+        removeHash();
+      });
+    });
+
+    function removeHash() {
+      history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search);
+    }
   }
 
   componentDidMount() {
@@ -88,16 +99,16 @@ export default class BurgeonNavbar extends Component {
               <div className='burgeon-nav-menu'>
                 <ul className="nav d-flex margin-twelve-rl">
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a className='text-light text-decoration-none'>Identity</a>
+                    <a href="#abstract" className='bai-link text-light text-decoration-none'>Identity</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a className='text-light text-decoration-none'>Operations</a>
+                    <a href="#operations" className='bai-link text-light text-decoration-none'>Operations</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a className='text-light text-decoration-none'>Acknowledgment</a>
+                    <a href="#acknowledgment" className='bai-link text-light text-decoration-none'>Acknowledgment</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
-                    <a className='text-light text-decoration-none'>Partners</a>
+                    <a href="#partners" className='bai-link text-light text-decoration-none'>Partners</a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
                     <a id="dropdown-nav" className='nav-link p-0 link-light' role='button' data-bs-toggle='dropdown' aria-expanded='false'>

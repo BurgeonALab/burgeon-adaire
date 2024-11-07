@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class BurgeonAbstract extends Component {
 	render() {
 		return (
-			<div className='container-fluid py-3'>
+			<section id="abstract" className='container-fluid py-3'>
 				<div className='row'>
 					<div className='col-xxl-8 c-abstract-box'>
 						<h1 className='text-light'>
@@ -20,7 +20,7 @@ export default class BurgeonAbstract extends Component {
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		);
 	}
 }

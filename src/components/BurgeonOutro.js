@@ -7,7 +7,7 @@ export default class BurgeonOutro extends Component {
   render() {
     return (
       <Fragment>
-        <div className='outro-container container-fluid py-3 d-flex'>
+        <section id="acknowledgment" className='outro-container container-fluid py-3 d-flex'>
           <div className='outro-container-gradient'>
           </div>
           <div className='outro-container-background'>
@@ -29,7 +29,7 @@ export default class BurgeonOutro extends Component {
               </a>
             </p>
           </div>
-        </div>
+        </section>
       </Fragment>
     );
   }

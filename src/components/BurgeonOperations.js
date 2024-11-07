@@ -73,7 +73,7 @@ export default class BurgeonOperations extends Component {
 
 	render() {
 		return (
-			<div className='container-fluid py-3'>
+			<section id="operations" className='container-fluid py-3'>
 				<div className='col-md-12 operation-container-overlay-container py-3'>
 					<div className='py-3 h-100 me-5'>
 						<div className='operation-container-overlay'>
@@ -208,7 +208,7 @@ export default class BurgeonOperations extends Component {
 						<BMediumExtras />
 					</div>
 				</div>
-			</div>
+			</section>
 		);
 	}
 }
