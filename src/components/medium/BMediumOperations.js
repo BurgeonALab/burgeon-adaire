@@ -25,26 +25,31 @@ export default class BMediumOperations extends Component {
         {
           id: 0,
           name: 'Portfolio',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           link: 'https://portfolio.burgeonadaire.com',
         },
         {
           id: 1,
           name: 'Blog',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           link: 'https://blog.burgeonadaire.com',
         },
         {
           id: 2,
           name: 'The Adaire Solutions',
+          desc: 'Our sister company which operates in Information Technology. We believe cloud computing will become a key driver for business innovation.',
           link: 'https://adairesolutions.com',
         },
         {
           id: 3,
           name: 'eCommerce',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           link: 'https://shop.burgeonadaire.com',
         },
         {
           id: 4,
           name: 'Investment',
+          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           link: 'https://burgeonadaire.com/investment',
         }
       ],
@@ -63,7 +68,7 @@ export default class BMediumOperations extends Component {
                     <a className='text-decoration-none' href={data.link} rel="noopener" target="_blank">
                       <h5 className='text-light'>{data.name}</h5>
                     </a>
-                    <p className='text-light'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p className='text-light'>{data.desc}</p>
                   </div>
                   <div className='d-flex justify-content-end'>
                     <span className="badge text-bg-danger">WIP</span>

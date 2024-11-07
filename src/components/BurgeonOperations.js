@@ -25,18 +25,21 @@ export default class BurgeonOperations extends Component {
 				{
 					id: 0,
 					hitoverlay: true,
+					desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 					name: 'Portfolio',
 					link: 'https://portfolio.burgeonadaire.com',
 				},
 				{
 					id: 1,
 					hitoverlay: false,
+					desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 					name: 'Blog',
 					link: 'https://blog.burgeonadaire.com',
 				},
 				{
 					id: 2,
 					hitoverlay: false,
+					desc: 'Our sister company which operates in Information Technology. We believe cloud computing will become a key driver for business innovation.',
 					name: 'The Adaire Solutions',
 					link: 'https://adairesolutions.com',
 				}
@@ -191,7 +194,7 @@ export default class BurgeonOperations extends Component {
 														<a className="text-decoration-none" href={data.link} target="_blank" rel="noopener">
 															<h5 className='text-light'>{data.name}</h5>
 														</a>
-														<p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+														<p className='text-light mb-0'>{data.desc}</p>
 													</div>
 													<div className='d-flex justify-content-end'>
 														<span className="badge text-bg-danger">WIP</span>
