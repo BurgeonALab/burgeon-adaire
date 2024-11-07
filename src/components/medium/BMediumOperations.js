@@ -40,7 +40,7 @@ export default class BMediumOperations extends Component {
         {
           id: 3,
           name: 'eCommerce',
-          link: 'https://adaireshop.com',
+          link: 'https://shop.burgeonadaire.com',
         },
         {
           id: 4,

@@ -13,7 +13,9 @@ export default class BMediumExtras extends Component {
               <div className='ecommerce-box rounded p-4'>
                 <div className='d-flex h-100 flex-column justify-content-between'>
                   <div>
-                    <h5 className='text-light'>eCommerce</h5>
+                    <a className='text-decoration-none' href="https://shop.burgeonadaire.com" rel="noopener" target="_blank">
+                      <h5 className='text-light'>eCommerce</h5>
+                    </a>
                     <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
                   <div className='d-flex justify-content-end'>
