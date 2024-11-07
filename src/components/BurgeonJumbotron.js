@@ -73,7 +73,7 @@ export default class BurgeonJumbotron extends Component {
             </Slider>
           </div>
         </div>
-        <img src="https://images.burgeonadaire.com/logo.webp" alt="PT. Burgeon Adaire International Logo" className="jumbotron-logo d-block"></img>
+        <img style={{ opacity: "0%" }} src="https://images.burgeonadaire.com/logo.webp" alt="PT. Burgeon Adaire International Logo" className="jumbotron-logo d-block jumbotron-logo-reveal"></img>
       </div>
     );
   }

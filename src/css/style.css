@@ -703,3 +703,17 @@ body {
 #chevron-nav {
   transition: transform 500ms;
 }
+
+@keyframes jumbotronOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.jumbotron-logo-reveal {
+  animation: jumbotronOpacity 2s forwards;
+}
