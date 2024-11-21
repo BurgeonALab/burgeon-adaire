@@ -129,17 +129,20 @@ export default class BurgeonFooter extends Component {
                         <div className='mt-3'>
                           <p className='lead fw-medium mb-0'>Portfolio</p>
                           <div className='link-blank-space footer-link-right-mobile'>
-                            <a className='text-decoration-none link-light' href="https://geraldzandisko.burgeonadaire.com" target='_blank' rel='noopener'>
-                              <p className='burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light'>Gerald Zandisko</p>
-                            </a>
                             <a className='text-decoration-none link-light' href="https://www.myfxbook.com/members/gerraour" target='_blank' rel='noopener'>
                               <p className='burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light'>Myfxbook</p>
+                            </a>
+                            <a className='text-decoration-none link-light' href="https://portfolio.burgeonadaire.com" target='_blank' rel='noopener'>
+                              <p className='burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light'>Investments</p>
                             </a>
                           </div>
                         </div>
                         <div className='footer-link-box-mobile mt-3'>
                           <p className='lead fw-medium mb-0'>Associates</p>
                           <div className='link-blank-space footer-link-right-mobile'>
+                            <a className='text-decoration-none link-light' href="https://geraldzandisko.burgeonadaire.com" target='_blank' rel='noopener'>
+                              <p className='burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light'>Gerald Zandisko</p>
+                            </a>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="https://adairesolutions.com" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>The Adaire Solutions</p>
                             </a>
@@ -184,6 +187,9 @@ export default class BurgeonFooter extends Component {
                             </a>
                             <a className='burgeon-adaire-link text-decoration-none link-light' href="https://burgeonadaire.com/terms-and-conditions" target='_blank' rel='noopener'>
                               <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Terms & Conditions</p>
+                            </a>
+                            <a className='burgeon-adaire-link text-decoration-none link-light' href="https://blog.burgeonadaire.com" target='_blank' rel='noopener'>
+                              <p className='footer-item-link-mobile mb-0 mt-3 fw-light'>Blog</p>
                             </a>
                           </div>
                         </div>
