@@ -25,13 +25,13 @@ export default class BMediumOperations extends Component {
         {
           id: 0,
           name: 'Portfolio',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          desc: 'We actively manage a diverse portfolio, carefully selecting companies with strong growth prospects alongside strategic investments in commodities, cryptocurrencies, and currencies.',
           link: 'https://portfolio.burgeonadaire.com',
         },
         {
           id: 1,
           name: 'Blog',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          desc: 'Get a glimpse of our thinking on finance, technology, and investment strategies, plus a few random musings along the way.',
           link: 'https://blog.burgeonadaire.com',
         },
         {
@@ -48,9 +48,9 @@ export default class BMediumOperations extends Component {
         },
         {
           id: 4,
-          name: 'Investment',
+          name: 'Organizations',
           desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          link: 'https://burgeonadaire.com/investment',
+          link: 'https://org.burgeonadaire.com',
         }
       ],
     };
