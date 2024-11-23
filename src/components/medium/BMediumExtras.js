@@ -8,7 +8,7 @@ export default class BMediumExtras extends Component {
     return (
       <Fragment>
         <div className='extras-container d-flex flex-row flex-grow-1'>
-          <div className='flex-grow-1 operation-child-container'>
+          <div className='operation-child-container w-50'>
             <div className='h-100 padding-twelve-r'>
               <div className='ecommerce-box rounded p-4'>
                 <div className='d-flex h-100 flex-column justify-content-between'>
@@ -16,7 +16,7 @@ export default class BMediumExtras extends Component {
                     <a className='text-decoration-none' href="https://shop.burgeonadaire.com" rel="noopener" target="_blank">
                       <h5 className='text-light'>eCommerce</h5>
                     </a>
-                    <p className='text-light mb-0'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p className='text-light mb-0'>Show your support and explore our diverse collection of merchandise in our online store, featuring a wide range of items you will love.</p>
                   </div>
                   <div className='d-flex justify-content-end'>
                     <span className="badge text-bg-danger">WIP</span>
@@ -25,7 +25,7 @@ export default class BMediumExtras extends Component {
               </div>
             </div>
           </div>
-          <div className='flex-grow-1 operation-child-container'>
+          <div className='operation-child-container w-50'>
             <div className='h-100 padding-twelve-l'>
               <div className='investment-box rounded p-4'>
                 <div className='d-flex h-100 flex-column justify-content-between'>

@@ -43,7 +43,7 @@ export default class BMediumOperations extends Component {
         {
           id: 3,
           name: 'eCommerce',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          desc: 'Show your support and explore our diverse collection of merchandise in our online store, featuring a wide range of items you will love.',
           link: 'https://shop.burgeonadaire.com',
         },
         {
