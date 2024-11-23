@@ -13,3 +13,6 @@ compressed/
 #SSR folder
 ssr-public/
 ssr-dist/
+
+# Keys
+.env
