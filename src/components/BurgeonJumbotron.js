@@ -66,7 +66,7 @@ export default class BurgeonJumbotron extends Component {
           <div className="slider-container">
             <Slider {...settings}>
               {this.state.values.map((data, i) => (
-                <Suspense>
+                <Suspense key={i}>
                   <BSmallSSRJumbotronSlider DataTitle={data.vname} DataDescription={data.description} />
                 </Suspense>
               ))}
