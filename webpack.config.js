@@ -7,6 +7,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 module.exports = (env) => {
   const isDevelopment = env.NODE_ENV !== 'production';
@@ -116,6 +119,9 @@ module.exports = (env) => {
           { from: "./public/webmanifest.json", to: "./configurations" },
           { from: "./public/ads.txt", to: "./" },
         ],
+      }),
+      new webpack.DefinePlugin({
+        'process.env': JSON.stringify(process.env)
       }),
       new HtmlWebpackPlugin({
         template: './public/index.html',
