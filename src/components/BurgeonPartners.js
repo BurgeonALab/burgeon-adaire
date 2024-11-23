@@ -93,7 +93,7 @@ export default class BurgeonPartners extends Component {
             <img className='ms-4' src="https://d0.awsstatic.com/logos/powered-by-aws-white.png" height={56} alt="Powered by AWS Cloud Computing" />
             <img
               className='ms-4'
-              src="https://images.burgeonadaire.com/gcp-logo.webp"
+              src="https://images.burgeonadaire.com/gcp-icon.webp"
               onError={({ currentTarget }) => {
                 currentTarget.onerror = null;
                 currentTarget.src = './assets/images/gcp-icon.webp'
