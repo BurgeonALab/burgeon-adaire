@@ -46,28 +46,59 @@ module.exports = (env) => {
       minimize: true,
       minimizer: [
         new TerserPlugin({
-          terserOptions: {
-            compress: {
-              drop_console: true,
-            },
-            mangle: true,
-            format: {
-              comments: false,
-            },
-          },
-          extractComments: true,
+          parallel: true,
+          minify: TerserPlugin.swcMinify,
         }),
-        new CssMinimizerPlugin(),
+        new CssMinimizerPlugin({
+          parallel: true,
+          minify: CssMinimizerPlugin.cssnanoMinify,
+          minimizerOptions: {
+            preset: [
+              "default",
+              {
+                discardComments: { removeAll: true },
+              },
+            ],
+          }
+        }),
       ],
     },
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.(js|jsx)$/,
           exclude: /node_modules/,
-          include: path.resolve(__dirname, 'src'),
           use: {
-            loader: 'babel-loader',
+            loader: "swc-loader",
+            options: {
+              module: {
+                type: "es6"
+              },
+              isModule: true,
+              jsc: {
+                minify: {
+                  compress: {
+                    drop_console: isDevelopment ? false : true,
+                  },
+                  mangle: true,
+                  format: {
+                    comments: false,
+                  }
+                },
+                target: "es2016",
+                parser: {
+                  syntax: "ecmascript",
+                  jsx: true
+                },
+                transform: {
+                  react: {
+                    runtime: "automatic",
+                    development: isDevelopment,
+                    refresh: isDevelopment,
+                  }
+                }
+              }
+            }
           },
         },
         {
@@ -80,20 +111,13 @@ module.exports = (env) => {
           }
         },
         {
-          test: /\.css$/i,
-          use: [
-            MiniCssExtractPlugin.loader, "css-loader"],
-        },
-        {
-          test: /\.[jt]sx?$/,
-          exclude: /node_modules/,
+          test: /\.css$/,
           use: [
             {
-              loader: require.resolve('babel-loader'),
-              options: {
-                plugins: [isDevelopment && require.resolve('react-refresh/babel')].filter(Boolean),
-              },
+              loader: isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
             },
+            "css-loader",
+            "postcss-loader",
           ],
         },
       ],
