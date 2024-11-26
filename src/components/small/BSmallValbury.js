@@ -90,6 +90,7 @@ export default class BSmallValbury extends Component {
       $(".ordering-badges-valbury-mobile").attr('style', 'justify-content:flex-end !important');
       if (dateday === 'Sabtu' || dateday === 'Minggu' || dateday === 'Senin' && datetime <= timeopen) {
         $('.signal-order-text').hide();
+        $('#status-signal').hide();
       }
     };
 
