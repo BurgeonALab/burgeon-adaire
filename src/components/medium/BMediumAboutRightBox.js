@@ -12,8 +12,8 @@ export default class BMediumAboutRightBox extends Component {
             <div className='position-relative h-100'>
               <div className='about-rightbox-focus-mobile'>
                 <div className='about-rightbox-focus p-4 rounded'>
-                  <h3 className='text-light'>Lorem Ipsum</h3>
-                  <p className='text-light mb-0'>Lorem ipsum dolor sit amet.</p>
+                  <h3 className='text-light'>Martin Luther King, Jr.</h3>
+                  <p className='text-light mb-0'>We must build dikes of courage to hold back the flood of fear.</p>
                 </div>
               </div>
               <div className='justify-content-end position-absolute bottom-0'>
