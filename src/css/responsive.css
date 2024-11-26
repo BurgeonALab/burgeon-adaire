@@ -452,22 +452,6 @@
     height: 25vh;
   }
 
-  .about-leftbox-description-mobile {
-    display: none;
-  }
-
-  .about-leftbox-header-mobile {
-    margin-bottom: 0px;
-  }
-
-  .about-rightbox-focus p {
-    display: none;
-  }
-
-  .about-rightbox-focus h3 {
-    margin-bottom: 0px;
-  }
-
   .outro-header-mobile p {
     font-size: 1rem !important;
   }
