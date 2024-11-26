@@ -1,14 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export const BurgeonSEO = ({ title, description }) => {
+export const BurgeonSEO = ({ title, description, canonical }) => {
   return (
     <Helmet>
       {/* Google */}
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="follow" />
       {/* Metas */}
-      <meta name="keywords" content="Forex, Commodity, Services, Technology" />
+      <meta name="keywords" content="Forex, Commodity, Service, Technology, Cryptocurrency, Stock, Paper, Finance" />
       <meta name="author" content="PT. Burgeon Adaire International" />
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,17 +16,17 @@ export const BurgeonSEO = ({ title, description }) => {
       {/* Open Graph */}
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="id_ID" />
-      <meta property="og:title" content="Home • PT. Burgeon Adaire International" />
+      <meta property="og:title" content={title} />
       <meta property="og:description"
-        content="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value." />
+        content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:image"
         content="https://firebasestorage.googleapis.com/v0/b/burgeon-adaire.appspot.com/o/BAI_MetaCover.webp?alt=media&token=68f49fa4-3fc0-48b5-8ee1-f95031d0bd34" />
       <meta property="og:image:alt" content="PT. Burgeon Adaire International Logo Cover" />
       {/* Twitter */}
-      <meta name="twitter:title" content="Home • PT. Burgeon Adaire International" />
+      <meta name="twitter:title" content={title} />
       <meta name="twitter:description"
-        content="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value." />
+        content={description} />
       <meta property="twitter:image"
         content="https://firebasestorage.googleapis.com/v0/b/burgeon-adaire.appspot.com/o/BAI_MetaCover.webp?alt=media&token=68f49fa4-3fc0-48b5-8ee1-f95031d0bd34" />
       <meta property="twitter:image:alt" content="PT. Burgeon Adaire International Logo Cover" />
@@ -48,7 +48,7 @@ export const BurgeonSEO = ({ title, description }) => {
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta property="og:site_name" content="PT. Burgeon Adaire International" />
-      <link rel="canoncial" href="https://burgeonadaire.com" />
+      <link rel="canonical" href={canonical} />
     </Helmet>
   );
 };

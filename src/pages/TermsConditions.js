@@ -17,8 +17,9 @@ export default class TermsConditions extends Component {
     return (
       <Fragment>
         <BurgeonSEO
-          title="Terms and Condition | PT. Burgeon Adaire International"
-          description="Terms and Condition."
+          title="Terms and Conditions | PT. Burgeon Adaire International"
+          description="Terms and Conditions."
+          canonical="https://burgeonadaire.com/terms-and-conditions"
         />
         <div className='bottom-footer-container'>
           <div className="container-fluid">

@@ -19,6 +19,7 @@ export default class PrivacyPolicy extends Component {
         <BurgeonSEO
           title="Privacy Policy | PT. Burgeon Adaire International"
           description="Privacy Policy."
+          canonical="https://burgeonadaire.com/privacy-policy"
         />
         <div className='bottom-footer-container'>
           <div className="container-fluid">

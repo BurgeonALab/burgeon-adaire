@@ -25,6 +25,7 @@ export default class HomePage extends Component {
         <BurgeonSEO
           title="Driving the Future | PT. Burgeon Adaire International"
           description="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value."
+          canonical="https://burgeonadaire.com"
         />
         <div className='bottom-footer-container'>
           <div className="container-fluid">

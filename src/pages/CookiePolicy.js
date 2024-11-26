@@ -19,6 +19,7 @@ export default class CookiePolicy extends Component {
         <BurgeonSEO
           title="Cookie Policy | PT. Burgeon Adaire International"
           description="Cookie Policy."
+          canonical="https://burgeonadaire.com/cookie-policy"
         />
         <div className='bottom-footer-container'>
           <div className="container-fluid">
