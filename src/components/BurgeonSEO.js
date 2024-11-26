@@ -49,6 +49,7 @@ export const BurgeonSEO = ({ title, description, canonical }) => {
       <meta name="description" content={description} />
       <meta property="og:site_name" content="PT. Burgeon Adaire International" />
       <link rel="canonical" href={canonical} />
+      <meta property="og:url" content={canonical} />
     </Helmet>
   );
 };
