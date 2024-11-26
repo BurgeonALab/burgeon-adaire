@@ -8,9 +8,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const dedent = require('dedent');
 
 module.exports = (env) => {
-  // const isDevelopment = env.NODE_ENV !== 'production';
+  const isDevelopment = env.NODE_ENV !== 'production';
   return {
-    // devtool: isDevelopment ? 'inline-source-map' : 'source-map',
     entry: "./src/client/index.js",
     mode: "production",
     performance: {
@@ -38,19 +37,21 @@ module.exports = (env) => {
       minimize: true,
       minimizer: [
         new TerserPlugin({
+          parallel: true,
           minify: TerserPlugin.swcMinify,
-          terserOptions: {
-            compress: {
-              drop_console: true,
-            },
-            mangle: true,
-            format: {
-              comments: false,
-            },
-          },
-          extractComments: true,
         }),
-        new CssMinimizerPlugin(),
+        new CssMinimizerPlugin({
+          parallel: true,
+          minify: CssMinimizerPlugin.cssnanoMinify,
+          minimizerOptions: {
+            preset: [
+              "default",
+              {
+                discardComments: { removeAll: true },
+              },
+            ],
+          }
+        }),
       ],
     },
     module: {
@@ -65,19 +66,22 @@ module.exports = (env) => {
                 type: "es6"
               },
               isModule: true,
+              minify: true,
               jsc: {
                 minify: {
-                  compress: true,
+                  compress: {
+                    drop_console: isDevelopment ? false : true,
+                  },
                   mangle: true,
                   format: {
                     asciiOnly: true,
-                    comments: /^ webpack/
+                    comments: false,
                   }
                 },
                 target: "es2016",
                 parser: {
-                  syntax: "typescript",
-                  tsx: true
+                  syntax: "ecmascript",
+                  jsx: true
                 },
                 transform: {
                   react: {
@@ -89,10 +93,13 @@ module.exports = (env) => {
           },
         },
         {
-          test: /\.css$/i,
+          test: /\.css$/,
           use: [
-            MiniCssExtractPlugin.loader,
-            { loader: "css-loader" },
+            {
+              loader: isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
+            },
+            "css-loader",
+            "postcss-loader",
           ],
         },
       ]

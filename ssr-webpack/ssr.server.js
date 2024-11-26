@@ -3,7 +3,7 @@ const externals = require('webpack-node-externals');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = (env) => {
-  // const isDevelopment = env.NODE_ENV !== 'production';
+  const isDevelopment = env.NODE_ENV !== 'production';
   return {
     target: 'node',
     performance: {
@@ -14,6 +14,7 @@ module.exports = (env) => {
       minimize: true,
       minimizer: [
         new TerserPlugin({
+          parallel: true,
           minify: TerserPlugin.swcMinify,
         }),
       ],
@@ -41,19 +42,22 @@ module.exports = (env) => {
                 type: "es6"
               },
               isModule: true,
+              minify: true,
               jsc: {
                 minify: {
-                  compress: true,
+                  compress: {
+                    drop_console: isDevelopment ? false : true,
+                  },
                   mangle: true,
                   format: {
                     asciiOnly: true,
-                    comments: /^ webpack/
+                    comments: false,
                   }
                 },
                 target: "es2016",
                 parser: {
-                  syntax: "typescript",
-                  tsx: true
+                  syntax: "ecmascript",
+                  jsx: true
                 },
                 transform: {
                   react: {

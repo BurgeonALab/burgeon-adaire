@@ -75,6 +75,7 @@ module.exports = (env) => {
                 type: "es6"
               },
               isModule: true,
+              minify: true,
               jsc: {
                 minify: {
                   compress: {
