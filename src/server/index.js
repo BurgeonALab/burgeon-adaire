@@ -1,7 +1,7 @@
 const express = require('express');
 const React = require('react');
 const { renderToPipeableStream } = require('react-dom/server');
-const { StaticRouter } = require('react-router-dom/server');
+const { StaticRouter } = require('react-router-dom');
 const App = require('../client/App').default;
 const app = express();
 const PORT = process.env.PORT || 3001;
