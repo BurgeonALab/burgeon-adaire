@@ -10,31 +10,29 @@ var schema = {
       "founders": [
         {
           "@type": "Person",
-          "name": "Gerald Zandisko"
+          "name": "Gerald Zandisko",
         },
         {
           "@type": "Person",
-          "name": "Nadine Huang"
-        }
+          "name": "Nadine Huang",
+        },
       ],
-      "sponsor":
-      {
+      "sponsor": {
         "@type": "Organization",
         "name": "Pepperstone",
-        "url": "https://pepperstone.com"
-      }
+        "url": "https://pepperstone.com",
+      },
     },
     {
       "@type": "WebSite",
       "name": "PT. Burgeon Adaire International",
       "alternateName": "Burgeon Adaire International",
-      "url": "https://burgeonadaire.com"
-    }
+      "url": "https://burgeonadaire.com",
+    },
   ],
-}
+};
 
-var script = document.createElement('script');
+var script = document.createElement("script");
 script.type = "application/ld+json";
 script.text = JSON.stringify(schema);
-
-document.querySelector('head').appendChild(script);
+document.querySelector("head").appendChild(script);

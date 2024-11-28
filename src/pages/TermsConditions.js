@@ -1,16 +1,7 @@
-import React, {
-  Component,
-  Fragment,
-} from 'react';
-import {
-  BurgeonNavbar,
-  BurgeonFooter,
-  BurgeonContact,
-} from '../components';
-import {
-  BurgeonSubTermsConditions,
-} from './sub-pages';
-import { BurgeonSEO } from '../components/BurgeonSEO';
+import React, { Component, Fragment } from "react";
+import { BurgeonNavbar, BurgeonFooter, BurgeonContact } from "../components";
+import { BurgeonSubTermsConditions } from "./sub-pages";
+import { BurgeonSEO } from "../components/BurgeonSEO";
 
 export default class TermsConditions extends Component {
   render() {
@@ -21,7 +12,7 @@ export default class TermsConditions extends Component {
           description="Terms and Conditions."
           canonical="https://burgeonadaire.com/terms-and-conditions"
         />
-        <div className='bottom-footer-container'>
+        <div className="bottom-footer-container">
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-12">

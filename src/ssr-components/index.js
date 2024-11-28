@@ -14,4 +14,4 @@ export {
   BurgeonSSRAbout,
   BurgeonSSRPartners,
   BurgeonSSROutro,
-}
+};

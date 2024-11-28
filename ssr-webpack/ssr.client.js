@@ -1,14 +1,14 @@
-const path = require('path');
+const path = require("path");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const dedent = require('dedent');
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const dedent = require("dedent");
 
 module.exports = (env) => {
-  const isDevelopment = env.NODE_ENV !== 'production';
+  const isDevelopment = env.NODE_ENV !== "production";
   return {
     entry: "./src/client/index.js",
     mode: "production",
@@ -17,22 +17,22 @@ module.exports = (env) => {
       maxAssetSize: 500 * 1024,
     },
     output: {
-      path: path.resolve(__dirname, '../ssr-public'),
+      path: path.resolve(__dirname, "../ssr-public"),
       filename: "./scripts/bai.[name].js",
       chunkFilename: "./scripts/bai.[name].js",
       clean: true,
     },
     resolve: {
-      extensions: ['.js', '.jsx']
+      extensions: [".js", ".jsx"],
     },
     optimization: {
       chunkIds: "natural",
       splitChunks: {
-        chunks: 'all',
+        chunks: "all",
         minSize: 0,
       },
       runtimeChunk: {
-        name: 'runtime',
+        name: "runtime",
       },
       minimize: true,
       minimizer: [
@@ -50,7 +50,7 @@ module.exports = (env) => {
                 discardComments: { removeAll: true },
               },
             ],
-          }
+          },
         }),
       ],
     },
@@ -63,7 +63,7 @@ module.exports = (env) => {
             loader: "swc-loader",
             options: {
               module: {
-                type: "es6"
+                type: "es6",
               },
               isModule: true,
               minify: true,
@@ -76,42 +76,44 @@ module.exports = (env) => {
                   format: {
                     asciiOnly: true,
                     comments: false,
-                  }
+                  },
                 },
                 target: "es2016",
                 parser: {
                   syntax: "ecmascript",
-                  jsx: true
+                  jsx: true,
                 },
                 transform: {
                   react: {
-                    runtime: "automatic"
-                  }
-                }
-              }
-            }
+                    runtime: "automatic",
+                  },
+                },
+              },
+            },
           },
         },
         {
           test: /\.css$/,
           use: [
             {
-              loader: isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
+              loader: isDevelopment
+                ? "style-loader"
+                : MiniCssExtractPlugin.loader,
             },
             "css-loader",
             "postcss-loader",
           ],
         },
-      ]
+      ],
     },
     plugins: [
       new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
+        $: "jquery",
+        jQuery: "jquery",
       }),
       new HtmlWebpackPlugin({
         inject: false,
-        filename: 'webpacks.js',
+        filename: "webpacks.js",
         minimize: true,
         templateContent: ({ htmlWebpackPlugin }) => {
           return (
@@ -128,20 +130,20 @@ module.exports = (env) => {
             })(
             ` +
             JSON.stringify(htmlWebpackPlugin.files, null, 2) +
-            ');'
+            ");"
           );
         },
       }),
       new MiniCssExtractPlugin({
         filename: "./styles/bai.[name].css",
-        chunkFilename: "./styles/bai.[name].css"
+        chunkFilename: "./styles/bai.[name].css",
       }),
       new CopyPlugin({
         patterns: [
           { from: "./src/client/favicon.ico", to: "./" },
-          { from: "./public/assets/vectors", to: "./assets" }
+          { from: "./public/assets/vectors", to: "./assets" },
         ],
       }),
     ],
-  }
-}
+  };
+};

@@ -5,5 +5,5 @@ import BurgeonSubTermsConditions from "./BurgeonTermsConditions";
 export {
   BurgeonSubCookiePolicy,
   BurgeonSubTermsConditions,
-  BurgeonSubPrivacyPolicy
-}
+  BurgeonSubPrivacyPolicy,
+};

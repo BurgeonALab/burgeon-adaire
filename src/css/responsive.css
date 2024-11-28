@@ -359,7 +359,7 @@
   .overlay-container-mobile-box {
     border-bottom-left-radius: var(--bs-border-radius) !important;
     border-bottom-right-radius: var(--bs-border-radius) !important;
-    background-color: #1C1C24;
+    background-color: #1c1c24;
     transition: all 500ms;
   }
 

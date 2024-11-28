@@ -1,8 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {
-  getAnalytics,
-  logEvent,
-} from "firebase/analytics";
+import { getAnalytics, logEvent } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.FIREBASE_APP_API_KEY,
@@ -11,10 +8,10 @@ const firebaseConfig = {
   storageBucket: process.env.FIREBASE_APP_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_APP_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
 // Analytics
 const analytics = getAnalytics(app);
-logEvent(analytics, 'notification_received');
+logEvent(analytics, "notification_received");

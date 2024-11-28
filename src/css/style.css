@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
 
 .preload {
   height: 100vh;
@@ -17,7 +17,7 @@ html::-webkit-scrollbar {
 }
 
 body {
-  font-family: 'Red Hat Text', sans-serif;
+  font-family: "Red Hat Text", sans-serif;
   background-color: #121217;
 }
 
@@ -28,7 +28,7 @@ body {
 }
 
 .footer-hr {
-  color: #8B0000;
+  color: #8b0000;
   margin: 0;
   border: 4px solid;
 }
@@ -159,7 +159,12 @@ body {
   height: 100%;
   left: 0;
   z-index: 9992;
-  background-image: linear-gradient(to bottom, rgba(18, 18, 23, 1) 10%, rgba(18, 18, 23, 0.5), rgba(18, 18, 23, 1) 75%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(18, 18, 23, 1) 10%,
+    rgba(18, 18, 23, 0.5),
+    rgba(18, 18, 23, 1) 75%
+  );
 }
 
 .outro-container-background {
@@ -213,7 +218,7 @@ body {
 
 .valbury-box {
   padding-left: 70px !important;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   transition: all 500ms;
 }
 
@@ -222,7 +227,7 @@ body {
 }
 
 .valbury-box:nth-child(1) {
-  background-color: #1F4B8A;
+  background-color: #1f4b8a;
   margin-bottom: 12px;
 }
 
@@ -263,7 +268,7 @@ body {
 }
 
 .operation-container-overlay {
-  background-color: #1C1C24;
+  background-color: #1c1c24;
   height: 100%;
   border-top-right-radius: var(--bs-border-radius) !important;
   border-bottom-right-radius: var(--bs-border-radius) !important;
@@ -379,7 +384,7 @@ body {
   height: 100%;
   right: 0;
   opacity: 0.6;
-  background-image: url('https://images.burgeonadaire.com/pepperstone-logo-bai.webp');
+  background-image: url("https://images.burgeonadaire.com/pepperstone-logo-bai.webp");
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: 220px;
@@ -396,8 +401,8 @@ body {
 }
 
 .btn-pepperstone {
-  --bs-btn-bg: #8B0000;
-  --bs-btn-border-color: #8B0000;
+  --bs-btn-bg: #8b0000;
+  --bs-btn-border-color: #8b0000;
   --bs-btn-hover-bg: #610000;
   --bs-btn-hover-border-color: #610000;
   --bs-btn-active-bg: #380000;
@@ -407,8 +412,8 @@ body {
 .btn-cp {
   --bs-btn-bg: #121217;
   --bs-btn-border-color: #121217;
-  --bs-btn-hover-bg: #0D0D10;
-  --bs-btn-hover-border-color: #0D0D10;
+  --bs-btn-hover-bg: #0d0d10;
+  --bs-btn-hover-border-color: #0d0d10;
   --bs-btn-active-bg: #070709;
   --bs-btn-active-border-color: #070709;
   position: absolute !important;
@@ -422,8 +427,8 @@ body {
 .btn-cp-mobile {
   --bs-btn-bg: #121217;
   --bs-btn-border-color: #121217;
-  --bs-btn-hover-bg: #0D0D10;
-  --bs-btn-hover-border-color: #0D0D10;
+  --bs-btn-hover-bg: #0d0d10;
+  --bs-btn-hover-border-color: #0d0d10;
   --bs-btn-active-bg: #070709;
   --bs-btn-active-border-color: #070709;
   padding: 18px;
@@ -444,9 +449,9 @@ body {
 
 .dropdown-menu {
   background-color: #272731;
-  --bs-dropdown-link-hover-bg: #3B3B4C;
-  --bs-nav-link-hover-color: #F8F9FA;
-  --bs-dropdown-link-active-bg: #1C1C24;
+  --bs-dropdown-link-hover-bg: #3b3b4c;
+  --bs-nav-link-hover-color: #f8f9fa;
+  --bs-dropdown-link-active-bg: #1c1c24;
 }
 
 .partners-marquee-box {
@@ -476,7 +481,7 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 24px;
-  background-color: #22345F;
+  background-color: #22345f;
   border-top-left-radius: var(--bs-border-radius);
   border-bottom-left-radius: var(--bs-border-radius);
 }
@@ -490,7 +495,7 @@ body {
 }
 
 .data-unavailable {
-  color: #F8F9FA;
+  color: #f8f9fa;
   font-weight: 500;
 }
 
@@ -503,11 +508,11 @@ body {
 }
 
 .data-unavailable-background {
-  background-color: #1B1B22 !important;
+  background-color: #1b1b22 !important;
 }
 
 .data-sell-background {
-  background-color: #631A1A;
+  background-color: #631a1a;
 }
 
 .vaf-slide-container {
@@ -517,14 +522,14 @@ body {
 }
 
 .vaf-slide-button.active {
-  background-color: #F8F9FA;
+  background-color: #f8f9fa;
 }
 
 .vaf-slide-button {
   margin-right: 12px;
   height: 10px;
   width: 10px;
-  background-color: #A1AEBC;
+  background-color: #a1aebc;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -534,7 +539,7 @@ body {
 }
 
 .burgeon-adaire-link:hover {
-  color: #8B0000 !important;
+  color: #8b0000 !important;
 }
 
 .valbury-box:nth-child(2) .slick-slide {
@@ -575,7 +580,11 @@ body {
   height: 100%;
   width: 100%;
   border-radius: var(--bs-border-radius);
-  background-image: linear-gradient(to top, rgba(18, 18, 23, 0.9) 30%, rgba(18, 18, 23, 0.4));
+  background-image: linear-gradient(
+    to top,
+    rgba(18, 18, 23, 0.9) 30%,
+    rgba(18, 18, 23, 0.4)
+  );
 }
 
 .news-content-image {
@@ -585,22 +594,32 @@ body {
   object-fit: cover;
 }
 
-.burgeon-adaire-link-svg-inside>path {
+.burgeon-adaire-link-svg-inside > path {
   transition: all 0.3s !important;
 }
 
-.burgeon-adaire-link-svg-inside>g>g>path {
+.burgeon-adaire-link-svg-inside > g > g > path {
   transition: all 0.3s !important;
 }
 
 .about-item.about-item-blue {
   background-size: cover;
-  background-image: linear-gradient(to top, rgba(18, 18, 23, 0.9) 30%, rgba(18, 18, 23, 0.4)), url('https://images.burgeonadaire.com/about-blue.webp');
+  background-image: linear-gradient(
+      to top,
+      rgba(18, 18, 23, 0.9) 30%,
+      rgba(18, 18, 23, 0.4)
+    ),
+    url("https://images.burgeonadaire.com/about-blue.webp");
 }
 
 .about-item.about-item-brown {
   background-size: cover;
-  background-image: linear-gradient(to top, rgba(18, 18, 23, 0.9) 30%, rgba(18, 18, 23, 0.4)), url('https://images.burgeonadaire.com/about-brown.webp');
+  background-image: linear-gradient(
+      to top,
+      rgba(18, 18, 23, 0.9) 30%,
+      rgba(18, 18, 23, 0.4)
+    ),
+    url("https://images.burgeonadaire.com/about-brown.webp");
 }
 
 .extras-container-mobile {
@@ -644,11 +663,11 @@ body {
   width: 10px;
   height: 10px;
   border-radius: 5px;
-  background-color: #A1AEBC;
+  background-color: #a1aebc;
 }
 
 .operations-dots li.slick-active {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .operations-circle-indicator {
@@ -658,7 +677,7 @@ body {
 }
 
 .footer-image-container {
-  background-image: url('https://images.burgeonadaire.com/lantern.webp');
+  background-image: url("https://images.burgeonadaire.com/lantern.webp");
   background-size: cover;
   background-position: center;
 }

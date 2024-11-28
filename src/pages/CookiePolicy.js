@@ -1,16 +1,7 @@
-import React, {
-  Component,
-  Fragment,
-} from 'react';
-import {
-  BurgeonNavbar,
-  BurgeonFooter,
-  BurgeonContact,
-} from '../components';
-import {
-  BurgeonSubCookiePolicy,
-} from './sub-pages';
-import { BurgeonSEO } from '../components/BurgeonSEO';
+import React, { Component, Fragment } from "react";
+import { BurgeonNavbar, BurgeonFooter, BurgeonContact } from "../components";
+import { BurgeonSubCookiePolicy } from "./sub-pages";
+import { BurgeonSEO } from "../components/BurgeonSEO";
 
 export default class CookiePolicy extends Component {
   render() {
@@ -21,7 +12,7 @@ export default class CookiePolicy extends Component {
           description="Cookie Policy."
           canonical="https://burgeonadaire.com/cookie-policy"
         />
-        <div className='bottom-footer-container'>
+        <div className="bottom-footer-container">
           <div className="container-fluid">
             <div className="row">
               <div className="col-md-12">

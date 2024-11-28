@@ -1,11 +1,11 @@
-const path = require('path');
-const externals = require('webpack-node-externals');
-const TerserPlugin = require('terser-webpack-plugin');
+const path = require("path");
+const externals = require("webpack-node-externals");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = (env) => {
-  const isDevelopment = env.NODE_ENV !== 'production';
+  const isDevelopment = env.NODE_ENV !== "production";
   return {
-    target: 'node',
+    target: "node",
     performance: {
       hints: false,
       maxAssetSize: 500 * 1024,
@@ -20,14 +20,14 @@ module.exports = (env) => {
       ],
     },
     entry: "./src/server/index.js",
-    mode: 'production',
+    mode: "production",
     output: {
-      path: path.resolve(__dirname, '../ssr-dist'),
-      filename: './server/server.js',
+      path: path.resolve(__dirname, "../ssr-dist"),
+      filename: "./server/server.js",
       clean: true,
     },
     resolve: {
-      extensions: ['.js', '.jsx']
+      extensions: [".js", ".jsx"],
     },
     externals: [externals()],
     module: {
@@ -39,7 +39,7 @@ module.exports = (env) => {
             loader: "swc-loader",
             options: {
               module: {
-                type: "es6"
+                type: "es6",
               },
               isModule: true,
               minify: true,
@@ -52,23 +52,23 @@ module.exports = (env) => {
                   format: {
                     asciiOnly: true,
                     comments: false,
-                  }
+                  },
                 },
                 target: "es2016",
                 parser: {
                   syntax: "ecmascript",
-                  jsx: true
+                  jsx: true,
                 },
                 transform: {
                   react: {
-                    runtime: "automatic"
-                  }
-                }
-              }
-            }
-          }
+                    runtime: "automatic",
+                  },
+                },
+              },
+            },
+          },
         },
-      ]
+      ],
     },
-  }
-}
+  };
+};

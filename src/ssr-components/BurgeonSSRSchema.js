@@ -8,23 +8,22 @@ var schema = {
   "founders": [
     {
       "@type": "Person",
-      "name": "Gerald Zandisko"
+      "name": "Gerald Zandisko",
     },
     {
       "@type": "Person",
-      "name": "Nadine Huang"
-    }
+      "name": "Nadine Huang",
+    },
   ],
-  "sponsor":
-  {
+  sponsor: {
     "@type": "Organization",
     "name": "Pepperstone",
-    "url": "https://pepperstone.com"
-  }
-}
+    "url": "https://pepperstone.com",
+  },
+};
 
-var script = document.createElement('script');
+var script = document.createElement("script");
 script.type = "application/ld+json";
 script.text = JSON.stringify(schema);
 
-document.querySelector('head').appendChild(script);
+document.querySelector("head").appendChild(script);

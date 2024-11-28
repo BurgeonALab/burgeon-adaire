@@ -1,10 +1,5 @@
-import React, {
-  Component,
-} from 'react';
-import {
-  Helmet,
-  HelmetProvider,
-} from 'react-helmet-async';
+import React, { Component } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 const helmetContext = {};
 
