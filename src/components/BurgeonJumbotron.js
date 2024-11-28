@@ -18,19 +18,19 @@ export default class BurgeonJumbotron extends Component {
       values: [
         {
           vname: "Development",
-          description: "We are constantly pushing ourselves to grow and improve in everything we take on."
+          description: "We continuously grow, improve, and adapt."
         },
         {
           vname: "Cooperation",
-          description: "Collaboration and strong partnerships are fundamental to our approach."
+          description: "We value collaboration and strong partnerships."
         },
         {
           vname: "Mastery",
-          description: "We pursue excellence through constant skill refinement and exceptional outcomes."
+          description: "We pursue excellence and deliver exceptional results."
         },
         {
           vname: "Trustworthiness",
-          description: "Integrity and reliability are foundational to our work, fostering trust with clients and partners."
+          description: "We build trust through integrity and reliability."
         }
       ]
     }

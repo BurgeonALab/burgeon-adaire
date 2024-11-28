@@ -25,31 +25,31 @@ export default class BMediumOperations extends Component {
         {
           id: 0,
           name: 'Portfolio',
-          desc: 'We actively manage a diverse portfolio, carefully selecting companies with strong growth prospects alongside strategic investments in commodities, cryptocurrencies, and currencies.',
+          desc: 'Diverse portfolio of companies and assets. Actively managed for growth and profit.',
           link: 'https://portfolio.burgeonadaire.com',
         },
         {
           id: 1,
           name: 'Blog',
-          desc: 'Get a glimpse of our thinking on finance, technology, and investment strategies, plus a few random musings along the way.',
+          desc: 'Insights on finance and technology. Explore our thoughts and join the conversation.',
           link: 'https://blog.burgeonadaire.com',
         },
         {
           id: 2,
           name: 'The Adaire Solutions',
-          desc: 'Our sister company which operates in Information Technology. We believe cloud computing will become a key driver for business innovation.',
+          desc: 'IT solutions and cloud innovation. Driving business growth through technology.',
           link: 'https://adairesolutions.com',
         },
         {
           id: 3,
           name: 'eCommerce',
-          desc: 'Show your support and explore our diverse collection of merchandise in our online store, featuring a wide range of items you will love.',
+          desc: 'Shop our diverse merchandise. Find unique items and show your support.',
           link: 'https://shop.burgeonadaire.com',
         },
         {
           id: 4,
           name: 'Organizations',
-          desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          desc: 'Our impactful partnerships. Collaborating for positive change.',
           link: 'https://org.burgeonadaire.com',
         }
       ],

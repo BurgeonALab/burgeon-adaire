@@ -25,21 +25,21 @@ export default class BurgeonOperations extends Component {
 				{
 					id: 0,
 					hitoverlay: true,
-					desc: 'We actively manage a diverse portfolio, carefully selecting companies with strong growth prospects alongside strategic investments in commodities, cryptocurrencies, and currencies.',
+					desc: 'Diverse portfolio of companies and assets. Actively managed for growth and profit.',
 					name: 'Portfolio',
 					link: 'https://portfolio.burgeonadaire.com',
 				},
 				{
 					id: 1,
 					hitoverlay: false,
-					desc: 'Get a glimpse of our thinking on finance, technology, and investment strategies, plus a few random musings along the way.',
+					desc: 'Insights on finance and technology. Explore our thoughts and join the conversation.',
 					name: 'Blog',
 					link: 'https://blog.burgeonadaire.com',
 				},
 				{
 					id: 2,
 					hitoverlay: false,
-					desc: 'Our sister company which operates in Information Technology. We believe cloud computing will become a key driver for business innovation.',
+					desc: 'IT solutions and cloud innovation. Driving business growth through technology.',
 					name: 'The Adaire Solutions',
 					link: 'https://adairesolutions.com',
 				}
