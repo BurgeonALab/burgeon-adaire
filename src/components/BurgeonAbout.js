@@ -1,4 +1,4 @@
-import React, { Fragment, Component, Suspense, lazy } from "react";
+import React, { Component, Suspense, lazy } from "react";
 
 const BMediumAboutLeftBox = lazy(() =>
   import("../components/medium/BMediumAboutLeftBox")
@@ -10,7 +10,7 @@ const BMediumAboutRightBox = lazy(() =>
 export default class BurgeonAbout extends Component {
   render() {
     return (
-      <Fragment>
+      <section>
         <div className="about-container d-flex flex-row">
           <Suspense fallback={<p className="d-none">Loading...</p>}>
             <BMediumAboutLeftBox />
@@ -19,7 +19,7 @@ export default class BurgeonAbout extends Component {
             <BMediumAboutRightBox />
           </Suspense>
         </div>
-      </Fragment>
+      </section>
     );
   }
 }

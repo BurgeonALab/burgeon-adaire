@@ -6,10 +6,17 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { TheOrg, PitchBook } from "./vectors";
-import $ from "jquery";
 import { ReactSVG } from "react-svg";
+import { handleViewport } from "react-in-viewport";
+// jQuery
+import $ from "jquery";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-export default class BurgeonFooter extends Component {
+gsap.registerPlugin(useGSAP, ScrollToPlugin);
+
+class BurgeonFooter extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -61,6 +68,21 @@ export default class BurgeonFooter extends Component {
     };
   }
 
+  jQueryPath = (ViewportStatus) => {
+    $(function () {
+      if (ViewportStatus === "In Viewport") {
+        window.history.pushState(
+          {
+            additionalInformation:
+              "Main section at PT. Burgeon Adaire International",
+          },
+          "Driving the Future | PT. Burgeon Adaire International",
+          "/"
+        );
+      }
+    });
+  };
+
   jQuery = () => {
     // The Org - Hover
     $(".social-media-footer-items-org").on("mouseenter", function () {
@@ -106,23 +128,6 @@ export default class BurgeonFooter extends Component {
         "fill: #8B0000 !important;"
       );
     });
-
-    const linkBtn = $(".bai-footer-link");
-    linkBtn.on("click", function () {
-      setTimeout(() => {
-        removeHash();
-      });
-    });
-
-    function removeHash() {
-      history.replaceState(
-        "",
-        document.title,
-        window.location.origin +
-          window.location.pathname +
-          window.location.search
-      );
-    }
   };
 
   componentDidMount() {
@@ -130,8 +135,30 @@ export default class BurgeonFooter extends Component {
   }
 
   render() {
+    function removeHash(name) {
+      var urlPath = name.toString();
+      var newURL = "/" + urlPath;
+      var urlPathCap = urlPath.charAt(0).toUpperCase() + urlPath.slice(1);
+      var newTitle = urlPathCap + " | PT. Burgeon Adaire International";
+      var newState = {
+        additionalInformation:
+          urlPathCap + " section at PT. Burgeon Adaire International",
+      };
+
+      window.history.pushState(newState, newTitle, newURL);
+    }
+
+    const { forwardedRef, inViewport } = this.props;
+    const ViewportStatus = inViewport ? "In Viewport" : "Not In Viewport";
+
+    if (ViewportStatus === "In Viewport") {
+      this.jQueryPath(ViewportStatus);
+    } else {
+      this.jQueryPath(ViewportStatus);
+    }
+
     return (
-      <Fragment>
+      <section ref={forwardedRef}>
         <div className="footer text-light">
           <hr className="footer-hr" />
           <div className="container-fluid">
@@ -228,33 +255,65 @@ export default class BurgeonFooter extends Component {
                           <div className="link-blank-space footer-link-right-mobile">
                             <a
                               className="burgeon-adaire-link text-decoration-none link-light"
-                              href="#abstract"
+                              role="button"
+                              onClick={() => {
+                                gsap.to(window, {
+                                  duration: 0.1,
+                                  scrollTo: "#abstract",
+                                });
+                                var name = $(".nav1").html().toLowerCase();
+                                removeHash(name);
+                              }}
                             >
-                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light">
+                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav1">
                                 Identity
                               </p>
                             </a>
                             <a
                               className="burgeon-adaire-link text-decoration-none link-light"
-                              href="#operations"
+                              role="button"
+                              onClick={() => {
+                                gsap.to(window, {
+                                  duration: 0.1,
+                                  scrollTo: "#operations",
+                                });
+                                var name = $(".nav2").html().toLowerCase();
+                                removeHash(name);
+                              }}
                             >
-                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light">
+                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav2">
                                 Operations
                               </p>
                             </a>
                             <a
                               className="burgeon-adaire-link text-decoration-none link-light"
-                              href="#acknowledgment"
+                              role="button"
+                              onClick={() => {
+                                gsap.to(window, {
+                                  duration: 0.1,
+                                  scrollTo: "#acknowledgment",
+                                });
+                                var name = $(".nav3").html().toLowerCase();
+                                removeHash(name);
+                              }}
                             >
-                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light">
+                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav3">
                                 Acknowledgment
                               </p>
                             </a>
                             <a
                               className="burgeon-adaire-link text-decoration-none link-light"
-                              href="#partners"
+                              role="button"
+                              onClick={() => {
+                                gsap.to(window, {
+                                  duration: 0.1,
+                                  scrollTo: "#partners",
+                                });
+                                var name = $(".nav4").html().toLowerCase();
+                                removeHash(name);
+                              }}
                             >
-                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light">
+                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav4">
                                 Partners
                               </p>
                             </a>
@@ -384,7 +443,13 @@ export default class BurgeonFooter extends Component {
             </div>
           </div>
         </div>
-      </Fragment>
+      </section>
     );
   }
 }
+
+const FooterSections = handleViewport(BurgeonFooter, {
+  rootMargin: "-1.0px",
+});
+
+export default FooterSections;

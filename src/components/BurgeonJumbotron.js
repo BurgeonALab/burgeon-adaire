@@ -1,5 +1,7 @@
 import React, { Component, Suspense, lazy } from "react";
 import Slider from "react-slick";
+import { handleViewport } from "react-in-viewport";
+// jQuery
 import $ from "jquery";
 
 const settings = {
@@ -13,7 +15,7 @@ const BSmallSSRJumbotronSlider = lazy(() =>
   import("./small/BSmallJumbotronSlider")
 );
 
-export default class BurgeonJumbotron extends Component {
+class BurgeonJumbotron extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,6 +40,21 @@ export default class BurgeonJumbotron extends Component {
     };
   }
 
+  jQueryPath = (ViewportStatus) => {
+    $(function () {
+      if (ViewportStatus === "In Viewport") {
+        window.history.pushState(
+          {
+            additionalInformation:
+              "Main section at PT. Burgeon Adaire International",
+          },
+          "Driving the Future | PT. Burgeon Adaire International",
+          "/"
+        );
+      }
+    });
+  };
+
   jQuery = () => {
     $(function () {
       $(window).on("scroll", function () {
@@ -55,49 +72,66 @@ export default class BurgeonJumbotron extends Component {
   }
 
   render() {
+    const { forwardedRef, inViewport } = this.props;
+    const ViewportStatus = inViewport ? "In Viewport" : "Not In Viewport";
+
+    if (ViewportStatus === "In Viewport") {
+      this.jQueryPath(ViewportStatus);
+    } else {
+      this.jQueryPath(ViewportStatus);
+    }
+
     return (
-      <div className="bai-jumbotron d-flex align-items-center justify-content-center">
-        <video
-          id="jumbotron-player"
-          poster="https://images.burgeonadaire.com/smokegrey_thumbnail.webp"
-          autoPlay
-          loop
-          muted
-        >
-          <source
-            src="https://resources.burgeonadaire.com/videos/smokegrey.mp4"
-            type="video/mp4"
-          ></source>
-        </video>
-        <div className="jumbotron-overlay d-flex flex-column justify-content-center">
-          <div className="jumbotron-overlay-text-box mb-4">
-            <h3 className="text-light text-end">Core Values</h3>
-            <p className="text-light text-end mb-0">
-              Our core values shape our identity and guide us toward success,
-              driving our decisions and helping us achieve our goals
-              consistently.
-            </p>
+      <section ref={forwardedRef}>
+        <div className="bai-jumbotron d-flex align-items-center justify-content-center">
+          <video
+            id="jumbotron-player"
+            poster="https://images.burgeonadaire.com/smokegrey_thumbnail.webp"
+            autoPlay
+            loop
+            muted
+          >
+            <source
+              src="https://resources.burgeonadaire.com/videos/smokegrey.mp4"
+              type="video/mp4"
+            ></source>
+          </video>
+          <div className="jumbotron-overlay d-flex flex-column justify-content-center">
+            <div className="jumbotron-overlay-text-box mb-4">
+              <h3 className="text-light text-end">Core Values</h3>
+              <p className="text-light text-end mb-0">
+                Our core values shape our identity and guide us toward success,
+                driving our decisions and helping us achieve our goals
+                consistently.
+              </p>
+            </div>
+            <div className="slider-container">
+              <Slider {...settings}>
+                {this.state.values.map((data, i) => (
+                  <Suspense key={i}>
+                    <BSmallSSRJumbotronSlider
+                      DataTitle={data.vname}
+                      DataDescription={data.description}
+                    />
+                  </Suspense>
+                ))}
+              </Slider>
+            </div>
           </div>
-          <div className="slider-container">
-            <Slider {...settings}>
-              {this.state.values.map((data, i) => (
-                <Suspense key={i}>
-                  <BSmallSSRJumbotronSlider
-                    DataTitle={data.vname}
-                    DataDescription={data.description}
-                  />
-                </Suspense>
-              ))}
-            </Slider>
-          </div>
+          <img
+            style={{ opacity: "0%" }}
+            src="https://images.burgeonadaire.com/logo.webp"
+            alt="PT. Burgeon Adaire International Logo"
+            className="jumbotron-logo d-block jumbotron-logo-reveal"
+          ></img>
         </div>
-        <img
-          style={{ opacity: "0%" }}
-          src="https://images.burgeonadaire.com/logo.webp"
-          alt="PT. Burgeon Adaire International Logo"
-          className="jumbotron-logo d-block jumbotron-logo-reveal"
-        ></img>
-      </div>
+      </section>
     );
   }
 }
+
+const MainSections = handleViewport(BurgeonJumbotron, {
+  rootMargin: "-1.0px",
+});
+
+export default MainSections;

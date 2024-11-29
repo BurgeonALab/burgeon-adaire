@@ -2,7 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import React, { Component, Suspense, lazy } from "react";
 import { TickerTape } from "react-ts-tradingview-widgets";
-import "moment/locale/id";
+import { handleViewport } from "react-in-viewport";
+// jQuery
 import $ from "jquery";
 
 const BSmallValbury = lazy(() => import("./small/BSmallValbury"));
@@ -10,7 +11,22 @@ const BSmallNews = lazy(() => import("./small/BSmallNews"));
 const BMediumOperations = lazy(() => import("./medium/BMediumOperations"));
 const BMediumExtras = lazy(() => import("./medium/BMediumExtras"));
 
-export default class BurgeonOperations extends Component {
+class BurgeonOperations extends Component {
+  jQueryPath = (ViewportStatus) => {
+    $(function () {
+      if (ViewportStatus === "In Viewport") {
+        window.history.pushState(
+          {
+            additionalInformation:
+              "Operations section at PT. Burgeon Adaire International",
+          },
+          "Operations | PT. Burgeon Adaire International",
+          "/operations"
+        );
+      }
+    });
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -76,8 +92,21 @@ export default class BurgeonOperations extends Component {
   }
 
   render() {
+    const { forwardedRef, inViewport } = this.props;
+    const ViewportStatus = inViewport ? "In Viewport" : "Not In Viewport";
+
+    if (ViewportStatus === "In Viewport") {
+      this.jQueryPath(ViewportStatus);
+    } else {
+      this.jQueryPath(ViewportStatus);
+    }
+
     return (
-      <section id="operations" className="container-fluid py-3">
+      <section
+        ref={forwardedRef}
+        id="operations"
+        className="container-fluid py-3"
+      >
         <div className="col-md-12 operation-container-overlay-container py-3">
           <div className="py-3 h-100 me-5">
             <div className="operation-container-overlay">
@@ -261,3 +290,9 @@ export default class BurgeonOperations extends Component {
     );
   }
 }
+
+const OperationsSection = handleViewport(BurgeonOperations, {
+  rootMargin: "-1.0px",
+});
+
+export default OperationsSection;

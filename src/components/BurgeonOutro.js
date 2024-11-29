@@ -1,10 +1,38 @@
 import React, { Component, Fragment } from "react";
+import { handleViewport } from "react-in-viewport";
+// jQuery
+import $ from "jquery";
 
-export default class BurgeonOutro extends Component {
+class BurgeonOutro extends Component {
+  jQuery = (ViewportStatus) => {
+    $(function () {
+      if (ViewportStatus === "In Viewport") {
+        window.history.pushState(
+          {
+            additionalInformation:
+              "Acknowledgment section at PT. Burgeon Adaire International",
+          },
+          "Acknowledgment | PT. Burgeon Adaire International",
+          "/acknowledgment"
+        );
+      }
+    });
+  };
+
   render() {
+    const { forwardedRef, inViewport } = this.props;
+    const ViewportStatus = inViewport ? "In Viewport" : "Not In Viewport";
+
+    if (ViewportStatus === "In Viewport") {
+      this.jQuery(ViewportStatus);
+    } else {
+      this.jQuery(ViewportStatus);
+    }
+
     return (
       <Fragment>
         <section
+          ref={forwardedRef}
           id="acknowledgment"
           className="outro-container container-fluid py-3 d-flex"
         >
@@ -54,3 +82,9 @@ export default class BurgeonOutro extends Component {
     );
   }
 }
+
+const OutroSections = handleViewport(BurgeonOutro, {
+  rootMargin: "-1.0px",
+});
+
+export default OutroSections;

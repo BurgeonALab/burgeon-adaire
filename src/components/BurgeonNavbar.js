@@ -5,8 +5,14 @@ import {
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { Component } from "react";
-import $ from "jquery";
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+// jQuery
+import $ from "jquery";
+
+gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
 const LinkNav = () => {
   return (
@@ -70,23 +76,6 @@ export default class BurgeonNavbar extends Component {
         $("#chevron-nav").toggleClass("rotate-overlay-button");
       });
     });
-
-    const linkBtn = $(".bai-link");
-    linkBtn.on("click", function () {
-      setTimeout(() => {
-        removeHash();
-      });
-    });
-
-    function removeHash() {
-      history.replaceState(
-        "",
-        document.title,
-        window.location.origin +
-          window.location.pathname +
-          window.location.search
-      );
-    }
   };
 
   componentDidMount() {
@@ -94,6 +83,19 @@ export default class BurgeonNavbar extends Component {
   }
 
   render() {
+    function removeHash(name) {
+      var urlPath = name.toString();
+      var newURL = "/" + urlPath;
+      var urlPathCap = urlPath.charAt(0).toUpperCase() + urlPath.slice(1);
+      var newTitle = urlPathCap + " | PT. Burgeon Adaire International";
+      var newState = {
+        additionalInformation:
+          urlPathCap + " section at PT. Burgeon Adaire International",
+      };
+
+      window.history.pushState(newState, newTitle, newURL);
+    }
+
     return (
       <nav id="burgeon-navbar" className="navbar-position w-100">
         <div className="bai-navbar py-3 padding-twelve-rl margin-twentyfour-rl">
@@ -160,32 +162,64 @@ export default class BurgeonNavbar extends Component {
                 <ul className="nav d-flex margin-twelve-rl">
                   <li className="nav-item ms-3 d-flex align-items-center">
                     <a
-                      href="#abstract"
-                      className="bai-link text-light text-decoration-none"
+                      role="button"
+                      onClick={() => {
+                        gsap.to(window, {
+                          duration: 0.1,
+                          scrollTo: "#abstract",
+                        });
+                        var name = $(".nav1").html().toLowerCase();
+                        removeHash(name);
+                      }}
+                      className="bai-link text-light text-decoration-none nav1"
                     >
                       Identity
                     </a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
                     <a
-                      href="#operations"
-                      className="bai-link text-light text-decoration-none"
+                      role="button"
+                      onClick={() => {
+                        gsap.to(window, {
+                          duration: 0.1,
+                          scrollTo: "#operations",
+                        });
+                        var name = $(".nav2").html().toLowerCase();
+                        removeHash(name);
+                      }}
+                      className="bai-link text-light text-decoration-none nav2"
                     >
                       Operations
                     </a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
                     <a
-                      href="#acknowledgment"
-                      className="bai-link text-light text-decoration-none"
+                      role="button"
+                      onClick={() => {
+                        gsap.to(window, {
+                          duration: 0.1,
+                          scrollTo: "#acknowledgment",
+                        });
+                        var name = $(".nav3").html().toLowerCase();
+                        removeHash(name);
+                      }}
+                      className="bai-link text-light text-decoration-none nav3"
                     >
                       Acknowledgment
                     </a>
                   </li>
                   <li className="nav-item ms-3 d-flex align-items-center">
                     <a
-                      href="#partners"
-                      className="bai-link text-light text-decoration-none"
+                      role="button"
+                      onClick={() => {
+                        gsap.to(window, {
+                          duration: 0.1,
+                          scrollTo: "#partners",
+                        });
+                        var name = $(".nav4").html().toLowerCase();
+                        removeHash(name);
+                      }}
+                      className="bai-link text-light text-decoration-none nav4"
                     >
                       Partners
                     </a>

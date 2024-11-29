@@ -1,5 +1,6 @@
 import moment from "moment";
 import "moment/locale/id";
+// jQuery
 import $ from "jquery";
 
 export function BAIContainerButtons(props) {

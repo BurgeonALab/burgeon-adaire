@@ -5,8 +5,6 @@ import { HelmetProvider } from "react-helmet-async";
 import "./components/BurgeonSchema";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BurgeonPreload } from "./components";
-// jQuery
-import $ from "jquery";
 // Firebase
 import "./services/Services";
 // Bootstrap

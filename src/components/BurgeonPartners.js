@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import Marquee from "react-fast-marquee";
+import { handleViewport } from "react-in-viewport";
+// jQuery
+import $ from "jquery";
 
-export default class BurgeonPartners extends Component {
+class BurgeonPartners extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -52,9 +55,37 @@ export default class BurgeonPartners extends Component {
     };
   }
 
+  jQuery = (ViewportStatus) => {
+    $(function () {
+      if (ViewportStatus === "In Viewport") {
+        window.history.pushState(
+          {
+            additionalInformation:
+              "Partners section at PT. Burgeon Adaire International",
+          },
+          "Partners | PT. Burgeon Adaire International",
+          "/partners"
+        );
+      }
+    });
+  };
+
   render() {
+    const { forwardedRef, inViewport } = this.props;
+    const ViewportStatus = inViewport ? "In Viewport" : "Not In Viewport";
+
+    if (ViewportStatus === "In Viewport") {
+      this.jQuery(ViewportStatus);
+    } else {
+      this.jQuery(ViewportStatus);
+    }
+
     return (
-      <section id="partners" className="burgeon-partners container-fluid">
+      <section
+        ref={forwardedRef}
+        id="partners"
+        className="burgeon-partners container-fluid"
+      >
         <div className="row">
           <div className="col-lg-9 py-3">
             <div className="d-flex flex-column justify-content-between h-100">
@@ -203,3 +234,9 @@ export default class BurgeonPartners extends Component {
     );
   }
 }
+
+const PartnersSections = handleViewport(BurgeonPartners, {
+  rootMargin: "-1.0px",
+});
+
+export default PartnersSections;
