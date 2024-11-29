@@ -52,7 +52,7 @@ export default class BMediumExtras extends Component {
             ) : (
               <div key={index} className="operation-child-container w-50">
                 <div className="h-100 padding-twelve-l">
-                  <div className="ecommerce-box rounded p-4">
+                  <div className="ecommerce-box rounded p-4 ecommerce-box-org">
                     <div className="d-flex h-100 flex-column justify-content-between">
                       <div>
                         <a
