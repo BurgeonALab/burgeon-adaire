@@ -1,6 +1,7 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faGithub,
   faInstagram,
   faLinkedin,
   faXTwitter,
@@ -44,6 +45,13 @@ class BurgeonFooter extends Component {
         },
         {
           id: 3,
+          type: "symbol",
+          desc: "PT. Burgeon Adaire International's GitHub Page",
+          link: "https://github.com/BurgeonALab",
+          icon: faGithub,
+        },
+        {
+          id: 4,
           type: "svg",
           desc: "PT. Burgeon Adaire International's The Org Profile Page",
           link: "https://bit.ly/3SWvfNS",
@@ -54,7 +62,7 @@ class BurgeonFooter extends Component {
             "social-media-footer-items-org social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center",
         },
         {
-          id: 4,
+          id: 5,
           type: "svg",
           desc: "PT. Burgeon Adaire International's PitchBook Profile Page",
           link: "https://pitchbook.com",

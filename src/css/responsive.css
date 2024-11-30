@@ -566,3 +566,9 @@
     height: 50px;
   }
 }
+
+@media (max-height: 720px) {
+  .tiger-ox {
+    margin-top: 200px;
+  }
+}

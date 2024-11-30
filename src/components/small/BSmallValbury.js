@@ -111,7 +111,7 @@ export default class BSmallValbury extends Component {
         $("#status-signal").hide();
       }
       $(".vaf-slide-container").attr("style", "display: none !important");
-      $("#status-market").hide();
+      $("#status-market").html("Unavailable");
     }
 
     function MarketBadgesClean($) {
