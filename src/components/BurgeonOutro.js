@@ -47,8 +47,11 @@ class BurgeonOutro extends Component {
           <div className="outro-header-box outro-header-mobile pointer-events-auto position-absolute h-100">
             <h2 className="text-light">Gratitude</h2>
             <p className="lead text-light mb-0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              We are truly grateful for all the people and organizations who
+              have shaped our journey. Thank you to those who have collaborated
+              with us, supported our vision, and challenged us to grow. These
+              relationships have shaped who we are. Our progress is a testament
+              to your impact.
             </p>
           </div>
           <div className="outro-credit outro-credit-mobile position-absolute h-100 d-flex align-items-end py-4">

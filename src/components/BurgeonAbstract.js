@@ -42,13 +42,11 @@ class BurgeonAbstract extends Component {
               <span className="fw-light"> Driving the Future</span>
             </h1>
             <p className="lead text-light">
-              <strong> PT. Burgeon Adaire International</strong> thrives at the
-              intersection of innovation and opportunity, where we weave
-              knowledge and growth into the fabric of an ever-changing
-              landscape. We build connections that matter, creating spaces for
-              exploration and collaboration. Beyond our primary pursuits, we
-              extend our reach into new avenues, offering value and excellence
-              in unexpected places.
+              At <strong>PT. Burgeon Adaire International</strong>, we navigate
+              the modern market with a focus on growth. We constantly learn and
+              adapt, creating value for our clients and partners. We believe in
+              collaboration and build strong relationships. We're also committed
+              to exploring new avenues and expanding our expertise.
             </p>
           </div>
           <div className="sky-video-box-mobile offset-xxl-1 col-xxl-3">
