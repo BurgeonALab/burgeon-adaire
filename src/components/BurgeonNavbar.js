@@ -19,7 +19,7 @@ const LinkNav = () => {
     <ul className="dropdown-menu dropdown-menu-end">
       <li>
         <Link
-          to="/privacy-policy"
+          to="/legal/privacy-policy"
           className="text-decoration-none dropdown-item link-light"
         >
           Privacy Policy
@@ -27,7 +27,7 @@ const LinkNav = () => {
       </li>
       <li>
         <Link
-          to="/cookie-policy"
+          to="/legal/cookie-policy"
           className="text-decoration-none dropdown-item link-light"
         >
           Cookie Policy
@@ -35,7 +35,7 @@ const LinkNav = () => {
       </li>
       <li>
         <Link
-          to="/terms-and-conditions"
+          to="/legal/terms-and-conditions"
           className="text-decoration-none dropdown-item link-light"
         >
           Terms & Conditions
