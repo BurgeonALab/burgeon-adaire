@@ -37,11 +37,11 @@ class BurgeonAbstract extends Component {
       >
         <div className="row">
           <div className="col-xxl-8 c-abstract-box">
-            <h1 className="text-light">
+            <h2 className="text-light h1">
               <span>Identity:</span>
               <span className="fw-light"> Driving the Future</span>
-            </h1>
-            <p className="lead text-light">
+            </h2>
+            <p className="lead text-light mb-0">
               At <strong>PT. Burgeon Adaire International</strong>, we navigate
               the modern market with a focus on growth. We constantly learn and
               adapt, creating value for our clients and partners. We believe in

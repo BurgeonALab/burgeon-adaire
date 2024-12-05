@@ -100,7 +100,7 @@ export default class BurgeonNavbar extends Component {
       <nav id="burgeon-navbar" className="navbar-position w-100">
         <div className="bai-navbar py-3 padding-twelve-rl margin-twentyfour-rl">
           <div className="d-flex flex-row">
-            <div className="margin-twelve-rl d-flex w-50">
+            <div className="margin-twelve-rl d-flex w-40">
               <Link to="/">
                 <img
                   alt="PT. Burgeon Adaire International Logo"
@@ -113,7 +113,7 @@ export default class BurgeonNavbar extends Component {
                 <span className="fw-light">International</span>
               </span>
             </div>
-            <div className="w-50 d-flex flex-row-reverse">
+            <div className="w-60 d-flex flex-row-reverse">
               <div className="burgeon-nav-mobile-button d-flex align-items-center justify-content-center">
                 <button
                   type="button"

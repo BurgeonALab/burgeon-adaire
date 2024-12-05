@@ -92,14 +92,6 @@
     background-position-x: 550px;
   }
 
-  .system-logo-mobile {
-    justify-content: space-between !important;
-  }
-
-  .system-logo-mobile img {
-    margin-left: 0px !important;
-  }
-
   .ordering-badges-valbury-mobile {
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -229,10 +221,12 @@
 
   .system-logo-mobile {
     flex-direction: column;
+    justify-content: center !important;
   }
 
   .system-logo-mobile img {
     height: 36px;
+    margin-right: 0px !important;
     margin-left: 0px !important;
     margin-bottom: 16px;
     margin-top: 16px;
@@ -242,29 +236,8 @@
     align-self: center;
   }
 
-  .system-logo-mobile {
-    justify-content: center !important;
-  }
-
-  .another-partner-text-mobile p {
-    text-align: center;
-  }
-
-  .another-partner-text-mobile h3 {
-    text-align: center;
-    width: 100%;
-  }
-
   .partners-marquee-box {
-    height: 200px;
-  }
-
-  .associates-text-mobile h2 {
-    text-align: center;
-  }
-
-  .associates-text-mobile p {
-    text-align: center;
+    height: 150px;
   }
 
   .associates-box-mobile img {
@@ -557,6 +530,12 @@
   }
 }
 
+@media (max-height: 700px) {
+  .tiger-ox {
+    margin-top: 100px !important;
+  }
+}
+
 @media (max-width: 360px) {
   .background-partner-overlay {
     background-position-x: 20px;
@@ -564,11 +543,5 @@
 
   .pepperstone-misc-mobile img {
     height: 50px;
-  }
-}
-
-@media (max-height: 720px) {
-  .tiger-ox {
-    margin-top: 200px;
   }
 }

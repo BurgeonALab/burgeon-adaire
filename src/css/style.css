@@ -455,7 +455,7 @@ body {
 }
 
 .partners-marquee-box {
-  height: 400px;
+  height: 150px;
 }
 
 .partners-small-box {
@@ -684,6 +684,14 @@ body {
 
 .contact-detail {
   display: none;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-40 {
+  width: 40%;
 }
 
 /* Animation */

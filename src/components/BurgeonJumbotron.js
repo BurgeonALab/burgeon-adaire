@@ -98,7 +98,9 @@ class BurgeonJumbotron extends Component {
           </video>
           <div className="jumbotron-overlay d-flex flex-column justify-content-center">
             <div className="jumbotron-overlay-text-box mb-4">
-              <h3 className="text-light text-end">Core Values</h3>
+              <h1 className="text-light text-end h3">
+                PT. Burgeon Adaire International
+              </h1>
               <p className="text-light text-end mb-0">
                 Our core values shape our identity and guide us toward success,
                 driving our decisions and helping us achieve our goals
