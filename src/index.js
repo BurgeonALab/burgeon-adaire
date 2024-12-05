@@ -26,17 +26,11 @@ function App() {
     <Suspense fallback={<BurgeonPreload />}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage pathURL="/" />} />
-          <Route path="/identity" element={<HomePage pathURL="/identity" />} />
-          <Route
-            path="/operations"
-            element={<HomePage pathURL="/operations" />}
-          />
-          <Route
-            path="/acknowledgment"
-            element={<HomePage pathURL="/acknowledgment" />}
-          />
-          <Route path="/partners" element={<HomePage pathURL="/partners" />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/identity" element={<HomePage />} />
+          <Route path="/operations" element={<HomePage />} />
+          <Route path="/acknowledgment" element={<HomePage />} />
+          <Route path="/partners" element={<HomePage />} />
           <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
           <Route
