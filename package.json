@@ -1,6 +1,6 @@
 {
   "name": "burgeon-adaire",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value.",
   "main": "./src/index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "keywords": [],
   "author": "PT. Burgeon Adaire International",
-  "license": "MIT",
+  "license": "MIT and GPL-3.0",
   "devDependencies": {
     "@babel/node": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
