@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -14,6 +14,9 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+
+import * as CookieConsent from "vanilla-cookieconsent";
+import "vanilla-cookieconsent/dist/cookieconsent.css";
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
@@ -143,6 +146,67 @@ class BurgeonFooter extends Component {
   }
 
   render() {
+    function CookiesConsent() {
+      useEffect(() => {
+        CookieConsent.run({
+          categories: {
+            necessary: {
+              enabled: true,
+              readOnly: true,
+            },
+            analytics: {},
+          },
+
+          language: {
+            default: "en",
+            translations: {
+              en: {
+                consentModal: {
+                  title: "We Use Cookies",
+                  description:
+                    "We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking <strong>Accept All</strong>, you agree to this, as outlined in our <a href='https://burgeonadaire.com/legal/cookie-policy'>Cookie Policy</a>.",
+                  acceptAllBtn: "Accept All",
+                  acceptNecessaryBtn: "Reject All",
+                  showPreferencesBtn: "Manage Individual Preferences",
+                },
+                preferencesModal: {
+                  title: "Cookies Settings",
+                  acceptAllBtn: "Accept All",
+                  acceptNecessaryBtn: "Reject All",
+                  savePreferencesBtn: "Accept Current Selection",
+                  closeIconLabel: "Close Cookies Settings",
+                  sections: [
+                    {
+                      title: "Manage Cookie Preferences",
+                      description:
+                        "By clicking <strong>Accept All</strong>, you agree to the storing of cookies on your device for various purposes, such as ensuring the proper functioning of the website. You can change your cookie settings from the page at any time.",
+                    },
+                    {
+                      title: "Strictly Necessary Cookies",
+                      description:
+                        "These cookies are essential for the proper functioning of the website and cannot be disabled.",
+                      linkedCategory: "necessary",
+                    },
+                    {
+                      title: "Performance and Analytics",
+                      description:
+                        "These cookies collect information about how you use our website. All of the data is anonymized and cannot be used to identify you.",
+                      linkedCategory: "analytics",
+                    },
+                    {
+                      title: "More information",
+                      description:
+                        'For any queries in relation to our policy on cookies and your choices, please <a href="mailto:geraldzandisko@burgeonadaire.com?subject=Cookie Policy">contact us</a>.',
+                    },
+                  ],
+                },
+              },
+            },
+          },
+        });
+      }, []);
+    }
+
     function removeHash(name) {
       var urlPath = name.toString();
       var newURL = "/" + urlPath;
@@ -167,6 +231,7 @@ class BurgeonFooter extends Component {
 
     return (
       <section ref={forwardedRef}>
+        <CookiesConsent />
         <div className="footer text-light">
           <hr className="footer-hr" />
           <div className="container-fluid">
@@ -184,7 +249,7 @@ class BurgeonFooter extends Component {
                     <div className="row">
                       <div className="col-md-6 d-flex flex-column justify-content-end">
                         <div className="mt-3">
-                          <p className="lead fw-medium mb-0">Portfolio</p>
+                          <p className="lead fw-bold mb-0">Portfolio</p>
                           <div className="link-blank-space footer-link-right-mobile">
                             <a
                               className="text-decoration-none link-light"
@@ -209,7 +274,7 @@ class BurgeonFooter extends Component {
                           </div>
                         </div>
                         <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-medium mb-0">Associates</p>
+                          <p className="lead fw-bold mb-0">Associates</p>
                           <div className="link-blank-space footer-link-right-mobile">
                             <a
                               className="text-decoration-none link-light"
@@ -244,7 +309,7 @@ class BurgeonFooter extends Component {
                           </div>
                         </div>
                         <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-medium mb-0">Services</p>
+                          <p className="lead fw-bold mb-0">Services</p>
                           <div className="link-blank-space footer-link-right-mobile">
                             <a
                               className="burgeon-adaire-link text-decoration-none link-light"
@@ -259,7 +324,7 @@ class BurgeonFooter extends Component {
                           </div>
                         </div>
                         <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-medium mb-0">Company</p>
+                          <p className="lead fw-bold mb-0">Company</p>
                           <div className="link-blank-space footer-link-right-mobile">
                             <a
                               className="burgeon-adaire-link text-decoration-none link-light"
@@ -328,7 +393,7 @@ class BurgeonFooter extends Component {
                           </div>
                         </div>
                         <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-medium mb-0">Link</p>
+                          <p className="lead fw-bold mb-0">Link</p>
                           <div className="link-blank-space footer-link-right-mobile">
                             <a
                               className="burgeon-adaire-link text-decoration-none link-light"
@@ -361,6 +426,15 @@ class BurgeonFooter extends Component {
                               </p>
                             </a>
                             <a
+                              role="button"
+                              data-cc="show-preferencesModal"
+                              className="burgeon-adaire-link text-decoration-none link-light"
+                            >
+                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                Cookie Preferences
+                              </p>
+                            </a>
+                            <a
                               className="burgeon-adaire-link text-decoration-none link-light"
                               href="https://blog.burgeonadaire.com"
                               target="_blank"
@@ -373,7 +447,7 @@ class BurgeonFooter extends Component {
                           </div>
                         </div>
                         <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-medium mb-0">Resources</p>
+                          <p className="lead fw-bold mb-0">Resources</p>
                           <div className="link-blank-space footer-link-right-mobile">
                             <a
                               className="burgeon-adaire-link text-decoration-none link-light"
