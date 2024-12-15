@@ -6,6 +6,7 @@ import {
   BurgeonContact,
 } from "../components";
 import { BurgeonSEO } from "../components/BurgeonSEO";
+import BurgeonCookieConsent from "../components/BurgeonCookieConsent";
 
 const BurgeonAbout = lazy(() => import("../components/BurgeonAbout"));
 const BurgeonAbstract = lazy(() => import("../components/BurgeonAbstract"));
@@ -17,6 +18,7 @@ export default class HomePage extends Component {
   render() {
     return (
       <Fragment>
+        <BurgeonCookieConsent />
         <BurgeonSEO
           title="Driving the Future | PT. Burgeon Adaire International"
           description="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value."

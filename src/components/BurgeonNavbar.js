@@ -5,7 +5,7 @@ import {
   faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -18,28 +18,28 @@ const LinkNav = () => {
   return (
     <ul className="dropdown-menu dropdown-menu-end">
       <li>
-        <Link
+        <NavLink
           to="/legal/privacy-policy"
           className="text-decoration-none dropdown-item link-light"
         >
           Privacy Policy
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
+        <NavLink
           to="/legal/cookie-policy"
           className="text-decoration-none dropdown-item link-light"
         >
           Cookie Policy
-        </Link>
+        </NavLink>
       </li>
       <li>
-        <Link
+        <NavLink
           to="/legal/terms-and-conditions"
           className="text-decoration-none dropdown-item link-light"
         >
           Terms & Conditions
-        </Link>
+        </NavLink>
       </li>
     </ul>
   );
@@ -101,13 +101,13 @@ export default class BurgeonNavbar extends Component {
         <div className="bai-navbar py-3 padding-twelve-rl margin-twentyfour-rl">
           <div className="d-flex flex-row">
             <div className="margin-twelve-rl d-flex w-40">
-              <Link to="/">
+              <NavLink to="/">
                 <img
                   alt="PT. Burgeon Adaire International Logo"
                   src="https://images.burgeonadaire.com/logo.webp"
                   height="40"
                 ></img>
-              </Link>
+              </NavLink>
               <span className="burgeon-nav-title ms-3 d-flex align-items-center text-light">
                 <span className="fw-medium">Burgeon Adaire&nbsp;</span>
                 <span className="fw-light">International</span>

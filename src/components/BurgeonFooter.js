@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from "react";
+import React, { Component, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGithub,
@@ -14,9 +14,6 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-import * as CookieConsent from "vanilla-cookieconsent";
-import "vanilla-cookieconsent/dist/cookieconsent.css";
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
@@ -146,67 +143,6 @@ class BurgeonFooter extends Component {
   }
 
   render() {
-    function CookiesConsent() {
-      useEffect(() => {
-        CookieConsent.run({
-          categories: {
-            necessary: {
-              enabled: true,
-              readOnly: true,
-            },
-            analytics: {},
-          },
-
-          language: {
-            default: "en",
-            translations: {
-              en: {
-                consentModal: {
-                  title: "We Use Cookies",
-                  description:
-                    "We use cookies and similar technologies to help personalize content, tailor and measure ads, and provide a better experience. By clicking <strong>Accept All</strong>, you agree to this, as outlined in our <a href='https://burgeonadaire.com/legal/cookie-policy'>Cookie Policy</a>.",
-                  acceptAllBtn: "Accept All",
-                  acceptNecessaryBtn: "Reject All",
-                  showPreferencesBtn: "Manage Individual Preferences",
-                },
-                preferencesModal: {
-                  title: "Cookies Settings",
-                  acceptAllBtn: "Accept All",
-                  acceptNecessaryBtn: "Reject All",
-                  savePreferencesBtn: "Accept Current Selection",
-                  closeIconLabel: "Close Cookies Settings",
-                  sections: [
-                    {
-                      title: "Manage Cookie Preferences",
-                      description:
-                        "By clicking <strong>Accept All</strong>, you agree to the storing of cookies on your device for various purposes, such as ensuring the proper functioning of the website. You can change your cookie settings from the page at any time.",
-                    },
-                    {
-                      title: "Strictly Necessary Cookies",
-                      description:
-                        "These cookies are essential for the proper functioning of the website and cannot be disabled.",
-                      linkedCategory: "necessary",
-                    },
-                    {
-                      title: "Performance and Analytics",
-                      description:
-                        "These cookies collect information about how you use our website. All of the data is anonymized and cannot be used to identify you.",
-                      linkedCategory: "analytics",
-                    },
-                    {
-                      title: "More information",
-                      description:
-                        'For any queries in relation to our policy on cookies and your choices, please <a href="mailto:geraldzandisko@burgeonadaire.com?subject=Cookie Policy">contact us</a>.',
-                    },
-                  ],
-                },
-              },
-            },
-          },
-        });
-      }, []);
-    }
-
     function removeHash(name) {
       var urlPath = name.toString();
       var newURL = "/" + urlPath;
@@ -230,302 +166,303 @@ class BurgeonFooter extends Component {
     }
 
     return (
-      <section ref={forwardedRef}>
-        <CookiesConsent />
-        <div className="footer text-light">
-          <hr className="footer-hr" />
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-md-12">
-                <div className="row">
-                  <div className="col-md-7 p-0">
-                    <div className="footer-image-container d-flex align-items-start pt-4 ps-4">
-                      <p className="lead text-light fw-medium mb-0">
-                        Photo credit
+      <Fragment>
+        <section ref={forwardedRef}>
+          <div className="footer text-light">
+            <hr className="footer-hr" />
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="row">
+                    <div className="col-md-7 p-0">
+                      <div className="footer-image-container d-flex align-items-start pt-4 ps-4">
+                        <p className="lead text-light fw-medium mb-0">
+                          Photo credit
+                        </p>
+                      </div>
+                    </div>
+                    <div className="col-md-5 p-4">
+                      <div className="row">
+                        <div className="col-md-6 d-flex flex-column justify-content-end">
+                          <div className="mt-3">
+                            <p className="lead fw-bold mb-0">Portfolio</p>
+                            <div className="link-blank-space footer-link-right-mobile">
+                              <a
+                                className="text-decoration-none link-light"
+                                href="https://www.myfxbook.com/members/gerraour"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Myfxbook
+                                </p>
+                              </a>
+                              <a
+                                className="text-decoration-none link-light"
+                                href="https://portfolio.burgeonadaire.com"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Investments
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                          <div className="footer-link-box-mobile mt-3">
+                            <p className="lead fw-bold mb-0">Associates</p>
+                            <div className="link-blank-space footer-link-right-mobile">
+                              <a
+                                className="text-decoration-none link-light"
+                                href="https://geraldzandisko.burgeonadaire.com"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Gerald Zandisko
+                                </p>
+                              </a>
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                href="https://adairesolutions.com"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  The Adaire Solutions
+                                </p>
+                              </a>
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                href="https://org.burgeonadaire.com"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Organizations
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                          <div className="footer-link-box-mobile mt-3">
+                            <p className="lead fw-bold mb-0">Services</p>
+                            <div className="link-blank-space footer-link-right-mobile">
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                href="https://shop.burgeonadaire.com"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  eCommerce
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                          <div className="footer-link-box-mobile mt-3">
+                            <p className="lead fw-bold mb-0">Company</p>
+                            <div className="link-blank-space footer-link-right-mobile">
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                role="button"
+                                onClick={() => {
+                                  gsap.to(window, {
+                                    duration: 0.1,
+                                    scrollTo: "#abstract",
+                                  });
+                                  var name = $(".nav1").html().toLowerCase();
+                                  removeHash(name);
+                                }}
+                              >
+                                <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav1">
+                                  Identity
+                                </p>
+                              </a>
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                role="button"
+                                onClick={() => {
+                                  gsap.to(window, {
+                                    duration: 0.1,
+                                    scrollTo: "#operations",
+                                  });
+                                  var name = $(".nav2").html().toLowerCase();
+                                  removeHash(name);
+                                }}
+                              >
+                                <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav2">
+                                  Operations
+                                </p>
+                              </a>
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                role="button"
+                                onClick={() => {
+                                  gsap.to(window, {
+                                    duration: 0.1,
+                                    scrollTo: "#acknowledgment",
+                                  });
+                                  var name = $(".nav3").html().toLowerCase();
+                                  removeHash(name);
+                                }}
+                              >
+                                <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav3">
+                                  Acknowledgment
+                                </p>
+                              </a>
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                role="button"
+                                onClick={() => {
+                                  gsap.to(window, {
+                                    duration: 0.1,
+                                    scrollTo: "#partners",
+                                  });
+                                  var name = $(".nav4").html().toLowerCase();
+                                  removeHash(name);
+                                }}
+                              >
+                                <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav4">
+                                  Partners
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                          <div className="footer-link-box-mobile mt-3">
+                            <p className="lead fw-bold mb-0">Link</p>
+                            <div className="link-blank-space footer-link-right-mobile">
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                href="https://burgeonadaire.com/privacy-policy"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Privacy Policy
+                                </p>
+                              </a>
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                href="https://burgeonadaire.com/cookie-policy"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Cookie Policy
+                                </p>
+                              </a>
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                href="https://burgeonadaire.com/terms-and-conditions"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Terms & Conditions
+                                </p>
+                              </a>
+                              <a
+                                role="button"
+                                data-cc="show-preferencesModal"
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Cookie Preferences
+                                </p>
+                              </a>
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                href="https://blog.burgeonadaire.com"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Blog
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                          <div className="footer-link-box-mobile mt-3">
+                            <p className="lead fw-bold mb-0">Resources</p>
+                            <div className="link-blank-space footer-link-right-mobile">
+                              <a
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                                href="https://portal.burgeonadaire.com"
+                                target="_blank"
+                                rel="noopener"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Portal
+                                </p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="social-media-footer-mobile col-md-6 d-flex flex-column justify-content-end">
+                          <div className="social-media-footer-mobile-items mb-0 d-flex flex-column align-items-end">
+                            {this.state.footericon.map((element, i) =>
+                              element.type === "symbol" ? (
+                                <div
+                                  key={i}
+                                  className="social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center"
+                                >
+                                  <a
+                                    className="d-block"
+                                    href={element.link}
+                                    target="_blank"
+                                    rel="noopener"
+                                  >
+                                    <FontAwesomeIcon
+                                      icon={element.icon}
+                                      className="burgeon-adaire-link link-light"
+                                      size="2xl"
+                                    />
+                                  </a>
+                                </div>
+                              ) : (
+                                <div key={i} className={element.classname}>
+                                  <a
+                                    className="d-block"
+                                    href={element.link}
+                                    target="_blank"
+                                    rel="noopener"
+                                  >
+                                    <ReactSVG
+                                      beforeInjection={(svg) => {
+                                        svg.classList.add(
+                                          "burgeon-adaire-link-svg-inside"
+                                        );
+                                        svg.setAttribute(
+                                          "style",
+                                          "height: " +
+                                            element.height +
+                                            "; width: " +
+                                            element.width +
+                                            ";"
+                                        );
+                                      }}
+                                      desc={element.desc}
+                                      src={element.icon}
+                                    />
+                                  </a>
+                                </div>
+                              )
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      <p className="mb-0 mt-5 footer-text-mobile">
+                        © 2024 <strong>PT. Burgeon Adaire International</strong>
+                        . All rights reserved
                       </p>
                     </div>
-                  </div>
-                  <div className="col-md-5 p-4">
-                    <div className="row">
-                      <div className="col-md-6 d-flex flex-column justify-content-end">
-                        <div className="mt-3">
-                          <p className="lead fw-bold mb-0">Portfolio</p>
-                          <div className="link-blank-space footer-link-right-mobile">
-                            <a
-                              className="text-decoration-none link-light"
-                              href="https://www.myfxbook.com/members/gerraour"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Myfxbook
-                              </p>
-                            </a>
-                            <a
-                              className="text-decoration-none link-light"
-                              href="https://portfolio.burgeonadaire.com"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Investments
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-bold mb-0">Associates</p>
-                          <div className="link-blank-space footer-link-right-mobile">
-                            <a
-                              className="text-decoration-none link-light"
-                              href="https://geraldzandisko.burgeonadaire.com"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Gerald Zandisko
-                              </p>
-                            </a>
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              href="https://adairesolutions.com"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                The Adaire Solutions
-                              </p>
-                            </a>
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              href="https://org.burgeonadaire.com"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Organizations
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-bold mb-0">Services</p>
-                          <div className="link-blank-space footer-link-right-mobile">
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              href="https://shop.burgeonadaire.com"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                eCommerce
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-bold mb-0">Company</p>
-                          <div className="link-blank-space footer-link-right-mobile">
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              role="button"
-                              onClick={() => {
-                                gsap.to(window, {
-                                  duration: 0.1,
-                                  scrollTo: "#abstract",
-                                });
-                                var name = $(".nav1").html().toLowerCase();
-                                removeHash(name);
-                              }}
-                            >
-                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav1">
-                                Identity
-                              </p>
-                            </a>
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              role="button"
-                              onClick={() => {
-                                gsap.to(window, {
-                                  duration: 0.1,
-                                  scrollTo: "#operations",
-                                });
-                                var name = $(".nav2").html().toLowerCase();
-                                removeHash(name);
-                              }}
-                            >
-                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav2">
-                                Operations
-                              </p>
-                            </a>
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              role="button"
-                              onClick={() => {
-                                gsap.to(window, {
-                                  duration: 0.1,
-                                  scrollTo: "#acknowledgment",
-                                });
-                                var name = $(".nav3").html().toLowerCase();
-                                removeHash(name);
-                              }}
-                            >
-                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav3">
-                                Acknowledgment
-                              </p>
-                            </a>
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              role="button"
-                              onClick={() => {
-                                gsap.to(window, {
-                                  duration: 0.1,
-                                  scrollTo: "#partners",
-                                });
-                                var name = $(".nav4").html().toLowerCase();
-                                removeHash(name);
-                              }}
-                            >
-                              <p className="bai-footer-link footer-item-link-mobile mb-0 mt-3 fw-light nav4">
-                                Partners
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-bold mb-0">Link</p>
-                          <div className="link-blank-space footer-link-right-mobile">
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              href="https://burgeonadaire.com/privacy-policy"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Privacy Policy
-                              </p>
-                            </a>
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              href="https://burgeonadaire.com/cookie-policy"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Cookie Policy
-                              </p>
-                            </a>
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              href="https://burgeonadaire.com/terms-and-conditions"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Terms & Conditions
-                              </p>
-                            </a>
-                            <a
-                              role="button"
-                              data-cc="show-preferencesModal"
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Cookie Preferences
-                              </p>
-                            </a>
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              href="https://blog.burgeonadaire.com"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Blog
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="footer-link-box-mobile mt-3">
-                          <p className="lead fw-bold mb-0">Resources</p>
-                          <div className="link-blank-space footer-link-right-mobile">
-                            <a
-                              className="burgeon-adaire-link text-decoration-none link-light"
-                              href="https://portal.burgeonadaire.com"
-                              target="_blank"
-                              rel="noopener"
-                            >
-                              <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                Portal
-                              </p>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="social-media-footer-mobile col-md-6 d-flex flex-column justify-content-end">
-                        <div className="social-media-footer-mobile-items mb-0 d-flex flex-column align-items-end">
-                          {this.state.footericon.map((element, i) =>
-                            element.type === "symbol" ? (
-                              <div
-                                key={i}
-                                className="social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center"
-                              >
-                                <a
-                                  className="d-block"
-                                  href={element.link}
-                                  target="_blank"
-                                  rel="noopener"
-                                >
-                                  <FontAwesomeIcon
-                                    icon={element.icon}
-                                    className="burgeon-adaire-link link-light"
-                                    size="2xl"
-                                  />
-                                </a>
-                              </div>
-                            ) : (
-                              <div key={i} className={element.classname}>
-                                <a
-                                  className="d-block"
-                                  href={element.link}
-                                  target="_blank"
-                                  rel="noopener"
-                                >
-                                  <ReactSVG
-                                    beforeInjection={(svg) => {
-                                      svg.classList.add(
-                                        "burgeon-adaire-link-svg-inside"
-                                      );
-                                      svg.setAttribute(
-                                        "style",
-                                        "height: " +
-                                          element.height +
-                                          "; width: " +
-                                          element.width +
-                                          ";"
-                                      );
-                                    }}
-                                    desc={element.desc}
-                                    src={element.icon}
-                                  />
-                                </a>
-                              </div>
-                            )
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mb-0 mt-5 footer-text-mobile">
-                      © 2024 <strong>PT. Burgeon Adaire International</strong>.
-                      All rights reserved
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </Fragment>
     );
   }
 }

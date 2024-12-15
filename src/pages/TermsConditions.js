@@ -22,7 +22,7 @@ export default class TermsConditions extends Component {
               </div>
             </div>
           </div>
-          <BurgeonFooter />
+          {/* <BurgeonFooter /> */}
         </div>
       </Fragment>
     );

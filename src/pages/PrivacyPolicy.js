@@ -22,7 +22,7 @@ export default class PrivacyPolicy extends Component {
               </div>
             </div>
           </div>
-          <BurgeonFooter />
+          {/* <BurgeonFooter /> */}
         </div>
       </Fragment>
     );

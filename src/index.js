@@ -3,7 +3,7 @@ import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./components/BurgeonSchema";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
 import { BurgeonPreload } from "./components";
 // Firebase
 import "./services/Services";
