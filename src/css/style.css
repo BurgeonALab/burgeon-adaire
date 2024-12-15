@@ -694,6 +694,10 @@ body {
   width: 40%;
 }
 
+:root {
+  --cc-modal-margin: 24px !important;
+}
+
 /* Animation */
 @keyframes fullOpacity {
   0% {
