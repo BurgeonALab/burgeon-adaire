@@ -183,7 +183,7 @@ class BurgeonPartners extends Component {
           </div>
           <div className="col-lg-12 d-flex flex-column py-3">
             <h3 className="text-light text-center">Technology Stacks</h3>
-            <p className="text-light mb-0 text-center">
+            <p className="tech-stacks-mobile-text text-light mb-0 text-center lead">
               We are proud to have relied on{" "}
               <span className="fw-medium">
                 <a

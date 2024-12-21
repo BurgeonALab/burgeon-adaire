@@ -496,6 +496,10 @@
   .ecommerce-box h5 {
     font-size: 1rem;
   }
+
+  .tech-stacks-mobile-text {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 480px) {
