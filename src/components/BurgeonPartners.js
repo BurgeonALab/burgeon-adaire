@@ -195,19 +195,9 @@ class BurgeonPartners extends Component {
                   Amazon Web Services
                 </a>
               </span>{" "}
-              and{" "}
-              <span className="fw-medium">
-                <a
-                  href="https://cloud.google.com"
-                  className="text-decoration-none text-white"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Google Cloud Platform
-                </a>
-              </span>{" "}
-              over the years, ensuring that we consistently deliver high-quality
-              services for both our team and our clients.
+              and other technology stacks over the years, ensuring that we
+              consistently deliver high-quality services for both our team and
+              our clients.
             </p>
           </div>
           <div className="col-lg-12 py-3">
@@ -223,13 +213,33 @@ class BurgeonPartners extends Component {
               />
               <img
                 style={{ marginRight: "48px", marginLeft: "48px" }}
-                src="https://images.burgeonadaire.com/gcp-icon.webp"
+                src="https://images.burgeonadaire.com/microsoft.webp"
                 onError={({ currentTarget }) => {
                   currentTarget.onerror = null;
-                  currentTarget.src = "./assets/images/gcp-icon.webp";
+                  currentTarget.src = "./assets/images/microsoft.webp";
+                }}
+                height={56}
+                alt="Powered by Microsoft Suites"
+              />
+              <img
+                style={{ marginRight: "48px", marginLeft: "48px" }}
+                src="https://images.burgeonadaire.com/firebase.webp"
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null;
+                  currentTarget.src = "./assets/images/firebase.webp";
                 }}
                 height={56}
                 alt="Built with Google Cloud Platform"
+              />
+              <img
+                style={{ marginRight: "48px", marginLeft: "48px" }}
+                src="https://images.burgeonadaire.com/affinity.webp"
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null;
+                  currentTarget.src = "./assets/images/affinity.webp";
+                }}
+                height={56}
+                alt="Every assets you see within our company is designed with Affinity Suites"
               />
             </div>
           </div>
