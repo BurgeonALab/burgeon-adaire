@@ -426,10 +426,6 @@
   .system-logo-mobile img {
     height: 32px;
   }
-
-  .system-logo-container {
-    height: 300px;
-  }
 }
 
 @media (max-width: 576px) {
