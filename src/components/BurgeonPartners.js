@@ -201,10 +201,7 @@ class BurgeonPartners extends Component {
             </p>
           </div>
           <div className="col-lg-12 py-3">
-            <div
-              style={{ height: "150px" }}
-              className="d-flex justify-content-center align-items-center system-logo-mobile"
-            >
+            <div className="d-flex justify-content-center align-items-center system-logo-mobile system-logo-container">
               <img
                 style={{ marginRight: "48px", marginLeft: "48px" }}
                 src="https://d0.awsstatic.com/logos/powered-by-aws-white.png"
