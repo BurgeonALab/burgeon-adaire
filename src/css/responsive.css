@@ -219,19 +219,6 @@
     height: 60px;
   }
 
-  .system-logo-mobile {
-    flex-direction: column;
-    justify-content: center !important;
-  }
-
-  .system-logo-mobile img {
-    height: 36px;
-    margin-right: 0px !important;
-    margin-left: 0px !important;
-    margin-bottom: 16px;
-    margin-top: 16px;
-  }
-
   .pepperstone-misc-mobile .btn {
     align-self: center;
   }

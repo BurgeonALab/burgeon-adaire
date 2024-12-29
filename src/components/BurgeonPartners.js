@@ -8,6 +8,71 @@ class BurgeonPartners extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      stacks: [
+        {
+          id: 0,
+          name: "Amazon Web Services",
+          desc: "Powered by AWS Cloud Computing.",
+          logo: "https://d0.awsstatic.com/logos/powered-by-aws-white.png",
+          link: "https://aws.amazon.com",
+        },
+        {
+          id: 1,
+          name: "Microsoft",
+          desc: "Powered by Microsoft Suites.",
+          logo: "https://images.burgeonadaire.com/microsoft.webp",
+          link: "https://www.microsoft.com",
+        },
+        {
+          id: 2,
+          name: "Firebase",
+          desc: "Powered by Firebase.",
+          logo: "https://images.burgeonadaire.com/firebase.webp",
+          link: "https://firebase.google.com",
+        },
+        {
+          id: 3,
+          name: "Affinity",
+          desc: "Every assets you see within our company is designed with Affinity Suites.",
+          logo: "https://images.burgeonadaire.com/affinity.webp",
+          link: "https://affinity.serif.com",
+        },
+        {
+          id: 4,
+          name: "Red Hat",
+          desc: "We use Red Hat Enterprise Linux to develop our systems.",
+          logo: "https://images.burgeonadaire.com/red-hat.webp",
+          link: "https://www.redhat.com",
+        },
+        {
+          id: 5,
+          name: "VMware",
+          desc: "We also use virtualization technology from VMware to develop our systems.",
+          logo: "https://images.burgeonadaire.com/vmware.webp",
+          link: "https://www.vmware.com",
+        },
+        {
+          id: 6,
+          name: "PostgreSQL",
+          desc: "We use PostgreSQL to maintain our database systems.",
+          logo: "https://images.burgeonadaire.com/postgresql.webp",
+          link: "https://www.postgresql.org",
+        },
+        {
+          id: 7,
+          name: "MongoDB",
+          desc: "We also use MongoDB to maintain our database systems.",
+          logo: "https://images.burgeonadaire.com/mongodb.webp",
+          link: "https://www.mongodb.com",
+        },
+        {
+          id: 8,
+          name: "cTrader",
+          desc: "We use cTrader to conduct our trading transactions.",
+          logo: "https://images.burgeonadaire.com/ctrader.webp",
+          link: "https://ctrader.com",
+        },
+      ],
       associates: [
         {
           id: 0,
@@ -58,6 +123,13 @@ class BurgeonPartners extends Component {
           logo: "https://images.burgeonadaire.com/start-up-and-fly.webp",
           link: "https://startupandfly.com",
         },
+        {
+          id: 7,
+          name: "Nunchuk",
+          desc: "Nunchuk's Home Page",
+          logo: "https://images.burgeonadaire.com/nunchuk.webp",
+          link: "https://nunchuk.io",
+        },
       ],
     };
   }
@@ -106,9 +178,9 @@ class BurgeonPartners extends Component {
                   </h2>
                   <p className="lead text-light pepperstone-text-mobile">
                     In partnership with Pepperstone, we strategically build our
-                    forex portfolio through the trading of commodities,
-                    currencies, and indices, enhancing our financial strength
-                    and growth.
+                    forex and crypto portfolio through the trading of
+                    commodities, currencies, cryptocurrencies, and indices,
+                    enhancing our financial strength and growth.
                   </p>
                 </div>
               </div>
@@ -195,42 +267,32 @@ class BurgeonPartners extends Component {
                   Amazon Web Services
                 </a>
               </span>{" "}
-              and{" "}
-              <span className="fw-medium">
-                <a
-                  href="https://cloud.google.com"
-                  className="text-decoration-none text-white"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Google Cloud Platform
-                </a>
-              </span>{" "}
-              over the years, ensuring that we consistently deliver high-quality
-              services for both our team and our clients.
+              and other technology stacks over the years, ensuring that we
+              consistently deliver high-quality services for both our team and
+              our clients.
             </p>
           </div>
           <div className="col-lg-12 py-3">
-            <div
-              style={{ height: "150px" }}
-              className="d-flex justify-content-center align-items-center system-logo-mobile"
-            >
-              <img
-                style={{ marginRight: "48px", marginLeft: "48px" }}
-                src="https://d0.awsstatic.com/logos/powered-by-aws-white.png"
-                height={56}
-                alt="Powered by AWS Cloud Computing"
-              />
-              <img
-                style={{ marginRight: "48px", marginLeft: "48px" }}
-                src="https://images.burgeonadaire.com/gcp-icon.webp"
-                onError={({ currentTarget }) => {
-                  currentTarget.onerror = null;
-                  currentTarget.src = "./assets/images/gcp-icon.webp";
-                }}
-                height={56}
-                alt="Built with Google Cloud Platform"
-              />
+            <div className="partners-marquee-box d-flex flex-column justify-content-center">
+              <Marquee
+                direction="left"
+                gradient="true"
+                gradientColor="#121217"
+                gradientWidth={50}
+              >
+                {this.state.stacks.map((element, i) => (
+                  <a key={i} href={element.link} target="_blank" rel="noopener">
+                    <div className="partners-small-box p-4 rounded ms-5 me-5">
+                      <img
+                        src={element.logo}
+                        height={56}
+                        alt={element.desc}
+                        className="partners-opacity"
+                      ></img>
+                    </div>
+                  </a>
+                ))}
+              </Marquee>
             </div>
           </div>
         </div>
