@@ -362,15 +362,6 @@ class BurgeonFooter extends Component {
                                 </p>
                               </a>
                               <a
-                                role="button"
-                                data-cc="show-preferencesModal"
-                                className="burgeon-adaire-link text-decoration-none link-light"
-                              >
-                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                  Cookie Preferences
-                                </p>
-                              </a>
-                              <a
                                 className="burgeon-adaire-link text-decoration-none link-light"
                                 href="https://blog.burgeonadaire.com"
                                 target="_blank"
@@ -378,6 +369,15 @@ class BurgeonFooter extends Component {
                               >
                                 <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
                                   Blog
+                                </p>
+                              </a>
+                              <a
+                                role="button"
+                                data-cc="show-preferencesModal"
+                                className="burgeon-adaire-link text-decoration-none link-light"
+                              >
+                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                  Cookie Preferences
                                 </p>
                               </a>
                             </div>
