@@ -58,6 +58,13 @@ class BurgeonPartners extends Component {
           logo: "https://images.burgeonadaire.com/start-up-and-fly.webp",
           link: "https://startupandfly.com",
         },
+        {
+          id: 7,
+          name: "Nunchuk",
+          desc: "Nunchuk's Home Page",
+          logo: "https://images.burgeonadaire.com/nunchuk.webp",
+          link: "https://nunchuk.io",
+        },
       ],
     };
   }
