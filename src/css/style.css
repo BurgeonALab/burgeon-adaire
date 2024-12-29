@@ -698,10 +698,6 @@ body {
   --cc-modal-margin: 24px !important;
 }
 
-.system-logo-container {
-  height: 150px;
-}
-
 /* Animation */
 @keyframes fullOpacity {
   0% {
