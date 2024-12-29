@@ -106,9 +106,9 @@ class BurgeonPartners extends Component {
                   </h2>
                   <p className="lead text-light pepperstone-text-mobile">
                     In partnership with Pepperstone, we strategically build our
-                    forex portfolio through the trading of commodities,
-                    currencies, and indices, enhancing our financial strength
-                    and growth.
+                    forex and crypto portfolio through the trading of
+                    commodities, currencies, cryptocurrencies, and indices,
+                    enhancing our financial strength and growth.
                   </p>
                 </div>
               </div>
@@ -205,7 +205,7 @@ class BurgeonPartners extends Component {
               <img
                 style={{ marginRight: "48px", marginLeft: "48px" }}
                 src="https://d0.awsstatic.com/logos/powered-by-aws-white.png"
-                height={56}
+                height={46}
                 alt="Powered by AWS Cloud Computing"
               />
               <img
@@ -215,7 +215,7 @@ class BurgeonPartners extends Component {
                   currentTarget.onerror = null;
                   currentTarget.src = "./assets/images/microsoft.webp";
                 }}
-                height={56}
+                height={46}
                 alt="Powered by Microsoft Suites"
               />
               <img
@@ -225,7 +225,7 @@ class BurgeonPartners extends Component {
                   currentTarget.onerror = null;
                   currentTarget.src = "./assets/images/firebase.webp";
                 }}
-                height={56}
+                height={46}
                 alt="Built with Google Cloud Platform"
               />
               <img
@@ -235,7 +235,7 @@ class BurgeonPartners extends Component {
                   currentTarget.onerror = null;
                   currentTarget.src = "./assets/images/affinity.webp";
                 }}
-                height={56}
+                height={46}
                 alt="Every assets you see within our company is designed with Affinity Suites"
               />
             </div>
