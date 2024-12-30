@@ -698,6 +698,46 @@ body {
   --cc-modal-margin: 24px !important;
 }
 
+.contact-content {
+  display: none;
+}
+
+.show-contact-content {
+  display: block;
+}
+
+.contact-button-zoom {
+  height: 52px;
+  width: 52px;
+  display: block;
+  border-radius: 26px;
+  background-color: rgba(11, 92, 255, 0.7);
+}
+
+.contact-button-colorful {
+  height: 52px;
+  width: 52px;
+  display: block;
+  border-radius: 26px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-button-redbai {
+  height: 52px;
+  width: 52px;
+  display: block;
+  border-radius: 26px;
+  background-color: rgba(139, 0, 0, 0.7);
+}
+
+.contact-button-colorful-small {
+  height: 40px;
+  width: 40px;
+  display: block;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
 /* Animation */
 @keyframes fullOpacity {
   0% {
