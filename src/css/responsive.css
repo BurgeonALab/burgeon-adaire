@@ -104,6 +104,16 @@
   }
 }
 
+@media (max-height: 768px) {
+  .tradingview-bai-tickertape {
+    display: none !important;
+  }
+
+  .small-desktop-op-description {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .about-box {
     height: 50vh;
