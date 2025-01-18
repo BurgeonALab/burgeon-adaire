@@ -452,7 +452,7 @@ class BurgeonFooter extends Component {
                         </div>
                       </div>
                       <p className="mb-0 mt-5 footer-text-mobile">
-                        © 2024 <strong>PT. Burgeon Adaire International</strong>
+                        © 2025 <strong>PT. Burgeon Adaire International</strong>
                         . All rights reserved
                       </p>
                     </div>
