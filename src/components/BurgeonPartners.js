@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import React, { Component } from "react";
 import Marquee from "react-fast-marquee";
 import { handleViewport } from "react-in-viewport";
@@ -183,14 +185,58 @@ class BurgeonPartners extends Component {
                   src="https://images.burgeonadaire.com/bai-pepperstone.webp"
                   height={80}
                 ></img>
-                <a
-                  href="https://trk.pepperstonepartners.com/aff_c?offer_id=367&aff_id=34824"
-                  className="btn btn-dark btn-pepperstone"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <span className="fw-medium">Join Pepperstone Now</span>
-                </a>
+                <div className="d-flex flex-row pepperstone-buttons-mobile">
+                  <a
+                    href="https://trk.pepperstonepartners.com/aff_c?offer_id=367&aff_id=34824"
+                    className="btn btn-dark btn-pepperstone btn-pepperstone-join-mobile me-3"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span className="fw-medium">Join Pepperstone Now</span>
+                  </a>
+                  <div className="dropdown dropdown-pepperstone-mobile">
+                    <a
+                      role="button"
+                      className="btn btn-pepperstone"
+                      type="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <span>
+                        <span className="text-white fw-medium">
+                          For Investors
+                        </span>
+                        <FontAwesomeIcon
+                          icon={faChevronDown}
+                          className="ms-2 link-white"
+                          size="sm"
+                        />
+                      </span>
+                    </a>
+                    <ul className="dropdown-menu dropdown-menu-pepperstone">
+                      <li>
+                        <a
+                          target="_blank"
+                          ref="noopener"
+                          className="dropdown-item dropdown-item-pepperstone text-white"
+                          href="https://ct.spotware.com/copy/strategy/94521"
+                        >
+                          Invite Link
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          target="_blank"
+                          ref="noopener"
+                          className="dropdown-item dropdown-item-pepperstone text-white"
+                          href="https://ct.spotware.com/investor/VRSveDvsgMU"
+                        >
+                          Investor Access Link
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

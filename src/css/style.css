@@ -738,6 +738,15 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.dropdown-menu-pepperstone {
+  background-color: #8b0000;
+  border-color: #380000;
+}
+
+.dropdown-item-pepperstone:hover {
+  background-color: #380000;
+}
+
 /* Animation */
 @keyframes fullOpacity {
   0% {

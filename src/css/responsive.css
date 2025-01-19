@@ -415,6 +415,12 @@
   .about-container {
     flex-direction: column !important;
   }
+
+  .pepperstone-buttons-mobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -496,6 +502,20 @@
 
   .tech-stacks-mobile-text {
     font-size: 1rem;
+  }
+
+  .pepperstone-buttons-mobile {
+    flex-direction: column !important;
+  }
+
+  .btn-pepperstone-join-mobile {
+    margin-right: 0px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .dropdown-pepperstone-mobile {
+    display: flex;
+    justify-content: center;
   }
 }
 
