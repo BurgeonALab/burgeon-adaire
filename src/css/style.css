@@ -747,6 +747,14 @@ body {
   background-color: #380000;
 }
 
+#cc-main {
+  --cc-font-family: "Red Hat Text", sans-serif;
+  --cc-btn-primary-bg: #121217;
+  --cc-btn-primary-border-color: #121217;
+  --cc-btn-primary-hover-bg: #0d0d10;
+  --cc-btn-primary-hover-border-color: #0d0d10;
+}
+
 /* Animation */
 @keyframes fullOpacity {
   0% {
