@@ -217,7 +217,7 @@ class BurgeonPartners extends Component {
                       <li>
                         <a
                           target="_blank"
-                          ref="noopener"
+                          rel="noopener"
                           className="dropdown-item dropdown-item-pepperstone text-white"
                           href="https://ct.spotware.com/copy/strategy/94521"
                         >
@@ -227,7 +227,7 @@ class BurgeonPartners extends Component {
                       <li>
                         <a
                           target="_blank"
-                          ref="noopener"
+                          rel="noopener"
                           className="dropdown-item dropdown-item-pepperstone text-white"
                           href="https://ct.spotware.com/investor/VRSveDvsgMU"
                         >
