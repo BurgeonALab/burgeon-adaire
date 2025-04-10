@@ -349,7 +349,7 @@ export default class BSmallValbury extends Component {
       <Fragment>
         <div className="valbury-box h-50 rounded p-4 position-relative">
           <div className="valbury-box-container-mobile h-100 d-flex flex-column justify-content-between">
-            <h5 className="text-light">VAF Trading Suggestions</h5>
+            <h5 className="text-light">Forex Suggestions</h5>
             <div className="d-flex flex-row vaf-slide-container">
               <a
                 role="button"
