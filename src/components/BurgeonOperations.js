@@ -184,44 +184,44 @@ class BurgeonOperations extends Component {
           <div className="other-operations-container-mobile col-xxl-9 d-flex flex-column py-3">
             <div className="tradingview-bai-tickertape">
               <TickerTape
-                // symbols={[
-                //   {
-                //     proName: "PEPPERSTONE:XAUUSD",
-                //     title: "GOLD",
-                //   },
-                //   {
-                //     proName: "PEPPERSTONE:USDJPY",
-                //     title: "USD/JPY",
-                //   },
-                //   {
-                //     proName: "PEPPERSTONE:GBPUSD",
-                //     title: "GBP/USD",
-                //   },
-                //   {
-                //     proName: "PEPPERSTONE:EURUSD",
-                //     title: "EUR/USD",
-                //   },
-                //   {
-                //     proName: "PEPPERSTONE:NAS100",
-                //     title: "NASDAQ-100",
-                //   },
-                //   {
-                //     proName: "PEPPERSTONE:US500",
-                //     title: "S&P 500",
-                //   },
-                //   {
-                //     proName: "PEPPERSTONE:SPOTCRUDE",
-                //     title: "CRUDE OIL",
-                //   },
-                //   {
-                //     proName: "PEPPERSTONE:BTCUSD",
-                //     title: "BITCOIN",
-                //   },
-                //   {
-                //     proName: "PEPPERSTONE:SOLUSD",
-                //     title: "SOLANA",
-                //   },
-                // ]}
+                symbols={[
+                  {
+                    proName: "PEPPERSTONE:XAUUSD",
+                    title: "GOLD",
+                  },
+                  {
+                    proName: "PEPPERSTONE:USDJPY",
+                    title: "USD/JPY",
+                  },
+                  {
+                    proName: "PEPPERSTONE:GBPUSD",
+                    title: "GBP/USD",
+                  },
+                  {
+                    proName: "PEPPERSTONE:EURUSD",
+                    title: "EUR/USD",
+                  },
+                  {
+                    proName: "PEPPERSTONE:NAS100",
+                    title: "NASDAQ-100",
+                  },
+                  {
+                    proName: "PEPPERSTONE:US500",
+                    title: "S&P 500",
+                  },
+                  {
+                    proName: "PEPPERSTONE:SPOTCRUDE",
+                    title: "CRUDE OIL",
+                  },
+                  {
+                    proName: "PEPPERSTONE:BTCUSD",
+                    title: "BITCOIN",
+                  },
+                  {
+                    proName: "PEPPERSTONE:SOLUSD",
+                    title: "SOLANA",
+                  },
+                ]}
                 colorTheme="dark"
               ></TickerTape>
             </div>
