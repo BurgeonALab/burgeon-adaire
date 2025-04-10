@@ -4,6 +4,9 @@ import { Helmet } from "react-helmet-async";
 export const BurgeonSEO = ({ title, description, canonical }) => {
   return (
     <Helmet>
+      {/* Informations */}
+      <title>{title}</title>
+      <link rel="canonical" href={canonical} />
       {/* Google */}
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="follow" />
@@ -16,6 +19,9 @@ export const BurgeonSEO = ({ title, description, canonical }) => {
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="description" content={description} />
+      <meta property="site_name" content="PT. Burgeon Adaire International" />
+      <meta property="url" content={canonical} />
       {/* Open Graph */}
       <meta property="og:locale" content="en_US" />
       <meta property="og:locale:alternate" content="id_ID" />
@@ -30,6 +36,11 @@ export const BurgeonSEO = ({ title, description, canonical }) => {
         property="og:image:alt"
         content="PT. Burgeon Adaire International Logo Cover"
       />
+      <meta
+        property="og:site_name"
+        content="PT. Burgeon Adaire International"
+      />
+      <meta property="og:url" content={canonical} />
       {/* Twitter */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
@@ -91,15 +102,6 @@ export const BurgeonSEO = ({ title, description, canonical }) => {
         content="https://resources.burgeonadaire.com/browserconfig.xml"
       />
       <meta name="theme-color" content="#ffffff" />
-      {/* Informations */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta
-        property="og:site_name"
-        content="PT. Burgeon Adaire International"
-      />
-      <link rel="canonical" href={canonical} />
-      <meta property="og:url" content={canonical} />
     </Helmet>
   );
 };

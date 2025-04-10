@@ -20,7 +20,7 @@ export default class HomePage extends Component {
       <Fragment>
         <BurgeonCookieConsent />
         <BurgeonSEO
-          title="Driving the Future | PT. Burgeon Adaire International"
+          title="PT. Burgeon Adaire International"
           description="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value."
           canonical="https://burgeonadaire.com"
         />
