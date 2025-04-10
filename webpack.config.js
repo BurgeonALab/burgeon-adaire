@@ -138,7 +138,14 @@ module.exports = (env) => {
       new CopyPlugin({
         patterns: [
           { from: "./public/assets/videos", to: "./assets/videos" },
-          { from: "./public/assets/images", to: "./assets/images" },
+          {
+            from: "./public/assets/videos/new_bai_vid",
+            to: "./assets/videos/new_bai_vid",
+          },
+          {
+            from: "./public/assets/images/new_bai_img",
+            to: "./assets/images/new_bai_img",
+          },
           { from: "./public/robots.txt", to: "./" },
           { from: "./public/sitemap.xml", to: "./" },
           { from: "./public/browserconfig.xml", to: "./configurations" },
