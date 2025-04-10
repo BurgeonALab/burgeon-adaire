@@ -104,7 +104,7 @@ export default class BurgeonNavbar extends Component {
               <NavLink to="/">
                 <img
                   alt="PT. Burgeon Adaire International Logo"
-                  src="https://images.burgeonadaire.com/logo.webp"
+                  src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp"
                   height="40"
                 ></img>
               </NavLink>
@@ -150,7 +150,7 @@ export default class BurgeonNavbar extends Component {
                     >
                       <FontAwesomeIcon
                         icon={faXmark}
-                        className="link-dark"
+                        className="link-light"
                         size="lg"
                       />
                     </button>

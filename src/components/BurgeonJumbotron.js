@@ -85,14 +85,16 @@ class BurgeonJumbotron extends Component {
       <section ref={forwardedRef}>
         <div className="bai-jumbotron d-flex align-items-center justify-content-center">
           <video
+            aria-label="Green Smoke Stock Videos by Vecteezy, Modified by PT. Burgeon Adaire International"
+            aria-details="https://www.vecteezy.com/free-videos/green-smoke"
             id="jumbotron-player"
-            poster="https://images.burgeonadaire.com/smokegrey_thumbnail.webp"
+            poster="https://images.burgeonadaire.com/new_bai_img/green_smoke_img.webp"
             autoPlay
             loop
             muted
           >
             <source
-              src="https://resources.burgeonadaire.com/videos/smokegrey.mp4"
+              src="https://resources.burgeonadaire.com/new_bai_vid/green_smoke.mp4"
               type="video/mp4"
             ></source>
           </video>
@@ -122,7 +124,7 @@ class BurgeonJumbotron extends Component {
           </div>
           <img
             style={{ opacity: "0%" }}
-            src="https://images.burgeonadaire.com/logo.webp"
+            src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp"
             alt="PT. Burgeon Adaire International Logo"
             className="jumbotron-logo d-block jumbotron-logo-reveal"
           ></img>

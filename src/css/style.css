@@ -50,7 +50,7 @@ body {
 
 .jumbotron-logo {
   transition: transform 500ms;
-  opacity: 30%;
+  opacity: 60% !important;
 }
 
 #burgeon-navbar {
@@ -350,7 +350,7 @@ body {
 }
 
 #jumbotron-player {
-  opacity: 20%;
+  opacity: 40%;
   position: absolute;
   width: 100%;
   object-fit: cover;
@@ -794,7 +794,7 @@ body {
   }
 
   100% {
-    opacity: 0.5;
+    opacity: 0.6;
   }
 }
 

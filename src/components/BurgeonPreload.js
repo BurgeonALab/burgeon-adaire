@@ -5,7 +5,7 @@ export default class BurgeonPreload extends Component {
     return (
       <div className="preload">
         <img
-          src="https://images.burgeonadaire.com/logo.webp"
+          src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp"
           alt="PT. Burgeon Adaire International Logo"
         ></img>
       </div>
