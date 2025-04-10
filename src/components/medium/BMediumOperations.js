@@ -42,8 +42,8 @@ export default class BMediumOperations extends Component {
         },
         {
           id: 3,
-          name: "eCommerce",
-          desc: "Shop our diverse merchandise. Find unique items and show your support.",
+          name: "PT. Burgeon Energyworks Industries",
+          desc: "PT. Burgeon Energyworks Industries is an oil production company that manufactures and supplies oil barrels to businesses.",
           link: "https://shop.burgeonadaire.com",
         },
         {

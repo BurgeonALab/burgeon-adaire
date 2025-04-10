@@ -116,8 +116,11 @@ class BurgeonOperations extends Component {
                   <p className="lead text-light mb-0">
                     Our work at{" "}
                     <strong>PT. Burgeon Adaire International</strong> touches on
-                    a wide range of fields, from trading and investing to web
-                    app development, media projects, and eCommerce. We focus on
+                    a wide range of fields, from <strong>Trading</strong> and{" "}
+                    <strong>Investing</strong> to{" "}
+                    <strong>Web App Development</strong>,{" "}
+                    <strong>Media Projects</strong>, and Energy Industries
+                    focuses on <strong>Oil Production</strong>. We focus on
                     bringing innovation and expertise to everything we do.
                   </p>
                   <a
@@ -148,9 +151,12 @@ class BurgeonOperations extends Component {
               <h2 className="text-light padding-twentyfour-rl">Operations</h2>
               <p className="lead text-light mb-0 padding-twentyfour-rl">
                 Our work at <strong>PT. Burgeon Adaire International</strong>{" "}
-                touches on a wide range of fields, from trading and investing to
-                web app development, media projects, and eCommerce. We focus on
-                bringing innovation and expertise to everything we do.
+                touches on a wide range of fields, from <strong>Trading</strong>{" "}
+                and <strong>Investing</strong> to{" "}
+                <strong>Web App Development</strong>,{" "}
+                <strong>Media Projects</strong>, and Energy Industries focuses
+                on <strong>Oil Production</strong>. We focus on bringing
+                innovation and expertise to everything we do.
               </p>
               <a
                 href="mailto:geraldzandisko@burgeonadaire.com?subject=Company Profile Request"

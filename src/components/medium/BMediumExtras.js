@@ -7,8 +7,8 @@ export default class BMediumExtras extends Component {
       items: [
         {
           id: 0,
-          name: "eCommerce",
-          desc: "Shop our diverse merchandise. Find unique items and show your support.",
+          name: "PT. Burgeon Energyworks Industries",
+          desc: "PT. Burgeon Energyworks Industries is an oil production company that manufactures and supplies oil barrels to businesses.",
           link: "https://shop.burgeonadaire.com",
         },
         {
@@ -26,7 +26,7 @@ export default class BMediumExtras extends Component {
       <Fragment>
         <div className="extras-container d-flex flex-row flex-grow-1">
           {this.state.items.map((data, index) =>
-            data.name === "eCommerce" ? (
+            data.name === "PT. Burgeon Energyworks Industries" ? (
               <div key={index} className="operation-child-container w-50">
                 <div className="h-100 padding-twelve-r">
                   <div className="ecommerce-box rounded p-4">
