@@ -55,7 +55,7 @@ export default class BurgeonNavbar extends Component {
           $("#burgeon-navbar .bai-navbar").css("margin-left", "0px");
           $("#burgeon-navbar .bai-navbar").css(
             "box-shadow",
-            "var(--bs-box-shadow)"
+            "0px 0px 30px 3px rgba(0, 7, 7, 0.5)"
           );
           $("#burgeon-navbar .bai-navbar").css("margin-right", "0px");
           $("#burgeon-navbar .bai-navbar").css("border-radius", "0px");
@@ -171,7 +171,7 @@ export default class BurgeonNavbar extends Component {
                         var name = $(".nav1").html().toLowerCase();
                         removeHash(name);
                       }}
-                      className="bai-link text-light text-decoration-none nav1"
+                      className="bai-link fw-medium text-light text-decoration-none nav1"
                     >
                       Identity
                     </a>
@@ -187,12 +187,12 @@ export default class BurgeonNavbar extends Component {
                         var name = $(".nav2").html().toLowerCase();
                         removeHash(name);
                       }}
-                      className="bai-link text-light text-decoration-none nav2"
+                      className="bai-link fw-medium text-light text-decoration-none nav2"
                     >
                       Operations
                     </a>
                   </li>
-                  <li className="nav-item ms-3 d-flex align-items-center">
+                  <li className="nav-item fw-medium ms-3 d-flex align-items-center">
                     <a
                       role="button"
                       onClick={() => {
@@ -208,7 +208,7 @@ export default class BurgeonNavbar extends Component {
                       Acknowledgment
                     </a>
                   </li>
-                  <li className="nav-item ms-3 d-flex align-items-center">
+                  <li className="nav-item fw-medium ms-3 d-flex align-items-center">
                     <a
                       role="button"
                       onClick={() => {
@@ -224,7 +224,7 @@ export default class BurgeonNavbar extends Component {
                       Partners
                     </a>
                   </li>
-                  <li className="nav-item ms-3 d-flex align-items-center">
+                  <li className="nav-item fw-medium ms-3 d-flex align-items-center">
                     <a
                       id="dropdown-nav"
                       className="nav-link p-0 link-light"

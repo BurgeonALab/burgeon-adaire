@@ -51,11 +51,19 @@ body {
 .jumbotron-logo {
   z-index: 9991;
   transition: transform 500ms;
-  opacity: 60% !important;
+  opacity: 60%;
 }
 
 #burgeon-navbar {
   z-index: 9997;
+}
+
+.bai-link {
+  transition: color 300ms;
+}
+
+.bai-link:hover {
+  color: #e89e11 !important;
 }
 
 .navbar-position {
@@ -458,10 +466,10 @@ body {
 /* Navigation Dropdown */
 
 .dropdown-menu {
-  background-color: #272731;
-  --bs-dropdown-link-hover-bg: #3b3b4c;
+  background-color: #01201d;
+  --bs-dropdown-link-hover-bg: #013933;
   --bs-nav-link-hover-color: #f8f9fa;
-  --bs-dropdown-link-active-bg: #1c1c24;
+  --bs-dropdown-link-active-bg: #000707;
 }
 
 .partners-marquee-box {
