@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.static("ssr-public"));
 
-app.get("*", (req, res) => {
+app.get(/(.*)/, (req, res) => {
   const { pipe } = renderToPipeableStream(
     <StaticRouter location={req.url}>
       <App />
