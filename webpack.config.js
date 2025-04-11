@@ -19,6 +19,7 @@ module.exports = (env) => {
     mode: isDevelopment ? "development" : "production",
     devServer: {
       hot: true,
+      historyApiFallback: true,
     },
     performance: {
       hints: false,
