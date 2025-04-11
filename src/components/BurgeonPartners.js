@@ -274,7 +274,7 @@ class BurgeonPartners extends Component {
               <Marquee
                 direction="left"
                 gradient="true"
-                gradientColor="#121217"
+                gradientColor="#000707"
                 gradientWidth={50}
               >
                 {this.state.associates.map((element, i) => (
@@ -316,7 +316,7 @@ class BurgeonPartners extends Component {
               <Marquee
                 direction="left"
                 gradient="true"
-                gradientColor="#121217"
+                gradientColor="#000707"
                 gradientWidth={50}
               >
                 {this.state.stacks.map((element, i) => (

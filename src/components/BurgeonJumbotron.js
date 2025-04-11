@@ -88,13 +88,13 @@ class BurgeonJumbotron extends Component {
             aria-label="Green Smoke Stock Videos by Vecteezy, Modified by PT. Burgeon Adaire International"
             aria-details="https://www.vecteezy.com/free-videos/green-smoke"
             id="jumbotron-player"
-            poster="https://images.burgeonadaire.com/new_bai_img/green_smoke_img.webp"
+            poster="https://images.burgeonadaire.com/new_bai_img/green_smoke_img_compressed.webp"
             autoPlay
             loop
             muted
           >
             <source
-              src="https://resources.burgeonadaire.com/new_bai_vid/green_smoke.mp4"
+              src="https://resources.burgeonadaire.com/new_bai_vid/green_smoke_compressed.mp4"
               type="video/mp4"
             ></source>
           </video>
@@ -128,6 +128,16 @@ class BurgeonJumbotron extends Component {
             alt="PT. Burgeon Adaire International Logo"
             className="jumbotron-logo d-block jumbotron-logo-reveal"
           ></img>
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              backgroundImage: "linear-gradient(transparent, #000707)",
+              alignSelf: "end",
+              width: "100%",
+              height: "50%",
+            }}
+          ></div>
         </div>
       </section>
     );
