@@ -80,6 +80,7 @@ export default class BurgeonNavbar extends Component {
 
   componentDidMount() {
     this.jQuery();
+    console.log(process.env.NODE_ENV);
   }
 
   render() {
@@ -101,13 +102,23 @@ export default class BurgeonNavbar extends Component {
         <div className="bai-navbar py-3 padding-twelve-rl margin-twentyfour-rl">
           <div className="d-flex flex-row">
             <div className="margin-twelve-rl d-flex w-40">
-              <NavLink to="/">
-                <img
-                  alt="PT. Burgeon Adaire International Logo"
-                  src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp"
-                  height="40"
-                ></img>
-              </NavLink>
+              {process.env.NODE_ENV === "development" ? (
+                <a href="localhost:8080">
+                  <img
+                    alt="PT. Burgeon Adaire International Logo"
+                    src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp"
+                    height="40"
+                  ></img>
+                </a>
+              ) : (
+                <a href="https://burgeonadaire.com">
+                  <img
+                    alt="PT. Burgeon Adaire International Logo"
+                    src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp"
+                    height="40"
+                  ></img>
+                </a>
+              )}
               <span className="burgeon-nav-title ms-3 d-flex align-items-center text-light">
                 <span className="fw-medium">Burgeon Adaire&nbsp;</span>
                 <span className="fw-light">International</span>
