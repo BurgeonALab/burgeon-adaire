@@ -1,9 +1,8 @@
 // React
-import React, { Suspense, lazy } from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./components/BurgeonSchema";
-import { BrowserRouter, Routes, Route } from "react-router";
 import { BurgeonPreload } from "./components";
 // Firebase
 import "./services/Services";
@@ -14,12 +13,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./css/style.css";
 import "./css/responsive.css";
 // Component
-import { BurgeonFooter } from "./components";
-
-const HomePage = lazy(() => import("./pages/HomePage"));
-const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
-const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
-const TermsConditions = lazy(() => import("./pages/TermsConditions"));
+import { PageLayout } from "./components/layout";
 
 import BurgeonCookieConsent from "./components/BurgeonCookieConsent";
 
@@ -29,24 +23,7 @@ function App() {
   return (
     <Suspense fallback={<BurgeonPreload />}>
       <BurgeonCookieConsent />
-      <div className="bottom-footer-container">
-        <BrowserRouter>
-          <Routes>
-            <Route index element={<HomePage />} />
-            <Route path="/identity" element={<HomePage />} />
-            <Route path="/operations" element={<HomePage />} />
-            <Route path="/acknowledgment" element={<HomePage />} />
-            <Route path="/partners" element={<HomePage />} />
-            <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
-            <Route
-              path="/legal/terms-and-conditions"
-              element={<TermsConditions />}
-            />
-          </Routes>
-        </BrowserRouter>
-        <BurgeonFooter />
-      </div>
+      <PageLayout />
     </Suspense>
   );
 }
