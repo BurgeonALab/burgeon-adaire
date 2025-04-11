@@ -103,7 +103,7 @@ export default class BurgeonNavbar extends Component {
           <div className="d-flex flex-row">
             <div className="margin-twelve-rl d-flex w-40">
               {process.env.NODE_ENV === "development" ? (
-                <a href="localhost:8080">
+                <a href="/">
                   <img
                     alt="PT. Burgeon Adaire International Logo"
                     src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp"
