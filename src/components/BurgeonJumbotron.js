@@ -128,16 +128,7 @@ class BurgeonJumbotron extends Component {
             alt="PT. Burgeon Adaire International Logo"
             className="jumbotron-logo d-block jumbotron-logo-reveal"
           ></img>
-          <div
-            style={{
-              position: "absolute",
-              bottom: 0,
-              backgroundImage: "linear-gradient(transparent, #000707)",
-              alignSelf: "end",
-              width: "100%",
-              height: "50%",
-            }}
-          ></div>
+          <div className="jumbotron-lower-cover"></div>
         </div>
       </section>
     );

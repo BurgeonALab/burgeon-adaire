@@ -322,6 +322,14 @@ body {
   z-index: 9990;
 }
 
+.jumbotron-lower-cover {
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(transparent, #000707);
+  width: 100%;
+  height: 50%;
+}
+
 .jumbotron-overlay-text-box {
   padding: 0 24px 0 12px;
 }
