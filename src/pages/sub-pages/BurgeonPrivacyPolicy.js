@@ -1,6 +1,10 @@
 import React, { Component, Fragment } from "react";
 
 export default class BurgeonSubPrivacyPolicy extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <Fragment>
