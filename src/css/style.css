@@ -337,7 +337,7 @@ body {
 .jumbotron-item {
   height: fit-content;
   padding: 24px;
-  background-color: rgba(59, 59, 76, 0.3);
+  background-color: rgba(1, 57, 51, 0.3);
   border-radius: var(--bs-border-radius);
 }
 
