@@ -13,32 +13,40 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 // Styles
 import "./css/style.css";
 import "./css/responsive.css";
+// Component
+import { BurgeonFooter } from "./components";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const TermsConditions = lazy(() => import("./pages/TermsConditions"));
 
+import BurgeonCookieConsent from "./components/BurgeonCookieConsent";
+
 const helmetContext = {};
 
 function App() {
   return (
     <Suspense fallback={<BurgeonPreload />}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/identity" element={<HomePage />} />
-          <Route path="/operations" element={<HomePage />} />
-          <Route path="/acknowledgment" element={<HomePage />} />
-          <Route path="/partners" element={<HomePage />} />
-          <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
-          <Route
-            path="/legal/terms-and-conditions"
-            element={<TermsConditions />}
-          />
-        </Routes>
-      </BrowserRouter>
+      <BurgeonCookieConsent />
+      <div className="bottom-footer-container">
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<HomePage />} />
+            <Route path="/identity" element={<HomePage />} />
+            <Route path="/operations" element={<HomePage />} />
+            <Route path="/acknowledgment" element={<HomePage />} />
+            <Route path="/partners" element={<HomePage />} />
+            <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
+            <Route
+              path="/legal/terms-and-conditions"
+              element={<TermsConditions />}
+            />
+          </Routes>
+        </BrowserRouter>
+        <BurgeonFooter />
+      </div>
     </Suspense>
   );
 }

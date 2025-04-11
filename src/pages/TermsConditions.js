@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { BurgeonNavbar, BurgeonFooter, BurgeonContact } from "../components";
+import { BurgeonNavbar, BurgeonContact } from "../components";
 import { BurgeonSubTermsConditions } from "./sub-pages";
 import { BurgeonSEO } from "../components/BurgeonSEO";
 
@@ -22,7 +22,6 @@ export default class TermsConditions extends Component {
               </div>
             </div>
           </div>
-          {/* <BurgeonFooter /> */}
         </div>
       </Fragment>
     );
