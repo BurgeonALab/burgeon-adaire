@@ -1,6 +1,6 @@
 import React, { lazy } from "react";
 import { BurgeonFooter } from "../components";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 const PrivacyPolicy = lazy(() => import("../pages/PrivacyPolicy"));
@@ -31,9 +31,8 @@ export default function PageLayout({ sectionScroll }) {
             element={<TermsConditions />}
           />
 
-          {/* 404
-          <Route path="/404" element={<BurgeonNotFound />} />
-          <Route path="*" element={<Navigate to="/404" replace />} /> */}
+          {/* 404 - For now */}
+          <Route path="*" element={<HomePage />} />
         </Routes>
         <BurgeonFooter />
       </BrowserRouter>
