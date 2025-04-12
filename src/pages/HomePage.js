@@ -1,4 +1,4 @@
-import React, { Component, Fragment, Suspense, lazy } from "react";
+import React, { Fragment, Suspense, lazy } from "react";
 import { BurgeonNavbar, BurgeonJumbotron, BurgeonContact } from "../components";
 import { BurgeonSEO } from "../components/BurgeonSEO";
 
@@ -8,40 +8,39 @@ const BurgeonOperations = lazy(() => import("../components/BurgeonOperations"));
 const BurgeonOutro = lazy(() => import("../components/BurgeonOutro"));
 const BurgeonPartners = lazy(() => import("../components/BurgeonPartners"));
 
-export default class HomePage extends Component {
-  render() {
-    return (
-      <Fragment>
-        <BurgeonSEO
-          title="PT. Burgeon Adaire International"
-          description="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value."
-          canonical="https://burgeonadaire.com"
-        />
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-md-12">
-              <BurgeonContact />
-              <BurgeonNavbar />
-              <BurgeonJumbotron />
-              <Suspense fallback={<p className="d-none">Loading</p>}>
-                <BurgeonAbout />
-              </Suspense>
-              <Suspense fallback={<p className="d-none">Loading</p>}>
-                <BurgeonAbstract />
-              </Suspense>
-              <Suspense fallback={<p className="d-none">Loading</p>}>
-                <BurgeonOperations />
-              </Suspense>
-              <Suspense fallback={<p className="d-none">Loading</p>}>
-                <BurgeonOutro />
-              </Suspense>
-              <Suspense fallback={<p className="d-none">Loading</p>}>
-                <BurgeonPartners />
-              </Suspense>
-            </div>
+export default function HomePage({ currectSection }) {
+  console.log("Current section: " + currectSection);
+  return (
+    <Fragment>
+      <BurgeonSEO
+        title="PT. Burgeon Adaire International"
+        description="PT. Burgeon Adaire International thrives in a dynamic landscape, offering insights and opportunities while building strong partnerships and consistently delivering exceptional value."
+        canonical="https://burgeonadaire.com"
+      />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-12">
+            <BurgeonContact />
+            <BurgeonNavbar />
+            <BurgeonJumbotron />
+            <Suspense fallback={<p className="d-none">Loading</p>}>
+              <BurgeonAbout />
+            </Suspense>
+            <Suspense fallback={<p className="d-none">Loading</p>}>
+              <BurgeonAbstract currectSection={currectSection} />
+            </Suspense>
+            <Suspense fallback={<p className="d-none">Loading</p>}>
+              <BurgeonOperations />
+            </Suspense>
+            <Suspense fallback={<p className="d-none">Loading</p>}>
+              <BurgeonOutro />
+            </Suspense>
+            <Suspense fallback={<p className="d-none">Loading</p>}>
+              <BurgeonPartners />
+            </Suspense>
           </div>
         </div>
-      </Fragment>
-    );
-  }
+      </div>
+    </Fragment>
+  );
 }

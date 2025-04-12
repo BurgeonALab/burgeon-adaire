@@ -1,5 +1,5 @@
 // React
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import "./components/BurgeonSchema";
@@ -13,17 +13,25 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "./css/style.css";
 import "./css/responsive.css";
 // Component
-import { PageLayout } from "./components/layout";
+import PageLayout from "./components/layout";
 
 import BurgeonCookieConsent from "./components/BurgeonCookieConsent";
 
 const helmetContext = {};
 
 function App() {
+  const [sectionPos, setSectionPos] = useState("");
+
+  useEffect(() => {
+    setSectionPos("Home");
+  }, []);
+
+  console.log(sectionPos);
+
   return (
     <Suspense fallback={<BurgeonPreload />}>
       <BurgeonCookieConsent />
-      <PageLayout />
+      <PageLayout sectionScroll={sectionPos} />
     </Suspense>
   );
 }

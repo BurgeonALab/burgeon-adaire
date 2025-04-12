@@ -82,7 +82,7 @@ class BurgeonFooter extends Component {
         window.history.pushState(
           {
             additionalInformation:
-              "Main section at PT. Burgeon Adaire International",
+              "Footer section at PT. Burgeon Adaire International",
           },
           "Driving the Future | PT. Burgeon Adaire International",
           "/"
@@ -333,7 +333,7 @@ class BurgeonFooter extends Component {
                             <div className="link-blank-space footer-link-right-mobile">
                               <a
                                 className="burgeon-adaire-link text-decoration-none link-light"
-                                href="https://burgeonadaire.com/privacy-policy"
+                                href="https://burgeonadaire.com/legal/privacy-policy"
                                 target="_blank"
                                 rel="noopener"
                               >
@@ -343,7 +343,7 @@ class BurgeonFooter extends Component {
                               </a>
                               <a
                                 className="burgeon-adaire-link text-decoration-none link-light"
-                                href="https://burgeonadaire.com/cookie-policy"
+                                href="https://burgeonadaire.com/legal/cookie-policy"
                                 target="_blank"
                                 rel="noopener"
                               >
@@ -353,7 +353,7 @@ class BurgeonFooter extends Component {
                               </a>
                               <a
                                 className="burgeon-adaire-link text-decoration-none link-light"
-                                href="https://burgeonadaire.com/terms-and-conditions"
+                                href="https://burgeonadaire.com/legal/terms-and-conditions"
                                 target="_blank"
                                 rel="noopener"
                               >
