@@ -242,11 +242,6 @@ class BurgeonFooter extends Component {
                                   Organizations
                                 </p>
                               </a>
-                            </div>
-                          </div>
-                          <div className="footer-link-box-mobile mt-3">
-                            <p className="lead fw-bold mb-0">Services</p>
-                            <div className="link-blank-space footer-link-right-mobile">
                               <a
                                 className="burgeon-adaire-link text-decoration-none link-light"
                                 href="https://shop.burgeonadaire.com"
@@ -254,7 +249,7 @@ class BurgeonFooter extends Component {
                                 rel="noopener"
                               >
                                 <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                  eCommerce
+                                  PT. Burgeon Energyworks Industries
                                 </p>
                               </a>
                             </div>
