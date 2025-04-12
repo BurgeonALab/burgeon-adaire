@@ -15,15 +15,32 @@ export default function PageLayout({ sectionScroll }) {
     <div className="bottom-footer-container">
       <BrowserRouter>
         <Routes>
-          <Route index element={<HomePage />} />
+          <Route index element={<HomePage selectedSection="Home" />} />
           <Route
             exact
             path="/identity"
-            element={<HomePage currectSection={sectionScroll} />}
+            element={
+              <HomePage
+                selectedSection="Identity"
+                currectSection={sectionScroll}
+              />
+            }
           />
-          <Route exact path="/operations" element={<HomePage />} />
-          <Route exact path="/acknowledgment" element={<HomePage />} />
-          <Route exact path="/partners" element={<HomePage />} />
+          <Route
+            exact
+            path="/operations"
+            element={<HomePage selectedSection="Operations" />}
+          />
+          <Route
+            exact
+            path="/acknowledgment"
+            element={<HomePage selectedSection="Acknowledgment" />}
+          />
+          <Route
+            exact
+            path="/partners"
+            element={<HomePage selectedSection="Partners" />}
+          />
           <Route path="/legal/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/legal/cookie-policy" element={<CookiePolicy />} />
           <Route
