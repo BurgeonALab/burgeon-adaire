@@ -5,11 +5,13 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-const BurgeonAbout = lazy(() => import("../components/BurgeonAbout"));
-const BurgeonAbstract = lazy(() => import("../components/BurgeonAbstract"));
-const BurgeonOperations = lazy(() => import("../components/BurgeonOperations"));
-const BurgeonOutro = lazy(() => import("../components/BurgeonOutro"));
-const BurgeonPartners = lazy(() => import("../components/BurgeonPartners"));
+import {
+  BurgeonAbout,
+  BurgeonAbstract,
+  BurgeonOperations,
+  BurgeonOutro,
+  BurgeonPartners,
+} from "../components";
 
 export default function HomePage({ currectSection, selectedSection }) {
   const [titlePage, setTitlePage] = useState("");
