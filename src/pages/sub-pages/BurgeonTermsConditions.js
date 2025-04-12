@@ -14,10 +14,10 @@ class BurgeonSubTermsConditions extends Component {
         window.history.pushState(
           {
             additionalInformation:
-              "Cookie Policy at PT. Burgeon Adaire International",
+              "Terms and Conditions at PT. Burgeon Adaire International",
           },
-          "Cookie Policy | PT. Burgeon Adaire International",
-          "/legal/cookie-policy"
+          "Terms and Conditions | PT. Burgeon Adaire International",
+          "/legal/terms-and-conditions"
         );
       }
     });
