@@ -117,7 +117,6 @@ export default class BSmallValbury extends Component {
     function MarketBadgesClean($) {
       $("#status-market").removeClass("text-bg-secondary");
       $("#status-market").removeClass("text-bg-bai-dark");
-      $("#status-market").removeClass("text-bg-light");
       $("#status-market").removeClass("text-bg-warning");
       $("#status-market").removeClass("text-bg-primary");
     }
@@ -150,7 +149,7 @@ export default class BSmallValbury extends Component {
       DataTradeClean(jQuery);
       MarketBadgesClean(jQuery);
       $("#status-signal").show();
-      $("#status-market").addClass("text-bg-light");
+      $("#status-market").addClass("text-bg-bai-dark");
       $("#status-market").html("XAU/USD");
       $("#status-signal").html("Waiting");
       $(".valbury-box:first-child").css("background-color", "#025249");
