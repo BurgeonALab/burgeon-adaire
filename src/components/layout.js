@@ -1,14 +1,13 @@
-import React, { lazy } from "react";
+import React from "react";
 import { BurgeonFooter } from "../components";
 import { BrowserRouter, Routes, Route } from "react-router";
 
-const HomePage = lazy(() => import("../pages/HomePage"));
-const PrivacyPolicy = lazy(() => import("../pages/PrivacyPolicy"));
-const CookiePolicy = lazy(() => import("../pages/CookiePolicy"));
-const TermsConditions = lazy(() => import("../pages/TermsConditions"));
-const BurgeonNotFound = lazy(() =>
-  import("../pages/sub-pages/BurgeonNotFound")
-);
+import {
+  HomePage,
+  PrivacyPolicy,
+  CookiePolicy,
+  TermsConditions,
+} from "../pages";
 
 export default function PageLayout() {
   return (
