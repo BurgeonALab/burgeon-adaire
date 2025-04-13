@@ -1,4 +1,12 @@
 @media (max-width: 1400px) {
+  .valbury-container-mobile {
+    height: 35%;
+  }
+
+  .other-operations-container-mobile {
+    height: 65%;
+  }
+
   .c-abstract-box {
     height: 70vh;
   }
