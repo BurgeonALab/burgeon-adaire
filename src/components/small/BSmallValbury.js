@@ -116,7 +116,7 @@ export default class BSmallValbury extends Component {
 
     function MarketBadgesClean($) {
       $("#status-market").removeClass("text-bg-secondary");
-      $("#status-market").removeClass("text-bg-dark");
+      $("#status-market").removeClass("text-bg-bai-dark");
       $("#status-market").removeClass("text-bg-light");
       $("#status-market").removeClass("text-bg-warning");
       $("#status-market").removeClass("text-bg-primary");
@@ -140,7 +140,7 @@ export default class BSmallValbury extends Component {
       DataTradeClean(jQuery);
       MarketBadgesClean(jQuery);
       $("#status-signal").hide();
-      $("#status-market").addClass("text-bg-dark");
+      $("#status-market").addClass("text-bg-bai-dark");
       $("#status-market").html("XAU/USD");
       $(".valbury-box:first-child").css("background-color", "#025249");
       DataTradeUnavailable(jQuery);
@@ -153,7 +153,7 @@ export default class BSmallValbury extends Component {
       $("#status-market").addClass("text-bg-light");
       $("#status-market").html("XAU/USD");
       $("#status-signal").html("Waiting");
-      $(".valbury-box:first-child").css("background-color", "#272731");
+      $(".valbury-box:first-child").css("background-color", "#025249");
       DataTradeUnavailable(jQuery);
     }
 
@@ -205,9 +205,9 @@ export default class BSmallValbury extends Component {
       DataTradeClean(jQuery);
       MarketBadgesClean(jQuery);
       $("#status-signal").hide();
-      $("#status-market").addClass("text-bg-dark");
+      $("#status-market").addClass("text-bg-bai-dark");
       $("#status-market").html("XAU/USD");
-      $(".valbury-box:first-child").css("background-color", "#272731");
+      $(".valbury-box:first-child").css("background-color", "#025249");
       DataTradeUnavailable(jQuery);
     }
 
@@ -349,7 +349,7 @@ export default class BSmallValbury extends Component {
       <Fragment>
         <div className="valbury-box h-50 rounded p-4 position-relative">
           <div className="valbury-box-container-mobile h-100 d-flex flex-column justify-content-between">
-            <h5 className="text-light">Forex Suggestions</h5>
+            <h5 className="text-light fw-bold">Forex Suggestions</h5>
             <div className="d-flex flex-row vaf-slide-container">
               <a
                 role="button"

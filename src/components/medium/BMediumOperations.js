@@ -70,12 +70,9 @@ export default class BMediumOperations extends Component {
                     rel="noopener"
                     target="_blank"
                   >
-                    <h5 className="text-light">{data.name}</h5>
+                    <h5 className="text-light fw-bold">{data.name}</h5>
                   </a>
                   <p className="text-light">{data.desc}</p>
-                </div>
-                <div className="d-flex justify-content-end">
-                  <span className="badge text-bg-danger">WIP</span>
                 </div>
               </div>
             </div>

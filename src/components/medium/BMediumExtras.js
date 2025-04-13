@@ -38,14 +38,11 @@ export default class BMediumExtras extends Component {
                           rel="noopener"
                           target="_blank"
                         >
-                          <h5 className="text-light">{data.name}</h5>
+                          <h5 className="text-light fw-bold">{data.name}</h5>
                         </a>
                         <p className="text-light mb-0 small-desktop-op-description">
                           {data.desc}
                         </p>
-                      </div>
-                      <div className="d-flex justify-content-end">
-                        <span className="badge text-bg-danger">WIP</span>
                       </div>
                     </div>
                   </div>
@@ -63,14 +60,11 @@ export default class BMediumExtras extends Component {
                           rel="noopener"
                           target="_blank"
                         >
-                          <h5 className="text-light">{data.name}</h5>
+                          <h5 className="text-light fw-bold">{data.name}</h5>
                         </a>
                         <p className="text-light mb-0 small-desktop-op-description">
                           {data.desc}
                         </p>
-                      </div>
-                      <div className="d-flex justify-content-end">
-                        <span className="badge text-bg-danger">WIP</span>
                       </div>
                     </div>
                   </div>

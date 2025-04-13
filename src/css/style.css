@@ -435,13 +435,18 @@ body {
   margin-top: 24px;
 }
 
+.text-bg-bai-dark {
+  background-color: #01201d !important;
+  color: #fff !important;
+}
+
 .btn-cp-mobile {
-  --bs-btn-bg: #121217;
-  --bs-btn-border-color: #121217;
-  --bs-btn-hover-bg: #0d0d10;
-  --bs-btn-hover-border-color: #0d0d10;
-  --bs-btn-active-bg: #070709;
-  --bs-btn-active-border-color: #070709;
+  --bs-btn-bg: #01201d;
+  --bs-btn-border-color: #01201d;
+  --bs-btn-hover-bg: #000707;
+  --bs-btn-hover-border-color: #000707;
+  --bs-btn-active-bg: #000707;
+  --bs-btn-active-border-color: #000707;
   padding: 18px;
   width: 100%;
   margin-top: 24px;

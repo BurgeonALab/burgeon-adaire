@@ -112,7 +112,7 @@ class BurgeonOperations extends Component {
             <div className="operation-container-overlay">
               <div className="d-flex flex-row justify-content-between align-items-center h-100">
                 <div className="overlay-content margin-twentyfour-rl">
-                  <h2 className="text-light">Operations</h2>
+                  <h2 className="text-light fw-bold">Operations</h2>
                   <p className="lead text-light mb-0">
                     Our work at{" "}
                     <strong>PT. Burgeon Adaire International</strong> touches on
@@ -148,7 +148,9 @@ class BurgeonOperations extends Component {
         <div className="overlay-container-mobile">
           <div className="overlay-container-mobile-box h-100">
             <div className="hide-mobile-overlay-content">
-              <h2 className="text-light padding-twentyfour-rl">Operations</h2>
+              <h2 className="text-light padding-twentyfour-rl fw-bold">
+                Operations
+              </h2>
               <p className="lead text-light mb-0 padding-twentyfour-rl">
                 Our work at <strong>PT. Burgeon Adaire International</strong>{" "}
                 touches on a wide range of fields, from <strong>Trading</strong>{" "}
@@ -248,14 +250,13 @@ class BurgeonOperations extends Component {
                               target="_blank"
                               rel="noopener"
                             >
-                              <h5 className="text-light">{data.name}</h5>
+                              <h5 className="text-light fw-bold">
+                                {data.name}
+                              </h5>
                             </a>
                             <p className="text-light mb-0 small-desktop-op-description">
                               {data.desc}
                             </p>
-                          </div>
-                          <div className="d-flex justify-content-end">
-                            <span className="badge text-bg-danger">WIP</span>
                           </div>
                         </div>
                       </div>
@@ -274,14 +275,13 @@ class BurgeonOperations extends Component {
                               target="_blank"
                               rel="noopener"
                             >
-                              <h5 className="text-light">{data.name}</h5>
+                              <h5 className="text-light fw-bold">
+                                {data.name}
+                              </h5>
                             </a>
                             <p className="text-light mb-0 small-desktop-op-description">
                               {data.desc}
                             </p>
-                          </div>
-                          <div className="d-flex justify-content-end">
-                            <span className="badge text-bg-danger">WIP</span>
                           </div>
                         </div>
                       </div>
