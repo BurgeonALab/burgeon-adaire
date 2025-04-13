@@ -357,7 +357,7 @@ body {
 
 .about-rightbox-focus {
   width: fit-content;
-  background-color: rgba(59, 59, 76, 0.3);
+  background-color: rgba(1, 57, 51, 0.3);
 }
 
 #jumbotron-player {
@@ -617,8 +617,8 @@ body {
   background-size: cover;
   background-image: linear-gradient(
       to top,
-      rgba(18, 18, 23, 0.9) 30%,
-      rgba(18, 18, 23, 0.4)
+      rgba(0, 7, 7, 1) 30%,
+      rgba(0, 7, 7, 0.4)
     ),
     url("https://images.burgeonadaire.com/about-blue.webp");
 }
@@ -627,8 +627,8 @@ body {
   background-size: cover;
   background-image: linear-gradient(
       to top,
-      rgba(18, 18, 23, 0.9) 30%,
-      rgba(18, 18, 23, 0.4)
+      rgba(0, 7, 7, 1) 30%,
+      rgba(0, 7, 7, 0.4)
     ),
     url("https://images.burgeonadaire.com/about-brown.webp");
 }
