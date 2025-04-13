@@ -13,14 +13,12 @@ import {
   BurgeonPartners,
 } from "../components";
 
-export default function HomePage({ currectSection, selectedSection }) {
+export default function HomePage({ selectedSection }) {
   const [titlePage, setTitlePage] = useState(
     "PT. Burgeon Adaire International"
   );
   const [isDone, setIsDone] = useState(false);
   gsap.registerPlugin(useGSAP, ScrollToPlugin);
-
-  console.log("Current section: " + currectSection);
   console.log("Selected section: " + selectedSection);
 
   const RenderProgress = () => {
@@ -83,7 +81,7 @@ export default function HomePage({ currectSection, selectedSection }) {
               <BurgeonAbout />
             </Suspense>
             <Suspense fallback={<p className="d-none">Loading</p>}>
-              <BurgeonAbstract currectSection={currectSection} />
+              <BurgeonAbstract />
             </Suspense>
             <Suspense fallback={<p className="d-none">Loading</p>}>
               <BurgeonOperations />

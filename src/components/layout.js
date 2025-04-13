@@ -10,7 +10,7 @@ const BurgeonNotFound = lazy(() =>
   import("../pages/sub-pages/BurgeonNotFound")
 );
 
-export default function PageLayout({ sectionScroll }) {
+export default function PageLayout() {
   return (
     <div className="bottom-footer-container">
       <BrowserRouter>
@@ -19,12 +19,7 @@ export default function PageLayout({ sectionScroll }) {
           <Route
             exact
             path="/identity"
-            element={
-              <HomePage
-                selectedSection="Identity"
-                currectSection={sectionScroll}
-              />
-            }
+            element={<HomePage selectedSection="Identity" />}
           />
           <Route
             exact

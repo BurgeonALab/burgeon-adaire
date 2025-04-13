@@ -97,7 +97,6 @@ export default class BSmallNews extends Component {
   }
 
   render() {
-    console.log(this.state.sumnews);
     const settings = {
       infinite: false,
       slidesToShow: 1,

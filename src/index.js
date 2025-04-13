@@ -31,7 +31,7 @@ function App() {
   return (
     <Suspense fallback={<BurgeonPreload />}>
       <BurgeonCookieConsent />
-      <PageLayout sectionScroll={sectionPos} />
+      <PageLayout />
     </Suspense>
   );
 }
