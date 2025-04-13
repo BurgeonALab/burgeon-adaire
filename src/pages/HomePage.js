@@ -14,7 +14,9 @@ import {
 } from "../components";
 
 export default function HomePage({ currectSection, selectedSection }) {
-  const [titlePage, setTitlePage] = useState("");
+  const [titlePage, setTitlePage] = useState(
+    "PT. Burgeon Adaire International"
+  );
   const [isDone, setIsDone] = useState(false);
   gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
@@ -23,41 +25,43 @@ export default function HomePage({ currectSection, selectedSection }) {
 
   const RenderProgress = () => {
     console.log(isDone);
-    setIsDone(true);
 
     async function setLoad() {
-      if (isDone == true) {
-        const getToPath = async () => {
-          if (selectedSection === "Identity") {
-            await gsap.to(window, {
-              duration: 0.1,
-              scrollTo: "#abstract",
-            });
-            setTitlePage("Identity | PT. Burgeon Adaire International");
-          } else if (selectedSection === "Operations") {
-            await gsap.to(window, {
-              duration: 0.1,
-              scrollTo: "#operations",
-            });
-            setTitlePage("Operations | PT. Burgeon Adaire International");
-          } else if (selectedSection === "Acknowledgment") {
-            await gsap.to(window, {
-              duration: 0.1,
-              scrollTo: "#acknowledgment",
-            });
-            setTitlePage("Acknowledgment | PT. Burgeon Adaire International");
-          } else if (selectedSection === "Partners") {
-            await gsap.to(window, {
-              duration: 0.1,
-              scrollTo: "#partners",
-            });
-            setTitlePage("Partners | PT. Burgeon Adaire International");
-          } else {
-            setTitlePage("PT. Burgeon Adaire International");
-          }
-        };
-        getToPath();
-      }
+      setTimeout(() => {
+        setIsDone(true);
+        if (isDone == true) {
+          const getToPath = async () => {
+            if (selectedSection === "Identity") {
+              await gsap.to(window, {
+                duration: 0.1,
+                scrollTo: "#abstract",
+              });
+              setTitlePage("Identity | PT. Burgeon Adaire International");
+            } else if (selectedSection === "Operations") {
+              await gsap.to(window, {
+                duration: 0.1,
+                scrollTo: "#operations",
+              });
+              setTitlePage("Operations | PT. Burgeon Adaire International");
+            } else if (selectedSection === "Acknowledgment") {
+              await gsap.to(window, {
+                duration: 0.1,
+                scrollTo: "#acknowledgment",
+              });
+              setTitlePage("Acknowledgment | PT. Burgeon Adaire International");
+            } else if (selectedSection === "Partners") {
+              await gsap.to(window, {
+                duration: 0.1,
+                scrollTo: "#partners",
+              });
+              setTitlePage("Partners | PT. Burgeon Adaire International");
+            } else {
+              setTitlePage("PT. Burgeon Adaire International");
+            }
+          };
+          getToPath();
+        }
+      }, 1000);
     }
     setLoad();
   };
