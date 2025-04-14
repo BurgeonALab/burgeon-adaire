@@ -469,6 +469,7 @@ body {
   --bs-dropdown-link-hover-bg: #013933;
   --bs-nav-link-hover-color: #f8f9fa;
   --bs-dropdown-link-active-bg: #000707;
+  border-width: 0px;
 }
 
 .partners-marquee-box {
