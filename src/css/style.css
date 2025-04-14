@@ -394,8 +394,9 @@ body {
   width: 100%;
   height: 100%;
   right: 0;
-  opacity: 0.6;
-  background-image: url("https://images.burgeonadaire.com/pepperstone-logo-bai.webp");
+  opacity: 1;
+  background-image: url("https://images.burgeonadaire.com/new_bai_img/pepperstone_bai_new_logo.png");
+  background-size: 70%;
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: 220px;
@@ -408,16 +409,16 @@ body {
 }
 
 .partner-right-box {
-  background-color: #272731;
+  background-color: #025249;
 }
 
 .btn-pepperstone {
-  --bs-btn-bg: #8b0000;
-  --bs-btn-border-color: #8b0000;
-  --bs-btn-hover-bg: #610000;
-  --bs-btn-hover-border-color: #610000;
-  --bs-btn-active-bg: #380000;
-  --bs-btn-active-border-color: #380000;
+  --bs-btn-bg: #025249;
+  --bs-btn-border-color: #025249;
+  --bs-btn-hover-bg: #013933;
+  --bs-btn-hover-border-color: #013933;
+  --bs-btn-active-bg: #013933;
+  --bs-btn-active-border-color: #013933;
 }
 
 .btn-cp {
@@ -755,12 +756,12 @@ body {
 }
 
 .dropdown-menu-pepperstone {
-  background-color: #8b0000;
-  border-color: #380000;
+  background-color: #013933;
+  border-width: 0px;
 }
 
 .dropdown-item-pepperstone:hover {
-  background-color: #380000;
+  background-color: #01201d;
 }
 
 #cc-main {

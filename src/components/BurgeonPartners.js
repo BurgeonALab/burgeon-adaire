@@ -181,8 +181,9 @@ class BurgeonPartners extends Component {
               </div>
               <div className="pepperstone-misc-mobile d-flex flex-row justify-content-between align-items-end py-3">
                 <img
+                  style={{ objectFit: "cover" }}
                   alt="Pepperstone Official Partner"
-                  src="https://images.burgeonadaire.com/bai-pepperstone.webp"
+                  src="https://images.burgeonadaire.com/new_bai_img/pepperstone_bai_new.png"
                   height={80}
                 ></img>
                 <div className="d-flex flex-row pepperstone-buttons-mobile">
