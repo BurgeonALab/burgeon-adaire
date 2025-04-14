@@ -96,7 +96,7 @@ class BurgeonFooter extends Component {
     $(".social-media-footer-items-org").on("mouseenter", function () {
       $(".burgeon-adaire-link-svg-inside>path").attr(
         "style",
-        "fill: #8B0000 !important;"
+        "fill: #e89e11 !important;"
       );
     });
 
@@ -111,7 +111,7 @@ class BurgeonFooter extends Component {
     $(".social-media-footer-items-pitchbook").on("mouseenter", function () {
       $(".burgeon-adaire-link-svg-inside > g > g > path").attr(
         "style",
-        "fill: #8B0000 !important;"
+        "fill: #e89e11 !important;"
       );
     });
 
