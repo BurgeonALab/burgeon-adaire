@@ -86,7 +86,7 @@ class BurgeonJumbotron extends Component {
         <div className="bai-jumbotron d-flex align-items-center justify-content-center">
           <video
             aria-label="Green Smoke Stock Videos by Vecteezy, Modified by PT. Burgeon Adaire International"
-            aria-details="https://www.vecteezy.com/free-videos/green-smoke"
+            aria-details="Vecteezy.com"
             id="jumbotron-player"
             poster="https://images.burgeonadaire.com/new_bai_img/green_smoke_img_compressed.webp"
             autoPlay
