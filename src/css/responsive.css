@@ -113,10 +113,6 @@
 }
 
 @media (max-height: 768px) {
-  .tradingview-bai-tickertape {
-    display: none !important;
-  }
-
   .small-desktop-op-description {
     display: none;
   }

@@ -190,7 +190,7 @@ class BurgeonOperations extends Component {
             </Suspense>
           </div>
           <div className="other-operations-container-mobile col-xxl-9 d-flex flex-column py-3">
-            <div className="tradingview-bai-tickertape">
+            <div>
               <TickerTape
                 symbols={[
                   {
