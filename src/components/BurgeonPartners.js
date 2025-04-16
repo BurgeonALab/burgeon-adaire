@@ -125,6 +125,20 @@ class BurgeonPartners extends Component {
           logo: "https://images.burgeonadaire.com/nunchuk.webp",
           link: "https://nunchuk.io",
         },
+        {
+          id: 8,
+          name: "The Funded Trader",
+          desc: "The Funded Trader's Home Page",
+          logo: "https://images.burgeonadaire.com/the_funded_trader.png",
+          link: "https://thefundedtraderprogram.com",
+        },
+        {
+          id: 8,
+          name: "HF Markets",
+          desc: "HF Markets's Home Page",
+          logo: "https://images.burgeonadaire.com/hf_markets.png",
+          link: "https://hfm.com",
+        },
       ],
     };
   }
