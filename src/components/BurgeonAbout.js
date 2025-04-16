@@ -1,11 +1,6 @@
 import React, { Component, Suspense, lazy } from "react";
-
-const BMediumAboutLeftBox = lazy(() =>
-  import("../components/medium/BMediumAboutLeftBox")
-);
-const BMediumAboutRightBox = lazy(() =>
-  import("../components/medium/BMediumAboutRightBox")
-);
+import BMediumAboutLeftBox from "../components/medium/BMediumAboutLeftBox";
+import BMediumAboutRightBox from "../components/medium/BMediumAboutRightBox";
 
 export default class BurgeonAbout extends Component {
   render() {
