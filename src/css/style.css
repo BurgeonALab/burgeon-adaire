@@ -357,7 +357,7 @@ body {
 
 .about-rightbox-focus {
   width: fit-content;
-  background-color: rgba(1, 57, 51, 0.3);
+  background-color: rgba(1, 57, 51, 0.6);
 }
 
 #jumbotron-player {
@@ -624,20 +624,20 @@ body {
   background-size: cover;
   background-image: linear-gradient(
       to top,
-      rgba(0, 7, 7, 1) 30%,
-      rgba(0, 7, 7, 0.4)
+      rgba(0, 7, 7, 1) 10%,
+      rgba(255, 255, 255, 0)
     ),
-    url("https://images.burgeonadaire.com/about-blue.webp");
+    url("https://images.burgeonadaire.com/white_horse.webp");
 }
 
 .about-item.about-item-brown {
   background-size: cover;
   background-image: linear-gradient(
       to top,
-      rgba(0, 7, 7, 1) 30%,
-      rgba(0, 7, 7, 0.4)
+      rgba(0, 7, 7, 1) 10%,
+      rgba(255, 255, 255, 0)
     ),
-    url("https://images.burgeonadaire.com/about-brown.webp");
+    url("https://images.burgeonadaire.com/blue_peacock.webp");
 }
 
 .extras-container-mobile {

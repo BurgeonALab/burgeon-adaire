@@ -9,7 +9,9 @@ export default class BMediumAboutRightBox extends Component {
             <div className="position-relative h-100">
               <div className="about-rightbox-focus-mobile">
                 <div className="about-rightbox-focus p-4 rounded">
-                  <h3 className="text-light">Martin Luther King, Jr.</h3>
+                  <h3 className="text-light fw-bold">
+                    Martin Luther King, Jr.
+                  </h3>
                   <p className="text-light mb-0">
                     We must build dikes of courage to hold back the flood of
                     fear.
@@ -17,9 +19,16 @@ export default class BMediumAboutRightBox extends Component {
                 </div>
               </div>
               <div className="justify-content-end position-absolute bottom-0">
-                <p className="about-credit-mobile text-light lead fw-medium mb-0">
-                  Photo credit
-                </p>
+                <a
+                  style={{ textDecoration: "none" }}
+                  href="https://vecteezy.com"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <p className="about-credit-mobile text-light lead fw-medium mb-0">
+                    Peacock by Vecteezy
+                  </p>
+                </a>
               </div>
             </div>
           </div>
