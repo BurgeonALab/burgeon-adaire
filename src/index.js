@@ -17,11 +17,14 @@ import PageLayout from "./components/layout";
 // Cookie Consent
 import * as CookieConsent from "vanilla-cookieconsent";
 import "vanilla-cookieconsent/dist/cookieconsent.css";
+// Get Year
+import moment from "moment";
+import "moment/locale/id";
 
 const helmetContext = {};
 
 function App() {
-  const [sectionPos, setSectionPos] = useState("");
+  const [currentYear, setCurrentYear] = useState("");
 
   useEffect(() => {
     CookieConsent.run({
@@ -82,15 +85,27 @@ function App() {
     });
   }, []);
 
-  useEffect(() => {
-    setSectionPos("Home");
-  }, []);
+  const GetYear = async () => {
+    await fetch(
+      "https://timeapi.io/api/time/current/zone?timeZone=Asia%2FJakarta"
+    )
+      .then(async (response) => await response.json())
+      .then((data) => {
+        setCurrentYear(moment(data["dateTime"]).format("YYYY"));
+      })
+      .catch((error) => {
+        error = "Cannot get year.";
+        console.log(error);
+      });
+  };
 
-  console.log(sectionPos);
+  useEffect(() => {
+    GetYear();
+  });
 
   return (
     <Suspense fallback={<BurgeonPreload />}>
-      <PageLayout />
+      <PageLayout currentYear={currentYear} />
     </Suspense>
   );
 }

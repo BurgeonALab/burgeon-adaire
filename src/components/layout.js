@@ -9,7 +9,8 @@ import {
   TermsConditions,
 } from "../pages";
 
-export default function PageLayout() {
+export default function PageLayout({ currentYear }) {
+  console.log("Year: " + currentYear);
   return (
     <div className="bottom-footer-container">
       <BrowserRouter>
@@ -45,7 +46,7 @@ export default function PageLayout() {
           {/* 404 - For now */}
           <Route path="*" element={<HomePage />} />
         </Routes>
-        <BurgeonFooter />
+        <BurgeonFooter currentYear={currentYear} />
       </BrowserRouter>
     </div>
   );

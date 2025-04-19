@@ -1,12 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faInstagram,
-  faLinkedin,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { TheOrg, PitchBook } from "./vectors";
 import { ReactSVG } from "react-svg";
 import { handleViewport } from "react-in-viewport";
 // jQuery
@@ -14,68 +7,12 @@ import $ from "jquery";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+// Data
+import { Associates, FooterIcon } from "../datas";
 
 gsap.registerPlugin(useGSAP, ScrollToPlugin);
 
 class BurgeonFooter extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      footericon: [
-        {
-          id: 0,
-          type: "symbol",
-          desc: "PT. Burgeon Adaire International's Instagram Profile Page",
-          link: "https://www.instagram.com/burgeonadaire",
-          icon: faInstagram,
-        },
-        {
-          id: 1,
-          type: "symbol",
-          desc: "PT. Burgeon Adaire International's LinkedIn Profile Page",
-          link: "https://linkedin.com/company/burgeonadaire",
-          icon: faLinkedin,
-        },
-        {
-          id: 2,
-          type: "symbol",
-          desc: "PT. Burgeon Adaire International's Twitter X Profile Page",
-          link: "https://twitter.com/burgeonadaire",
-          icon: faXTwitter,
-        },
-        {
-          id: 3,
-          type: "symbol",
-          desc: "PT. Burgeon Adaire International's GitHub Page",
-          link: "https://github.com/BurgeonALab",
-          icon: faGithub,
-        },
-        {
-          id: 4,
-          type: "svg",
-          desc: "PT. Burgeon Adaire International's The Org Profile Page",
-          link: "https://bit.ly/3SWvfNS",
-          icon: TheOrg,
-          height: "auto",
-          width: "28px",
-          classname:
-            "social-media-footer-items-org social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center",
-        },
-        {
-          id: 5,
-          type: "svg",
-          desc: "PT. Burgeon Adaire International's PitchBook Profile Page",
-          link: "https://pitchbook.com",
-          icon: PitchBook,
-          height: "28px",
-          width: "auto",
-          classname:
-            "social-media-footer-items-pitchbook social-media-footer-mobile-links mt-3 d-flex justify-content-center align-items-center",
-        },
-      ],
-    };
-  }
-
   jQueryPath = (ViewportStatus) => {
     $(function () {
       if (ViewportStatus === "In Viewport") {
@@ -165,6 +102,9 @@ class BurgeonFooter extends Component {
       this.jQueryPath(ViewportStatus);
     }
 
+    const { currentYear } = this.props;
+    console.log(currentYear);
+
     return (
       <Fragment>
         <section ref={forwardedRef}>
@@ -212,46 +152,19 @@ class BurgeonFooter extends Component {
                           <div className="footer-link-box-mobile mt-3">
                             <p className="lead fw-bold mb-0">Associates</p>
                             <div className="link-blank-space footer-link-right-mobile">
-                              <a
-                                className="text-decoration-none link-light"
-                                href="https://geraldzandisko.burgeonadaire.com"
-                                target="_blank"
-                                rel="noopener"
-                              >
-                                <p className="burgeon-adaire-link footer-item-link-mobile mb-0 mt-3 fw-light">
-                                  Gerald Zandisko
-                                </p>
-                              </a>
-                              <a
-                                className="burgeon-adaire-link text-decoration-none link-light"
-                                href="https://adairesolutions.com"
-                                target="_blank"
-                                rel="noopener"
-                              >
-                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                  The Adaire Solutions
-                                </p>
-                              </a>
-                              <a
-                                className="burgeon-adaire-link text-decoration-none link-light"
-                                href="https://org.burgeonadaire.com"
-                                target="_blank"
-                                rel="noopener"
-                              >
-                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                  Organizations
-                                </p>
-                              </a>
-                              <a
-                                className="burgeon-adaire-link text-decoration-none link-light"
-                                href="https://shop.burgeonadaire.com"
-                                target="_blank"
-                                rel="noopener"
-                              >
-                                <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
-                                  PT. Burgeon Energyworks Industries
-                                </p>
-                              </a>
+                              {Associates.map((item, i) => (
+                                <a
+                                  key={i}
+                                  className="burgeon-adaire-link text-decoration-none link-light"
+                                  href={item.link}
+                                  target="_blank"
+                                  rel="noopener"
+                                >
+                                  <p className="footer-item-link-mobile mb-0 mt-3 fw-light">
+                                    {item.name}
+                                  </p>
+                                </a>
+                              ))}
                             </div>
                           </div>
                           <div className="footer-link-box-mobile mt-3">
@@ -395,7 +308,7 @@ class BurgeonFooter extends Component {
                         </div>
                         <div className="social-media-footer-mobile col-md-6 d-flex flex-column justify-content-end">
                           <div className="social-media-footer-mobile-items mb-0 d-flex flex-column align-items-end">
-                            {this.state.footericon.map((element, i) =>
+                            {FooterIcon.map((element, i) =>
                               element.type === "symbol" ? (
                                 <div
                                   key={i}
@@ -447,8 +360,9 @@ class BurgeonFooter extends Component {
                         </div>
                       </div>
                       <p className="mb-0 mt-5 footer-text-mobile">
-                        © 2025 <strong>PT. Burgeon Adaire International</strong>
-                        . All rights reserved
+                        © {currentYear}{" "}
+                        <strong>PT. Burgeon Adaire International</strong>. All
+                        rights reserved
                       </p>
                     </div>
                   </div>
