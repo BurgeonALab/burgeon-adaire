@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true
+  },
+  "compileOnSave": false,
+  "include": ["src"]
+}
