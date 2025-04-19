@@ -1,4 +1,4 @@
-import React, { Component, Suspense, lazy } from "react";
+import React, { Component, Suspense } from "react";
 import BMediumAboutLeftBox from "../components/medium/BMediumAboutLeftBox";
 import BMediumAboutRightBox from "../components/medium/BMediumAboutRightBox";
 
