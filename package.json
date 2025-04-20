@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "scripts": {
     "build": "del-cli --force ./compressed && webpack --config webpack.config.js --env NODE_ENV=production",
-    "s3-script": "concurrently \"aws s3 rm s3://burgeonadaire-storage/compiled --recursive\" \"aws s3 rm s3://burgeonadaire-storage/compressed --recursive\" \"aws s3 cp ./dist/compiled s3://burgeonadaire-storage/compiled --recursive\" \"aws s3 cp ./dist/compiled s3://burgeonadaire-storage/compiled --recursive\" \"aws s3 cp ./compressed s3://burgeonadaire-storage/compressed --recursive\" \"aws s3 cp ./dist/configurations s3://burgeonadaire-storage --recursive\"",
+    "s3-script": "concurrently \"aws s3 rm s3://burgeonadaire-storage/compiled --recursive\" \"aws s3 rm s3://burgeonadaire-storage/compressed --recursive\" \"aws s3 cp ./dist/compiled s3://burgeonadaire-storage/compiled --recursive\" \"aws s3 cp ./compressed s3://burgeonadaire-storage/compressed --recursive\" \"aws s3 cp ./dist/configurations s3://burgeonadaire-storage --recursive\"",
     "s3-images": "aws s3 cp ./dist/assets/images s3://burgeonadaire-storage --recursive",
     "s3-videos": "aws s3 cp ./dist/assets/videos s3://burgeonadaire-storage --recursive",
     "s3-media": "concurrently \"npm run s3-images\" \"npm run s3-videos\"",
