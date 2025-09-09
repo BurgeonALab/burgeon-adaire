@@ -1,5 +1,5 @@
 <p align: center;>
-<img src="https://resources.burgeonadaire.com/Logo+Text.png" style="height: '50%';" />
+<img src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp" style="height: '50%';" />
 </p>
 
 # PT. Burgeon Adaire International's Homepage
