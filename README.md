@@ -1,4 +1,4 @@
-<p align: center;>
+<p align="center" width="100%">
 <img src="https://images.burgeonadaire.com/new_bai_img/new_logo.webp" style="height: '50%';" />
 </p>
 
