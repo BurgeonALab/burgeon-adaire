@@ -3,7 +3,7 @@ import { faChevronUp, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faLinkedin,
   faGithub,
-  faThreads,
+  faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import React, { Component } from "react";
 // jQuery
@@ -53,11 +53,12 @@ export default class BurgeonContact extends Component {
                   <a role="button" className="contact-button-redbai"></a>
                 </div>
               </div>
-              <img
+              {/* Contact Image Avatar */}
+              {/* <img
                 style={{ width: "100%", objectFit: "cover" }}
                 src="https://images.burgeonadaire.com/gerald_zandisko_cp.webp"
                 height={320}
-              ></img>
+              ></img> */}
               <div
                 className="position-absolute bottom-0 p-3 w-100"
                 style={{
@@ -66,7 +67,7 @@ export default class BurgeonContact extends Component {
                 }}
               >
                 <span className="lead fw-medium d-flex align-items-center justify-content-center pb-3">
-                  Gerald Zandisko
+                  Support Center
                 </span>
                 <div className="d-flex flex-row justify-content-center align-items-center">
                   <a
@@ -81,7 +82,7 @@ export default class BurgeonContact extends Component {
                     />
                   </a>
                   <a
-                    href="https://www.linkedin.com/in/geraldzandisko/"
+                    href="http://linkedin.com/company/burgeonadaire/"
                     target="_blank"
                     rel="noreferrer"
                     className="mx-2 contact-button-colorful-small d-flex align-items-center justify-content-center text-decoration-none"
@@ -94,7 +95,7 @@ export default class BurgeonContact extends Component {
                     />
                   </a>
                   <a
-                    href="https://github.com/geraldzandisko"
+                    href="https://github.com/BurgeonALab/"
                     target="_blank"
                     rel="noreferrer"
                     className="mx-2 contact-button-colorful-small d-flex align-items-center justify-content-center text-decoration-none"
@@ -107,14 +108,14 @@ export default class BurgeonContact extends Component {
                     />
                   </a>
                   <a
-                    href="https://www.threads.net/@geraldzandisko"
+                    href="https://www.instagram.com/burgeonadaire/"
                     target="_blank"
                     rel="noreferrer"
                     className="mx-2 contact-button-colorful-small d-flex align-items-center justify-content-center text-decoration-none"
                   >
                     <FontAwesomeIcon
                       id="chevron-nav-contact"
-                      icon={faThreads}
+                      icon={faInstagram}
                       size="lg"
                       color="white"
                     />

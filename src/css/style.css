@@ -718,6 +718,8 @@ body {
 
 .contact-content {
   display: none;
+  width: 320px;
+  height: 320px;
 }
 
 .show-contact-content {
